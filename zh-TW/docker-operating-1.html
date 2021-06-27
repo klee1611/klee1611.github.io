@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="zh-TW,en,default">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"klee1611.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="亂七八糟的 project 太多，每個 project 用的 module 版本又不一樣，有些東西要測試的時候還要把 port 打開有點危險，乾脆直接用 docker 把不同的 project 拆開免得互相干擾，還不用把自己實體機器的 port 打開來測程式能不能跑。   還可以抓各種 Image 來放到 Container 上搞壞再重開(?   Docker 基本概念一言以蔽之，簡化版的 VM。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker 操作紀錄(一)">
+<meta property="og:url" content="https://klee1611.github.io/zh-TW/docker-operating-1.html">
+<meta property="og:site_name" content="Kourtney&#39;s Space">
+<meta property="og:description" content="亂七八糟的 project 太多，每個 project 用的 module 版本又不一樣，有些東西要測試的時候還要把 port 打開有點危險，乾脆直接用 docker 把不同的 project 拆開免得互相干擾，還不用把自己實體機器的 port 打開來測程式能不能跑。   還可以抓各種 Image 來放到 Container 上搞壞再重開(?   Docker 基本概念一言以蔽之，簡化版的 VM。">
+<meta property="og:locale" content="zh_TW">
+<meta property="article:published_time" content="2020-01-01T09:06:00.000Z">
+<meta property="article:modified_time" content="2021-05-19T17:04:50.000Z">
+<meta property="article:author" content="Kourtney Lee">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="Virtual Environment">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://klee1611.github.io/zh-TW/docker-operating-1.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-TW'
+  };
+</script>
+
+  <title>Docker 操作紀錄(一) | Kourtney's Space</title>
+  
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1"></script>
+    <script>
+      if (CONFIG.hostname === location.hostname) {
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-127207785-1');
+      }
+    </script>
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切換導航欄">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">Kourtney's Space</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首頁</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>標籤</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分類</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>歸檔</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>網站地圖</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-TW">
+    <link itemprop="mainEntityOfPage" href="https://klee1611.github.io/zh-TW/docker-operating-1.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Kourtney Lee">
+      <meta itemprop="description" content="工程師隨手記">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Kourtney's Space">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Docker 操作紀錄(一)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">發表於</span>
+
+              <time title="創建時間：2020-01-01 17:06:00" itemprop="dateCreated datePublished" datetime="2020-01-01T17:06:00+08:00">2020-01-01</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新於</span>
+                <time title="修改時間：2021-05-20 01:04:50" itemprop="dateModified" datetime="2021-05-20T01:04:50+08:00">2021-05-20</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分類於</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Docker/" itemprop="url" rel="index"><span itemprop="name">Docker</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Disqus：</span>
+    
+    <a title="disqus" href="/zh-TW/docker-operating-1.html#disqus_thread" itemprop="discussionUrl">
+      <span class="post-comments-count disqus-comment-count" data-disqus-identifier="zh-TW/docker-operating-1.html" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>亂七八糟的 project 太多，<br>每個 project 用的 module 版本又不一樣，<br>有些東西要測試的時候還要把 port 打開有點危險，<br>乾脆直接用 docker 把不同的 project 拆開免得互相干擾，<br>還不用把自己實體機器的 port 打開來測程式能不能跑。  </p>
+<p>還可以抓各種 Image 來放到 Container 上搞壞再重開(?  </p>
+<h2 id="Docker-基本概念"><a href="#Docker-基本概念" class="headerlink" title="Docker 基本概念"></a>Docker 基本概念</h2><p>一言以蔽之，<br>簡化版的 VM。<br>因為 docker 不會把整個 operating system 都裝起來，  </p>
+<span id="more"></span>
+<p>所以大小比 VM 小很多速度也比 VM 快很多。  </p>
+<h3 id="Image"><a href="#Image" class="headerlink" title="Image"></a>Image</h3><p>跑在 container 上面的東西，<br>裡面包了一個輕量級的 runtime environment，<br>就是一些 library 跟 executable，<br>可以想像成 VM 上的 .iso，<br>只能被讀。<br>要改的話就是產生一個新的 image。  </p>
+<h3 id="Container"><a href="#Container" class="headerlink" title="Container"></a>Container</h3><p>真的把 image 拿來跑起來的東西，<br>就是把 image 拿來真的啟動放到 memory 去執行，<br>跟 VM 一樣和 host environment 是完全隔離的，<br>除非經過特別設定否則對 container 做什麼跟 host environment 都沒有什麼關係，<br>例如說可以在 container 上把 port 開起來也不會影響到 host，<br>但有需要的話也可以設定。  </p>
+<h3 id="Repository"><a href="#Repository" class="headerlink" title="Repository"></a>Repository</h3><p>放 Image 的地方。  </p>
+<p>可以拿 Git 的 Repository 做比喻，<br>Git 會有很多 repository，<br>每個 Repository 是拿來放一個專案的 code 的集合，<br>Docker 所謂的 repository 也是一樣，<br>Repository 是拿來放 image 的地方，<br>通常在同一個 repository 的 image 會有一樣的名字但不一樣的 tag。<br>所以也會有很多不同的 repository。  </p>
+<h3 id="Registry"><a href="#Registry" class="headerlink" title="Registry"></a>Registry</h3><p>也是放 image 的地方。  </p>
+<p>和 repository 不同的是，<br>registry 是一種服務，<br>可以讓大家把 image 放上去或拉回自己的機器，<br>用 Git 來比喻就是像 Github。<br>最有名的就是 <a target="_blank" rel="noopener" href="https://hub.docker.com/">Docker Hub</a>。  </p>
+<h2 id="Docker-基本使用"><a href="#Docker-基本使用" class="headerlink" title="Docker 基本使用"></a>Docker 基本使用</h2><h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><p>在 Ubuntu 很簡單，  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker.io</span><br></pre></td></tr></table></figure>
+
+<h3 id="抓-Image"><a href="#抓-Image" class="headerlink" title="抓 Image"></a>抓 Image</h3><p>官方 <a target="_blank" rel="noopener" href="https://hub.docker.com/">Docker Hub</a>，<br>有很多 Image 可以抓，<br>例如我想要一個乾淨無汙染的 Ubuntu 環境，<br>就可以用 command 來抓一個 Ubuntu 的 image 回自己的機器 (host machine):  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>或者要指定某一個 tag:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull ubuntu:14.04</span><br></pre></td></tr></table></figure>
+
+<h3 id="跑看看抓下來的-Image-來測試一下"><a href="#跑看看抓下來的-Image-來測試一下" class="headerlink" title="跑看看抓下來的 Image 來測試一下"></a>跑看看抓下來的 Image 來測試一下</h3><p>剛剛抓了 Ubuntu，<br>試看看能不能用那個 Ubuntu echo 一個 Hello World:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run ubuntu /bin/<span class="built_in">echo</span> <span class="string">&#x27;Hello world&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>應該會跳出一行 Hello world</p>
+<p>這裡只是測試一下 Image，<br><code>docker run</code> 建立了一個暫時的 Container，<br>跑完 hello world 以後 container 就結束了。  </p>
+<h3 id="列出裝過哪些-Images"><a href="#列出裝過哪些-Images" class="headerlink" title="列出裝過哪些 Images"></a>列出裝過哪些 Images</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker images</span><br></pre></td></tr></table></figure>
+
+<p>應該會出現剛剛裝過的那個 Ubuntu  </p>
+<h3 id="用現有的-Image-來-create-一個-Container"><a href="#用現有的-Image-來-create-一個-Container" class="headerlink" title="用現有的 Image 來 create 一個 Container"></a>用現有的 Image 來 create 一個 Container</h3><p>Container 被開出來就是可以被改變的東西了!!<br>用 image 建一個 container 就好像用 .iso 裝到 VM 裡。  </p>
+<p>用剛剛有的 ubuntu 那個 image 來建一個 container:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker create -it ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>也可以建立一個有名字的 Container:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker create -it --name CONTAINER_NAME ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>或者如果要讓 Container 被 create 而且直接被啟動:<br>(只是啟動，還沒有進入那個 container)</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>或  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -itd --name CONTAINER_NAME ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>不論是用 <code>create</code> 還是 <code>run</code> 都有下參數 <code>i</code> 跟 <code>t</code>，<br><code>i</code> 是指 input (讓 container 的 stdin 打開)，<br><code>t</code> 是指 tty (有個 terminal 可以用)。<br><code>docker run</code> 的 <code>d</code> 是 detach (讓 container 跑在 background)。  </p>
+<h3 id="列出有哪些-Container"><a href="#列出有哪些-Container" class="headerlink" title="列出有哪些 Container"></a>列出有哪些 Container</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+
+<p>可以列出所有現在 host 上有的 container，<br>應該會出現前面用 Ubuntu image 建立起來的 Container。  </p>
+<p>用 <code>docker create</code> 和 <code>docker run</code> 建立的 Container 的 <code>status</code> 會不一樣，<br><code>docker create</code> 只有建立了這個 container 還沒有啟動他，<br>所以 <code>status</code> 會是 <code>created</code>；<br><code>docker run</code> 已經直接讓 container 被建立也被啟動了，<br>所以 <code>status</code> 會是 <code>Up</code>。  </p>
+<p>最前面有個 <strong>container id</strong>，<br>要去 run 這個 container 的時候可能會用到。  </p>
+<h3 id="啟動並進入-Container"><a href="#啟動並進入-Container" class="headerlink" title="啟動並進入 Container"></a>啟動並進入 Container</h3><p>如果是用 <code>docker create</code> 建立的 container 要<strong>先被啟動</strong>才能進入:  </p>
+<ul>
+<li>沒有名字的 Container 就用 <strong>container id</strong> 來跑起來並進入:  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start -i <span class="string">&quot;CONTAINER_ID&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>有名字的 Container 可以用 <strong>container 的名字</strong> 來跑起來並進入:  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker start -i <span class="string">&quot;CONTAINER_NAME&quot;</span></span><br></pre></td></tr></table></figure>
+除了剛被 create 的 container 要先被 start 才能進入，<br>被停止的 container 也要先被 start 才能進入。<br>可以先用<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+看一下 status，<br>不是 <code>Up</code> 狀態的就先 start 啟動他。  </li>
+</ul>
+<p>已經被 <code>docker run</code> 啟動過先 run 在 background 的 container 可以直接進入:  </p>
+<ul>
+<li><p>沒有名字的 Container 就用 <strong>container id</strong> 來進入:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it <span class="string">&quot;CONTAINER_ID&quot;</span> bash</span><br></pre></td></tr></table></figure>
+<p>(<em>bash</em> 是要執行的 command)</p>
+</li>
+<li><p>有名字的 Container 可以用 <strong>container 的名字</strong>來進入:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">exec</span> -it <span class="string">&quot;CONTAINER_NAME&quot;</span> bash</span><br></pre></td></tr></table></figure>
+<p>(<em>bash</em> 是要執行的 command)</p>
+</li>
+</ul>
+<p>應該會發現已經進入到 Container 了，<br>使用者會變成 Container 的 root，<br>可以開始在這個 Container 上面做設定或裝東西。<br>要離開 Container 環境的時候打個</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<p>就好。<br>離開以後 Container 依然會在，<br>不過會變成<strong>Exited</strong> 的狀態，<br>下次再回去進入這個 Container 的時候要先啟動他，<br>不過設定跟裝過的東西都會在。  </p>
+<h3 id="停止-Container"><a href="#停止-Container" class="headerlink" title="停止 Container"></a>停止 Container</h3><p>就跟把 VM 關機差不多意思，<br>讓 container 變成<strong>未啟動</strong>的狀態，<br>也是要用到 <strong>container id</strong> 或名字，  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop <span class="string">&quot;CONTAINER_ID&quot;</span></span><br></pre></td></tr></table></figure>
+<p>或  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker stop <span class="string">&quot;CONTAINER_NAME&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>如果這個時候再用</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker ps -a</span><br></pre></td></tr></table></figure>
+<p>看一下，<br>可以發現 <code>status</code> 會變成 <code>Exited</code>。  </p>
+<h3 id="Export-Container"><a href="#Export-Container" class="headerlink" title="Export Container"></a>Export Container</h3><p>就可以把 Container 搬到別的主機上，<br>也是要用到 <strong>container id</strong> 或 <strong>container name</strong>，<br>假設我打算把 export 出來的 container 叫做 c_test:  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">export</span> <span class="string">&quot;CONTAINER_ID&quot;</span> &gt; c_test.tar</span><br></pre></td></tr></table></figure>
+<p>或  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker <span class="built_in">export</span> <span class="string">&quot;CONTAINER_NAME&quot;</span> &gt; c_test.tar</span><br></pre></td></tr></table></figure>
+
+<p>這時候會是一個壓縮檔，<br>已經可以拿去搬了。  </p>
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p><a target="_blank" rel="noopener" href="https://docs.docker.com/v17.09/get-started/">Docker docs</a></p>
+
+    </div>
+
+    
+    
+    
+
+        <div>
+          <script type="text/javascript">
+            document.write(
+              "<iframe scrolling='no' frameborder='0' sandbox='allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-storage-access-by-user-activation' style='height: 212px; width: 100%;' src='https://button.like.co/in/embed/klee1611/button?referrer=" +
+              encodeURIComponent(location.href.split("?")[0].split("#")[0]) + "'></iframe>");
+          </script>
+        <div>
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Docker/" rel="tag"># Docker</a>
+              <a href="/tags/Virtual-Environment/" rel="tag"># Virtual Environment</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/zh-TW/jekyll-sitemap-github-pages.html" rel="prev" title="Github Pages and Jekyll - sitemap">
+      <i class="fa fa-chevron-left"></i> Github Pages and Jekyll - sitemap
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/zh-TW/linux-process-group-sessions-daemon.html" rel="next" title="Process Groups, Sessions and Daemon Overview">
+      Process Groups, Sessions and Daemon Overview <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+    </div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目錄
+        </li>
+        <li class="sidebar-nav-overview">
+          本站概要
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">Docker 基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Image"><span class="nav-number">1.1.</span> <span class="nav-text">Image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Container"><span class="nav-number">1.2.</span> <span class="nav-text">Container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Repository"><span class="nav-number">1.3.</span> <span class="nav-text">Repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Registry"><span class="nav-number">1.4.</span> <span class="nav-text">Registry</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Docker-%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-number">2.</span> <span class="nav-text">Docker 基本使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Install"><span class="nav-number">2.1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8A%93-Image"><span class="nav-number">2.2.</span> <span class="nav-text">抓 Image</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%B7%91%E7%9C%8B%E7%9C%8B%E6%8A%93%E4%B8%8B%E4%BE%86%E7%9A%84-Image-%E4%BE%86%E6%B8%AC%E8%A9%A6%E4%B8%80%E4%B8%8B"><span class="nav-number">2.3.</span> <span class="nav-text">跑看看抓下來的 Image 來測試一下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E5%87%BA%E8%A3%9D%E9%81%8E%E5%93%AA%E4%BA%9B-Images"><span class="nav-number">2.4.</span> <span class="nav-text">列出裝過哪些 Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E7%8F%BE%E6%9C%89%E7%9A%84-Image-%E4%BE%86-create-%E4%B8%80%E5%80%8B-Container"><span class="nav-number">2.5.</span> <span class="nav-text">用現有的 Image 來 create 一個 Container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%97%E5%87%BA%E6%9C%89%E5%93%AA%E4%BA%9B-Container"><span class="nav-number">2.6.</span> <span class="nav-text">列出有哪些 Container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%95%9F%E5%8B%95%E4%B8%A6%E9%80%B2%E5%85%A5-Container"><span class="nav-number">2.7.</span> <span class="nav-text">啟動並進入 Container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%81%9C%E6%AD%A2-Container"><span class="nav-number">2.8.</span> <span class="nav-text">停止 Container</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Export-Container"><span class="nav-number">2.9.</span> <span class="nav-text">Export Container</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Reference"><span class="nav-number">3.</span> <span class="nav-text">Reference</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Kourtney Lee</p>
+  <div class="site-description" itemprop="description">工程師隨手記</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">文章</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分類</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">30</span>
+        <span class="site-state-item-name">標籤</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/klee1611" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;klee1611" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+  <div class="languages">
+    <label class="lang-select-label">
+      <i class="fa fa-language"></i>
+      <span>繁體中文</span>
+      <i class="fa fa-angle-up" aria-hidden="true"></i>
+    </label>
+    <select class="lang-select" data-canonical="">
+      
+        <option value="zh-TW" data-href="/docker-operating-1.html" selected="">
+          繁體中文
+        </option>
+      
+        <option value="en" data-href="/en/docker-operating-1.html" selected="">
+          English
+        </option>
+      
+    </select>
+  </div>
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Kourtney Lee</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 強力驅動
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+<script>
+  function loadCount() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://klee1611-github-com.disqus.com/count.js';
+    s.id = 'dsq-count-scr';
+    (d.head || d.body).appendChild(s);
+  }
+  // defer loading until the whole page loading is completed
+  window.addEventListener('load', loadCount, false);
+</script>
+<script>
+  var disqus_config = function() {
+    this.page.url = "https://klee1611.github.io/zh-TW/docker-operating-1.html";
+    this.page.identifier = "zh-TW/docker-operating-1.html";
+    this.page.title = "Docker 操作紀錄(一)";
+    };
+  NexT.utils.loadComments(document.querySelector('#disqus_thread'), () => {
+    if (window.DISQUS) {
+      DISQUS.reset({
+        reload: true,
+        config: disqus_config
+      });
+    } else {
+      var d = document, s = d.createElement('script');
+      s.src = 'https://klee1611-github-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', '' + +new Date());
+      (d.head || d.body).appendChild(s);
+    }
+  });
+</script>
+
+</body>
+</html>

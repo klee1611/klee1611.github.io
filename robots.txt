@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://klee1611.github.io/sitemap.xml
+Sitemap: https://klee1611.github.io/baidusitemap.xml
+
+
