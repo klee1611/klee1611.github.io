@@ -1,3 +1,14 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'My New Hugo Site'
+theme = 'LoveIt'
+
+[params]
+	# LoveIt version
+  version = "0.2.X"
+
+[markup]
+  # syntax highlight (https://gohugo.io/content-management/syntax-highlighting)
+  [markup.highlight]
+    # LoveIt issue(https://github.com/dillonzq/LoveIt/issues/158)
+    noClasses = false
