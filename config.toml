@@ -7,6 +7,35 @@ theme = 'LoveIt'
 	# LoveIt version
   version = "0.2.X"
 
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    # 你可以在名稱 (允許 HTML 格式) 之前添加其他信息, 例如圖標
+    pre = ""
+    # 你可以在名稱 (允許 HTML 格式) 之後添加其他信息, 例如圖標
+    post = ""
+    name = "文章"
+    url = "/posts/"
+    # 當你將鼠標懸停在此菜單鏈接上時, 將顯示的標題
+    title = ""
+    weight = 1
+  [[menu.main]]
+    identifier = "tags"
+    pre = ""
+    post = ""
+    name = "標簽"
+    url = "/tags/"
+    title = ""
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    pre = ""
+    post = ""
+    name = "分類"
+    url = "/categories/"
+    title = ""
+    weight = 3
+
 [markup]
   # syntax highlight (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
