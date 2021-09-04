@@ -1,43 +1,150 @@
 baseURL = 'http://example.org/'
-languageCode = 'en-us'
 title = 'My New Hugo Site'
 theme = 'LoveIt'
 
+# [en, zh-cn, fr, ...] determines default content language
+defaultContentLanguage = "zh-tw"
+# language code
+languageCode = "zh-tw"
+
 [params]
-	# LoveIt version
+  # LoveIt version
   version = "0.2.X"
 
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    # 你可以在名稱 (允許 HTML 格式) 之前添加其他信息, 例如圖標
-    pre = ""
-    # 你可以在名稱 (允許 HTML 格式) 之後添加其他信息, 例如圖標
-    post = ""
-    name = "文章"
-    url = "/posts/"
-    # 當你將鼠標懸停在此菜單鏈接上時, 將顯示的標題
-    title = ""
-    weight = 1
-  [[menu.main]]
-    identifier = "tags"
-    pre = ""
-    post = ""
-    name = "標簽"
-    url = "/tags/"
-    title = ""
-    weight = 2
-  [[menu.main]]
-    identifier = "categories"
-    pre = ""
-    post = ""
-    name = "分類"
-    url = "/categories/"
-    title = ""
-    weight = 3
+[permalinks]
+  posts = "/posts/:slug.html"
+
+[Languages]
+    [Languages.en]
+        title = "Kourtney's Blog"
+        weight = 1
+        languageName = "English"
+
+        [[Languages.en.menu.main]]
+            pre = "<i class='fab fa-fw fa-github'></i>"
+            name = "GitHub"
+            identifier = "github"
+            url = "https://github.com/klee1611"
+            weight = 1
+        [[Languages.en.menu.main]]
+            identifier = "posts"
+            pre = ""
+            post = ""
+            name = "Posts"
+            url = "/posts/"
+            # 當你將鼠標懸停在此菜單鏈接上時, 將顯示的標題
+            title = ""
+            weight = 1
+        [[Languages.en.menu.main]]
+            identifier = "tags"
+            pre = ""
+            post = ""
+            name = "Tags"
+            url = "/tags/"
+            title = ""
+            weight = 2
+        [[Languages.en.menu.main]]
+            identifier = "categories"
+            pre = ""
+            post = ""
+            name = "Categories"
+            url = "/categories/"
+            title = ""
+            weight = 3
+
+    [Languages.zh-tw]
+        title = "Kourtney's Blog"
+        weight = 2
+        languageName = "繁體中文"
+
+        [[Languages.zh-tw.menu.main]]
+            pre = "<i class='fab fa-fw fa-github'></i>"
+            name = "GitHub"
+            identifier = "github"
+            url = "https://github.com/klee1611"
+            weight = 1
+        [[Languages.zh-tw.menu.main]]
+            identifier = "posts"
+            # 你可以在名稱 (允許 HTML 格式) 之前添加其他信息, 例如圖標
+            pre = ""
+            # 你可以在名稱 (允許 HTML 格式) 之後添加其他信息, 例如圖標
+            post = ""
+            name = "文章"
+            url = "/posts/"
+            # 當你將鼠標懸停在此菜單鏈接上時, 將顯示的標題
+            title = ""
+            weight = 1
+        [[Languages.zh-tw.menu.main]]
+            identifier = "tags"
+            pre = ""
+            post = ""
+            name = "標簽"
+            url = "/tags/"
+            title = ""
+            weight = 2
+        [[Languages.zh-tw.menu.main]]
+            identifier = "categories"
+            pre = ""
+            post = ""
+            name = "分類"
+            url = "/categories/"
+            title = ""
+            weight = 3
 
 [markup]
   # syntax highlight (https://gohugo.io/content-management/syntax-highlighting)
   [markup.highlight]
     # LoveIt issue(https://github.com/dillonzq/LoveIt/issues/158)
     noClasses = false
+  [markup.tableOfContents]
+      endLevel = 3
+      ordered = false
+      startLevel = 1
+
+[params.home]
+    [params.home.profile]
+        enable = true
+        social = true
+        gravatarEmail = "kourtneylee1611@gmail.com"
+        title = "Kourtney's Space"
+        subtitle = "Keep coding, keep learning"
+        typeit = true
+    [params.home.posts]
+        enable = true
+        paginate = 10
+
+[params.social]
+    GitHub = "klee1611"
+    Linkedin = "kuo-hsiu-lee-5928b9a6"
+    Email = "kourtneylee1611@gmail.com"
+    RSS = true
+
+[params.page]
+    [params.page.toc]
+	    enable = true
+        keepStatic = false
+        auto = false
+    [params.page.code]
+        copy = true
+    [params.page.share]
+        enable = true
+        Twitter = true
+        Facebook = true
+        Linkedin = false
+    [params.page.comment]
+        enable = true
+        [params.page.comment.gitalk]
+            enable = true
+            owner = "klee1611"
+            repo = "klee1611.github.io"
+            clientId = "9039cf9e5ad3113a26a0"
+            clientSecret = "f7944019c2817fafd830792a4b68d2c38ff69521"
+
+[author]
+    name = "Kourtney Lee"
+    email = "kourtneylee1611@gmail.com"
+
+[sitemap]
+    changefreq = "weekly"
+    filename = "sitemap.xml"
+
