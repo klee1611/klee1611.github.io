@@ -1,5 +1,5 @@
-baseURL = 'http://example.org/'
-title = 'My New Hugo Site'
+baseURL = 'http://klee1611.github.io/'
+title = "Kourtney's Space"
 theme = 'LoveIt'
 
 # [en, zh-cn, fr, ...] determines default content language
