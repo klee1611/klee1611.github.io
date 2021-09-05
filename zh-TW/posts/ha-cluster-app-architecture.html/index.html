@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>HA cluster 筆記和 Application 設計 - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="HA cluster 筆記和 Application 設計" />
+<meta property="og:description" content="設計比較大流量的系統時早晚要遇上 cluster 的問題。
+Cluster 一台以上的機器(node)組成的集合，
+有三種不同的目的:
+Load Balancing 讓多台機器一起盡可能的平均分擔任務，
+加速應用程式執行。
+High Availability (HA) 為了高可用性和備援，
+如果其中一台機器突然掛了其他的機器可以接替。
+High Performance Computing 高效能/平行運算系統，
+簡稱 HPC cluster，
+結合多台機器的硬體來增加運算能力，
+用來解決單一一台機器不能解決的任務。
+HA 運作模式 有很多種例如 N&#43;1, N&#43;M, &hellip;
+但最常見的是 two-node cluster，
+two-node cluster 有兩種運作方式:
+ Active-Passive Active-Acitve  Active-Passive (AP) Master-slave 的設計，
+正常狀況下只有 master (Active) 在做 service，
+當 master (Active) 出現問題時 slave (Passive) 才接手，
+等到 master (Active) 恢復正常狀態再換回來由 master (Active) 繼續處理 service
+優點:
+ Fail-over 的速度快 設計跟設定都相對簡單  缺點:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/zh-tw/posts/ha-cluster-app-architecture.html/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-01-09T19:40:00+00:00" />
+<meta property="article:modified_time" content="2020-01-09T19:40:00+00:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="HA cluster 筆記和 Application 設計"/>
+<meta name="twitter:description" content="設計比較大流量的系統時早晚要遇上 cluster 的問題。
+Cluster 一台以上的機器(node)組成的集合，
+有三種不同的目的:
+Load Balancing 讓多台機器一起盡可能的平均分擔任務，
+加速應用程式執行。
+High Availability (HA) 為了高可用性和備援，
+如果其中一台機器突然掛了其他的機器可以接替。
+High Performance Computing 高效能/平行運算系統，
+簡稱 HPC cluster，
+結合多台機器的硬體來增加運算能力，
+用來解決單一一台機器不能解決的任務。
+HA 運作模式 有很多種例如 N&#43;1, N&#43;M, &hellip;
+但最常見的是 two-node cluster，
+two-node cluster 有兩種運作方式:
+ Active-Passive Active-Acitve  Active-Passive (AP) Master-slave 的設計，
+正常狀況下只有 master (Active) 在做 service，
+當 master (Active) 出現問題時 slave (Passive) 才接手，
+等到 master (Active) 恢復正常狀態再換回來由 master (Active) 繼續處理 service
+優點:
+ Fail-over 的速度快 設計跟設定都相對簡單  缺點:"/>
+<meta name="application-name" content="Kourtney&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/zh-tw/posts/ha-cluster-app-architecture.html/" /><link rel="prev" href="http://example.org/zh-tw/posts/common-dns-resource-record.html/" /><link rel="next" href="http://example.org/zh-tw/posts/docker-operating-2.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "HA cluster 筆記和 Application 設計",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/zh-tw\/posts\/ha-cluster-app-architecture.html\/"
+        },"genre": "posts","keywords": "Cluster, High availability, Architecture","wordcount":  158 ,
+        "url": "http:\/\/example.org\/zh-tw\/posts\/ha-cluster-app-architecture.html\/","datePublished": "2020-01-09T19:40:00+00:00","dateModified": "2020-01-09T19:40:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kourtney Lee"},"author": {
+                "@type": "Person",
+                "name": "Kourtney Lee"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/zh-tw/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/zh-tw/posts/"> 文章 </a><a class="menu-item" href="/zh-tw/tags/"> 標簽 </a><a class="menu-item" href="/zh-tw/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-tw/posts/ha-cluster-app-architecture.html/" selected>繁體中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/zh-tw/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/zh-tw/posts/" title="">文章</a><a class="menu-item" href="/zh-tw/tags/" title="">標簽</a><a class="menu-item" href="/zh-tw/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/zh-tw/posts/ha-cluster-app-architecture.html/" selected>繁體中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目錄</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">HA cluster 筆記和 Application 設計</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/zh-tw/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/zh-tw/categories/web-hosting/"><i class="far fa-folder fa-fw"></i>Web Hosting</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-09">2020-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 158 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 1 分鐘&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目錄</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#cluster">Cluster</a>
+          <ul>
+            <li><a href="#load-balancing">Load Balancing</a></li>
+            <li><a href="#high-availability-ha">High Availability (HA)</a></li>
+            <li><a href="#high-performance-computing">High Performance Computing</a></li>
+          </ul>
+        </li>
+        <li><a href="#ha-運作模式">HA 運作模式</a>
+          <ul>
+            <li><a href="#active-passive-ap">Active-Passive (AP)</a></li>
+            <li><a href="#active-active-aa">Active-Active (AA)</a></li>
+          </ul>
+        </li>
+        <li><a href="#application-design">Application Design</a>
+          <ul>
+            <li><a href="#remark">Remark</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>設計比較大流量的系統時早晚要遇上 cluster 的問題。</p>
+<h2 id="cluster">Cluster</h2>
+<p>一台以上的機器(node)組成的集合，<br>
+有三種不同的目的:</p>
+<h3 id="load-balancing">Load Balancing</h3>
+<p>讓多台機器一起盡可能的平均分擔任務，<br>
+加速應用程式執行。</p>
+<h3 id="high-availability-ha">High Availability (HA)</h3>
+<p>為了高可用性和備援，<br>
+如果其中一台機器突然掛了其他的機器可以接替。</p>
+<!-- raw HTML omitted -->
+<h3 id="high-performance-computing">High Performance Computing</h3>
+<p>高效能/平行運算系統，<br>
+簡稱 HPC cluster，<br>
+結合多台機器的硬體來增加運算能力，<br>
+用來解決單一一台機器不能解決的任務。</p>
+<h2 id="ha-運作模式">HA 運作模式</h2>
+<p>有很多種例如 N+1, N+M, &hellip;<br>
+但最常見的是 two-node cluster，<br>
+two-node cluster 有兩種運作方式:</p>
+<ul>
+<li>Active-Passive</li>
+<li>Active-Acitve</li>
+</ul>
+<h3 id="active-passive-ap">Active-Passive (AP)</h3>
+<p>Master-slave 的設計，<br>
+正常狀況下只有 master (Active) 在做 service，<br>
+當 master (Active) 出現問題時 slave (Passive) 才接手，<br>
+等到 master (Active) 恢復正常狀態再換回來由 master (Active) 繼續處理 service</p>
+<p>優點:</p>
+<ul>
+<li>Fail-over 的速度快</li>
+<li>設計跟設定都相對簡單</li>
+</ul>
+<p>缺點:</p>
+<ul>
+<li>沒辦法同時做 load balance 會浪費一些硬體</li>
+</ul>
+<h3 id="active-active-aa">Active-Active (AA)</h3>
+<p>兩台機器都同時有自己獨立執行的 service (都同時是 Active)，<br>
+同時也互相備援 (當對方的 Passive)，<br>
+當其中一台出現問題時另一台接手他的 service。</p>
+<p>優點:</p>
+<ul>
+<li>正常運作的時候兩台機器都沒有閒置，<br>
+運作效益高</li>
+</ul>
+<p>缺點:</p>
+<ul>
+<li>Fail-over 之後機器的負擔變大，<br>
+速度變慢</li>
+<li>設計設定相對複雜</li>
+</ul>
+<h2 id="application-design">Application Design</h2>
+<ul>
+<li>需要有相對簡單的方法來 start, stop, force-stop service 和檢查 service 目前的狀態。<br>
+=&gt; 設計 application 的時候要有 command line interface 或 script 能夠做到這點<br>
+=&gt; 兩台機器上的 service 要互相可以知道對方狀態跟發生意外的時候要能啟動 or 停止</li>
+<li>需要有 shared storage，<br>
+而且 Application 要能將自己的狀態盡量仔細的紀錄到 shared storage。<br>
+=&gt; 兩台機器切換的時候才不會少東西</li>
+<li>要能 restart 另一個 node 並恢復到 failure 發生前的狀態<br>
+=&gt; 恢復 failure 前的狀態可以用存到 shared storage 的狀態來做</li>
+<li>當 application crash 的時候不能毀損存到 shared storage 上的資料<br>
+=&gt; 另外一邊要用</li>
+</ul>
+<h3 id="remark">Remark</h3>
+<ul>
+<li>Application upgrade 時會發生的狀況要考慮進去</li>
+<li>有些 SQL 或 noSQL 本身有支援這類的設定可以採用可以減少不少麻煩</li>
+</ul>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新於 2020-01-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.org/zh-tw/posts/ha-cluster-app-architecture.html/" data-title="HA cluster 筆記和 Application 設計" data-hashtags="Cluster,High availability,Architecture"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/zh-tw/posts/ha-cluster-app-architecture.html/" data-hashtag="Cluster"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-tw/tags/cluster/">Cluster</a>,&nbsp;<a href="/zh-tw/tags/high-availability/">High availability</a>,&nbsp;<a href="/zh-tw/tags/architecture/">Architecture</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zh-tw/">主頁</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zh-tw/posts/common-dns-resource-record.html/" class="prev" rel="prev" title="常用 DNS Resource Record 紀錄"><i class="fas fa-angle-left fa-fw"></i>常用 DNS Resource Record 紀錄</a>
+            <a href="/zh-tw/posts/docker-operating-2.html/" class="next" rel="next" title="Docker 操作紀錄(二)">Docker 操作紀錄(二)<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/zh-tw/" target="_blank">Kourtney Lee</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂端">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼簿","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2020-01-09T19:40:00Z","owner":"klee1611","repo":"klee1611.github.io","title":"HA cluster 筆記和 Application 設計"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-127207785-1');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>
+</html>

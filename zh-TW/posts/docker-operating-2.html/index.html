@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Docker 操作紀錄(二) - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Docker 操作紀錄(二)" />
+<meta property="og:description" content="接上一篇 {% post_link docker-operating-1 Docker 操作紀錄 (一) %}
+Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
+docker rm CONTAINER_NAME 或
+docker rm CONTAINER_ID 刪完之後可以用
+docker ps -a 確認一下是不是 container 就消失了。
+用之前 Export 過的 Container 建立 image 之前 export 過一個 container 出來叫 c_test.tar，
+可以用它來建立一個新的 image:
+cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_repo 是 repository 的名字，
+1.0 是 tag，
+可以用
+docker images 列出來看一下。
+有了 image 就可以建立新的 container 了。
+刪除 Image 如果我用" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/zh-tw/posts/docker-operating-2.html/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-01-09T20:40:00+00:00" />
+<meta property="article:modified_time" content="2020-01-09T20:40:00+00:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker 操作紀錄(二)"/>
+<meta name="twitter:description" content="接上一篇 {% post_link docker-operating-1 Docker 操作紀錄 (一) %}
+Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
+docker rm CONTAINER_NAME 或
+docker rm CONTAINER_ID 刪完之後可以用
+docker ps -a 確認一下是不是 container 就消失了。
+用之前 Export 過的 Container 建立 image 之前 export 過一個 container 出來叫 c_test.tar，
+可以用它來建立一個新的 image:
+cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_repo 是 repository 的名字，
+1.0 是 tag，
+可以用
+docker images 列出來看一下。
+有了 image 就可以建立新的 container 了。
+刪除 Image 如果我用"/>
+<meta name="application-name" content="Kourtney&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://example.org/zh-tw/posts/docker-operating-2.html/" /><link rel="prev" href="http://example.org/zh-tw/posts/ha-cluster-app-architecture.html/" /><link rel="next" href="http://example.org/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Docker 操作紀錄(二)",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/example.org\/zh-tw\/posts\/docker-operating-2.html\/"
+        },"genre": "posts","keywords": "Docker, Virtual Environment","wordcount":  249 ,
+        "url": "http:\/\/example.org\/zh-tw\/posts\/docker-operating-2.html\/","datePublished": "2020-01-09T20:40:00+00:00","dateModified": "2020-01-09T20:40:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kourtney Lee"},"author": {
+                "@type": "Person",
+                "name": "Kourtney Lee"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/zh-tw/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/zh-tw/posts/"> 文章 </a><a class="menu-item" href="/zh-tw/tags/"> 標簽 </a><a class="menu-item" href="/zh-tw/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/zh-tw/posts/docker-operating-2.html/" selected>繁體中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/zh-tw/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/zh-tw/posts/" title="">文章</a><a class="menu-item" href="/zh-tw/tags/" title="">標簽</a><a class="menu-item" href="/zh-tw/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/zh-tw/posts/docker-operating-2.html/" selected>繁體中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目錄</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Docker 操作紀錄(二)</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/zh-tw/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/zh-tw/categories/docker/"><i class="far fa-folder fa-fw"></i>Docker</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-09">2020-01-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 249 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 2 分鐘&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目錄</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#docker-基本使用">Docker 基本使用</a>
+          <ul>
+            <li><a href="#刪除-container">刪除 Container</a></li>
+            <li><a href="#用之前-export-過的-container-建立-image">用之前 Export 過的 Container 建立 image</a></li>
+            <li><a href="#刪除-image">刪除 Image</a></li>
+          </ul>
+        </li>
+        <li><a href="#dockerfile">Dockerfile</a></li>
+        <li><a href="#建立-image">建立 Image</a></li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p>接上一篇  {% post_link docker-operating-1 Docker 操作紀錄 (一) %}</p>
+<h2 id="docker-基本使用">Docker 基本使用</h2>
+<h3 id="刪除-container">刪除 Container</h3>
+<p>記得先用 <code>stop</code> 停止 container 才能刪。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker rm CONTAINER_NAME
+</code></pre></div><p>或</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker rm CONTAINER_ID
+</code></pre></div><!-- raw HTML omitted -->
+<p>刪完之後可以用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker ps -a
+</code></pre></div><p>確認一下是不是 container 就消失了。</p>
+<h3 id="用之前-export-過的-container-建立-image">用之前 Export 過的 Container 建立 image</h3>
+<p>之前 export 過一個 container 出來叫 c_test.tar，<br>
+可以用它來建立一個新的 image:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">cat c_test.tar <span class="p">|</span> docker import - ubuntu_test_repo:1.0
+</code></pre></div><p>後面那個 <code>ubuntu_test_repo</code> 是 repository 的名字，<br>
+<code>1.0</code> 是 tag，<br>
+可以用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker images
+</code></pre></div><p>列出來看一下。<br>
+有了 image 就可以建立新的 container 了。</p>
+<h3 id="刪除-image">刪除 Image</h3>
+<p>如果我用</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker images 
+</code></pre></div><p>列出的 image 有這些:</p>
+<pre><code>REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+aaa                 2.0                 b30c39fffb75        4 seconds ago       64.2MB
+aaa                 1.0                 6b8046192d83        8 seconds ago       64.2MB
+ubuntu_test_repo    1.0                 864c36a752c3        5 hours ago         64.2MB
+ubuntu              latest              549b9b86cb8d        2 weeks ago         64.2MB
+hello-world         latest              fce289e99eb9        12 months ago       1.84kB
+</code></pre><p>要刪除 repository 名稱為 aaa，<br>
+tag 為 1.0 的 image:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker rmi aaa:1.0
+</code></pre></div><p>就可以了。<br>
+所有用這個 image 的 container 要先被 <code>rm</code> 掉。</p>
+<h2 id="dockerfile">Dockerfile</h2>
+<p>是一個檔案，<br>
+可以讓使用者用更簡單的方式來建立 image。</p>
+<p>分成四個部分:</p>
+<ul>
+<li>Image</li>
+<li>Maintainer (誰要對這個 dockerfile 負責)</li>
+<li>操作 command</li>
+<li>Container 啟動時的 command</li>
+</ul>
+<p>舉一個 nginx 的例子:</p>
+<pre><code># 這是 dockerfile 的註解方式
+
+# Image
+FROM ubuntu
+
+# Maintainer
+MAINTAINER user user@example.com
+
+# 操作 command
+RUN apt-get update \
+&amp;&amp; apt-get upgrade -y \
+&amp;&amp; apt-get install -y nginx
+
+# Container 啟動時的 command
+CMD [&quot;nginx&quot;, &quot;-g&quot;, &quot;daemon off;&quot;]
+</code></pre><h2 id="建立-image">建立 Image</h2>
+<p>可以用 <code>docker build</code> 來建立 image。</p>
+<p>把剛剛那個 nginx 的 Dockerfile 放在 <code>/tmp/d_file</code> 下，<br>
+名稱叫 <code>test_d_file</code> 要 build 成 image，<br>
+並給那個 image 一個 <code>test-nginx-img/1.0</code> 的 tag:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker build -t test-nginx-img/1.0 -f /tmp/d_file/test_d_file .
+</code></pre></div><p>build 完之後用 <code>docker images</code> 看一下:</p>
+<pre><code>REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+test-nginx-img/1.0   latest              7293588d00a9        27 seconds ago      152MB
+</code></pre><h2 id="reference">Reference</h2>
+<p><a href="https://docs.docker.com/v17.09/get-started/" target="_blank" rel="noopener noreffer">Docker docs</a></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新於 2020-01-09</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://example.org/zh-tw/posts/docker-operating-2.html/" data-title="Docker 操作紀錄(二)" data-hashtags="Docker,Virtual Environment"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://example.org/zh-tw/posts/docker-operating-2.html/" data-hashtag="Docker"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-tw/tags/docker/">Docker</a>,&nbsp;<a href="/zh-tw/tags/virtual-environment/">Virtual Environment</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/zh-tw/">主頁</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/zh-tw/posts/ha-cluster-app-architecture.html/" class="prev" rel="prev" title="HA cluster 筆記和 Application 設計"><i class="fas fa-angle-left fa-fw"></i>HA cluster 筆記和 Application 設計</a>
+            <a href="/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/" class="next" rel="next" title="C&#43;&#43; STL Containers 比較 - array, vector, deque, list, forward_list">C&#43;&#43; STL Containers 比較 - array, vector, deque, list, forward_list<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/zh-tw/" target="_blank">Kourtney Lee</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂端">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼簿","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2020-01-09T20:40:00Z","owner":"klee1611","repo":"klee1611.github.io","title":"Docker 操作紀錄(二)"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-127207785-1');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>
+</html>

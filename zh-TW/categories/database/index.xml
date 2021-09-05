@@ -1,0 +1,35 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Database - 分類 - Kourtney&#39;s Blog</title>
+        <link>http://example.org/zh-tw/categories/database/</link>
+        <description>Database - 分類 - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 06 Jan 2020 04:06:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-tw/categories/database/" rel="self" type="application/rss+xml" /><item>
+    <title>RDBMS 與 NoSQL 差異筆記</title>
+    <link>http://example.org/zh-tw/posts/rdbms-acid-nosql-cap.html/</link>
+    <pubDate>Mon, 06 Jan 2020 04:06:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/posts/rdbms-acid-nosql-cap.html/</guid>
+    <description><![CDATA[<h2 id="rdbms">RDBMS</h2>
+<p><strong>Relational Database Management System</strong></p>
+<ul>
+<li>在資料之前有很強的 <strong>Relation (關聯性)</strong> 的時候使用:
+<ul>
+<li>設計不太會去變動的 schema 將 table 互相關聯，<br>
+就可以去透過 SQL 取得想要的資料</li>
+</ul>
+</li>
+<li><strong>資料的正確性</strong>很重要的時候使用
+<ul>
+<li>通常會提供<strong>ACID</strong></li>
+</ul>
+</li>
+<li>要變動 schema 是一件很浩大的工程:
+<ul>
+<li>要把的 table 的 schema 更新還要 migrate 資料</li>
+<li>所有用到要被更換 schema 的 table 的程式都要修改</li>
+</ul>
+</li>
+</ul>]]></description>
+</item></channel>
+</rss>

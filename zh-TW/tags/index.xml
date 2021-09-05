@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Tags - 標籤 - Kourtney&#39;s Blog</title>
+        <link>http://example.org/zh-tw/tags/</link>
+        <description>Tags - 標籤 - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-tw/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Cookie</title>
+    <link>http://example.org/zh-tw/tags/cookie/</link>
+    <pubDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/cookie/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Session</title>
+    <link>http://example.org/zh-tw/tags/session/</link>
+    <pubDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/session/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Web</title>
+    <link>http://example.org/zh-tw/tags/web/</link>
+    <pubDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/web/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Ubuntu</title>
+    <link>http://example.org/zh-tw/tags/ubuntu/</link>
+    <pubDate>Sun, 11 Apr 2021 00:14:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/ubuntu/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Windows terminal</title>
+    <link>http://example.org/zh-tw/tags/windows-terminal/</link>
+    <pubDate>Sun, 11 Apr 2021 00:14:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/windows-terminal/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>WSL</title>
+    <link>http://example.org/zh-tw/tags/wsl/</link>
+    <pubDate>Sun, 11 Apr 2021 00:14:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/wsl/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Programming</title>
+    <link>http://example.org/zh-tw/tags/programming/</link>
+    <pubDate>Tue, 21 Jan 2020 01:19:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/programming/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>C&#43;&#43;</title>
+    <link>http://example.org/zh-tw/tags/c&#43;&#43;/</link>
+    <pubDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/c&#43;&#43;/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>container</title>
+    <link>http://example.org/zh-tw/tags/container/</link>
+    <pubDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/container/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>STL</title>
+    <link>http://example.org/zh-tw/tags/stl/</link>
+    <pubDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/tags/stl/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

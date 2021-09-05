@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>C - 標籤 - Kourtney&#39;s Blog</title>
+        <link>http://example.org/zh-tw/tags/c/</link>
+        <description>C - 標籤 - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-tw/tags/c/" rel="self" type="application/rss+xml" /><item>
+    <title>C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理</title>
+    <link>http://example.org/zh-tw/posts/const-pointer-reference.html/</link>
+    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/posts/const-pointer-reference.html/</guid>
+    <description><![CDATA[<h2 id="const-和一般變數">const 和一般變數</h2>
+<p>有兩種寫法</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="n">TYPE</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
+</span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
+</code></pre></div><p>意思都一樣，<br>
+就是這個變數不能再被指定別的值。</p>
+<p>舉個例：</p>]]></description>
+</item></channel>
+</rss>

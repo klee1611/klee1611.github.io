@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>DNS - 標籤 - Kourtney&#39;s Blog</title>
+        <link>http://example.org/zh-tw/tags/dns/</link>
+        <description>DNS - 標籤 - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 08 Jan 2020 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-tw/tags/dns/" rel="self" type="application/rss+xml" /><item>
+    <title>常用 DNS Resource Record 紀錄</title>
+    <link>http://example.org/zh-tw/posts/common-dns-resource-record.html/</link>
+    <pubDate>Wed, 08 Jan 2020 20:40:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://example.org/zh-tw/posts/common-dns-resource-record.html/</guid>
+    <description><![CDATA[<p>DNS server 中每個 DNS zone 都有一個 zone file，<br>
+DNS zone 通常會是一個 single domain (有時候不是)，<br>
+zone file 是由很多個 dns resource record (RR) 組成，<br>
+RR 有很多種不同的類型，<br>
+紀錄一下常用幾種。</p>
+<h2 id="a-record">A record</h2>
+<p>將 hostname 對應到 IPv4。 (32-bit)</p>
+<pre><code>hostname IN A xxx.xxx.xxx.xxx
+</code></pre>]]></description>
+</item></channel>
+</rss>
