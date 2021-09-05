@@ -11,6 +11,12 @@ theme = 'LoveIt'
   # LoveIt version
   version = "0.2.X"
 
+[params.analytics]
+    enable = true
+    [params.analytics.google]
+        id = "UA-127207785-1"
+        anonymizeIP = false
+
 [permalinks]
   posts = "/posts/:slug.html"
 
