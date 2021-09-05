@@ -1,13 +1,10 @@
 ---
 title: WSL 2 on Windows Part 2 - Terminal 介面設定
-tags:
-  - WSL
-  - Ubuntu
-  - Windows terminal
+tags: [WSL, Ubuntu, Windows terminal]
 categories:
   - Develop environment
-date: 2021-04-11 00:14:00
-slug: 'wsl-2-on-windows-part-2'
+date: 2021-04-11 00:14:00 +0800
+slug: wsl-2-on-windows-part-2
 ---
 ![wsl2_terminal_screenshot](/images/wsl2_terminal_screenshot.png)
   

@@ -28,14 +28,14 @@ Concurrent 指的是
 ### Parallel Processing
 Parallel processing 可能長這樣：
 
-![parallel_processing](/img/concurrent_processing_and_parallel_processing/parallel_processing.jpeg)
+![parallel_processing](/images/concurrent_processing_and_parallel_processing/parallel_processing.jpeg)
 
 Process A 和 Process B 同時都在執行。
 
 ### Concurrent Processing
 但對 Concurrent processing 來說，執行的狀況可以像上面的 Parallel processing，也可以長這樣：
 
-![consurrent_processing](/img/concurrent_processing_and_parallel_processing/concurrent_processing.jpeg)
+![consurrent_processing](/images/concurrent_processing_and_parallel_processing/concurrent_processing.jpeg)
 
 Process A 和 Process B 都處於 in progress 的狀態但是兩者是交互執行的。
 

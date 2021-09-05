@@ -31,7 +31,7 @@ LikeCoin 是一種虛擬貨幣，
 所以我只好去 Medium 隨便找了個有加 Like Button 的文章，  
 把 Firefox 的 Debug Console 打開觀察了一下:  
   
-![like_btn_in_medium](/img/likebutton_for_github_pages/code_for_likecoin.png){:height="300px" width="550px" align="center"}
+![like_btn_in_medium](/images/likebutton_for_github_pages/code_for_likecoin.png){:height="300px" width="550px" align="center"}
   
 OK 原來是用 ``iframe``，  
 ``src`` 的網址看起來直接把黑筆塗掉的地方替換成自己的 **liker ID** 跟**文章網址**應該就能 Work 了。  
@@ -45,7 +45,7 @@ OK 原來是用 ``iframe``，
 我用的 jekyll theme 產生 blog post 的 template html 放在 ``_layouts/post.html``，  
 所以我就在放 content 的地方的最後面加上了：  
   
-![code_to_embed](/img/likebutton_for_github_pages/code_to_embed.png)
+![code_to_embed](/images/likebutton_for_github_pages/code_to_embed.png)
   
 Liker ID 要換成自己的 Liker ID，  
 ``site.url`` 和 ``page.url`` 是 ``Liquid`` 的語法，  

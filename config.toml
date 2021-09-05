@@ -3,9 +3,9 @@ title = 'My New Hugo Site'
 theme = 'LoveIt'
 
 # [en, zh-cn, fr, ...] determines default content language
-defaultContentLanguage = "zh-tw"
+#defaultContentLanguage = "zh-tw"
 # language code
-languageCode = "zh-tw"
+#languageCode = "zh-tw"
 
 [params]
   # LoveIt version
@@ -111,7 +111,7 @@ languageCode = "zh-tw"
         typeit = true
     [params.home.posts]
         enable = true
-        paginate = 10
+        paginate = 6
 
 [params.social]
     GitHub = "klee1611"
