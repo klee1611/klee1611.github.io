@@ -10,6 +10,7 @@ slug: 'linux-process-group-sessions-daemon'
 決定把 daemon 是什麼弄清楚，  
 網路上找到的資料實在又多又不清楚，  
 乾脆直接從 [The Linux Programming Interface](https://www.oreilly.com/library/view/the-linux-programming/9781593272203/) 把相關資料找出來做筆記。  
+<!--more-->
   
 * **Process group** 是一堆 **related processes** 組成的集合
 * **Session** 是一堆 **related process groups** 組成的集合
@@ -20,7 +21,6 @@ Process group 和 Session 的定義是為了方便做 **job control**。
 一堆 related processes 共享相同的 **process group identifier (PGID)**。  
 這群 process 裡面會有一個 **process group leader** 是建立這個 process group 的 process，  
 這個 process group leader 的 PID 就會是這個 process group 的 PGID。  
-<!--more-->
   
 任何一個新的 process 被建立出來的時候，  
 他的 PGID 就會是他的 parent 的 PGID。  
