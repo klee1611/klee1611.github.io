@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Virtual Environment - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://example.org/zh-tw/tags/virtual-environment/</link>
+        <link>http://klee1611.github.io/zh-tw/tags/virtual-environment/</link>
         <description>Virtual Environment - 標籤 - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-tw/tags/virtual-environment/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/zh-tw/tags/virtual-environment/" rel="self" type="application/rss+xml" /><item>
     <title>Docker 操作紀錄(二)</title>
-    <link>http://example.org/zh-tw/posts/docker-operating-2.html/</link>
+    <link>http://klee1611.github.io/zh-tw/posts/docker-operating-2.html/</link>
     <pubDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/zh-tw/posts/docker-operating-2.html/</guid>
+    <guid>http://klee1611.github.io/zh-tw/posts/docker-operating-2.html/</guid>
     <description><![CDATA[接上一篇 {% post_link docker-operating-1 Docker 操作紀錄 (一) %}
 Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
 docker rm CONTAINER_NAME 或
@@ -25,10 +25,10 @@ docker images 列出來看一下。
 刪除 Image 如果我用]]></description>
 </item><item>
     <title>Docker 操作紀錄(一)</title>
-    <link>http://example.org/zh-tw/posts/docker-operating-1.html/</link>
+    <link>http://klee1611.github.io/zh-tw/posts/docker-operating-1.html/</link>
     <pubDate>Wed, 01 Jan 2020 17:06:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/zh-tw/posts/docker-operating-1.html/</guid>
+    <guid>http://klee1611.github.io/zh-tw/posts/docker-operating-1.html/</guid>
     <description><![CDATA[<p>亂七八糟的 project 太多，<br>
 每個 project 用的 module 版本又不一樣，<br>
 有些東西要測試的時候還要把 port 打開有點危險，<br>

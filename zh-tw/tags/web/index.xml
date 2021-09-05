@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Web - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://example.org/zh-tw/tags/web/</link>
+        <link>http://klee1611.github.io/zh-tw/tags/web/</link>
         <description>Web - 標籤 - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</lastBuildDate><atom:link href="http://example.org/zh-tw/tags/web/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/zh-tw/tags/web/" rel="self" type="application/rss+xml" /><item>
     <title>Stateless HTTP, Stateful Session and Cookies</title>
-    <link>http://example.org/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</link>
+    <link>http://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</link>
     <pubDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>http://example.org/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</guid>
+    <guid>http://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</guid>
     <description><![CDATA[Stateless HTTP HTTP 是一種 stateless 的 protocol，
 也就是說每一次的 request / response 都是獨立的，
 和之前或之後的 request / response 無關。
