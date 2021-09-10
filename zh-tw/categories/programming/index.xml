@@ -14,10 +14,10 @@
 Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，
 並一起共享 elements。
 舉個 Java 的例子，
-{% codeblock lang:java %} int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; {% endcodeblock %} arr2 就是一個 arr1 的 shallow copy。
+int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; arr2 就是一個 arr1 的 shallow copy。
  一旦其中一個 structure 更動了 element 另外一個也會受到影響。  Deep Copy 全部複製，
 Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
 還把舊的 structure 的 elements 全部複製了一份給新的。
-{% codeblock lang:java %} int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.]]></description>
+int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt; arr1.]]></description>
 </item></channel>
 </rss>

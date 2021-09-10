@@ -95,13 +95,17 @@ client 和 server 就可以透過 request / response 夾帶的 state 資訊製�
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-tw/tags/web/">Web</a>,&nbsp;<a href="/zh-tw/tags/session/">Session</a>,&nbsp;<a href="/zh-tw/tags/cookie/">Cookie</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/zh-tw/posts/wsl-2-on-windows-part-2.html/">WSL 2 on Windows Part 2 - Terminal 介面設定</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/zh-tw/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-04-11">2021-04-11</time></span>&nbsp;<span class="post-category">收錄於 <a href="/zh-tw/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div><div class="content">把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上， 方便操作。
-## Windows Terminal 功能 用 Windows terminal 可以 * 啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換)
- 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題  這些功能比原生 WSL 能支援的多的多， 也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，
-於是就決定選用 windows terminal 了。 ## Windows terminal 設定 到 Microsoft store 搜尋 Windows terminal 並安裝完成後，
+    </h1><div class="post-meta"><span class="post-author"><a href="/zh-tw/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-04-11">2021-04-11</time></span>&nbsp;<span class="post-category">收錄於 <a href="/zh-tw/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div><div class="content">把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，
+方便操作。
+Windows Terminal 功能 用 Windows terminal 可以
+ 啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換) 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題  這些功能比原生 WSL 能支援的多的多，
+也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，
+於是就決定選用 windows terminal 了。
+Windows terminal 設定 到 Microsoft store 搜尋 Windows terminal 並安裝完成後，
 就可以開始設定 Windows terminal。
 將 WSL 設定為 Windows terminal 預設開啟環境  在 windows terminal 的 [V] 箭頭選單選擇&quot;設定(settings)&quot;，
-會出現一個 JSON 檔可以修改，</div><div class="post-footer">
+會出現一個 JSON 檔可以修改，
+從 profiles 的 list 找到想要做為預設的 Linux distribution，</div><div class="post-footer">
         <a href="/zh-tw/posts/wsl-2-on-windows-part-2.html/">閱讀全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-tw/tags/wsl/">WSL</a>,&nbsp;<a href="/zh-tw/tags/ubuntu/">Ubuntu</a>,&nbsp;<a href="/zh-tw/tags/windows-terminal/">Windows terminal</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
@@ -123,11 +127,11 @@ WSL 2 支援的能力比 WSL 1 更好。
 Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，
 並一起共享 elements。
 舉個 Java 的例子，
-{% codeblock lang:java %} int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; {% endcodeblock %} arr2 就是一個 arr1 的 shallow copy。
+int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; arr2 就是一個 arr1 的 shallow copy。
  一旦其中一個 structure 更動了 element 另外一個也會受到影響。  Deep Copy 全部複製，
 Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
 還把舊的 structure 的 elements 全部複製了一份給新的。
-{% codeblock lang:java %} int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.</div><div class="post-footer">
+int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt; arr1.</div><div class="post-footer">
         <a href="/zh-tw/posts/deep-copy-shallow-copy.html/">閱讀全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-tw/tags/programming/">Programming</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
@@ -143,7 +147,7 @@ Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-tw/tags/programming/">Programming</a>,&nbsp;<a href="/zh-tw/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/zh-tw/tags/stl/">STL</a>,&nbsp;<a href="/zh-tw/tags/container/">container</a></div></div>
 </article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/zh-tw/posts/docker-operating-2.html/">Docker 操作紀錄(二)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/zh-tw/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2020-01-09">2020-01-09</time></span>&nbsp;<span class="post-category">收錄於 <a href="/zh-tw/categories/docker/"><i class="far fa-folder fa-fw"></i>Docker</a></span></div><div class="content">接上一篇 {% post_link docker-operating-1 Docker 操作紀錄 (一) %}
+    </h1><div class="post-meta"><span class="post-author"><a href="/zh-tw/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2020-01-09">2020-01-09</time></span>&nbsp;<span class="post-category">收錄於 <a href="/zh-tw/categories/docker/"><i class="far fa-folder fa-fw"></i>Docker</a></span></div><div class="content">接上一篇 Docker 操作紀錄 (一)
 Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
 docker rm CONTAINER_NAME 或
 docker rm CONTAINER_ID 刪完之後可以用
@@ -155,7 +159,8 @@ cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_r
 可以用
 docker images 列出來看一下。
 有了 image 就可以建立新的 container 了。
-刪除 Image 如果我用</div><div class="post-footer">
+刪除 Image 如果我用
+docker images 列出的 image 有這些:</div><div class="post-footer">
         <a href="/zh-tw/posts/docker-operating-2.html/">閱讀全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/zh-tw/tags/docker/">Docker</a>,&nbsp;<a href="/zh-tw/tags/virtual-environment/">Virtual Environment</a></div></div>
 </article><ul class="pagination"><li class="page-item active">

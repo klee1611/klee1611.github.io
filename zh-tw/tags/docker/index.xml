@@ -10,7 +10,7 @@
     <pubDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://klee1611.github.io/zh-tw/posts/docker-operating-2.html/</guid>
-    <description><![CDATA[接上一篇 {% post_link docker-operating-1 Docker 操作紀錄 (一) %}
+    <description><![CDATA[接上一篇 Docker 操作紀錄 (一)
 Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
 docker rm CONTAINER_NAME 或
 docker rm CONTAINER_ID 刪完之後可以用
@@ -22,7 +22,8 @@ cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_r
 可以用
 docker images 列出來看一下。
 有了 image 就可以建立新的 container 了。
-刪除 Image 如果我用]]></description>
+刪除 Image 如果我用
+docker images 列出的 image 有這些:]]></description>
 </item><item>
     <title>Docker 操作紀錄(一)</title>
     <link>http://klee1611.github.io/zh-tw/posts/docker-operating-1.html/</link>

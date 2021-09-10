@@ -10,11 +10,11 @@
 Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，
 並一起共享 elements。
 舉個 Java 的例子，
-{% codeblock lang:java %} int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; {% endcodeblock %} arr2 就是一個 arr1 的 shallow copy。
+int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; arr2 就是一個 arr1 的 shallow copy。
  一旦其中一個 structure 更動了 element 另外一個也會受到影響。  Deep Copy 全部複製，
 Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
 還把舊的 structure 的 elements 全部複製了一份給新的。
-{% codeblock lang:java %} int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1." />
+int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt; arr1." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-01-21T01:19:00+00:00" />
@@ -26,11 +26,11 @@ Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
 Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，
 並一起共享 elements。
 舉個 Java 的例子，
-{% codeblock lang:java %} int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; {% endcodeblock %} arr2 就是一個 arr1 的 shallow copy。
+int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; arr2 就是一個 arr1 的 shallow copy。
  一旦其中一個 structure 更動了 element 另外一個也會受到影響。  Deep Copy 全部複製，
 Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
 還把舊的 structure 的 elements 全部複製了一份給新的。
-{% codeblock lang:java %} int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1."/>
+int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt; arr1."/>
 <meta name="application-name" content="Kourtney&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -43,7 +43,7 @@ Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/klee1611.github.io\/zh-tw\/posts\/deep-copy-shallow-copy.html\/"
-        },"genre": "posts","keywords": "Programming","wordcount":  97 ,
+        },"genre": "posts","keywords": "Programming","wordcount":  83 ,
         "url": "http:\/\/klee1611.github.io\/zh-tw\/posts\/deep-copy-shallow-copy.html\/","datePublished": "2020-01-21T01:19:00+00:00","dateModified": "2020-01-21T01:19:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kourtney Lee"},"author": {
@@ -97,7 +97,7 @@ Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
             <div class="toc-content always-active" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Deep Copy and Shallow Copy</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/zh-tw/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/zh-tw/categories/programming/"><i class="far fa-folder fa-fw"></i>Programming</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-21">2020-01-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 97 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-21">2020-01-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 83 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 1 分鐘&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -124,11 +124,9 @@ Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構
 並一起<strong>共享 elements</strong>。</p>
 <p>舉個 Java 的例子，</p>
 <!-- raw HTML omitted -->
-<p>{% codeblock lang:java %}
-int[] arr1 = {1, 2, 3};
-int[] arr2 = arr1;
-{% endcodeblock %}
-<code>arr2</code> 就是一個 <code>arr1</code> 的 shallow copy。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">arr1</span> <span class="o">=</span> <span class="o">{</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">};</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span> <span class="o">=</span> <span class="n">arr1</span><span class="o">;</span>
+</code></pre></div><p><code>arr2</code> 就是一個 <code>arr1</code> 的 shallow copy。</p>
 <ul>
 <li>一旦其中一個 structure 更動了 element 另外一個也會受到影響。</li>
 </ul>
@@ -136,14 +134,13 @@ int[] arr2 = arr1;
 <p>全部複製，<br>
 Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，<br>
 還把<strong>舊的 structure 的 elements 全部複製了一份給新的</strong>。</p>
-<p>{% codeblock lang:java %}
-int[] arr1 = {1, 2, 3};
-int[] arr2 = new int[arr1.length];</p>
-<p>for (int i = 0; i &lt; arr1.length; ++i) {
-arr2[i] = arr1[i];
-}
-{% endcodeblock %}
-<code>arr2</code> 是 <code>arr1</code> 的 deep copy。</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="kt">int</span><span class="o">[]</span> <span class="n">arr1</span> <span class="o">=</span> <span class="o">{</span><span class="n">1</span><span class="o">,</span> <span class="n">2</span><span class="o">,</span> <span class="n">3</span><span class="o">};</span>
+<span class="kt">int</span><span class="o">[]</span> <span class="n">arr2</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="o">[</span><span class="n">arr1</span><span class="o">.</span><span class="na">length</span><span class="o">];</span>
+
+<span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="n">0</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">arr1</span><span class="o">.</span><span class="na">length</span><span class="o">;</span> <span class="o">++</span><span class="n">i</span><span class="o">)</span> <span class="o">{</span>
+	<span class="n">arr2</span><span class="o">[</span><span class="n">i</span><span class="o">]</span> <span class="o">=</span> <span class="n">arr1</span><span class="o">[</span><span class="n">i</span><span class="o">];</span>
+<span class="o">}</span>
+</code></pre></div><p><code>arr2</code> 是 <code>arr1</code> 的 deep copy。</p>
 <ul>
 <li>占用的記憶體空間比較多。</li>
 </ul>
