@@ -1,31 +1,6 @@
 <urlset
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://klee1611.github.io/categories/</loc><changefreq>weekly</changefreq><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-tw"
-                        href="http://klee1611.github.io/zh-tw/categories/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://klee1611.github.io/categories/"
-                    /></url><url>
-            <loc>http://klee1611.github.io/</loc><changefreq>weekly</changefreq><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-tw"
-                        href="http://klee1611.github.io/zh-tw/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://klee1611.github.io/"
-                    /></url><url>
-            <loc>http://klee1611.github.io/tags/</loc><changefreq>weekly</changefreq><xhtml:link
-                        rel="alternate"
-                        hreflang="zh-tw"
-                        href="http://klee1611.github.io/zh-tw/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://klee1611.github.io/tags/"
-                    /></url></urlset>
+            <loc>http://klee1611.github.io/categories/</loc><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/</loc><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/tags/</loc><changefreq>weekly</changefreq></url></urlset>

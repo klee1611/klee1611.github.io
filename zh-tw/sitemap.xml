@@ -1,39 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-    xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://klee1611.github.io/zh-tw/categories/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="http://klee1611.github.io/categories/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-tw"
-                    href="http://klee1611.github.io/zh-tw/categories/"
-                    /></url><url>
+            <loc>http://klee1611.github.io/zh-tw/categories/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/zh-tw/tags/cookie/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/zh-tw/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="http://klee1611.github.io/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-tw"
-                    href="http://klee1611.github.io/zh-tw/"
-                    /></url><url>
+            <loc>http://klee1611.github.io/zh-tw/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/zh-tw/posts/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/zh-tw/tags/session/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/zh-tw/tags/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="http://klee1611.github.io/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="zh-tw"
-                    href="http://klee1611.github.io/zh-tw/tags/"
-                    /></url><url>
+            <loc>http://klee1611.github.io/zh-tw/tags/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/zh-tw/tags/web/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/zh-tw/categories/web/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/zh-tw/categories/develop-environment/</loc><lastmod>2021-04-11T00:14:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
