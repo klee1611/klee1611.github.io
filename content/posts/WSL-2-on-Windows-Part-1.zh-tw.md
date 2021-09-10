@@ -1,6 +1,5 @@
 ---
 title: WSL 2 on Windows Part 1 - 安裝啟用
-author: Kourtney Lee 李國秀
 tags:
   - WSL
   - Ubuntu
