@@ -7,6 +7,8 @@ theme = 'LoveIt'
 # language code
 #languageCode = "zh-tw"
 
+enableRobotsTXT = true
+
 [params]
   # LoveIt version
   version = "0.2.X"
