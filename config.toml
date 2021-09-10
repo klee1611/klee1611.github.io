@@ -12,6 +12,8 @@ enableRobotsTXT = true
 [params]
   # LoveIt version
   version = "0.2.X"
+  # site default theme ("light", "dark", "auto")
+  defaultTheme = "dark"
 
 [params.analytics]
     enable = true
@@ -44,7 +46,7 @@ enableRobotsTXT = true
             url = "/posts/"
             # 當你將鼠標懸停在此菜單鏈接上時, 將顯示的標題
             title = ""
-            weight = 1
+            weight = 2
         [[Languages.zh-tw.menu.main]]
             identifier = "tags"
             pre = ""
@@ -52,7 +54,7 @@ enableRobotsTXT = true
             name = "標簽"
             url = "/tags/"
             title = ""
-            weight = 2
+            weight = 3
         [[Languages.zh-tw.menu.main]]
             identifier = "categories"
             pre = ""
@@ -60,7 +62,7 @@ enableRobotsTXT = true
             name = "分類"
             url = "/categories/"
             title = ""
-            weight = 3
+            weight = 4
 
     [Languages.en]
         title = "Kourtney's Blog"
@@ -81,7 +83,7 @@ enableRobotsTXT = true
             url = "/posts/"
             # 當你將鼠標懸停在此菜單鏈接上時, 將顯示的標題
             title = ""
-            weight = 1
+            weight = 2
         [[Languages.en.menu.main]]
             identifier = "tags"
             pre = ""
@@ -89,7 +91,7 @@ enableRobotsTXT = true
             name = "Tags"
             url = "/tags/"
             title = ""
-            weight = 2
+            weight = 3
         [[Languages.en.menu.main]]
             identifier = "categories"
             pre = ""
@@ -97,7 +99,7 @@ enableRobotsTXT = true
             name = "Categories"
             url = "/categories/"
             title = ""
-            weight = 3
+            weight = 4
 
 [markup]
   # syntax highlight (https://gohugo.io/content-management/syntax-highlighting)
