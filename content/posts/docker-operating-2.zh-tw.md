@@ -7,7 +7,7 @@ tags: [Docker, Virtual Environment]
 slug: docker-operating-2
 ---
 
-接上一篇  {% post_link docker-operating-1 Docker 操作紀錄 (一) %}
+接上一篇 [Docker 操作紀錄 (一)](/zh-tw/posts/docker-operating-1.html)
 
   
 ## Docker 基本使用

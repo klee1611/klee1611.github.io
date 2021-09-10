@@ -34,6 +34,3 @@ build 完之後檢查一下沒有問題，
 ## 更新
 已從 Jekyll migrate 到 Hexo，  
 這篇方法僅適用 Jekyll。  
-
-mission accomplished!!  
-

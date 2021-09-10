@@ -22,7 +22,8 @@ slug: rdbms-acid-nosql-cap
 ### ACID
 通常 RDBMS 會保證交易(transaction)有四種特性:
 * **Atomicity**  
-只有**全部做完(Commit)**跟**全部沒做(Abort)**兩種可能，沒有做了一半這種狀態  
+只有 **全部做完(Commit)** 跟 **全部沒做(Abort)** 兩種可能，  
+沒有做了一半這種狀態  
 如果執行中有 error 的話就是 Rollback 成全部沒做的狀態
 
 * **Consistency**  

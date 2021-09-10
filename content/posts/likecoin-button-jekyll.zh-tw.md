@@ -1,5 +1,5 @@
 ---
-title: Add LikeWidget to Github Pages
+title: Add LikeWidget to Jekyll theme
 date: 2019-12-27 04:06:00 +0800
 categories:
 - Github Pages
@@ -25,13 +25,13 @@ LikeCoin 是一種虛擬貨幣，
 ## Like Rewords Button for Github Pages
 因為看起來很有趣的樣子所以我就註冊了一個帳號，  
 然後默默的發現 Like Button 的 Widget 有支援 Medium, WordPress, Oice, Matters, ...等等等等，  
-但是沒有支援 Github Pages!!!  
+但是沒有發現 Jekyll 的支援!!!  
   
-很合理因為 Github Pages 要怎麼設計完全是看個人，  
+很合理因為 Jekyll theme 要怎麼設計完全是看個人，  
 所以我只好去 Medium 隨便找了個有加 Like Button 的文章，  
 把 Firefox 的 Debug Console 打開觀察了一下:  
   
-![like_btn_in_medium](/images/likebutton_for_github_pages/code_for_likecoin.png){:height="300px" width="550px" align="center"}
+![like_btn_in_medium](/images/likebutton_for_github_pages/code_for_likecoin.png)
   
 OK 原來是用 ``iframe``，  
 ``src`` 的網址看起來直接把黑筆塗掉的地方替換成自己的 **liker ID** 跟**文章網址**應該就能 Work 了。  

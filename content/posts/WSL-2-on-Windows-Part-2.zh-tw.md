@@ -7,24 +7,22 @@ date: 2021-04-11 00:14:00 +0800
 slug: wsl-2-on-windows-part-2
 ---
 ![wsl2_terminal_screenshot](/images/wsl2_terminal_screenshot.png)
-  
-   
-把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，  
+
+把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，  
 方便操作。
 
-## Windows Terminal 功能
+## Windows Terminal 功能
 用 Windows terminal 可以
- * 啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換)
- * 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵)
- * 使用搜尋功能
- * 自訂佈景主題 
-
-這些功能比原生 WSL 能支援的多的多，  
+* 啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換)
+* 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵)
+* 使用搜尋功能
+* 自訂佈景主題
+  
+這些功能比原生 WSL 能支援的多的多，  
 也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，  
-<!-- more -->
-於是就決定選用 windows terminal 了。
-  
-## Windows terminal 設定
+於是就決定選用 windows terminal 了。  
+
+## Windows terminal 設定
 到 Microsoft store 搜尋 Windows terminal 並安裝完成後，  
 就可以開始設定 Windows terminal。  
   
@@ -34,13 +32,13 @@ slug: wsl-2-on-windows-part-2
 從 ``profiles`` 的 ``list`` 找到想要做為預設的 Linux distribution，  
 例如:
 ```
-			{
-                "guid": "{xxxxxxxxxxxxxxx}",
-                "hidden": false,
-                "name": "Ubuntu-18.04",
-                "commandline": "wsl.exe",
-                "source": "Windows.Terminal.Wsl"
-            }
+{
+    "guid": "{xxxxxxxxxxxxxxx}",
+    "hidden": false,
+    "name": "Ubuntu-18.04",
+    "commandline": "wsl.exe",
+    "source": "Windows.Terminal.Wsl"
+}
 ```
 把 guid 後面那串被大括號括起來的 ID 複製起來，  
 用那個 ID 取代原本預設開啟的 profile 的 ID:
