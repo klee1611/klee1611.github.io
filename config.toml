@@ -23,46 +23,9 @@ enableRobotsTXT = true
   posts = "/posts/:slug.html"
 
 [Languages]
-    [Languages.en]
-        title = "Kourtney's Blog"
-        weight = 1
-        languageName = "English"
-
-        [[Languages.en.menu.main]]
-            pre = "<i class='fab fa-fw fa-github'></i>"
-            name = "GitHub"
-            identifier = "github"
-            url = "https://github.com/klee1611"
-            weight = 1
-        [[Languages.en.menu.main]]
-            identifier = "posts"
-            pre = ""
-            post = ""
-            name = "Posts"
-            url = "/posts/"
-            # 當你將鼠標懸停在此菜單鏈接上時, 將顯示的標題
-            title = ""
-            weight = 1
-        [[Languages.en.menu.main]]
-            identifier = "tags"
-            pre = ""
-            post = ""
-            name = "Tags"
-            url = "/tags/"
-            title = ""
-            weight = 2
-        [[Languages.en.menu.main]]
-            identifier = "categories"
-            pre = ""
-            post = ""
-            name = "Categories"
-            url = "/categories/"
-            title = ""
-            weight = 3
-
     [Languages.zh-tw]
         title = "Kourtney's Blog"
-        weight = 2
+        weight = 1
         languageName = "繁體中文"
 
         [[Languages.zh-tw.menu.main]]
@@ -95,6 +58,43 @@ enableRobotsTXT = true
             pre = ""
             post = ""
             name = "分類"
+            url = "/categories/"
+            title = ""
+            weight = 3
+
+    [Languages.en]
+        title = "Kourtney's Blog"
+        weight = 2
+        languageName = "English"
+
+        [[Languages.en.menu.main]]
+            pre = "<i class='fab fa-fw fa-github'></i>"
+            name = "GitHub"
+            identifier = "github"
+            url = "https://github.com/klee1611"
+            weight = 1
+        [[Languages.en.menu.main]]
+            identifier = "posts"
+            pre = ""
+            post = ""
+            name = "Posts"
+            url = "/posts/"
+            # 當你將鼠標懸停在此菜單鏈接上時, 將顯示的標題
+            title = ""
+            weight = 1
+        [[Languages.en.menu.main]]
+            identifier = "tags"
+            pre = ""
+            post = ""
+            name = "Tags"
+            url = "/tags/"
+            title = ""
+            weight = 2
+        [[Languages.en.menu.main]]
+            identifier = "categories"
+            pre = ""
+            post = ""
+            name = "Categories"
             url = "/categories/"
             title = ""
             weight = 3
