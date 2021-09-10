@@ -46,7 +46,7 @@ two or more processes are in progress at the same time
             },"description": ""
     }
     </script></head>
-    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : '' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
 
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
@@ -148,7 +148,10 @@ two or more processes are in progress at the same time
 <p>Process A 和 Process B 都處於 in progress 的狀態但是兩者是交互執行的。</p>
 <h3 id="summary">Summary</h3>
 <p>要特別注意的一點是，parallel processing 是 concurrent processing 的一種。<br>
-只要是有<strong>兩個以上的 process 同時在執行中就是 Concurrent processing</strong>，達成這樣的目標有很多種做法，而 parallel processing 只是其中之一。</p></div><div class="post-footer" id="post-footer">
+只要是有<strong>兩個以上的 process 同時在執行中就是 Concurrent processing</strong>，達成這樣的目標有很多種做法，而 parallel processing 只是其中之一。</p></div><div id="likecoin-wrap" align='center'>
+    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fzh-tw%2fposts%2fconcurrent-process-parallel-process.html%2f" frameborder="0"></iframe>
+</div>
+<div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
