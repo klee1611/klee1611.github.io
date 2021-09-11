@@ -1,0 +1,34 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>C&#43;&#43; - 標籤 - Kourtney&#39;s Blog</title>
+        <link>http://klee1611.github.io/tags/c&#43;&#43;/</link>
+        <description>C&#43;&#43; - 標籤 - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43; STL Containers 比較 - array, vector, deque, list, forward_list</title>
+    <link>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link>
+    <pubDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid>
+    <description><![CDATA[Array 固定大小的連續記憶體空間所構成
+優缺點  不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1))  Vector 可以動態改變儲存空間大小的 array
+底層實作方式  動態的 allocate array，
+當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去   實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大  優缺點  random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢  Deque Double-ended queue，
+一樣可以動態的改變 container 大小。
+不同的 library 實作 deque 的方式可能會不一樣。
+優缺點  可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，]]></description>
+</item><item>
+    <title>C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理</title>
+    <link>http://klee1611.github.io/posts/const-pointer-reference.html/</link>
+    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/const-pointer-reference.html/</guid>
+    <description><![CDATA[<h2 id="const-和一般變數">const 和一般變數</h2>
+<p>有兩種寫法</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="n">TYPE</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
+</span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
+</code></pre></div><p>意思都一樣，<br>
+就是這個變數不能再被指定別的值。</p>
+<p>舉個例：</p>]]></description>
+</item></channel>
+</rss>

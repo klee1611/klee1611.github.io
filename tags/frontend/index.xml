@@ -1,0 +1,27 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Frontend - 標籤 - Kourtney&#39;s Blog</title>
+        <link>http://klee1611.github.io/tags/frontend/</link>
+        <description>Frontend - 標籤 - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/frontend/" rel="self" type="application/rss+xml" /><item>
+    <title>Add LikeWidget to Jekyll theme</title>
+    <link>http://klee1611.github.io/posts/likecoin-button-jekyll.html/</link>
+    <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/likecoin-button-jekyll.html/</guid>
+    <description><![CDATA[<h2 id="likecoin">LikeCoin</h2>
+<p>前陣子對 LikeCoin 發生了一點興趣，<br>
+LikeCoin 是一種虛擬貨幣，<br>
+創立的初衷是想做為一種獎勵創作者的機制，<br>
+創作者在文章裡放入<strong>Like Button</strong>，<br>
+讓大家對他的按鈕按讚鼓掌，<br>
+他就能收到相對的 LikeCoin。</p>
+<p>至於作者能獲得多少 LikeCoin 就要看按讚讀者的帳戶種類，<br>
+如果讀者註冊的是免費帳戶，<br>
+那點下的讚就由 LikeCoin 的基金會按比例支付;<br>
+如果讀者註冊的是付費帳戶，<br>
+那就看該讀者當月按下多少讚按比例分配。<br>
+詳情可以參考 <a href="https://medium.com/likecoin/%E8%AE%9A%E8%B3%9E%E5%85%AC%E6%B0%91%E6%87%B6%E4%BA%BA%E5%8C%85-e7079686bf6e" target="_blank" rel="noopener noreffer">LikeCoin 的 Medium</a>。</p>]]></description>
+</item></channel>
+</rss>

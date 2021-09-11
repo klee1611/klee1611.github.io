@@ -1,0 +1,21 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>container - 標籤 - Kourtney&#39;s Blog</title>
+        <link>http://klee1611.github.io/tags/container/</link>
+        <description>container - 標籤 - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/container/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43; STL Containers 比較 - array, vector, deque, list, forward_list</title>
+    <link>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link>
+    <pubDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid>
+    <description><![CDATA[Array 固定大小的連續記憶體空間所構成
+優缺點  不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1))  Vector 可以動態改變儲存空間大小的 array
+底層實作方式  動態的 allocate array，
+當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去   實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大  優缺點  random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢  Deque Double-ended queue，
+一樣可以動態的改變 container 大小。
+不同的 library 實作 deque 的方式可能會不一樣。
+優缺點  可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，]]></description>
+</item></channel>
+</rss>

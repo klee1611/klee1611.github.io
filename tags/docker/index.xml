@@ -1,0 +1,44 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Docker - 標籤 - Kourtney&#39;s Blog</title>
+        <link>http://klee1611.github.io/tags/docker/</link>
+        <description>Docker - 標籤 - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/docker/" rel="self" type="application/rss+xml" /><item>
+    <title>Docker 操作紀錄(二)</title>
+    <link>http://klee1611.github.io/posts/docker-operating-2.html/</link>
+    <pubDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/docker-operating-2.html/</guid>
+    <description><![CDATA[接上一篇 Docker 操作紀錄 (一)
+Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
+docker rm CONTAINER_NAME 或
+docker rm CONTAINER_ID 刪完之後可以用
+docker ps -a 確認一下是不是 container 就消失了。
+用之前 Export 過的 Container 建立 image 之前 export 過一個 container 出來叫 c_test.tar，
+可以用它來建立一個新的 image:
+cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_repo 是 repository 的名字，
+1.0 是 tag，
+可以用
+docker images 列出來看一下。
+有了 image 就可以建立新的 container 了。
+刪除 Image 如果我用
+docker images 列出的 image 有這些:]]></description>
+</item><item>
+    <title>Docker 操作紀錄(一)</title>
+    <link>http://klee1611.github.io/posts/docker-operating-1.html/</link>
+    <pubDate>Wed, 01 Jan 2020 17:06:00 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/docker-operating-1.html/</guid>
+    <description><![CDATA[<p>亂七八糟的 project 太多，<br>
+每個 project 用的 module 版本又不一樣，<br>
+有些東西要測試的時候還要把 port 打開有點危險，<br>
+乾脆直接用 docker 把不同的 project 拆開免得互相干擾，<br>
+還不用把自己實體機器的 port 打開來測程式能不能跑。</p>
+<p>還可以抓各種 Image 來放到 Container 上搞壞再重開(?</p>
+<h2 id="docker-基本概念">Docker 基本概念</h2>
+<p>一言以蔽之，<br>
+簡化版的 VM。<br>
+因為 docker 不會把整個 operating system 都裝起來，</p>]]></description>
+</item></channel>
+</rss>

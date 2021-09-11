@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Add LikeWidget to Jekyll theme - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Add LikeWidget to Jekyll theme" />
+<meta property="og:description" content="LikeCoin
+前陣子對 LikeCoin 發生了一點興趣，
+LikeCoin 是一種虛擬貨幣，
+創立的初衷是想做為一種獎勵創作者的機制，
+創作者在文章裡放入Like Button，
+讓大家對他的按鈕按讚鼓掌，
+他就能收到相對的 LikeCoin。
+至於作者能獲得多少 LikeCoin 就要看按讚讀者的帳戶種類，
+如果讀者註冊的是免費帳戶，
+那點下的讚就由 LikeCoin 的基金會按比例支付;
+如果讀者註冊的是付費帳戶，
+那就看該讀者當月按下多少讚按比例分配。
+詳情可以參考 LikeCoin 的 Medium。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://klee1611.github.io/posts/likecoin-button-jekyll.html/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2019-12-27T04:06:00+00:00" />
+<meta property="article:modified_time" content="2019-12-27T04:06:00+00:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Add LikeWidget to Jekyll theme"/>
+<meta name="twitter:description" content="LikeCoin
+前陣子對 LikeCoin 發生了一點興趣，
+LikeCoin 是一種虛擬貨幣，
+創立的初衷是想做為一種獎勵創作者的機制，
+創作者在文章裡放入Like Button，
+讓大家對他的按鈕按讚鼓掌，
+他就能收到相對的 LikeCoin。
+至於作者能獲得多少 LikeCoin 就要看按讚讀者的帳戶種類，
+如果讀者註冊的是免費帳戶，
+那點下的讚就由 LikeCoin 的基金會按比例支付;
+如果讀者註冊的是付費帳戶，
+那就看該讀者當月按下多少讚按比例分配。
+詳情可以參考 LikeCoin 的 Medium。"/>
+<meta name="application-name" content="Kourtney&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://klee1611.github.io/posts/likecoin-button-jekyll.html/" /><link rel="prev" href="http://klee1611.github.io/posts/remove-ds_store-from-all-git-repo.html/" /><link rel="next" href="http://klee1611.github.io/posts/const-pointer-reference.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Add LikeWidget to Jekyll theme",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/klee1611.github.io\/posts\/likecoin-button-jekyll.html\/"
+        },"genre": "posts","keywords": "Likecoin, Blockchain, Frontend, Github Pages","wordcount":  150 ,
+        "url": "http:\/\/klee1611.github.io\/posts\/likecoin-button-jekyll.html\/","datePublished": "2019-12-27T04:06:00+00:00","dateModified": "2019-12-27T04:06:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kourtney Lee"},"author": {
+                "@type": "Person",
+                "name": "Kourtney Lee"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 標簽 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/likecoin-button-jekyll.html/" selected>繁體中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">標簽</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/likecoin-button-jekyll.html/" selected>繁體中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目錄</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Add LikeWidget to Jekyll theme</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/github-pages/"><i class="far fa-folder fa-fw"></i>Github Pages</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-27">2019-12-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 150 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 1 分鐘&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目錄</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#likecoin">LikeCoin</a></li>
+        <li><a href="#like-rewords-button-for-github-pages">Like Rewords Button for Github Pages</a></li>
+        <li><a href="#更新">更新</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="likecoin">LikeCoin</h2>
+<p>前陣子對 LikeCoin 發生了一點興趣，<br>
+LikeCoin 是一種虛擬貨幣，<br>
+創立的初衷是想做為一種獎勵創作者的機制，<br>
+創作者在文章裡放入<strong>Like Button</strong>，<br>
+讓大家對他的按鈕按讚鼓掌，<br>
+他就能收到相對的 LikeCoin。</p>
+<p>至於作者能獲得多少 LikeCoin 就要看按讚讀者的帳戶種類，<br>
+如果讀者註冊的是免費帳戶，<br>
+那點下的讚就由 LikeCoin 的基金會按比例支付;<br>
+如果讀者註冊的是付費帳戶，<br>
+那就看該讀者當月按下多少讚按比例分配。<br>
+詳情可以參考 <a href="https://medium.com/likecoin/%E8%AE%9A%E8%B3%9E%E5%85%AC%E6%B0%91%E6%87%B6%E4%BA%BA%E5%8C%85-e7079686bf6e" target="_blank" rel="noopener noreffer">LikeCoin 的 Medium</a>。</p>
+<h2 id="like-rewords-button-for-github-pages">Like Rewords Button for Github Pages</h2>
+<p>因為看起來很有趣的樣子所以我就註冊了一個帳號，<br>
+然後默默的發現 Like Button 的 Widget 有支援 Medium, WordPress, Oice, Matters, &hellip;等等等等，<br>
+但是沒有發現 Jekyll 的支援!!!</p>
+<p>很合理因為 Jekyll theme 要怎麼設計完全是看個人，<br>
+所以我只好去 Medium 隨便找了個有加 Like Button 的文章，<br>
+把 Firefox 的 Debug Console 打開觀察了一下:</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/likebutton_for_github_pages/code_for_likecoin.png"
+        data-srcset="/images/likebutton_for_github_pages/code_for_likecoin.png, /images/likebutton_for_github_pages/code_for_likecoin.png 1.5x, /images/likebutton_for_github_pages/code_for_likecoin.png 2x"
+        data-sizes="auto"
+        alt="/images/likebutton_for_github_pages/code_for_likecoin.png"
+        title="like_btn_in_medium" /></p>
+<p>OK 原來是用 <code>iframe</code>，<br>
+<code>src</code> 的網址看起來直接把黑筆塗掉的地方替換成自己的 <strong>liker ID</strong> 跟<strong>文章網址</strong>應該就能 Work 了。<br>
+所以要把 Like Button 加到 blog post 裡有兩種方法:</p>
+<ol>
+<li>把 <code>iframe</code> 加到 blog post</li>
+<li>把 <code>iframe</code> 加到產生 blog post 的 template html</li>
+</ol>
+<p>顯然第二種方法比較好，<br>
+只要加一次之後所有的 blog post 在產生的時候就可以自己生出 Like Button。</p>
+<p>我用的 jekyll theme 產生 blog post 的 template html 放在 <code>_layouts/post.html</code>，<br>
+所以我就在放 content 的地方的最後面加上了：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="/images/likebutton_for_github_pages/code_to_embed.png"
+        data-srcset="/images/likebutton_for_github_pages/code_to_embed.png, /images/likebutton_for_github_pages/code_to_embed.png 1.5x, /images/likebutton_for_github_pages/code_to_embed.png 2x"
+        data-sizes="auto"
+        alt="/images/likebutton_for_github_pages/code_to_embed.png"
+        title="code_to_embed" /></p>
+<p>Liker ID 要換成自己的 Liker ID，<br>
+<code>site.url</code> 和 <code>page.url</code> 是 <code>Liquid</code> 的語法，<br>
+代表的是當下的那篇 blog post 的網址，<br>
+如果 Github Pages 用的是 jekyll 的話就可以直接這樣用。<br>
+加完之後之後每篇 blog post 都會自己產生一個 Like button 了。</p>
+<h2 id="更新">更新</h2>
+<p>已從 Jekyll migrate 到 Hexo，<br>
+這篇方法原理不變但 code 放的位置和內容要修正。</p></div><div id="likecoin-wrap" align='center'>
+    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fposts%2flikecoin-button-jekyll.html%2f" frameborder="0"></iframe>
+</div>
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新於 2019-12-27</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://klee1611.github.io/posts/likecoin-button-jekyll.html/" data-title="Add LikeWidget to Jekyll theme" data-hashtags="Likecoin,Blockchain,Frontend,Github Pages"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://klee1611.github.io/posts/likecoin-button-jekyll.html/" data-hashtag="Likecoin"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/likecoin/">Likecoin</a>,&nbsp;<a href="/tags/blockchain/">Blockchain</a>,&nbsp;<a href="/tags/frontend/">Frontend</a>,&nbsp;<a href="/tags/github-pages/">Github Pages</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主頁</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/remove-ds_store-from-all-git-repo.html/" class="prev" rel="prev" title="從所有的 git repository 移除 .DS_Store 追蹤"><i class="fas fa-angle-left fa-fw"></i>從所有的 git repository 移除 .DS_Store 追蹤</a>
+            <a href="/posts/const-pointer-reference.html/" class="next" rel="next" title="C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理">C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Kourtney Lee</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂端">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼簿","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2019-12-27T04:06:00Z","owner":"klee1611","repo":"klee1611.github.io","title":"Add LikeWidget to Jekyll theme"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-127207785-1');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>
+</html>
