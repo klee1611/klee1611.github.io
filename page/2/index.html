@@ -77,6 +77,24 @@
         alt="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp"
         title="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp" /></a></div><h1 class="home-title">Kourtney's Space</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/klee1611" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/kuo-hsiu-lee-5928b9a6" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="mailto:kourtneylee1611@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/docker-operating-2.html/">Docker 操作紀錄(二)</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2020-01-09">2020-01-09</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/docker/"><i class="far fa-folder fa-fw"></i>Docker</a></span></div><div class="content">接上一篇 Docker 操作紀錄 (一)
+Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
+docker rm CONTAINER_NAME 或
+docker rm CONTAINER_ID 刪完之後可以用
+docker ps -a 確認一下是不是 container 就消失了。
+用之前 Export 過的 Container 建立 image 之前 export 過一個 container 出來叫 c_test.tar，
+可以用它來建立一個新的 image:
+cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_repo 是 repository 的名字，
+1.0 是 tag，
+可以用
+docker images 列出來看一下。
+有了 image 就可以建立新的 container 了。
+刪除 Image 如果我用
+docker images 列出的 image 有這些:</div><div class="post-footer">
+        <a href="/posts/docker-operating-2.html/">閱讀全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/virtual-environment/">Virtual Environment</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/ha-cluster-app-architecture.html/">HA cluster 筆記和 Application 設計</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2020-01-09">2020-01-09</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/web-hosting/"><i class="far fa-folder fa-fw"></i>Web Hosting</a></span></div><div class="content">設計比較大流量的系統時早晚要遇上 cluster 的問題。
 Cluster 一台以上的機器(node)組成的集合，
@@ -160,19 +178,6 @@ RR 有很多種不同的類型，<br>
 因為 docker 不會把整個 operating system 都裝起來，</p></div><div class="post-footer">
         <a href="/posts/docker-operating-1.html/">閱讀全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/virtual-environment/">Virtual Environment</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/jekyll-sitemap-github-pages.html/">Github Pages and Jekyll - sitemap</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2019-12-30">2019-12-30</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/github-pages/"><i class="far fa-folder fa-fw"></i>Github Pages</a></span></div><div class="content"><h2 id="sitemap">Sitemap</h2>
-<p>sitemap 基本上就一個 <code>.xml</code> 檔案，<br>
-裡面包含了網站有哪些頁面連結，<br>
-讓搜尋引擎去爬，<br>
-搜尋引擎爬完以後就可以建立 index，<br>
-之後有人在搜尋引擎打關鍵字才搜尋的到。</p>
-<h2 id="jekyll-sitemap">Jekyll-sitemap</h2>
-<p>Jekyll 有一個 plugin 叫做 <a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer">jekyll-stiemap</a>，<br>
-可以在每次 build 網站之後自動產生 sitemap。</p></div><div class="post-footer">
-        <a href="/posts/jekyll-sitemap-github-pages.html/">閱讀全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/jekyll/">Jekyll</a>,&nbsp;<a href="/tags/seo/">SEO</a>,&nbsp;<a href="/tags/github-pages/">Github Pages</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>

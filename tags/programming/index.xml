@@ -4,7 +4,25 @@
         <link>http://klee1611.github.io/tags/programming/</link>
         <description>Programming - 標籤 - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Tue, 21 Jan 2020 01:19:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/programming/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 26 Sep 2021 18:34:23 &#43;0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/programming/" rel="self" type="application/rss+xml" /><item>
+    <title>Pipenv Notes</title>
+    <link>http://klee1611.github.io/posts/pipenv-notes.html/</link>
+    <pubDate>Sun, 26 Sep 2021 18:34:23 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/pipenv-notes.html/</guid>
+    <description><![CDATA[Why Pipenv 當有很多 Python project 要維護，
+不同的 project 有可能使用相同的 python libraries 的不同版本，
+不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。
+過去使用 virtualenv + requirement.txt 的機制可以在不同的 project 使用同一個套件的不同版本，
+也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，
+但當套件需要更新時相當麻煩，
+需要手動再去倒出一份新的 requirement.txt，
+而且當 project 有不同環境的需求的時候(例如 development 環境和 production 環境)還要維護requirement-prod.txt 和 requirement-dev.txt 兩份套件設定，
+如果不搭配 pyenv 也無法切換不同的 python 版本。
+後來發現了 Python 官方推薦的 pipenv 解決了這些問題，
+可以方便的只用 command 做到：
+ 建立獨立的 python 版本和套件虛擬環境 安裝並記錄套件版本到自動生成的 Pipfile 和 Pipfile.lock，同時透過套件的 Hash 值檢查套件安全性 紀錄套件使用環境 (分開 development 和 production 環境) 讀取 .]]></description>
+</item><item>
     <title>Deep Copy and Shallow Copy</title>
     <link>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</link>
     <pubDate>Tue, 21 Jan 2020 01:19:00 &#43;0000</pubDate>

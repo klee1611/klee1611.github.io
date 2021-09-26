@@ -77,6 +77,22 @@
         alt="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp"
         title="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp" /></a></div><h1 class="home-title">Kourtney's Space</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/klee1611" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/kuo-hsiu-lee-5928b9a6" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="mailto:kourtneylee1611@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/pipenv-notes.html/">Pipenv Notes</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-09-26">2021-09-26</time></span></div><div class="content">Why Pipenv 當有很多 Python project 要維護，
+不同的 project 有可能使用相同的 python libraries 的不同版本，
+不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。
+過去使用 virtualenv + requirement.txt 的機制可以在不同的 project 使用同一個套件的不同版本，
+也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，
+但當套件需要更新時相當麻煩，
+需要手動再去倒出一份新的 requirement.txt，
+而且當 project 有不同環境的需求的時候(例如 development 環境和 production 環境)還要維護requirement-prod.txt 和 requirement-dev.txt 兩份套件設定，
+如果不搭配 pyenv 也無法切換不同的 python 版本。
+後來發現了 Python 官方推薦的 pipenv 解決了這些問題，
+可以方便的只用 command 做到：
+ 建立獨立的 python 版本和套件虛擬環境 安裝並記錄套件版本到自動生成的 Pipfile 和 Pipfile.lock，同時透過套件的 Hash 值檢查套件安全性 紀錄套件使用環境 (分開 development 和 production 環境) 讀取 .</div><div class="post-footer">
+        <a href="/posts/pipenv-notes.html/">閱讀全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/pipenv/">Pipenv</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/stateless-http-stateful-session-and-cookies.html/">Stateless HTTP, Stateful Session and Cookies</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-06-28">2021-06-28</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>Web</a></span></div><div class="content">Stateless HTTP HTTP 是一種 stateless 的 protocol，
 也就是說每一次的 request / response 都是獨立的，
@@ -145,24 +161,6 @@ int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt
 優缺點  可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，</div><div class="post-footer">
         <a href="/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/">閱讀全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/tags/stl/">STL</a>,&nbsp;<a href="/tags/container/">container</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/docker-operating-2.html/">Docker 操作紀錄(二)</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2020-01-09">2020-01-09</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/docker/"><i class="far fa-folder fa-fw"></i>Docker</a></span></div><div class="content">接上一篇 Docker 操作紀錄 (一)
-Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
-docker rm CONTAINER_NAME 或
-docker rm CONTAINER_ID 刪完之後可以用
-docker ps -a 確認一下是不是 container 就消失了。
-用之前 Export 過的 Container 建立 image 之前 export 過一個 container 出來叫 c_test.tar，
-可以用它來建立一個新的 image:
-cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_repo 是 repository 的名字，
-1.0 是 tag，
-可以用
-docker images 列出來看一下。
-有了 image 就可以建立新的 container 了。
-刪除 Image 如果我用
-docker images 列出的 image 有這些:</div><div class="post-footer">
-        <a href="/posts/docker-operating-2.html/">閱讀全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/docker/">Docker</a>,&nbsp;<a href="/tags/virtual-environment/">Virtual Environment</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
