@@ -22,6 +22,10 @@ defaultContentLanguage = 'zh-tw'
         id = "UA-127207785-1"
         anonymizeIP = false
 
+# Site verification code for search engine
+[params.verification]
+    google = "WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0"
+
 [permalinks]
   posts = "/posts/:slug.html"
 
