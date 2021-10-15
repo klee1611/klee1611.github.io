@@ -1,6 +1,8 @@
 <urlset
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     ><url>
+            <loc>http://klee1611.github.io/categories/</loc><lastmod>2021-09-26T18:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/categories/develop-environment/</loc><lastmod>2021-09-26T18:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/</loc><lastmod>2021-09-26T18:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/pipenv/</loc><lastmod>2021-09-26T18:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/posts/pipenv-notes.html/</loc><lastmod>2021-09-26T18:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
@@ -8,13 +10,11 @@
             <loc>http://klee1611.github.io/tags/programming/</loc><lastmod>2021-09-26T18:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/python/</loc><lastmod>2021-09-26T18:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/</loc><lastmod>2021-09-26T18:34:23&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/categories/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/cookie/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/session/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/web/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/categories/web/</loc><lastmod>2021-06-28T02:51:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/categories/develop-environment/</loc><lastmod>2021-04-11T00:14:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/ubuntu/</loc><lastmod>2021-04-11T00:14:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/windows-terminal/</loc><lastmod>2021-04-11T00:14:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/wsl/</loc><lastmod>2021-04-11T00:14:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
