@@ -77,6 +77,18 @@
         alt="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp"
         title="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp" /></a></div><h1 class="home-title">Kourtney's Space</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/klee1611" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/kuo-hsiu-lee-5928b9a6" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="mailto:kourtneylee1611@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/python-coroutine-asyncio.html/">Python Coroutine Asyncio</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-10-27">2021-10-27</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/concurrency-programming/"><i class="far fa-folder fa-fw"></i>Concurrency Programming</a></span></div><div class="content"><p>在出現 <code>asyncio</code> 前，<br>
+當一隻 Python 程式有很多需要並行執行的 task，<br>
+想要提升程式效能，<br>
+只能選用 multiprocessing 或 threading；<br>
+Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
+<code>asyncio</code> 可以用來撰寫 coroutines，<br>
+並使用 event loop 並行執行 coroutines，<br>
+減少程式不必要的等待時間以提升效能。</p></div><div class="post-footer">
+        <a href="/posts/python-coroutine-asyncio.html/">閱讀全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/concurrent-processing/">Concurrent Processing</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/pipenv-notes.html/">Pipenv Notes</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-09-26">2021-09-26</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div><div class="content"><h2 id="why-pipenv">Why Pipenv</h2>
 <p>當有很多 Python project 要維護，<br>
@@ -144,17 +156,6 @@ Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
 int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt; arr1.</div><div class="post-footer">
         <a href="/posts/deep-copy-shallow-copy.html/">閱讀全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/">C&#43;&#43; STL Containers 比較 - array, vector, deque, list, forward_list</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2020-01-12">2020-01-12</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/c++/"><i class="far fa-folder fa-fw"></i>C++</a></span></div><div class="content">Array 固定大小的連續記憶體空間所構成
-優缺點  不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1))  Vector 可以動態改變儲存空間大小的 array
-底層實作方式  動態的 allocate array，
-當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去   實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大  優缺點  random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢  Deque Double-ended queue，
-一樣可以動態的改變 container 大小。
-不同的 library 實作 deque 的方式可能會不一樣。
-優缺點  可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，</div><div class="post-footer">
-        <a href="/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/">閱讀全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a>,&nbsp;<a href="/tags/stl/">STL</a>,&nbsp;<a href="/tags/container/">container</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>

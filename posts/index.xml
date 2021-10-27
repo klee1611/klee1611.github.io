@@ -4,7 +4,21 @@
         <link>http://klee1611.github.io/posts/</link>
         <description>所有文章 | Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 26 Sep 2021 18:34:23 &#43;0800</lastBuildDate><atom:link href="http://klee1611.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 27 Oct 2021 16:39:27 &#43;0800</lastBuildDate><atom:link href="http://klee1611.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Python Coroutine Asyncio</title>
+    <link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link>
+    <pubDate>Wed, 27 Oct 2021 16:39:27 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid>
+    <description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
+當一隻 Python 程式有很多需要並行執行的 task，<br>
+想要提升程式效能，<br>
+只能選用 multiprocessing 或 threading；<br>
+Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
+<code>asyncio</code> 可以用來撰寫 coroutines，<br>
+並使用 event loop 並行執行 coroutines，<br>
+減少程式不必要的等待時間以提升效能。</p>]]></description>
+</item><item>
     <title>Pipenv Notes</title>
     <link>http://klee1611.github.io/posts/pipenv-notes.html/</link>
     <pubDate>Sun, 26 Sep 2021 18:34:23 &#43;0800</pubDate>
@@ -156,32 +170,5 @@ RR 有很多種不同的類型，<br>
 <p>將 hostname 對應到 IPv4。 (32-bit)</p>
 <pre><code>hostname IN A xxx.xxx.xxx.xxx
 </code></pre>]]></description>
-</item><item>
-    <title>RDBMS 與 NoSQL 差異筆記</title>
-    <link>http://klee1611.github.io/posts/rdbms-acid-nosql-cap.html/</link>
-    <pubDate>Mon, 06 Jan 2020 04:06:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/rdbms-acid-nosql-cap.html/</guid>
-    <description><![CDATA[<h2 id="rdbms">RDBMS</h2>
-<p><strong>Relational Database Management System</strong></p>
-<ul>
-<li>在資料之前有很強的 <strong>Relation (關聯性)</strong> 的時候使用:
-<ul>
-<li>設計不太會去變動的 schema 將 table 互相關聯，<br>
-就可以去透過 SQL 取得想要的資料</li>
-</ul>
-</li>
-<li><strong>資料的正確性</strong>很重要的時候使用
-<ul>
-<li>通常會提供<strong>ACID</strong></li>
-</ul>
-</li>
-<li>要變動 schema 是一件很浩大的工程:
-<ul>
-<li>要把的 table 的 schema 更新還要 migrate 資料</li>
-<li>所有用到要被更換 schema 的 table 的程式都要修改</li>
-</ul>
-</li>
-</ul>]]></description>
 </item></channel>
 </rss>
