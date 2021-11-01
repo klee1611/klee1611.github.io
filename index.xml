@@ -4,9 +4,29 @@
         <link>http://klee1611.github.io/</link>
         <description>Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 27 Oct 2021 16:39:27 &#43;0800</lastBuildDate>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 01 Nov 2021 18:48:33 &#43;0800</lastBuildDate>
             <atom:link href="http://klee1611.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Pyenv Notes</title>
+    <link>http://klee1611.github.io/posts/pyenv-notes.html/</link>
+    <pubDate>Mon, 01 Nov 2021 18:48:33 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/pyenv-notes.html/</guid>
+    <description><![CDATA[pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
+並能夠方便的切換 python 版本的工具。
+當同時有不同 python 版本的專案需要開發或維護時，
+就會需要使用 pyenv 來協助切換 python 的版本。
+python 的新版本通常都會有一些語法上的更新或是新增一些功能，
+例如 python 的 async / await 就是 python 3.5 以上才出現的功能，
+用 python 3.5 以下的版本來開發的專案就無法使用；
+又或者例如同時有 python 2 和 python 3 的專案，
+而且因為 python 2 和 python 3 語法不相容，
+勢必要在系統裡安裝 python 2 和 python 3；
+諸如次類的情況就可以使用 pyenv 方便的切換 python 的版本。
+安裝和初始化 安裝
+brew install pyenv 安裝完畢後執行初始化
+pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/.]]></description>
+</item><item>
     <title>Python Coroutine Asyncio</title>
     <link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link>
     <pubDate>Wed, 27 Oct 2021 16:39:27 &#43;0800</pubDate>
@@ -157,20 +177,5 @@ two-node cluster 有兩種運作方式:
 等到 master (Active) 恢復正常狀態再換回來由 master (Active) 繼續處理 service
 優點:
  Fail-over 的速度快 設計跟設定都相對簡單  缺點:]]></description>
-</item><item>
-    <title>常用 DNS Resource Record 紀錄</title>
-    <link>http://klee1611.github.io/posts/common-dns-resource-record.html/</link>
-    <pubDate>Wed, 08 Jan 2020 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/common-dns-resource-record.html/</guid>
-    <description><![CDATA[<p>DNS server 中每個 DNS zone 都有一個 zone file，<br>
-DNS zone 通常會是一個 single domain (有時候不是)，<br>
-zone file 是由很多個 dns resource record (RR) 組成，<br>
-RR 有很多種不同的類型，<br>
-紀錄一下常用幾種。</p>
-<h2 id="a-record">A record</h2>
-<p>將 hostname 對應到 IPv4。 (32-bit)</p>
-<pre><code>hostname IN A xxx.xxx.xxx.xxx
-</code></pre>]]></description>
 </item></channel>
 </rss>
