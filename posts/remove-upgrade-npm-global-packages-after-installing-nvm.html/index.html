@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Remove or Upgrade Global NPM Packages After Installing NVM - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Remove or Upgrade Global NPM Packages After Installing NVM" />
+<meta property="og:description" content="今天遇到一個問題，
+安裝過 nvm 後安裝 global package 的路徑就被改變了，
+導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
+怎麼發現這件事的呢？
+很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，
+但因為年代久遠，
+要升級那個 package 的時候發現他不在 npm list -g 的範圍，
+只好先用 which 看一下他在的位置，
+接著發現是一個 link 然後就用 ls -al 看那個 link 連到哪裡，
+發現是在 /usr/lib/node_modules 底下，
+很明顯是用 npm -g 安裝的，
+於是再仔細的看了一下 npm list -g 的結果，
+發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
+在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-11-06T19:31:32+08:00" />
+<meta property="article:modified_time" content="2021-11-06T19:31:32+08:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Remove or Upgrade Global NPM Packages After Installing NVM"/>
+<meta name="twitter:description" content="今天遇到一個問題，
+安裝過 nvm 後安裝 global package 的路徑就被改變了，
+導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
+怎麼發現這件事的呢？
+很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，
+但因為年代久遠，
+要升級那個 package 的時候發現他不在 npm list -g 的範圍，
+只好先用 which 看一下他在的位置，
+接著發現是一個 link 然後就用 ls -al 看那個 link 連到哪裡，
+發現是在 /usr/lib/node_modules 底下，
+很明顯是用 npm -g 安裝的，
+於是再仔細的看了一下 npm list -g 的結果，
+發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
+在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，"/>
+<meta name="application-name" content="Kourtney&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/" /><link rel="prev" href="http://klee1611.github.io/posts/pyenv-notes.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Remove or Upgrade Global NPM Packages After Installing NVM",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/klee1611.github.io\/posts\/remove-upgrade-npm-global-packages-after-installing-nvm.html\/"
+        },"genre": "posts","keywords": "Programming, Node.js","wordcount":  127 ,
+        "url": "http:\/\/klee1611.github.io\/posts\/remove-upgrade-npm-global-packages-after-installing-nvm.html\/","datePublished": "2021-11-06T19:31:32+08:00","dateModified": "2021-11-06T19:31:32+08:00","publisher": {
+            "@type": "Organization",
+            "name": "Kourtney Lee"},"author": {
+                "@type": "Person",
+                "name": "Kourtney Lee"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 標簽 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/" selected>繁體中文</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">標簽</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/" selected>繁體中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目錄</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Remove or Upgrade Global NPM Packages After Installing NVM</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-06">2021-11-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 127 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 1 分鐘&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目錄</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+            </div><div class="content" id="content"><p>今天遇到一個問題，</p>
+<p>安裝過 <code>nvm</code> 後安裝 global package 的路徑就被改變了，</p>
+<p>導致想要移除之前安裝過的 global package 時沒辦法直接用 <code>npm uninstall -g</code> 移除。</p>
+<p>怎麼發現這件事的呢？</p>
+<p>很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，</p>
+<p>但因為年代久遠，</p>
+<p>要升級那個 package 的時候發現他不在 <code>npm list -g</code> 的範圍，</p>
+<p>只好先用 <code>which</code> 看一下他在的位置，</p>
+<p>接著發現是一個 link 然後就用 <code>ls -al</code> 看那個 link 連到哪裡，</p>
+<p>發現是在 <code>/usr/lib/node_modules</code> 底下，</p>
+<p>很明顯是用 <code>npm -g</code> 安裝的，</p>
+<p>於是再仔細的看了一下 <code>npm list -g</code> 的結果，</p>
+<p>發現其他的 global package 都列在 <code>/Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib</code> 底下，</p>
+<p>在一陣 google 之後找到了一個方式 <code>nvm use system &amp;&amp; npm ls -g --depth=0</code> 來列出原本安裝過的 global package 有哪些，</p>
+<p>悲劇的是他跳出了</p>
+<pre><code>System version of node not found.
+</code></pre><p>看來我已經移除了系統裡的 <code>node</code> &hellip;</p>
+<p>於是我又找到了一個 command <code>nvm deactivate</code> 暫時 disable <code>nvm</code> ，</p>
+<p>然後用 <code>brew</code> 再安裝一次 <code>node</code> ，</p>
+<p>接著再 <code>npm list -g</code> 一次，</p>
+<p>終於讓我看到那個在安裝 <code>nvm</code> 之前安裝過的 package 了！！！</p>
+<p>可喜可賀！！</p>
+<p>終於可以順利的移除 / 升級之前安裝的 global package 了。</p>
+<p>搞定之後要重新把 <code>nvm</code> 叫回來只要用 <code>source ~/.zshrc</code> 之類的重啟 shell 就可以了。</p>
+</div><div id="likecoin-wrap" align='center'>
+    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fposts%2fremove-upgrade-npm-global-packages-after-installing-nvm.html%2f" frameborder="0"></iframe>
+</div>
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新於 2021-11-06</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/" data-title="Remove or Upgrade Global NPM Packages After Installing NVM" data-hashtags="Programming,Node.js"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/" data-hashtag="Programming"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/node.js/">Node.js</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主頁</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/pyenv-notes.html/" class="prev" rel="prev" title="Pyenv Notes"><i class="fas fa-angle-left fa-fw"></i>Pyenv Notes</a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Kourtney Lee</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂端">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼簿","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2021-11-06T19:31:32+08:00","owner":"klee1611","repo":"klee1611.github.io","title":"Remove or Upgrade Global NPM Packages After Installing NVM"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-127207785-1');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>
+</html>

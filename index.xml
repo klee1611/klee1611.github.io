@@ -4,9 +4,29 @@
         <link>http://klee1611.github.io/</link>
         <description>Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 01 Nov 2021 18:48:33 &#43;0800</lastBuildDate>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</lastBuildDate>
             <atom:link href="http://klee1611.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Remove or Upgrade Global NPM Packages After Installing NVM</title>
+    <link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link>
+    <pubDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid>
+    <description><![CDATA[今天遇到一個問題，
+安裝過 nvm 後安裝 global package 的路徑就被改變了，
+導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
+怎麼發現這件事的呢？
+很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，
+但因為年代久遠，
+要升級那個 package 的時候發現他不在 npm list -g 的範圍，
+只好先用 which 看一下他在的位置，
+接著發現是一個 link 然後就用 ls -al 看那個 link 連到哪裡，
+發現是在 /usr/lib/node_modules 底下，
+很明顯是用 npm -g 安裝的，
+於是再仔細的看了一下 npm list -g 的結果，
+發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
+在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description>
+</item><item>
     <title>Pyenv Notes</title>
     <link>http://klee1611.github.io/posts/pyenv-notes.html/</link>
     <pubDate>Mon, 01 Nov 2021 18:48:33 &#43;0800</pubDate>
@@ -151,31 +171,5 @@ docker images 列出來看一下。
 有了 image 就可以建立新的 container 了。
 刪除 Image 如果我用
 docker images 列出的 image 有這些:]]></description>
-</item><item>
-    <title>HA cluster 筆記和 Application 設計</title>
-    <link>http://klee1611.github.io/posts/ha-cluster-app-architecture.html/</link>
-    <pubDate>Thu, 09 Jan 2020 19:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/ha-cluster-app-architecture.html/</guid>
-    <description><![CDATA[設計比較大流量的系統時早晚要遇上 cluster 的問題。
-Cluster 一台以上的機器(node)組成的集合，
-有三種不同的目的:
-Load Balancing 讓多台機器一起盡可能的平均分擔任務，
-加速應用程式執行。
-High Availability (HA) 為了高可用性和備援，
-如果其中一台機器突然掛了其他的機器可以接替。
-High Performance Computing 高效能/平行運算系統，
-簡稱 HPC cluster，
-結合多台機器的硬體來增加運算能力，
-用來解決單一一台機器不能解決的任務。
-HA 運作模式 有很多種例如 N+1, N+M, &hellip;
-但最常見的是 two-node cluster，
-two-node cluster 有兩種運作方式:
- Active-Passive Active-Acitve  Active-Passive (AP) Master-slave 的設計，
-正常狀況下只有 master (Active) 在做 service，
-當 master (Active) 出現問題時 slave (Passive) 才接手，
-等到 master (Active) 恢復正常狀態再換回來由 master (Active) 繼續處理 service
-優點:
- Fail-over 的速度快 設計跟設定都相對簡單  缺點:]]></description>
 </item></channel>
 </rss>

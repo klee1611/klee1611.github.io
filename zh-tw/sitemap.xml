@@ -1,14 +1,16 @@
 <urlset
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     ><url>
-            <loc>http://klee1611.github.io/categories/</loc><lastmod>2021-11-01T18:48:33&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/categories/develop-environment/</loc><lastmod>2021-11-01T18:48:33&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/</loc><lastmod>2021-11-01T18:48:33&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/posts/</loc><lastmod>2021-11-01T18:48:33&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/tags/programming/</loc><lastmod>2021-11-01T18:48:33&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/categories/</loc><lastmod>2021-11-06T19:31:32&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/categories/develop-environment/</loc><lastmod>2021-11-06T19:31:32&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/</loc><lastmod>2021-11-06T19:31:32&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/tags/node.js/</loc><lastmod>2021-11-06T19:31:32&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/posts/</loc><lastmod>2021-11-06T19:31:32&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/tags/programming/</loc><lastmod>2021-11-06T19:31:32&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</loc><lastmod>2021-11-06T19:31:32&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/tags/</loc><lastmod>2021-11-06T19:31:32&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/posts/pyenv-notes.html/</loc><lastmod>2021-11-01T18:48:33&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/python/</loc><lastmod>2021-11-01T18:48:33&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/tags/</loc><lastmod>2021-11-01T18:48:33&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/categories/concurrency-programming/</loc><lastmod>2021-10-27T16:39:27&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/tags/concurrent-processing/</loc><lastmod>2021-10-27T16:39:27&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>
             <loc>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</loc><lastmod>2021-10-27T16:39:27&#43;08:00</lastmod><changefreq>weekly</changefreq></url><url>

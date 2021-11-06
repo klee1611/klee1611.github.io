@@ -77,6 +77,24 @@
         alt="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp"
         title="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp" /></a></div><h1 class="home-title">Kourtney's Space</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/klee1611" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/kuo-hsiu-lee-5928b9a6" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="mailto:kourtneylee1611@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/">Remove or Upgrade Global NPM Packages After Installing NVM</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-11-06">2021-11-06</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div><div class="content">今天遇到一個問題，
+安裝過 nvm 後安裝 global package 的路徑就被改變了，
+導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
+怎麼發現這件事的呢？
+很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，
+但因為年代久遠，
+要升級那個 package 的時候發現他不在 npm list -g 的範圍，
+只好先用 which 看一下他在的位置，
+接著發現是一個 link 然後就用 ls -al 看那個 link 連到哪裡，
+發現是在 /usr/lib/node_modules 底下，
+很明顯是用 npm -g 安裝的，
+於是再仔細的看了一下 npm list -g 的結果，
+發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
+在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，</div><div class="post-footer">
+        <a href="/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/">閱讀全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/node.js/">Node.js</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/pyenv-notes.html/">Pyenv Notes</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-11-01">2021-11-01</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div><div class="content">pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
 並能夠方便的切換 python 版本的工具。
@@ -148,19 +166,6 @@ Windows terminal 設定 到 Microsoft store 搜尋 Windows terminal 並安裝�
 從 profiles 的 list 找到想要做為預設的 Linux distribution，</div><div class="post-footer">
         <a href="/posts/wsl-2-on-windows-part-2.html/">閱讀全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/wsl/">WSL</a>,&nbsp;<a href="/tags/ubuntu/">Ubuntu</a>,&nbsp;<a href="/tags/windows-terminal/">Windows terminal</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/wsl-2-on-windows-part-1.html/">WSL 2 on Windows Part 1 - 安裝啟用</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2021-04-10">2021-04-10</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div><div class="content">工作的時候習慣用 Linux 或 mac 的 terminal，
-找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。 WSL 2 和 WSL 1 的差異 WSL 2 是基於 Hyper-V 在 virtual machine 中跑完整的 Linux kernal，
-WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，
-因此 WSL 2 比 WSL 1 支援更多 Linux 原生的功能和 system call。
-如果需要用到 Linux 底層的應用，
-WSL 2 支援的能力比 WSL 1 更好。
-一般情況下 WSL 2 啟動 process 的效能也更好，
-但需要讀取 host 系統的檔案時除外。
-但因為 WSL 2 是在 VM 上跑 Linux kernal，</div><div class="post-footer">
-        <a href="/posts/wsl-2-on-windows-part-1.html/">閱讀全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/wsl/">WSL</a>,&nbsp;<a href="/tags/ubuntu/">Ubuntu</a></div></div>
 </article><ul class="pagination"><li class="page-item active">
                     <span class="page-link">
                         <a href="/">1</a>
