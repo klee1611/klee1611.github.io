@@ -1,7 +1,7 @@
 ---
 title: Difference between Concurrent Processing and Parallel Processing
 date: 2019-12-25 19:40:00 +0800
-last-modified: 2021-11-14 00:28:00 +0800
+lastmod: 2021-11-14 00:28:00 +0800
 categories:
 - Concurrency
 tags: [Programming, Concurrent Processing, Parallel Processing]
