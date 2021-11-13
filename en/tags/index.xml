@@ -4,5 +4,26 @@
         <link>http://klee1611.github.io/en/tags/</link>
         <description>Tags - Tag - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><atom:link href="http://klee1611.github.io/en/tags/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Concurrent Processing</title>
+    <link>http://klee1611.github.io/en/tags/concurrent-processing/</link>
+    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/concurrent-processing/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Parallel Processing</title>
+    <link>http://klee1611.github.io/en/tags/parallel-processing/</link>
+    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/parallel-processing/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Programming</title>
+    <link>http://klee1611.github.io/en/tags/programming/</link>
+    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/programming/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

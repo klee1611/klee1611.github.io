@@ -4,5 +4,12 @@
         <link>http://klee1611.github.io/en/categories/</link>
         <description>Categories - Category - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><atom:link href="http://klee1611.github.io/en/categories/" rel="self" type="application/rss+xml" /></channel>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Concurrency</title>
+    <link>http://klee1611.github.io/en/categories/concurrency/</link>
+    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/categories/concurrency/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
 </rss>

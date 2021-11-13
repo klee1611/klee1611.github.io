@@ -127,16 +127,14 @@ int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt
 就是這個變數不能再被指定別的值。</p>
 <p>舉個例：</p>]]></description>
 </item><item>
-    <title>Concurrent Processing and Parallel Processing</title>
+    <title>Difference between Concurrent Processing and Parallel Processing</title>
     <link>http://klee1611.github.io/posts/concurrent-process-parallel-process.html/</link>
     <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://klee1611.github.io/posts/concurrent-process-parallel-process.html/</guid>
-    <description><![CDATA[<p>Concurrent Processing 和 Parallel Processing 指的都是 CPU 在 一段時間內執行多個 process，</p>
-<p>但兩者在概念上有些差異；</p>
-<p>根據 <a href="http://shop.oreilly.com/product/9780596521547.do" target="_blank" rel="noopener noreffer">The Art of Concurrency</a> ，</p>
-<p>Concurrent 指的是</p>
-<pre><code>two or more processes are in progress at the same time
-</code></pre>]]></description>
+    <description><![CDATA[<p>Concurrent Processing 和 Parallel Processing 指的都是 CPU <strong>在 一段時間內執行多個 process</strong>，<br>
+但兩者在概念上有些差異；</p>
+<p>根據 <a href="http://shop.oreilly.com/product/9780596521547.do" target="_blank" rel="noopener noreffer">The Art of Concurrency</a> ，<br>
+Concurrent 指的是</p>]]></description>
 </item></channel>
 </rss>

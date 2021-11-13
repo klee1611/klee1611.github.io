@@ -1,6 +1,12 @@
 <urlset
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     ><url>
-            <loc>http://klee1611.github.io/en/categories/</loc><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/en/</loc><changefreq>weekly</changefreq></url><url>
-            <loc>http://klee1611.github.io/en/tags/</loc><changefreq>weekly</changefreq></url></urlset>
+            <loc>http://klee1611.github.io/en/categories/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/en/categories/concurrency/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/en/tags/concurrent-processing/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/en/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/en/tags/parallel-processing/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/en/posts/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/en/tags/programming/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url><url>
+            <loc>http://klee1611.github.io/en/tags/</loc><lastmod>2019-12-25T19:40:00&#43;00:00</lastmod><changefreq>weekly</changefreq></url></urlset>
