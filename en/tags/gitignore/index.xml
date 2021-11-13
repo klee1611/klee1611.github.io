@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/en/posts/</link>
-        <description>All Posts | Kourtney&#39;s Blog</description>
+        <title>gitignore - Tag - Kourtney&#39;s Blog</title>
+        <link>http://klee1611.github.io/en/tags/gitignore/</link>
+        <description>gitignore - Tag - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/gitignore/" rel="self" type="application/rss+xml" /><item>
     <title>Remove .DS_Store tracking in all Git repositories</title>
     <link>http://klee1611.github.io/en/posts/remove-ds_store-from-all-git-repo.html/</link>
     <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
@@ -20,15 +20,5 @@ so I find a way to prevent the <code>.DS_Store</code> file from being tracked in
 The most famous ones are <code>git config --global user.name</code> and <code>git config --global user.email</code>,<br>
 which sets <code>user.name</code> and <code>user.email</code> globally,<br>
 so every git repositories can use these settings.</p>]]></description>
-</item><item>
-    <title>Difference between Concurrent Processing and Parallel Processing</title>
-    <link>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</link>
-    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</guid>
-    <description><![CDATA[<p>Both &lsquo;Concurrent Processing&rsquo; and &lsquo;Parallel Processing&rsquo; refer to <strong>multiple processes is executing by the CPU in a period</strong>,<br>
-but they are two different things.</p>
-<p>According to the <a href="http://shop.oreilly.com/product/9780596521547.do" target="_blank" rel="noopener noreffer">The Art of Concurrency</a> ，<br>
-Concurrent means:</p>]]></description>
 </item></channel>
 </rss>

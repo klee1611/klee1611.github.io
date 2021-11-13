@@ -4,9 +4,25 @@
         <link>http://klee1611.github.io/en/</link>
         <description>Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</lastBuildDate>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</lastBuildDate>
             <atom:link href="http://klee1611.github.io/en/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Remove .DS_Store tracking in all Git repositories</title>
+    <link>http://klee1611.github.io/en/posts/remove-ds_store-from-all-git-repo.html/</link>
+    <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/posts/remove-ds_store-from-all-git-repo.html/</guid>
+    <description><![CDATA[<p>Every time we create a new folder and add some files in MacOS,<br>
+it generates a <code>.DS_Store</code> file in that folder,<br>
+which causes lots of <code>.DS_Store</code> files spreading all over the places in MacOS,<br>
+and it is pretty annoying to add <code>**/.DS_Store</code> into every <code>.gitignore</code> file every time we create a new Git repository,<br>
+so I find a way to prevent the <code>.DS_Store</code> file from being tracked in every Git repository.</p>
+<h2 id="the-git-config-command">The <code>git config</code> command</h2>
+<p>The <code>git config</code> command can be used to set a variety of settings for git.<br>
+The most famous ones are <code>git config --global user.name</code> and <code>git config --global user.email</code>,<br>
+which sets <code>user.name</code> and <code>user.email</code> globally,<br>
+so every git repositories can use these settings.</p>]]></description>
+</item><item>
     <title>Difference between Concurrent Processing and Parallel Processing</title>
     <link>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</link>
     <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
