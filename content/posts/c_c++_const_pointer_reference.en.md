@@ -1,5 +1,5 @@
 ---
-title: C/C++ - const 加上 pointer 和 reference 的用法整理
+title: C/C++ - const with Pointer or Reference
 date: 2019-12-30 08:19:00 +0800
 lastmod: 2021-11-15 00:40:00 +0800
 categories:
@@ -7,18 +7,17 @@ categories:
 tags: [Programming, C, C++]
 slug: const-pointer-reference
 ---
-## const 和一般變數
-有兩種寫法  
+## ``const`` with Normal Variables
+Two ways to add ``const`` for normal variables:
 
 ```cpp
 const TYPE NAME = VALUE; // more common
 TYPE const NAME = VAULE;
 ```
 
-意思都一樣，  
-就是這個變數不能再被指定別的值。  
+Both means this variable cannot be assigned to another value.  
 
-舉個例：  
+For example,  
 <!--more-->
 
 ```cpp
@@ -39,7 +38,7 @@ int main(void)
 }
 ```
 
-``i``和``j``兩個噴的 error 一模一樣:
+The same error cames out for ``i`` and ``j``:
 
 ```
 const.cpp:9:4: error: cannot assign to variable 'i' with const-qualified type 'const int'
@@ -57,21 +56,21 @@ const.cpp:8:12: note: variable 'j' declared const here
 2 errors generated.
 ```
 
-## const 和 reference
-跟一般變數一樣有兩種寫法:  
+## ``const`` and Reference
+Also two ways to add ``const`` to a reference:  
 
 ```cpp
 const TYPE &NAME = VALUE; // more common
 TYPE const &NAME = VAULE;
 ```
 
-意思也一樣，  
-有兩個限制:  
-1. Reference 不能再拿去指定別的變數
-2. 被 reference 指到的變數不能**用 reference 去指定**別的值。  
-不過他**可以在不透過 reference 的情況下自己改變他的值**。  
+Both have the same meaning.  
+There are two limits for them:  
+1. This reference cannot be assigned to another variable
+2. The variable being referenced **cannot change its value with this reference**,  
+but it **can change its value without using that reference**.  
 
-例子:  
+For example,  
 
 ```cpp
 #include <iostream>
@@ -98,12 +97,15 @@ int main(void)
 	return 0;
 }
 ```
-**constant reference 唯一能做的就是拿來讀**，  
-要改值的話**只能是他 reference 到的變數不透過 reference 自己改自己**。  
 
-## const 和 pointer
-這就複雜了，  
-可以用 ``const`` 的位置來記 ``const`` 是用來修飾誰:  
+**constant reference can only be read**.  
+if the value of the variable it referenced to has be changed,  
+it **can only change the value without that reference**.  
+
+## ``const`` and Pointer
+This one is complicated.  
+
+But we can use the position of ``const`` to remember which one ``const`` is decorating:  
 
 ```cpp
 TYPE* const pNAME;  // 1
@@ -112,17 +114,22 @@ const TYPE *pNAME;  // 3
 const TYPE* const pNAME;  // 4
 ```
 
-1 的情況下 ``const`` 修飾的是 ``pNAME``，  
-也就是 ``pNAME`` 不能再被改變 (不能 ``pNAME = ...``)；  
+For 1,  
+``const`` decorates ``pNAME``,  
+that means ``pNAME`` cannot be changed (No ``pNAME = ...``).  
 
-2 的情況 ``const`` 修飾的是 ``*pNAME``，  
-是說 ``*pNAME`` 不能再被改變 (不能 ``*pNAME = ...``)；  
+For 2,  
+``const`` decorates `*pNAME`,  
+so `*pNAME` cannot be changed (No `*pNAME = ...`).  
 
-3 的情況 ``const`` 修飾的是 ``TYPE *pNAME``，  
-跟 2 一樣是說 ``*pNAME`` 不能再被改變 (不能 ``*pNAME = ...``)；  
+For 3,  
+`const` decorates `TYPE *pNAME`.  
+it is the same as 2,  
+saying that `*pNAME` cannot be changed (No `*pNAME = ...`).
 
-4 的情況 ``const`` 修飾的是 ``pNAME`` 和 ``TYPE*``，  
-所以 ``pNAME`` 和 ``TYPE*`` 都不能改變 (``pNAME = ...`` 和 ``*pNAME = ...`` 都不行)。  
+For 4,  
+`const` decorates `pNAME` and `TYPE*`,  
+so both `pNAME` and `TYPE*` cannot be changed (No `pNAME = ...` or `*pNAME = ...`).  
 
 ```cpp
 #include <iostream>
