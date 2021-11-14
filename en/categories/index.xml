@@ -4,7 +4,14 @@
         <link>http://klee1611.github.io/en/categories/</link>
         <description>Categories - Category - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/categories/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/categories/" rel="self" type="application/rss+xml" /><item>
+    <title>Blog</title>
+    <link>http://klee1611.github.io/en/categories/blog/</link>
+    <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/categories/blog/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Git</title>
     <link>http://klee1611.github.io/en/categories/git/</link>
     <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
