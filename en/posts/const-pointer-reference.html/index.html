@@ -5,42 +5,40 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理 - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理" />
-<meta property="og:description" content="const 和一般變數
-有兩種寫法
+        <title>C/C&#43;&#43; - const with Pointer or Reference - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="C/C&#43;&#43; - const with Pointer or Reference" />
+<meta property="og:description" content="const with Normal Variables
+Two ways to add const for normal variables:
 const TYPE NAME = VALUE; // more common
 TYPE const NAME = VAULE;
-意思都一樣，
-就是這個變數不能再被指定別的值。
-舉個例：" />
+Both means this variable cannot be assigned to another value.
+For example," />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://klee1611.github.io/posts/const-pointer-reference.html/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="http://klee1611.github.io/en/posts/const-pointer-reference.html/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2019-12-30T08:19:00+00:00" />
 <meta property="article:modified_time" content="2021-11-15T00:40:00+00:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理"/>
-<meta name="twitter:description" content="const 和一般變數
-有兩種寫法
+<meta name="twitter:title" content="C/C&#43;&#43; - const with Pointer or Reference"/>
+<meta name="twitter:description" content="const with Normal Variables
+Two ways to add const for normal variables:
 const TYPE NAME = VALUE; // more common
 TYPE const NAME = VAULE;
-意思都一樣，
-就是這個變數不能再被指定別的值。
-舉個例："/>
+Both means this variable cannot be assigned to another value.
+For example,"/>
 <meta name="application-name" content="Kourtney&#39;s Blog">
 <meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://klee1611.github.io/posts/const-pointer-reference.html/" /><link rel="prev" href="http://klee1611.github.io/posts/likecoin-button-jekyll.html/" /><link rel="next" href="http://klee1611.github.io/posts/jekyll-sitemap-github-pages.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0" /><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://klee1611.github.io/en/posts/const-pointer-reference.html/" /><link rel="prev" href="http://klee1611.github.io/en/posts/likecoin-button-jekyll.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0" /><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "C/C++ - const 加上 pointer 和 reference 的用法整理",
+        "headline": "C/C++ - const with Pointer or Reference",
         "inLanguage": "",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/klee1611.github.io\/posts\/const-pointer-reference.html\/"
-        },"genre": "posts","keywords": "Programming, C, C\u002b\u002b","wordcount":  412 ,
-        "url": "http:\/\/klee1611.github.io\/posts\/const-pointer-reference.html\/","datePublished": "2019-12-30T08:19:00+00:00","dateModified": "2021-11-15T00:40:00+00:00","publisher": {
+            "@id": "http:\/\/klee1611.github.io\/en\/posts\/const-pointer-reference.html\/"
+        },"genre": "posts","keywords": "Programming, C, C\u002b\u002b","wordcount":  520 ,
+        "url": "http:\/\/klee1611.github.io\/en\/posts\/const-pointer-reference.html\/","datePublished": "2019-12-30T08:19:00+00:00","dateModified": "2021-11-15T00:40:00+00:00","publisher": {
             "@type": "Organization",
             "name": "Kourtney Lee"},"author": {
                 "@type": "Person",
@@ -53,12 +51,12 @@ TYPE const NAME = VAULE;
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+            <a href="/en/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 標簽 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/const-pointer-reference.html/" selected>繁體中文</option><option value="/en/posts/const-pointer-reference.html/">English</option></select>
-                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/en/posts/"> Posts </a><a class="menu-item" href="/en/tags/"> Tags </a><a class="menu-item" href="/en/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/const-pointer-reference.html/">繁體中文</option><option value="/en/posts/const-pointer-reference.html/" selected>English</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw"></i>
                 </a>
             </div>
@@ -68,16 +66,16 @@ TYPE const NAME = VAULE;
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+                <a href="/en/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">標簽</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/en/posts/" title="">Posts</a><a class="menu-item" href="/en/tags/" title="">Tags</a><a class="menu-item" href="/en/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw"></i>
-            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/posts/const-pointer-reference.html/" selected>繁體中文</option><option value="/en/posts/const-pointer-reference.html/">English</option></select>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/const-pointer-reference.html/">繁體中文</option><option value="/en/posts/const-pointer-reference.html/" selected>English</option></select>
                 </a></div>
     </div>
 </header>
@@ -89,35 +87,34 @@ TYPE const NAME = VAULE;
 </div>
 <main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">目錄</h2>
+            <h2 class="toc-title">Contents</h2>
             <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/c++/"><i class="far fa-folder fa-fw"></i>C++</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-30">2019-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 412 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 2 分鐘&nbsp;</div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">C/C&#43;&#43; - const with Pointer or Reference</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/en/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">included in <a href="/en/categories/c++/"><i class="far fa-folder fa-fw"></i>C++</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2019-12-30">2019-12-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;520 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;3 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
-                    <span>目錄</span>
+                    <span>Contents</span>
                     <span><i class="details-icon fas fa-angle-right"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li>
       <ul>
-        <li><a href="#const-和一般變數">const 和一般變數</a></li>
-        <li><a href="#const-和-reference">const 和 reference</a></li>
-        <li><a href="#const-和-pointer">const 和 pointer</a></li>
+        <li><a href="#const-with-normal-variables"><code>const</code> with Normal Variables</a></li>
+        <li><a href="#const-and-reference"><code>const</code> and Reference</a></li>
+        <li><a href="#const-and-pointer"><code>const</code> and Pointer</a></li>
       </ul>
     </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h2 id="const-和一般變數">const 和一般變數</h2>
-<p>有兩種寫法</p>
+            </div><div class="content" id="content"><h2 id="const-with-normal-variables"><code>const</code> with Normal Variables</h2>
+<p>Two ways to add <code>const</code> for normal variables:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="n">TYPE</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
 </span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
-</code></pre></div><p>意思都一樣，<br>
-就是這個變數不能再被指定別的值。</p>
-<p>舉個例：</p>
+</code></pre></div><p>Both means this variable cannot be assigned to another value.</p>
+<p>For example,</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -133,7 +130,7 @@ TYPE const NAME = VAULE;
 
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><p><code>i</code>和<code>j</code>兩個噴的 error 一模一樣:</p>
+</code></pre></div><p>The same error cames out for <code>i</code> and <code>j</code>:</p>
 <pre><code>const.cpp:9:4: error: cannot assign to variable 'i' with const-qualified type 'const int'
         i = 2;
         ~ ^
@@ -147,18 +144,18 @@ const.cpp:8:12: note: variable 'j' declared const here
         int const j = 1;
         ~~~~~~~~~~^~~~~
 2 errors generated.
-</code></pre><h2 id="const-和-reference">const 和 reference</h2>
-<p>跟一般變數一樣有兩種寫法:</p>
+</code></pre><h2 id="const-and-reference"><code>const</code> and Reference</h2>
+<p>Also two ways to add <code>const</code> to a reference:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="n">TYPE</span> <span class="o">&amp;</span><span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
 </span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="o">&amp;</span><span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
-</code></pre></div><p>意思也一樣，<br>
-有兩個限制:</p>
+</code></pre></div><p>Both have the same meaning.<br>
+There are two limits for them:</p>
 <ol>
-<li>Reference 不能再拿去指定別的變數</li>
-<li>被 reference 指到的變數不能<strong>用 reference 去指定</strong>別的值。<br>
-不過他<strong>可以在不透過 reference 的情況下自己改變他的值</strong>。</li>
+<li>This reference cannot be assigned to another variable</li>
+<li>The variable being referenced <strong>cannot change its value with this reference</strong>,<br>
+but it <strong>can change its value without using that reference</strong>.</li>
 </ol>
-<p>例子:</p>
+<p>For example,</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -182,23 +179,29 @@ const.cpp:8:12: note: variable 'j' declared const here
 </span><span class="c1"></span>
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre></div><p><strong>constant reference 唯一能做的就是拿來讀</strong>，<br>
-要改值的話<strong>只能是他 reference 到的變數不透過 reference 自己改自己</strong>。</p>
-<h2 id="const-和-pointer">const 和 pointer</h2>
-<p>這就複雜了，<br>
-可以用 <code>const</code> 的位置來記 <code>const</code> 是用來修飾誰:</p>
+</code></pre></div><p><strong>constant reference can only be read</strong>.<br>
+if the value of the variable it referenced to has be changed,<br>
+it <strong>can only change the value without that reference</strong>.</p>
+<h2 id="const-and-pointer"><code>const</code> and Pointer</h2>
+<p>This one is complicated.</p>
+<p>But we can use the position of <code>const</code> to remember which one <code>const</code> is decorating:</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="n">TYPE</span><span class="o">*</span> <span class="k">const</span> <span class="n">pNAME</span><span class="p">;</span>  <span class="c1">// 1
 </span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="o">*</span><span class="n">pNAME</span><span class="p">;</span>  <span class="c1">// 2
 </span><span class="c1"></span><span class="k">const</span> <span class="n">TYPE</span> <span class="o">*</span><span class="n">pNAME</span><span class="p">;</span>  <span class="c1">// 3
 </span><span class="c1"></span><span class="k">const</span> <span class="n">TYPE</span><span class="o">*</span> <span class="k">const</span> <span class="n">pNAME</span><span class="p">;</span>  <span class="c1">// 4
-</span></code></pre></div><p>1 的情況下 <code>const</code> 修飾的是 <code>pNAME</code>，<br>
-也就是 <code>pNAME</code> 不能再被改變 (不能 <code>pNAME = ...</code>)；</p>
-<p>2 的情況 <code>const</code> 修飾的是 <code>*pNAME</code>，<br>
-是說 <code>*pNAME</code> 不能再被改變 (不能 <code>*pNAME = ...</code>)；</p>
-<p>3 的情況 <code>const</code> 修飾的是 <code>TYPE *pNAME</code>，<br>
-跟 2 一樣是說 <code>*pNAME</code> 不能再被改變 (不能 <code>*pNAME = ...</code>)；</p>
-<p>4 的情況 <code>const</code> 修飾的是 <code>pNAME</code> 和 <code>TYPE*</code>，<br>
-所以 <code>pNAME</code> 和 <code>TYPE*</code> 都不能改變 (<code>pNAME = ...</code> 和 <code>*pNAME = ...</code> 都不行)。</p>
+</span></code></pre></div><p>For 1,<br>
+<code>const</code> decorates <code>pNAME</code>,<br>
+that means <code>pNAME</code> cannot be changed (No <code>pNAME = ...</code>).</p>
+<p>For 2,<br>
+<code>const</code> decorates <code>*pNAME</code>,<br>
+so <code>*pNAME</code> cannot be changed (No <code>*pNAME = ...</code>).</p>
+<p>For 3,<br>
+<code>const</code> decorates <code>TYPE *pNAME</code>.<br>
+it is the same as 2,<br>
+saying that <code>*pNAME</code> cannot be changed (No <code>*pNAME = ...</code>).</p>
+<p>For 4,<br>
+<code>const</code> decorates <code>pNAME</code> and <code>TYPE*</code>,<br>
+so both <code>pNAME</code> and <code>TYPE*</code> cannot be changed (No <code>pNAME = ...</code> or <code>*pNAME = ...</code>).</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
 </span><span class="cp"></span>
 <span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
@@ -229,49 +232,48 @@ const.cpp:8:12: note: variable 'j' declared const here
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
 </code></pre></div></div><div id="likecoin-wrap" align='center'>
-    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fposts%2fconst-pointer-reference.html%2f" frameborder="0"></iframe>
+    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fen%2fposts%2fconst-pointer-reference.html%2f" frameborder="0"></iframe>
 </div>
 <div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新於 2021-11-15</span>
+                <span>Updated on 2021-11-15</span>
             </div>
             <div class="post-info-license"></div>
         </div>
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://klee1611.github.io/posts/const-pointer-reference.html/" data-title="C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理" data-hashtags="Programming,C,C&#43;&#43;"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://klee1611.github.io/posts/const-pointer-reference.html/" data-hashtag="Programming"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://klee1611.github.io/en/posts/const-pointer-reference.html/" data-title="C/C&#43;&#43; - const with Pointer or Reference" data-hashtags="Programming,C,C&#43;&#43;"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://klee1611.github.io/en/posts/const-pointer-reference.html/" data-hashtag="Programming"><i class="fab fa-facebook-square fa-fw"></i></a></span>
             </div>
         </div>
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/c/">C</a>,&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/en/tags/programming/">Programming</a>,&nbsp;<a href="/en/tags/c/">C</a>,&nbsp;<a href="/en/tags/c&#43;&#43;/">C&#43;&#43;</a></section>
         <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主頁</a></span>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/en/">Home</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/likecoin-button-jekyll.html/" class="prev" rel="prev" title="Add LikeWidget to Jekyll theme"><i class="fas fa-angle-left fa-fw"></i>Add LikeWidget to Jekyll theme</a>
-            <a href="/posts/jekyll-sitemap-github-pages.html/" class="next" rel="next" title="Github Pages and Jekyll - sitemap">Github Pages and Jekyll - sitemap<i class="fas fa-angle-right fa-fw"></i></a></div>
+    <div class="post-nav"><a href="/en/posts/likecoin-button-jekyll.html/" class="prev" rel="prev" title="Add LikeWidget to Jekyll theme"><i class="fas fa-angle-left fa-fw"></i>Add LikeWidget to Jekyll theme</a></div>
 </div>
 <div id="comments"><div id="gitalk" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
             </noscript></div></article></div>
             </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Kourtney Lee</a></span></div>
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/en/" target="_blank">Kourtney Lee</a></span></div>
         </div>
     </footer></div>
 
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂端">
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
                 <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼簿","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2019-12-30T08:19:00Z","owner":"klee1611","repo":"klee1611.github.io","title":"C/C++ - const 加上 pointer 和 reference 的用法整理"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2019-12-30T08:19:00Z","owner":"klee1611","repo":"klee1611.github.io","title":"C/C++ - const with Pointer or Reference"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
             window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
             gtag('config', 'UA-127207785-1');
         </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>

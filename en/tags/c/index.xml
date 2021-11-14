@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Programming - Tag - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/en/tags/programming/</link>
-        <description>Programming - Tag - Kourtney&#39;s Blog</description>
+        <title>C - Tag - Kourtney&#39;s Blog</title>
+        <link>http://klee1611.github.io/en/tags/c/</link>
+        <description>C - Tag - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/programming/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/c/" rel="self" type="application/rss+xml" /><item>
     <title>C/C&#43;&#43; - const with Pointer or Reference</title>
     <link>http://klee1611.github.io/en/posts/const-pointer-reference.html/</link>
     <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
@@ -16,15 +16,5 @@
 </span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
 </code></pre></div><p>Both means this variable cannot be assigned to another value.</p>
 <p>For example,</p>]]></description>
-</item><item>
-    <title>Difference between Concurrent Processing and Parallel Processing</title>
-    <link>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</link>
-    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</guid>
-    <description><![CDATA[<p>Both &lsquo;Concurrent Processing&rsquo; and &lsquo;Parallel Processing&rsquo; refer to <strong>multiple processes is executing by the CPU in a period</strong>,<br>
-but they are two different things.</p>
-<p>According to the <a href="http://shop.oreilly.com/product/9780596521547.do" target="_blank" rel="noopener noreffer">The Art of Concurrency</a> ，<br>
-Concurrent means:</p>]]></description>
 </item></channel>
 </rss>

@@ -4,7 +4,28 @@
         <link>http://klee1611.github.io/en/tags/</link>
         <description>Tags - Tag - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>C</title>
+    <link>http://klee1611.github.io/en/tags/c/</link>
+    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/c/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>C&#43;&#43;</title>
+    <link>http://klee1611.github.io/en/tags/c&#43;&#43;/</link>
+    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/c&#43;&#43;/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Programming</title>
+    <link>http://klee1611.github.io/en/tags/programming/</link>
+    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/programming/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Cryptocurrency</title>
     <link>http://klee1611.github.io/en/tags/cryptocurrency/</link>
     <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
@@ -52,27 +73,6 @@
     <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
     <author>Author</author>
     <guid>http://klee1611.github.io/en/tags/tool/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Concurrent Processing</title>
-    <link>http://klee1611.github.io/en/tags/concurrent-processing/</link>
-    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/concurrent-processing/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Parallel Processing</title>
-    <link>http://klee1611.github.io/en/tags/parallel-processing/</link>
-    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/parallel-processing/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Programming</title>
-    <link>http://klee1611.github.io/en/tags/programming/</link>
-    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/programming/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

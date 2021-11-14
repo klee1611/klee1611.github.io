@@ -4,9 +4,21 @@
         <link>http://klee1611.github.io/en/</link>
         <description>Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</lastBuildDate>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</lastBuildDate>
             <atom:link href="http://klee1611.github.io/en/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>C/C&#43;&#43; - const with Pointer or Reference</title>
+    <link>http://klee1611.github.io/en/posts/const-pointer-reference.html/</link>
+    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/posts/const-pointer-reference.html/</guid>
+    <description><![CDATA[<h2 id="const-with-normal-variables"><code>const</code> with Normal Variables</h2>
+<p>Two ways to add <code>const</code> for normal variables:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="n">TYPE</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
+</span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
+</code></pre></div><p>Both means this variable cannot be assigned to another value.</p>
+<p>For example,</p>]]></description>
+</item><item>
     <title>Add LikeWidget to Jekyll theme</title>
     <link>http://klee1611.github.io/en/posts/likecoin-button-jekyll.html/</link>
     <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
