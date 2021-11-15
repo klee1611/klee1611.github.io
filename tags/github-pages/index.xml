@@ -10,7 +10,10 @@
     <pubDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://klee1611.github.io/posts/jekyll-sitemap-github-pages.html/</guid>
-    <description><![CDATA[<h2 id="sitemap">Sitemap</h2>
+    <description><![CDATA[<h2 id="更新">更新</h2>
+<p>已從 Jekyll migrate 到 Hugo，<br>
+這篇方法僅適用 Jekyll。</p>
+<h2 id="sitemap">Sitemap</h2>
 <p>sitemap 基本上就一個 <code>.xml</code> 檔案，<br>
 裡面包含了網站有哪些頁面連結，<br>
 讓搜尋引擎去爬，<br>

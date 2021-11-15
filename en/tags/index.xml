@@ -4,7 +4,35 @@
         <link>http://klee1611.github.io/en/tags/</link>
         <description>Tags - Tag - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Github Pages</title>
+    <link>http://klee1611.github.io/en/tags/github-pages/</link>
+    <pubDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/github-pages/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Jekyll</title>
+    <link>http://klee1611.github.io/en/tags/jekyll/</link>
+    <pubDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/jekyll/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Programming</title>
+    <link>http://klee1611.github.io/en/tags/programming/</link>
+    <pubDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/programming/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>SEO</title>
+    <link>http://klee1611.github.io/en/tags/seo/</link>
+    <pubDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/seo/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>C</title>
     <link>http://klee1611.github.io/en/tags/c/</link>
     <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
@@ -17,13 +45,6 @@
     <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
     <author>Author</author>
     <guid>http://klee1611.github.io/en/tags/c&#43;&#43;/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Programming</title>
-    <link>http://klee1611.github.io/en/tags/programming/</link>
-    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/programming/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Cryptocurrency</title>
@@ -40,13 +61,6 @@
     <guid>http://klee1611.github.io/en/tags/frontend/</guid>
     <description><![CDATA[]]></description>
 </item><item>
-    <title>Github Pages</title>
-    <link>http://klee1611.github.io/en/tags/github-pages/</link>
-    <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/github-pages/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
     <title>Likecoin</title>
     <link>http://klee1611.github.io/en/tags/likecoin/</link>
     <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
@@ -59,20 +73,6 @@
     <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
     <author>Author</author>
     <guid>http://klee1611.github.io/en/tags/git/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>gitignore</title>
-    <link>http://klee1611.github.io/en/tags/gitignore/</link>
-    <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/gitignore/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Tool</title>
-    <link>http://klee1611.github.io/en/tags/tool/</link>
-    <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/tool/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
