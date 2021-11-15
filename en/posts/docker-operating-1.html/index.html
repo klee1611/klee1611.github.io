@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Docker Notes 1 - Beginner - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Docker Notes 1 - Beginner" />
+<meta property="og:description" content="Basic Concept
+Docker can be seen as a simplified VM.
+Since it will not install the whole operating system,
+it comes with a smaller size and faster speed.
+Image
+Image contains a lightweight runtime environment,
+including some libraries and executables within it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://klee1611.github.io/en/posts/docker-operating-1.html/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-01-01T17:06:00+00:00" />
+<meta property="article:modified_time" content="2021-11-16T00:35:00+00:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Docker Notes 1 - Beginner"/>
+<meta name="twitter:description" content="Basic Concept
+Docker can be seen as a simplified VM.
+Since it will not install the whole operating system,
+it comes with a smaller size and faster speed.
+Image
+Image contains a lightweight runtime environment,
+including some libraries and executables within it."/>
+<meta name="application-name" content="Kourtney&#39;s Blog">
+<meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://klee1611.github.io/en/posts/docker-operating-1.html/" /><link rel="prev" href="http://klee1611.github.io/en/posts/jekyll-sitemap-github-pages.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Docker Notes 1 - Beginner",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/klee1611.github.io\/en\/posts\/docker-operating-1.html\/"
+        },"genre": "posts","keywords": "Docker, Virtual Environment","wordcount":  950 ,
+        "url": "http:\/\/klee1611.github.io\/en\/posts\/docker-operating-1.html\/","datePublished": "2020-01-01T17:06:00+00:00","dateModified": "2021-11-16T00:35:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": "Kourtney Lee"},"author": {
+                "@type": "Person",
+                "name": "Kourtney Lee"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/en/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/en/posts/"> Posts </a><a class="menu-item" href="/en/tags/"> Tags </a><a class="menu-item" href="/en/categories/"> Categories </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/docker-operating-1.html/">繁體中文</option><option value="/en/posts/docker-operating-1.html/" selected>English</option></select>
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/en/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/en/posts/" title="">Posts</a><a class="menu-item" href="/en/tags/" title="">Tags</a><a class="menu-item" href="/en/categories/" title="">Categories</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="Select Language">English<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/posts/docker-operating-1.html/">繁體中文</option><option value="/en/posts/docker-operating-1.html/" selected>English</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content always-active" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Docker Notes 1 - Beginner</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/en/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">included in <a href="/en/categories/docker/"><i class="far fa-folder fa-fw"></i>Docker</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2020-01-01">2020-01-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;950 words&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;5 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#basic-concept">Basic Concept</a>
+          <ul>
+            <li><a href="#image">Image</a></li>
+            <li><a href="#container">Container</a></li>
+            <li><a href="#repository">Repository</a></li>
+            <li><a href="#registry">Registry</a></li>
+          </ul>
+        </li>
+        <li><a href="#basic-usage-of-docker">Basic Usage of Docker</a>
+          <ul>
+            <li><a href="#install">Install</a></li>
+            <li><a href="#pull-image">Pull Image</a></li>
+            <li><a href="#run-the-image">Run the Image</a></li>
+            <li><a href="#list-images-at-local">List Images at Local</a></li>
+            <li><a href="#create-a-container">Create a Container</a></li>
+            <li><a href="#list-containers">List Containers</a></li>
+            <li><a href="#run-containers">Run Containers</a></li>
+            <li><a href="#stop-containers">Stop Containers</a></li>
+            <li><a href="#export-container">Export Container</a></li>
+          </ul>
+        </li>
+        <li><a href="#reference">Reference</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="basic-concept">Basic Concept</h2>
+<p>Docker can be seen as a simplified VM.<br>
+Since it will not install the whole operating system,<br>
+it comes with a smaller size and faster speed.</p>
+<h3 id="image">Image</h3>
+<p><strong>Image</strong> contains a lightweight runtime environment,<br>
+including some libraries and executables within it.</p>
+<p>Images can be seen as the <code>.iso</code> file on VM for docker.<br>
+It can only be read but not to be executed.<br>
+If anyone ever wants to modify the image,<br>
+he or she can only create a new image based on the old one.</p>
+<h3 id="container">Container</h3>
+<p>When the image is used and becomes a running environment,<br>
+it is the <strong>container</strong>.</p>
+<p>Like VM,<br>
+the docker container is also isolated from the host environment.<br>
+Whatever is done in the container has nothing to do with the host environment,<br>
+unless we have done some special settings.</p>
+<p>For example,<br>
+we can open a port of a docker container,<br>
+but the host port remains closed.<br>
+But if we can also expose the port of the host if we want.</p>
+<h3 id="repository">Repository</h3>
+<p>A <strong>repository</strong> is where we keep the images.</p>
+<p>It is like the repository of Git:<br>
+There can be lots of repositories,<br>
+and each of them is where to place the code of a project.<br>
+Likewise,<br>
+The repositories of docker are where to place images.<br>
+Every image in the same repository has the same name but different tags.<br>
+And also,<br>
+there are many different repositories for different images.</p>
+<h3 id="registry">Registry</h3>
+<p>A <strong>registry</strong> is also somewhere to place images.</p>
+<p>The difference between registry and repository is,<br>
+the registry is a service where people can push their images from or pull images back to their local machine;<br>
+like GitHub for Git.<br>
+The most famous one is <a href="https://hub.docker.com/" target="_blank" rel="noopener noreffer">Docker Hub</a>.<br>
+While the repository is somewhere to keep images with the same name and different tags.</p>
+<h2 id="basic-usage-of-docker">Basic Usage of Docker</h2>
+<h3 id="install">Install</h3>
+<p>It is really simple in Ubuntu,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">sudo apt-get install docker.io
+</code></pre></div><h3 id="pull-image">Pull Image</h3>
+<p>There are lots of images on <a href="https://hub.docker.com/" target="_blank" rel="noopener noreffer">Docker Hub</a> that can be used.</p>
+<p>If I want a clean Ubuntu environment,<br>
+I can pull a Ubuntu image back to my local machine:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker pull ubuntu
+</code></pre></div><p>Or if I want to specify a tag:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker pull ubuntu:14.04
+</code></pre></div><h3 id="run-the-image">Run the Image</h3>
+<p>We can echo a <code>Hello world</code> using the image we just get:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run ubuntu /bin/echo <span class="s1">&#39;Hello world&#39;</span>
+</code></pre></div><p>Should print <code>Hello world</code> on the terminal.</p>
+<p>What just happened is the <code>docker run</code> command creates a temporary container,<br>
+terminates itself after the <code>echo</code> command.</p>
+<h3 id="list-images-at-local">List Images at Local</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker images
+</code></pre></div><p>It should list the image we just pulled to our local machine.</p>
+<h3 id="create-a-container">Create a Container</h3>
+<p>Once we have a container,<br>
+we have a running environment that can be changed by what we do.</p>
+<p>Creating a container with an image is just like using <code>.iso</code> to create a virtual machine.</p>
+<p>We can create a container running Ubuntu with the image we pulled:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker create -it ubuntu
+</code></pre></div><p>We can also create a container with a name:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker create -it --name CONTAINER_NAME ubuntu
+</code></pre></div><p><code>i</code> refers to &lsquo;input&rsquo; (open <code>stdin</code> of the container).<br>
+<code>t</code> refers to &lsquo;tty&rsquo; (so we can access it with terminal).</p>
+<p>Or if we want to create a container and run it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run -itd ubuntu
+</code></pre></div><p>or</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker run -itd --name CONTAINER_NAME ubuntu
+</code></pre></div><p><code>d</code> refers to &lsquo;detach&rsquo; (let the container runs in the background).</p>
+<h3 id="list-containers">List Containers</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker ps -a
+</code></pre></div><p>Should be able to list all the containers in the host machine.</p>
+<p>And we can see there is a difference in <code>status</code> between container created with <code>docker create</code> and <code>docker run</code>:<br>
+Containers created with <code>docker create</code> is only created and have not been running,<br>
+so the status is <code>created</code>;<br>
+while containers created with <code>docker run</code> is not only created but also run,<br>
+so the status is <code>up</code>.</p>
+<p>There is a  <strong>container id</strong> that can be used at running the container or terminate it.</p>
+<h3 id="run-containers">Run Containers</h3>
+<p>So,<br>
+if the container is created with <code>docker create</code> then it has to be run before we can access it:</p>
+<p>We can use container ID to run the container:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker start <span class="s2">&#34;CONTAINER_ID&#34;</span>
+</code></pre></div><p>Or,<br>
+if the container creates with a name,<br>
+we can use the name to run it:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker start <span class="s2">&#34;CONTAINER_NAME&#34;</span>
+</code></pre></div><p>If the status of the container is <code>exit</code>,<br>
+it also has to be <code>start</code>ed to run before we can access it.<br>
+Use</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker ps -a
+</code></pre></div><p>to check the <code>status</code> first.</p>
+<p>As for containers created with <code>docker run</code>,<br>
+or the containers have already started to run by <code>docker start</code>,<br>
+we can access them with <code>docker exec</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">exec</span> -it <span class="s2">&#34;CONTAINER_ID&#34;</span> bash
+</code></pre></div><p><code>bash</code> is the command we want it to run,<br>
+it can be replaced with other commands like <code>echo</code> or something else.</p>
+<p>We can also use the container&rsquo;s name to access the container:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">exec</span> -it <span class="s2">&#34;CONTAINER_NAME&#34;</span> bash
+</code></pre></div><p>If the command used is <code>bash</code>,<br>
+we should find ourselves in the container.<br>
+The user has become <code>root</code>,<br>
+and we can start to do some settings or install something on the container.</p>
+<p>If we want to leave the container:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nb">exit</span>
+</code></pre></div><p>The container is left running in the background after we <code>exit</code> it.</p>
+<h3 id="stop-containers">Stop Containers</h3>
+<p>It is pretty similar to turning off the virtual machine.<br>
+Stops a container only changes the <code>status</code> of the container to be <code>exit</code>,<br>
+it will not remove the container entirely.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stop <span class="s2">&#34;CONTAINER_ID&#34;</span>
+</code></pre></div><p>Or,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker stop <span class="s2">&#34;CONTAINER_NAME&#34;</span>
+</code></pre></div><p>If we inspect with,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker ps -a
+</code></pre></div><p>We will find that the container remains to exist,<br>
+only the <code>status</code> has changed to <code>exit</code>.</p>
+<h3 id="export-container">Export Container</h3>
+<p>Once a container is exported,<br>
+it can be moved to another host machine.</p>
+<p>We can export a container to be a <code>.tar</code> file.</p>
+<p>For example,<br>
+export a container to be <code>exported.tar</code>:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">export</span> <span class="s2">&#34;CONTAINER_ID&#34;</span> &gt; exported.tar
+</code></pre></div><p>Or,</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">docker <span class="nb">export</span> <span class="s2">&#34;CONTAINER_NAME&#34;</span> &gt; exported.tar
+</code></pre></div><p>Then we can move the <code>.tar</code> file to another machine.</p>
+<h2 id="reference">Reference</h2>
+<p><a href="https://docs.docker.com/v17.09/get-started/" target="_blank" rel="noopener noreffer">Docker docs</a></p></div><div id="likecoin-wrap" align='center'>
+    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fen%2fposts%2fdocker-operating-1.html%2f" frameborder="0"></iframe>
+</div>
+<div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2021-11-16</span>
+            </div>
+            <div class="post-info-license"></div>
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="http://klee1611.github.io/en/posts/docker-operating-1.html/" data-title="Docker Notes 1 - Beginner" data-hashtags="Docker,Virtual Environment"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="http://klee1611.github.io/en/posts/docker-operating-1.html/" data-hashtag="Docker"><i class="fab fa-facebook-square fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/en/tags/docker/">Docker</a>,&nbsp;<a href="/en/tags/virtual-environment/">Virtual Environment</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/en/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/en/posts/jekyll-sitemap-github-pages.html/" class="prev" rel="prev" title="Github Pages and Jekyll - sitemap"><i class="fas fa-angle-left fa-fw"></i>Github Pages and Jekyll - sitemap</a></div>
+</div>
+<div id="comments"><div id="gitalk" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/en/" target="_blank">Kourtney Lee</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2020-01-01T17:06:00Z","owner":"klee1611","repo":"klee1611.github.io","title":"Docker Notes 1 - Beginner"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
+            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
+            gtag('config', 'UA-127207785-1');
+        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>
+</html>
