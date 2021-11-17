@@ -25,20 +25,19 @@ docker images 列出來看一下。
 刪除 Image 如果我用
 docker images 列出的 image 有這些:]]></description>
 </item><item>
-    <title>Docker 操作紀錄(一)</title>
+    <title>Docker Notes 1 - Beginner</title>
     <link>http://klee1611.github.io/posts/docker-operating-1.html/</link>
     <pubDate>Wed, 01 Jan 2020 17:06:00 &#43;0000</pubDate>
     <author>作者</author>
     <guid>http://klee1611.github.io/posts/docker-operating-1.html/</guid>
-    <description><![CDATA[<p>亂七八糟的 project 太多，<br>
-每個 project 用的 module 版本又不一樣，<br>
-有些東西要測試的時候還要把 port 打開有點危險，<br>
-乾脆直接用 docker 把不同的 project 拆開免得互相干擾，<br>
-還不用把自己實體機器的 port 打開來測程式能不能跑。</p>
-<p>還可以抓各種 Image 來放到 Container 上搞壞再重開(?</p>
-<h2 id="docker-基本概念">Docker 基本概念</h2>
+    <description><![CDATA[<h2 id="docker-基本概念">Docker 基本概念</h2>
 <p>一言以蔽之，<br>
 簡化版的 VM。<br>
-因為 docker 不會把整個 operating system 都裝起來，</p>]]></description>
+因為 docker 不會把整個 operating system 都裝起來，<br>
+所以大小比 VM 小很多速度也比 VM 快很多。</p>
+<h3 id="image">Image</h3>
+<p>跑在 container 上面的東西，<br>
+裡面包了一個輕量級的 runtime environment，<br>
+包含一些 library 跟 executable。</p>]]></description>
 </item></channel>
 </rss>
