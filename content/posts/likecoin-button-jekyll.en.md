@@ -4,7 +4,7 @@ date: 2019-12-27 04:06:00 +0800
 lastmod: 2021-11-14 22:38:00 +0800
 categories:
 - Blog
-tags: [Likecoin, Cryptocurrency, Frontend, Github Pages]
+tags: [Likecoin, Frontend, Github Pages]
 slug: 'likecoin-button-jekyll'
 ---
 ## Update
