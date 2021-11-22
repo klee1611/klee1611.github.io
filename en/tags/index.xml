@@ -4,7 +4,21 @@
         <link>http://klee1611.github.io/en/tags/</link>
         <description>Tags - Tag - Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 01 Jan 2020 17:06:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Linux</title>
+    <link>http://klee1611.github.io/en/tags/linux/</link>
+    <pubDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/linux/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>OS</title>
+    <link>http://klee1611.github.io/en/tags/os/</link>
+    <pubDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/tags/os/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
     <title>Docker</title>
     <link>http://klee1611.github.io/en/tags/docker/</link>
     <pubDate>Wed, 01 Jan 2020 17:06:00 &#43;0000</pubDate>
@@ -59,20 +73,6 @@
     <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
     <author>Author</author>
     <guid>http://klee1611.github.io/en/tags/c&#43;&#43;/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Frontend</title>
-    <link>http://klee1611.github.io/en/tags/frontend/</link>
-    <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/frontend/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>Likecoin</title>
-    <link>http://klee1611.github.io/en/tags/likecoin/</link>
-    <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/tags/likecoin/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>

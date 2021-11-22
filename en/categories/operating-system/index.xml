@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Operating System - Category - Kourtney&#39;s Blog</title>
+        <link>http://klee1611.github.io/en/categories/operating-system/</link>
+        <description>Operating System - Category - Kourtney&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/en/categories/operating-system/" rel="self" type="application/rss+xml" /><item>
+    <title>Process Groups, Sessions and Daemon Overview</title>
+    <link>http://klee1611.github.io/en/posts/linux-process-group-sessions-daemon.html/</link>
+    <pubDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://klee1611.github.io/en/posts/linux-process-group-sessions-daemon.html/</guid>
+    <description><![CDATA[<p>Trying to figure out what <strong>daemon</strong> is,<br>
+so I found <a href="https://www.oreilly.com/library/view/the-linux-programming/9781593272203/" target="_blank" rel="noopener noreffer">The Linux Programming Interface</a> and took notes related to it.</p>]]></description>
+</item></channel>
+</rss>
