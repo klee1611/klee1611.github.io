@@ -4,9 +4,21 @@
         <link>http://klee1611.github.io/</link>
         <description>Kourtney&#39;s Blog</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</lastBuildDate>
+            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 09 Jan 2022 19:27:21 &#43;0800</lastBuildDate>
             <atom:link href="http://klee1611.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>Joplin With Webdav on Synology 918plus</title>
+    <link>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</link>
+    <pubDate>Sun, 09 Jan 2022 19:27:21 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</guid>
+    <description><![CDATA[<p>原本使用的筆記軟體是 Notion，<br>
+功能相當強大；<br>
+但後來看到了一些隱私權爭議，<br>
+決定尋找有沒有替代的方案，<br>
+方便我儲存私人專案或清單之類的個人筆記；<br>
+然後就找到了<a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer">Joplin</a> 這套開源軟體。</p>]]></description>
+</item><item>
     <title>Remove or Upgrade Global NPM Packages After Installing NVM</title>
     <link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link>
     <pubDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</pubDate>
@@ -151,25 +163,5 @@ int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt
 一樣可以動態的改變 container 大小。
 不同的 library 實作 deque 的方式可能會不一樣。
 優缺點  可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，]]></description>
-</item><item>
-    <title>Docker 操作紀錄(二)</title>
-    <link>http://klee1611.github.io/posts/docker-operating-2.html/</link>
-    <pubDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/docker-operating-2.html/</guid>
-    <description><![CDATA[接上一篇 Docker 操作紀錄 (一)
-Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
-docker rm CONTAINER_NAME 或
-docker rm CONTAINER_ID 刪完之後可以用
-docker ps -a 確認一下是不是 container 就消失了。
-用之前 Export 過的 Container 建立 image 之前 export 過一個 container 出來叫 c_test.tar，
-可以用它來建立一個新的 image:
-cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_repo 是 repository 的名字，
-1.0 是 tag，
-可以用
-docker images 列出來看一下。
-有了 image 就可以建立新的 container 了。
-刪除 Image 如果我用
-docker images 列出的 image 有這些:]]></description>
 </item></channel>
 </rss>

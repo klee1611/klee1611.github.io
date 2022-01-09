@@ -77,6 +77,19 @@
         alt="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp"
         title="https://www.gravatar.com/avatar/206912d6900c65386f24516df605c206?s=240&amp;d=mp" /></a></div><h1 class="home-title">Kourtney's Space</h1><h2 class="home-subtitle"><div id="id-1" class="typeit"></div></h2><div class="links"><a href="https://github.com/klee1611" title="GitHub" target="_blank" rel="noopener noreffer me"><i class="fab fa-github-alt fa-fw"></i></a><a href="https://linkedin.com/in/kuo-hsiu-lee-5928b9a6" title="LinkedIn" target="_blank" rel="noopener noreffer me"><i class="fab fa-linkedin fa-fw"></i></a><a href="mailto:kourtneylee1611@gmail.com" title="Email" rel=" me"><i class="far fa-envelope fa-fw"></i></a><a href="/index.xml" title="RSS" target="_blank" rel="noopener noreffer me"><i class="fas fa-rss fa-fw"></i></a></div></div>
 <article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
+        <a href="/posts/common-dns-resource-record.html/">常用 DNS Resource Record 紀錄</a>
+    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2020-01-08">2020-01-08</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/web-hosting/"><i class="far fa-folder fa-fw"></i>Web Hosting</a></span></div><div class="content"><p>DNS server 中每個 DNS zone 都有一個 zone file，<br>
+DNS zone 通常會是一個 single domain (有時候不是)，<br>
+zone file 是由很多個 dns resource record (RR) 組成，<br>
+RR 有很多種不同的類型，<br>
+紀錄一下常用幾種。</p>
+<h2 id="a-record">A record</h2>
+<p>將 hostname 對應到 IPv4。 (32-bit)</p>
+<pre><code>hostname IN A xxx.xxx.xxx.xxx
+</code></pre></div><div class="post-footer">
+        <a href="/posts/common-dns-resource-record.html/">閱讀全文</a><div class="post-tags">
+                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/dns/">DNS</a></div></div>
+</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
         <a href="/posts/rdbms-acid-nosql-cap.html/">RDBMS 與 NoSQL 差異筆記</a>
     </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2020-01-06">2020-01-06</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/database/"><i class="far fa-folder fa-fw"></i>Database</a></span></div><div class="content"><h2 id="rdbms">RDBMS</h2>
 <p><strong>Relational Database Management System</strong></p>
@@ -149,26 +162,6 @@
 <p>舉個例：</p></div><div class="post-footer">
         <a href="/posts/const-pointer-reference.html/">閱讀全文</a><div class="post-tags">
                 <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/c/">C</a>,&nbsp;<a href="/tags/c&#43;&#43;/">C&#43;&#43;</a></div></div>
-</article><article class="single summary" itemscope itemtype="http://schema.org/Article"><h1 class="single-title" itemprop="name headline">
-        <a href="/posts/likecoin-button-jekyll.html/">Add LikeWidget to Jekyll theme</a>
-    </h1><div class="post-meta"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-publish">發表於 <time datetime="2019-12-27">2019-12-27</time></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/blog/"><i class="far fa-folder fa-fw"></i>Blog</a></span></div><div class="content"><h2 id="更新">更新</h2>
-<p>已從 Jekyll migrate 到 Hugo，<br>
-這篇方法原理不變但 code 放的位置和內容要修正。</p>
-<h2 id="likecoin">LikeCoin</h2>
-<p>前陣子對 LikeCoin 發生了一點興趣，<br>
-LikeCoin 是一種虛擬貨幣，<br>
-創立的初衷是想做為一種獎勵創作者的機制，<br>
-創作者在文章裡放入 <strong>Like Button</strong>，<br>
-讓大家對他的按鈕按讚鼓掌，<br>
-他就能收到相對的 LikeCoin。</p>
-<p>至於作者能獲得多少 LikeCoin 就要看按讚讀者的帳戶種類，<br>
-如果讀者註冊的是免費帳戶，<br>
-那點下的讚就由 LikeCoin 的基金會按比例支付;<br>
-如果讀者註冊的是付費帳戶，<br>
-那就看該讀者當月按下多少讚按比例分配。<br>
-詳情可以參考 <a href="https://medium.com/likecoin/%E8%AE%9A%E8%B3%9E%E5%85%AC%E6%B0%91%E6%87%B6%E4%BA%BA%E5%8C%85-e7079686bf6e" target="_blank" rel="noopener noreffer">LikeCoin 的 Medium</a>。</p></div><div class="post-footer">
-        <a href="/posts/likecoin-button-jekyll.html/">閱讀全文</a><div class="post-tags">
-                <i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/likecoin/">Likecoin</a>,&nbsp;<a href="/tags/frontend/">Frontend</a>,&nbsp;<a href="/tags/github-pages/">Github Pages</a></div></div>
 </article><ul class="pagination"><li class="page-item ">
                     <span class="page-link">
                         <a href="/">1</a>
@@ -188,7 +181,7 @@ LikeCoin 是一種虛擬貨幣，<br>
                 </li></ul></div></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Kourtney Lee</a></span></div>
+                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Kourtney Lee</a></span></div>
         </div>
     </footer></div>
 
