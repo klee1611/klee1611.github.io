@@ -1,18 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>OS - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/tags/os/</link>
-        <description>OS - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/os/" rel="self" type="application/rss+xml" /><item>
-    <title>Process Groups, Sessions and Daemon Overview</title>
-    <link>http://klee1611.github.io/posts/linux-process-group-sessions-daemon.html/</link>
-    <pubDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/linux-process-group-sessions-daemon.html/</guid>
-    <description><![CDATA[<p>為了弄清楚某個 daemon 的東西，<br>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>OS - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/os/</link><description>OS - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 02 Jan 2020 02:06:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/os/" rel="self" type="application/rss+xml"/><item><title>Process Groups, Sessions and Daemon Overview</title><link>http://klee1611.github.io/posts/linux-process-group-sessions-daemon.html/</link><pubDate>Thu, 02 Jan 2020 02:06:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/linux-process-group-sessions-daemon.html/</guid><description><![CDATA[<p>為了弄清楚某個 daemon 的東西，<br>
 決定把 daemon 是什麼弄清楚，<br>
 網路上找到的資料實在又多又不清楚，<br>
-乾脆直接從 <a href="https://www.oreilly.com/library/view/the-linux-programming/9781593272203/" target="_blank" rel="noopener noreffer">The Linux Programming Interface</a> 把相關資料找出來做筆記。</p>]]></description>
-</item></channel>
-</rss>
+乾脆直接從 <a href="https://www.oreilly.com/library/view/the-linux-programming/9781593272203/" target="_blank" rel="noopener noreffer">The Linux Programming Interface</a> 把相關資料找出來做筆記。</p>]]></description></item></channel></rss>

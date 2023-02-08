@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Virtual Environment - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/tags/virtual-environment/</link>
-        <description>Virtual Environment - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/virtual-environment/" rel="self" type="application/rss+xml" /><item>
-    <title>Docker 操作紀錄(二)</title>
-    <link>http://klee1611.github.io/posts/docker-operating-2.html/</link>
-    <pubDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/docker-operating-2.html/</guid>
-    <description><![CDATA[接上一篇 Docker 操作紀錄 (一)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Virtual Environment - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/virtual-environment/</link><description>Virtual Environment - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 09 Jan 2020 20:40:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/virtual-environment/" rel="self" type="application/rss+xml"/><item><title>Docker 操作紀錄(二)</title><link>http://klee1611.github.io/posts/docker-operating-2.html/</link><pubDate>Thu, 09 Jan 2020 20:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/docker-operating-2.html/</guid><description>接上一篇 Docker 操作紀錄 (一)
 Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
 docker rm CONTAINER_NAME 或
 docker rm CONTAINER_ID 刪完之後可以用
@@ -23,14 +11,7 @@ cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_r
 docker images 列出來看一下。
 有了 image 就可以建立新的 container 了。
 刪除 Image 如果我用
-docker images 列出的 image 有這些:]]></description>
-</item><item>
-    <title>Docker Notes 1 - Beginner</title>
-    <link>http://klee1611.github.io/posts/docker-operating-1.html/</link>
-    <pubDate>Wed, 01 Jan 2020 17:06:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/docker-operating-1.html/</guid>
-    <description><![CDATA[<h2 id="docker-基本概念">Docker 基本概念</h2>
+docker images 列出的 image 有這些:</description></item><item><title>Docker Notes 1 - Beginner</title><link>http://klee1611.github.io/posts/docker-operating-1.html/</link><pubDate>Wed, 01 Jan 2020 17:06:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/docker-operating-1.html/</guid><description><![CDATA[<h2 id="docker-基本概念">Docker 基本概念</h2>
 <p>一言以蔽之，<br>
 簡化版的 VM。<br>
 因為 docker 不會把整個 operating system 都裝起來，<br>
@@ -38,6 +19,4 @@ docker images 列出的 image 有這些:]]></description>
 <h3 id="image">Image</h3>
 <p>跑在 container 上面的東西，<br>
 裡面包了一個輕量級的 runtime environment，<br>
-包含一些 library 跟 executable。</p>]]></description>
-</item></channel>
-</rss>
+包含一些 library 跟 executable。</p>]]></description></item></channel></rss>

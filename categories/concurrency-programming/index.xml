@@ -1,22 +1,8 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Concurrency Programming - 分類 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/categories/concurrency-programming/</link>
-        <description>Concurrency Programming - 分類 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 27 Oct 2021 16:39:27 &#43;0800</lastBuildDate><atom:link href="http://klee1611.github.io/categories/concurrency-programming/" rel="self" type="application/rss+xml" /><item>
-    <title>Python Coroutine Asyncio</title>
-    <link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link>
-    <pubDate>Wed, 27 Oct 2021 16:39:27 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid>
-    <description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Concurrency Programming - 分類 - Kourtney's Blog</title><link>http://klee1611.github.io/categories/concurrency-programming/</link><description>Concurrency Programming - 分類 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 27 Oct 2021 16:39:27 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/categories/concurrency-programming/" rel="self" type="application/rss+xml"/><item><title>Python Coroutine Asyncio</title><link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid><description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
 當一隻 Python 程式有很多需要並行執行的 task，<br>
 想要提升程式效能，<br>
 只能選用 multiprocessing 或 threading；<br>
 Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
 <code>asyncio</code> 可以用來撰寫 coroutines，<br>
 並使用 event loop 並行執行 coroutines，<br>
-減少程式不必要的等待時間以提升效能。</p>]]></description>
-</item></channel>
-</rss>
+減少程式不必要的等待時間以提升效能。</p>]]></description></item></channel></rss>

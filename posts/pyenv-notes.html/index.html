@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Pyenv Notes - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Pyenv Notes" />
-<meta property="og:description" content="pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
+<!doctype html><html lang><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>Pyenv Notes - Kourtney's Blog</title><meta name=Description content><meta property="og:title" content="Pyenv Notes"><meta property="og:description" content="pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
 並能夠方便的切換 python 版本的工具。
 當同時有不同 python 版本的專案需要開發或維護時，
 就會需要使用 pyenv 來協助切換 python 的版本。
@@ -19,15 +11,7 @@ python 的新版本通常都會有一些語法上的更新或是新增一些功�
 諸如次類的情況就可以使用 pyenv 方便的切換 python 的版本。
 安裝和初始化 安裝
 brew install pyenv 安裝完畢後執行初始化
-pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://klee1611.github.io/posts/pyenv-notes.html/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-11-01T18:48:33+08:00" />
-<meta property="article:modified_time" content="2021-11-01T18:48:33+08:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pyenv Notes"/>
-<meta name="twitter:description" content="pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
+pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/."><meta property="og:type" content="article"><meta property="og:url" content="http://klee1611.github.io/posts/pyenv-notes.html/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-11-01T18:48:33+08:00"><meta property="article:modified_time" content="2021-11-01T18:48:33+08:00"><meta property="og:site_name" content="Kourtney's Blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="Pyenv Notes"><meta name=twitter:description content="pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
 並能夠方便的切換 python 版本的工具。
 當同時有不同 python 版本的專案需要開發或維護時，
 就會需要使用 pyenv 來協助切換 python 的版本。
@@ -40,121 +24,17 @@ python 的新版本通常都會有一些語法上的更新或是新增一些功�
 諸如次類的情況就可以使用 pyenv 方便的切換 python 的版本。
 安裝和初始化 安裝
 brew install pyenv 安裝完畢後執行初始化
-pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/."/>
-<meta name="application-name" content="Kourtney&#39;s Blog">
-<meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://klee1611.github.io/posts/pyenv-notes.html/" /><link rel="prev" href="http://klee1611.github.io/posts/python-coroutine-asyncio.html/" /><link rel="next" href="http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0" /><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Pyenv Notes",
-        "inLanguage": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http:\/\/klee1611.github.io\/posts\/pyenv-notes.html\/"
-        },"genre": "posts","keywords": "Programming, Python","wordcount":  167 ,
-        "url": "http:\/\/klee1611.github.io\/posts\/pyenv-notes.html\/","datePublished": "2021-11-01T18:48:33+08:00","dateModified": "2021-11-01T18:48:33+08:00","publisher": {
-            "@type": "Organization",
-            "name": "Kourtney Lee"},"author": {
-                "@type": "Person",
-                "name": "Kourtney Lee"
-            },"description": ""
-    }
-    </script></head>
-    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
-
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 標簽 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/pyenv-notes.html/" selected>繁體中文</option></select>
-                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">標簽</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/posts/pyenv-notes.html/" selected>繁體中文</option></select>
-                </a></div>
-    </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">目錄</h2>
-            <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Pyenv Notes</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-11-01">2021-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 167 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 1 分鐘&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>目錄</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li>
-          <ul>
-            <li><a href="#pyenv-的功能和使用的原因"><code>pyenv</code> 的功能和使用的原因</a></li>
-            <li><a href="#安裝和初始化">安裝和初始化</a></li>
-            <li><a href="#常用指令">常用指令</a></li>
-          </ul>
-        </li>
-        <li><a href="#reference">Reference</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h3 id="pyenv-的功能和使用的原因"><code>pyenv</code> 的功能和使用的原因</h3>
-<p><code>pyenv</code> 是用來在系統裡安裝各種不同版本的 python，</p>
-<p>並能夠方便的切換 python 版本的工具。</p>
-<p>當同時有不同 python 版本的專案需要開發或維護時，</p>
-<p>就會需要使用 <code>pyenv</code> 來協助切換 python 的版本。</p>
-<p>python 的新版本通常都會有一些語法上的更新或是新增一些功能，</p>
-<p>例如 python 的 <code>async / await</code> 就是 python 3.5 以上才出現的功能，</p>
-<p>用 python 3.5 以下的版本來開發的專案就無法使用；</p>
-<p>又或者例如同時有 python 2 和 python 3 的專案，</p>
-<p>而且因為 python 2 和 python 3 語法不相容，</p>
-<p>勢必要在系統裡安裝 python 2 和 python 3；</p>
-<p>諸如次類的情況就可以使用 <code>pyenv</code> 方便的切換 python 的版本。</p>
-<h3 id="安裝和初始化">安裝和初始化</h3>
-<p>安裝</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">brew install pyenv
-</code></pre></div><p>安裝完畢後執行初始化</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pyenv init
-</code></pre></div><p>之後按照指示將顯示的 code 貼到 <code>~/.zshrc</code> 或 <code>~/.bash_profile</code></p>
-<h3 id="常用指令">常用指令</h3>
-<ul>
-<li>列出可以安裝的 python 版本</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pyenv install --list
-</code></pre></div><p>會出現</p>
-<pre><code>Available versions:
+pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/."><meta name=application-name content="Kourtney's Blog"><meta name=apple-mobile-web-app-title content="Kourtney's Blog"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=canonical href=http://klee1611.github.io/posts/pyenv-notes.html/><link rel=prev href=http://klee1611.github.io/posts/python-coroutine-asyncio.html/><link rel=next href=http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><meta name=google-site-verification content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Pyenv Notes","inLanguage":"","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/klee1611.github.io\/posts\/pyenv-notes.html\/"},"genre":"posts","keywords":"Programming, Python","wordcount":167,"url":"http:\/\/klee1611.github.io\/posts\/pyenv-notes.html\/","datePublished":"2021-11-01T18:48:33+08:00","dateModified":"2021-11-01T18:48:33+08:00","publisher":{"@type":"Organization","name":"Kourtney Lee"},"author":{"@type":"Person","name":"Kourtney Lee"},"description":""}</script></head><body header-desktop header-mobile><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"dark"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"dark"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kourtney's Blog">Kourtney's Blog</a></div><div class=menu><div class=menu-inner><a class=menu-item href=https://github.com/klee1611 rel="noopener noreffer" target=_blank><i class='fab fa-fw fa-github'></i> GitHub </a><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>標簽 </a><a class=menu-item href=/categories/>分類 </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item language" title=選擇語言>繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select id=language-select-desktop onchange="location=this.value"><option value=/posts/pyenv-notes.html/ selected>繁體中文</option></select>
+</a><a href=javascript:void(0); class="menu-item theme-switch" title=切換主題><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kourtney's Blog">Kourtney's Blog</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=https://github.com/klee1611 title rel="noopener noreffer" target=_blank><i class='fab fa-fw fa-github'></i>GitHub</a><a class=menu-item href=/posts/ title>文章</a><a class=menu-item href=/tags/ title>標簽</a><a class=menu-item href=/categories/ title>分類</a><a href=javascript:void(0); class="menu-item theme-switch" title=切換主題>
+<i class="fas fa-adjust fa-fw"></i>
+</a><a href=javascript:void(0); class=menu-item title=選擇語言>繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select onchange="location=this.value"><option value=/posts/pyenv-notes.html/ selected>繁體中文</option></select></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目錄</h2><div class="toc-content always-active" id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">Pyenv Notes</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class=post-category>收錄於 <a href=/categories/develop-environment/><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2021-11-01>2021-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 167 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 1 分鐘&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目錄</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><ul><li><a href=#pyenv-的功能和使用的原因><code>pyenv</code> 的功能和使用的原因</a></li><li><a href=#安裝和初始化>安裝和初始化</a></li><li><a href=#常用指令>常用指令</a></li></ul></li><li><a href=#reference>Reference</a></li></ul></li></ul></nav></div></div><div class=content id=content><h3 id=pyenv-的功能和使用的原因><code>pyenv</code> 的功能和使用的原因</h3><p><code>pyenv</code> 是用來在系統裡安裝各種不同版本的 python，</p><p>並能夠方便的切換 python 版本的工具。</p><p>當同時有不同 python 版本的專案需要開發或維護時，</p><p>就會需要使用 <code>pyenv</code> 來協助切換 python 的版本。</p><p>python 的新版本通常都會有一些語法上的更新或是新增一些功能，</p><p>例如 python 的 <code>async / await</code> 就是 python 3.5 以上才出現的功能，</p><p>用 python 3.5 以下的版本來開發的專案就無法使用；</p><p>又或者例如同時有 python 2 和 python 3 的專案，</p><p>而且因為 python 2 和 python 3 語法不相容，</p><p>勢必要在系統裡安裝 python 2 和 python 3；</p><p>諸如次類的情況就可以使用 <code>pyenv</code> 方便的切換 python 的版本。</p><h3 id=安裝和初始化>安裝和初始化</h3><p>安裝</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>brew install pyenv
+</span></span></code></pre></div><p>安裝完畢後執行初始化</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pyenv init
+</span></span></code></pre></div><p>之後按照指示將顯示的 code 貼到 <code>~/.zshrc</code> 或 <code>~/.bash_profile</code></p><h3 id=常用指令>常用指令</h3><ul><li>列出可以安裝的 python 版本</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pyenv install --list
+</span></span></code></pre></div><p>會出現</p><pre tabindex=0><code>Available versions:
   2.1.3
   2.2.3
   2.3.7
@@ -166,84 +46,13 @@ pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/."/>
   3.10-dev
   3.11.0a1
 	...
-</code></pre><ul>
-<li>安裝指定版本的 python</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pyenv install 3.10.0
-</code></pre></div><ul>
-<li>觀察已經安裝過哪些版本的 python</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pyenv versions
-</code></pre></div><p>會出現</p>
-<pre><code>* system (set by ......./.pyenv/version)
+</code></pre><ul><li>安裝指定版本的 python</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pyenv install 3.10.0
+</span></span></code></pre></div><ul><li>觀察已經安裝過哪些版本的 python</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pyenv versions
+</span></span></code></pre></div><p>會出現</p><pre tabindex=0><code>* system (set by ......./.pyenv/version)
   3.10.0
-</code></pre><p>代表目前有系統預設的版本跟剛剛安裝過的 <code>3.10.0</code>，</p>
-<p>但目前使用 python 的是系統預設版本</p>
-<ul>
-<li>切換系統使用版本</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pyenv global 3.10.0
-</code></pre></div><p>到系統任何地方下 <code>pyenv versions</code> 都會看到目前使用的 python 版本是 <code>3.10.0</code></p>
-<ul>
-<li>只切換<strong>當前目錄下</strong>的 python 版本</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pyenv <span class="nb">local</span> 3.7.12
-</code></pre></div><p>在當前目錄下 <code>pyenv versions</code> 會看到正在使用的是 <code>3.7.12</code> 的版本；</p>
-<p>但是到其他目錄下，</p>
-<p>假如之前有用 <code>pyenv global</code> 設定過版本 (假設是 <code>3.10.0</code>)，</p>
-<p>則 <code>pyenv versions</code> 會看到的是之前用 <code>pyenv global</code> 設定的版本 (<code>3.10.0</code>)；</p>
-<p>假如沒有跑過 <code>pyenv global</code> 設定版本則 <code>pyenv versions</code> 會出現系統預設的版本。</p>
-<ul>
-<li>解除安裝指定的 python 版本</li>
-</ul>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pyenv uninstall 3.7.12
-</code></pre></div><h2 id="reference">Reference</h2>
-<p><a href="https://github.com/pyenv/pyenv" target="_blank" rel="noopener noreffer">pyenv Github</a></p>
-</div><div id="likecoin-wrap" align='center'>
-    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fposts%2fpyenv-notes.html%2f" frameborder="0"></iframe>
-</div>
-<div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>更新於 2021-11-01</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://klee1611.github.io/posts/pyenv-notes.html/" data-title="Pyenv Notes" data-hashtags="Programming,Python"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://klee1611.github.io/posts/pyenv-notes.html/" data-hashtag="Programming"><i class="fab fa-facebook-square fa-fw"></i></a></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/python/">Python</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主頁</a></span>
-        </section>
-    </div>
-
-    <div class="post-nav"><a href="/posts/python-coroutine-asyncio.html/" class="prev" rel="prev" title="Python Coroutine Asyncio"><i class="fas fa-angle-left fa-fw"></i>Python Coroutine Asyncio</a>
-            <a href="/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/" class="next" rel="next" title="Remove or Upgrade Global NPM Packages After Installing NVM">Remove or Upgrade Global NPM Packages After Installing NVM<i class="fas fa-angle-right fa-fw"></i></a></div>
-</div>
-<div id="comments"><div id="gitalk" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
-            </noscript></div></article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Kourtney Lee</a></span></div>
-        </div>
-    </footer></div>
-
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂端">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
-                <i class="fas fa-comment fa-fw"></i>
-            </a>
-        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼簿","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2021-11-01T18:48:33+08:00","owner":"klee1611","repo":"klee1611.github.io","title":"Pyenv Notes"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
-            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-            gtag('config', 'UA-127207785-1');
-        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>
-</html>
+</code></pre><p>代表目前有系統預設的版本跟剛剛安裝過的 <code>3.10.0</code>，</p><p>但目前使用 python 的是系統預設版本</p><ul><li>切換系統使用版本</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pyenv global 3.10.0
+</span></span></code></pre></div><p>到系統任何地方下 <code>pyenv versions</code> 都會看到目前使用的 python 版本是 <code>3.10.0</code></p><ul><li>只切換<strong>當前目錄下</strong>的 python 版本</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pyenv <span class=nb>local</span> 3.7.12
+</span></span></code></pre></div><p>在當前目錄下 <code>pyenv versions</code> 會看到正在使用的是 <code>3.7.12</code> 的版本；</p><p>但是到其他目錄下，</p><p>假如之前有用 <code>pyenv global</code> 設定過版本 (假設是 <code>3.10.0</code>)，</p><p>則 <code>pyenv versions</code> 會看到的是之前用 <code>pyenv global</code> 設定的版本 (<code>3.10.0</code>)；</p><p>假如沒有跑過 <code>pyenv global</code> 設定版本則 <code>pyenv versions</code> 會出現系統預設的版本。</p><ul><li>解除安裝指定的 python 版本</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pyenv uninstall 3.7.12
+</span></span></code></pre></div><h2 id=reference>Reference</h2><p><a href=https://github.com/pyenv/pyenv target=_blank rel="noopener noreffer">pyenv Github</a></p></div><div id=buy-me-a-coffee align=center style=margin-top:5vh><script type=text/javascript src=https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js data-name=bmc-button data-slug=klee1611 data-color=#FFDD00 data-emoji data-font=Bree data-text="Buy me a coffee" data-outline-color=#000000 data-font-color=#000000 data-coffee-color=#ffffff></script></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新於 2021-11-01</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=http://klee1611.github.io/posts/pyenv-notes.html/ data-title="Pyenv Notes" data-hashtags=Programming,Python><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=http://klee1611.github.io/posts/pyenv-notes.html/ data-hashtag=Programming><i class="fab fa-facebook-square fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/programming/>Programming</a>,&nbsp;<a href=/tags/python/>Python</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主頁</a></span></section></div><div class=post-nav><a href=/posts/python-coroutine-asyncio.html/ class=prev rel=prev title="Python Coroutine Asyncio"><i class="fas fa-angle-left fa-fw"></i>Python Coroutine Asyncio</a>
+<a href=/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/ class=next rel=next title="Remove or Upgrade Global NPM Packages After Installing NVM">Remove or Upgrade Global NPM Packages After Installing NVM<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=gitalk class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> 強力驅動 | 主題 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2023</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kourtney Lee</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到頂端><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看評論><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=/lib/gitalk/gitalk.min.css><script type=text/javascript src=/lib/gitalk/gitalk.min.js></script><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.js></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/sharer/sharer.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"複製到剪貼簿",maxShownLines:10},comment:{gitalk:{admin:["klee1611"],clientID:"9039cf9e5ad3113a26a0",clientSecret:"f7944019c2817fafd830792a4b68d2c38ff69521",id:"2021-11-01T18:48:33+08:00",owner:"klee1611",repo:"klee1611.github.io",title:"Pyenv Notes"}}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-127207785-1")</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body></html>

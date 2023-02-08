@@ -1,30 +1,9 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/</link>
-        <description>Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 09 Jan 2022 19:27:21 &#43;0800</lastBuildDate>
-            <atom:link href="http://klee1611.github.io/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Joplin With Webdav on Synology 918plus</title>
-    <link>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</link>
-    <pubDate>Sun, 09 Jan 2022 19:27:21 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</guid>
-    <description><![CDATA[<p>原本使用的筆記軟體是 Notion，<br>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kourtney's Blog</title><link>http://klee1611.github.io/</link><description>Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 09 Jan 2022 19:27:21 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Joplin With Webdav on Synology 918plus</title><link>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</link><pubDate>Sun, 09 Jan 2022 19:27:21 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</guid><description><![CDATA[<p>原本使用的筆記軟體是 Notion，<br>
 功能相當強大；<br>
 但後來看到了一些隱私權爭議，<br>
 決定尋找有沒有替代的方案，<br>
 方便我儲存私人專案或清單之類的個人筆記；<br>
-然後就找到了<a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer">Joplin</a> 這套開源軟體。</p>]]></description>
-</item><item>
-    <title>Remove or Upgrade Global NPM Packages After Installing NVM</title>
-    <link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link>
-    <pubDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid>
-    <description><![CDATA[今天遇到一個問題，
+然後就找到了<a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer">Joplin</a> 這套開源軟體。</p>]]></description></item><item><title>Remove or Upgrade Global NPM Packages After Installing NVM</title><link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid><description><![CDATA[今天遇到一個問題，
 安裝過 nvm 後安裝 global package 的路徑就被改變了，
 導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
 怎麼發現這件事的呢？
@@ -37,14 +16,7 @@
 很明顯是用 npm -g 安裝的，
 於是再仔細的看了一下 npm list -g 的結果，
 發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
-在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description>
-</item><item>
-    <title>Pyenv Notes</title>
-    <link>http://klee1611.github.io/posts/pyenv-notes.html/</link>
-    <pubDate>Mon, 01 Nov 2021 18:48:33 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/pyenv-notes.html/</guid>
-    <description><![CDATA[pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
+在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description></item><item><title>Pyenv Notes</title><link>http://klee1611.github.io/posts/pyenv-notes.html/</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/pyenv-notes.html/</guid><description>pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
 並能夠方便的切換 python 版本的工具。
 當同時有不同 python 版本的專案需要開發或維護時，
 就會需要使用 pyenv 來協助切換 python 的版本。
@@ -57,40 +29,19 @@ python 的新版本通常都會有一些語法上的更新或是新增一些功�
 諸如次類的情況就可以使用 pyenv 方便的切換 python 的版本。
 安裝和初始化 安裝
 brew install pyenv 安裝完畢後執行初始化
-pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/.]]></description>
-</item><item>
-    <title>Python Coroutine Asyncio</title>
-    <link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link>
-    <pubDate>Wed, 27 Oct 2021 16:39:27 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid>
-    <description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
+pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/.</description></item><item><title>Python Coroutine Asyncio</title><link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid><description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
 當一隻 Python 程式有很多需要並行執行的 task，<br>
 想要提升程式效能，<br>
 只能選用 multiprocessing 或 threading；<br>
 Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
 <code>asyncio</code> 可以用來撰寫 coroutines，<br>
 並使用 event loop 並行執行 coroutines，<br>
-減少程式不必要的等待時間以提升效能。</p>]]></description>
-</item><item>
-    <title>Pipenv Notes</title>
-    <link>http://klee1611.github.io/posts/pipenv-notes.html/</link>
-    <pubDate>Sun, 26 Sep 2021 18:34:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/pipenv-notes.html/</guid>
-    <description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
+減少程式不必要的等待時間以提升效能。</p>]]></description></item><item><title>Pipenv Notes</title><link>http://klee1611.github.io/posts/pipenv-notes.html/</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/pipenv-notes.html/</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
 <p>當有很多 Python project 要維護，<br>
 不同的 project 有可能使用相同的 python libraries 的不同版本，<br>
 不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。</p>
 <p>過去使用 <code>virtualenv</code> + <code>requirement.txt</code> 的機制可以在不同的 project 使用同一個套件的不同版本，<br>
-也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description>
-</item><item>
-    <title>Stateless HTTP, Stateful Session and Cookies</title>
-    <link>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</link>
-    <pubDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</guid>
-    <description><![CDATA[Stateless HTTP HTTP 是一種 stateless 的 protocol，
+也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description></item><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</guid><description>Stateless HTTP HTTP 是一種 stateless 的 protocol，
 也就是說每一次的 request / response 都是獨立的，
 和之前或之後的 request / response 無關。
 相同的 request 就會回應相同的 response，
@@ -102,31 +53,17 @@ Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
 Session Session 是一段具有狀態 (stateful) 的時間。
 HTTP request / response 是 stateless 的，
 但如果透過 stateless 的 request / response 夾帶 state 資訊的話，
-client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。]]></description>
-</item><item>
-    <title>WSL 2 on Windows Part 2 - Terminal 介面設定</title>
-    <link>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</link>
-    <pubDate>Sun, 11 Apr 2021 00:14:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</guid>
-    <description><![CDATA[把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，
+client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。</description></item><item><title>WSL 2 on Windows Part 2 - Terminal 介面設定</title><link>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</guid><description>把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，
 方便操作。
 Windows Terminal 功能 用 Windows terminal 可以
- 啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換) 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題  這些功能比原生 WSL 能支援的多的多，
+啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換) 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題 這些功能比原生 WSL 能支援的多的多，
 也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，
 於是就決定選用 windows terminal 了。
 Windows terminal 設定 到 Microsoft store 搜尋 Windows terminal 並安裝完成後，
 就可以開始設定 Windows terminal。
-將 WSL 設定為 Windows terminal 預設開啟環境  在 windows terminal 的 [V] 箭頭選單選擇&quot;設定(settings)&quot;，
+將 WSL 設定為 Windows terminal 預設開啟環境 在 windows terminal 的 [V] 箭頭選單選擇&amp;quot;設定(settings)&amp;quot;，
 會出現一個 JSON 檔可以修改，
-從 profiles 的 list 找到想要做為預設的 Linux distribution，]]></description>
-</item><item>
-    <title>WSL 2 on Windows Part 1 - 安裝啟用</title>
-    <link>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</link>
-    <pubDate>Sat, 10 Apr 2021 15:52:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</guid>
-    <description><![CDATA[工作的時候習慣用 Linux 或 mac 的 terminal，
+從 profiles 的 list 找到想要做為預設的 Linux distribution，</description></item><item><title>WSL 2 on Windows Part 1 - 安裝啟用</title><link>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</guid><description>工作的時候習慣用 Linux 或 mac 的 terminal，
 找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。 WSL 2 和 WSL 1 的差異 WSL 2 是基於 Hyper-V 在 virtual machine 中跑完整的 Linux kernal，
 WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，
 因此 WSL 2 比 WSL 1 支援更多 Linux 原生的功能和 system call。
@@ -134,34 +71,19 @@ WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，
 WSL 2 支援的能力比 WSL 1 更好。
 一般情況下 WSL 2 啟動 process 的效能也更好，
 但需要讀取 host 系統的檔案時除外。
-但因為 WSL 2 是在 VM 上跑 Linux kernal，]]></description>
-</item><item>
-    <title>Deep Copy and Shallow Copy</title>
-    <link>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</link>
-    <pubDate>Tue, 21 Jan 2020 01:19:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</guid>
-    <description><![CDATA[Shallow Copy 複製越少越好，
+但因為 WSL 2 是在 VM 上跑 Linux kernal，</description></item><item><title>Deep Copy and Shallow Copy</title><link>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</guid><description>Shallow Copy 複製越少越好，
 Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，
 並一起共享 elements。
 舉個 Java 的例子，
 int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; arr2 就是一個 arr1 的 shallow copy。
- 一旦其中一個 structure 更動了 element 另外一個也會受到影響。  Deep Copy 全部複製，
+一旦其中一個 structure 更動了 element 另外一個也會受到影響。 Deep Copy 全部複製，
 Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
 還把舊的 structure 的 elements 全部複製了一份給新的。
-int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt; arr1.]]></description>
-</item><item>
-    <title>C&#43;&#43; STL Containers 比較 - array, vector, deque, list, forward_list</title>
-    <link>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link>
-    <pubDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid>
-    <description><![CDATA[Array 固定大小的連續記憶體空間所構成
-優缺點  不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1))  Vector 可以動態改變儲存空間大小的 array
-底層實作方式  動態的 allocate array，
-當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去   實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大  優缺點  random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢  Deque Double-ended queue，
+int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &amp;lt; arr1.length; ++i) { arr2[i] = arr1[i]; } arr2 是 arr1 的 deep copy。</description></item><item><title>C++ STL Containers 比較 - array, vector, deque, list, forward_list</title><link>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid><description>Array 固定大小的連續記憶體空間所構成
+優缺點 不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1)) Vector 可以動態改變儲存空間大小的 array
+底層實作方式 動態的 allocate array，
+當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去 實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大 優缺點 random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢 Deque Double-ended queue，
 一樣可以動態的改變 container 大小。
 不同的 library 實作 deque 的方式可能會不一樣。
-優缺點  可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，]]></description>
-</item></channel>
-</rss>
+優缺點 可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，
+但不保證 elements 都被存在一塊連續記憶體空間 Reallocate 的時候比 vector 有效率 在不是頭或尾端的地方加入或刪除 element 比較慢 random access 很有效率 (O(1)) List 底層實作方式 Doubly-linked list</description></item></channel></rss>

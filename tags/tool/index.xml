@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Tool - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/tags/tool/</link>
-        <description>Tool - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/tool/" rel="self" type="application/rss+xml" /><item>
-    <title>從所有的 git repository 移除 .DS_Store 追蹤</title>
-    <link>http://klee1611.github.io/posts/remove-ds_store-from-all-git-repo.html/</link>
-    <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/remove-ds_store-from-all-git-repo.html/</guid>
-    <description><![CDATA[<p>每當建立一個新的資料夾並在裡面放了一些檔案，<br>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Tool - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/tool/</link><description>Tool - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 25 Dec 2019 20:40:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/tool/" rel="self" type="application/rss+xml"/><item><title>從所有的 git repository 移除 .DS_Store 追蹤</title><link>http://klee1611.github.io/posts/remove-ds_store-from-all-git-repo.html/</link><pubDate>Wed, 25 Dec 2019 20:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/remove-ds_store-from-all-git-repo.html/</guid><description><![CDATA[<p>每當建立一個新的資料夾並在裡面放了一些檔案，<br>
 MacOS 就會在該資料夾下自動產生一個 <code>.DS_Store</code> 檔案，<br>
 也就導致了 <code>.DS_Store</code> 在 macOS 裡面散的到處都是。<br>
 而每次有新的 Git repository 就一定要在 <code>.gitignore</code> 裡加 <code>.DS_Store</code> 和 <code>**/.DS_Store</code> 實在是很煩人，<br>
@@ -19,6 +7,4 @@ MacOS 就會在該資料夾下自動產生一個 <code>.DS_Store</code> 檔案�
 <p><code>git config</code> 這個指令可以拿來對 git 的各種值做設定，<br>
 最出名的就是 <code>git config --global user.name</code> 和 <code>git config --global user.email</code>這種，<br>
 對 <code>user.name</code> 和 <code>user.email</code> 做 global 的設定，<br>
-之後每個 Repository 就可以沿用設定好的 <code>user.name</code> 和 <code>user.email</code>；</p>]]></description>
-</item></channel>
-</rss>
+之後每個 Repository 就可以沿用設定好的 <code>user.name</code> 和 <code>user.email</code>；</p>]]></description></item></channel></rss>

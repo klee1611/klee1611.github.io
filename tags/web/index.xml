@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Web - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/tags/web/</link>
-        <description>Web - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/web/" rel="self" type="application/rss+xml" /><item>
-    <title>Stateless HTTP, Stateful Session and Cookies</title>
-    <link>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</link>
-    <pubDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</guid>
-    <description><![CDATA[Stateless HTTP HTTP 是一種 stateless 的 protocol，
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Web - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/web/</link><description>Web - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 28 Jun 2021 02:51:00 +0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/web/" rel="self" type="application/rss+xml"/><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</guid><description>Stateless HTTP HTTP 是一種 stateless 的 protocol，
 也就是說每一次的 request / response 都是獨立的，
 和之前或之後的 request / response 無關。
 相同的 request 就會回應相同的 response，
@@ -22,6 +10,4 @@
 Session Session 是一段具有狀態 (stateful) 的時間。
 HTTP request / response 是 stateless 的，
 但如果透過 stateless 的 request / response 夾帶 state 資訊的話，
-client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。]]></description>
-</item></channel>
-</rss>
+client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。</description></item></channel></rss>

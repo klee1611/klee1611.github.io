@@ -1,39 +1,11 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/en/</link>
-        <description>Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</lastBuildDate>
-            <atom:link href="http://klee1611.github.io/en/index.xml" rel="self" type="application/rss+xml" />
-        <item>
-    <title>Process Groups, Sessions and Daemon Overview</title>
-    <link>http://klee1611.github.io/en/posts/linux-process-group-sessions-daemon.html/</link>
-    <pubDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/linux-process-group-sessions-daemon.html/</guid>
-    <description><![CDATA[<p>Trying to figure out what <strong>daemon</strong> is,<br>
-so I found <a href="https://www.oreilly.com/library/view/the-linux-programming/9781593272203/" target="_blank" rel="noopener noreffer">The Linux Programming Interface</a> and took notes related to it.</p>]]></description>
-</item><item>
-    <title>Docker Notes 1 - Beginner</title>
-    <link>http://klee1611.github.io/en/posts/docker-operating-1.html/</link>
-    <pubDate>Wed, 01 Jan 2020 17:06:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/docker-operating-1.html/</guid>
-    <description><![CDATA[<h2 id="basic-concept">Basic Concept</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kourtney's Blog</title><link>http://klee1611.github.io/en/</link><description>Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 02 Jan 2020 02:06:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/en/index.xml" rel="self" type="application/rss+xml"/><item><title>Process Groups, Sessions and Daemon Overview</title><link>http://klee1611.github.io/en/posts/linux-process-group-sessions-daemon.html/</link><pubDate>Thu, 02 Jan 2020 02:06:00 +0800</pubDate><author>Author</author><guid>http://klee1611.github.io/en/posts/linux-process-group-sessions-daemon.html/</guid><description><![CDATA[<p>Trying to figure out what <strong>daemon</strong> is,<br>
+so I found <a href="https://www.oreilly.com/library/view/the-linux-programming/9781593272203/" target="_blank" rel="noopener noreffer">The Linux Programming Interface</a> and took notes related to it.</p>]]></description></item><item><title>Docker Notes 1 - Beginner</title><link>http://klee1611.github.io/en/posts/docker-operating-1.html/</link><pubDate>Wed, 01 Jan 2020 17:06:00 +0800</pubDate><author>Author</author><guid>http://klee1611.github.io/en/posts/docker-operating-1.html/</guid><description><![CDATA[<h2 id="basic-concept">Basic Concept</h2>
 <p>Docker can be seen as a simplified VM.<br>
 Since it will not install the whole operating system,<br>
 it comes with a smaller size and faster speed.</p>
 <h3 id="image">Image</h3>
 <p><strong>Image</strong> contains a lightweight runtime environment,<br>
-including some libraries and executables within it.</p>]]></description>
-</item><item>
-    <title>Github Pages and Jekyll - sitemap</title>
-    <link>http://klee1611.github.io/en/posts/jekyll-sitemap-github-pages.html/</link>
-    <pubDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/jekyll-sitemap-github-pages.html/</guid>
-    <description><![CDATA[<h2 id="update">Update</h2>
+including some libraries and executables within it.</p>]]></description></item><item><title>Github Pages and Jekyll - sitemap</title><link>http://klee1611.github.io/en/posts/jekyll-sitemap-github-pages.html/</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>Author</author><guid>http://klee1611.github.io/en/posts/jekyll-sitemap-github-pages.html/</guid><description><![CDATA[<h2 id="update">Update</h2>
 <p>I&rsquo;ve moved from Jekyll to Hugo.<br>
 This method only fits Jekyll.</p>
 <h2 id="sitemap">Sitemap</h2>
@@ -43,26 +15,12 @@ a search engine knows the pages and can therefore create indexes for them.<br>
 Then, people surfing the internet can find those pages with keywords after that.</p>
 <h2 id="jekyll-sitemap">Jekyll-sitemap</h2>
 <p>There is a plugin called <a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer">jekyll-stiemap</a> for Jekyll,<br>
-which generates a sitemap automatically whenever the website is re-building.</p>]]></description>
-</item><item>
-    <title>C/C&#43;&#43; - const with Pointer or Reference</title>
-    <link>http://klee1611.github.io/en/posts/const-pointer-reference.html/</link>
-    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/const-pointer-reference.html/</guid>
-    <description><![CDATA[<h2 id="const-with-normal-variables"><code>const</code> with Normal Variables</h2>
+which generates a sitemap automatically whenever the website is re-building.</p>]]></description></item><item><title>C/C++ - const with Pointer or Reference</title><link>http://klee1611.github.io/en/posts/const-pointer-reference.html/</link><pubDate>Mon, 30 Dec 2019 08:19:00 +0800</pubDate><author>Author</author><guid>http://klee1611.github.io/en/posts/const-pointer-reference.html/</guid><description><![CDATA[<h2 id="const-with-normal-variables"><code>const</code> with Normal Variables</h2>
 <p>Two ways to add <code>const</code> for normal variables:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="n">TYPE</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
-</span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
-</code></pre></div><p>Both means this variable cannot be assigned to another value.</p>
-<p>For example,</p>]]></description>
-</item><item>
-    <title>Add LikeWidget to Jekyll theme</title>
-    <link>http://klee1611.github.io/en/posts/likecoin-button-jekyll.html/</link>
-    <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/likecoin-button-jekyll.html/</guid>
-    <description><![CDATA[<h2 id="update">Update</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">TYPE</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
+</span></span></code></pre></div><p>Both means this variable cannot be assigned to another value.</p>
+<p>For example,</p>]]></description></item><item><title>Add LikeWidget to Jekyll theme</title><link>http://klee1611.github.io/en/posts/likecoin-button-jekyll.html/</link><pubDate>Fri, 27 Dec 2019 04:06:00 +0800</pubDate><author>Author</author><guid>http://klee1611.github.io/en/posts/likecoin-button-jekyll.html/</guid><description><![CDATA[<h2 id="update">Update</h2>
 <p>I&rsquo;ve moved my blog from Jekyll to Hugo.<br>
 The way to add like button stays the same,<br>
 but the code and where to place the code have to change.</p>
@@ -76,14 +34,7 @@ and the content creator will receive the corresponding LikeCoin.</p>
 <p>The amount of LikeCoin the content creator will receive depends on the account type of the likers.<br>
 The LikeCoin Foundation will pay in proportion for the free account likers,<br>
 and payment accounts will pay in proportion for how many likes they click at the month.<br>
-The detail can be found at <a href="https://medium.com/likecoin" target="_blank" rel="noopener noreffer">LikeCoin&rsquo;s Medium</a>.</p>]]></description>
-</item><item>
-    <title>Remove .DS_Store tracking in all Git repositories</title>
-    <link>http://klee1611.github.io/en/posts/remove-ds_store-from-all-git-repo.html/</link>
-    <pubDate>Wed, 25 Dec 2019 20:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/remove-ds_store-from-all-git-repo.html/</guid>
-    <description><![CDATA[<p>Every time we create a new folder and add some files in MacOS,<br>
+The detail can be found at <a href="https://medium.com/likecoin" target="_blank" rel="noopener noreffer">LikeCoin&rsquo;s Medium</a>.</p>]]></description></item><item><title>Remove .DS_Store tracking in all Git repositories</title><link>http://klee1611.github.io/en/posts/remove-ds_store-from-all-git-repo.html/</link><pubDate>Wed, 25 Dec 2019 20:40:00 +0800</pubDate><author>Author</author><guid>http://klee1611.github.io/en/posts/remove-ds_store-from-all-git-repo.html/</guid><description><![CDATA[<p>Every time we create a new folder and add some files in MacOS,<br>
 it generates a <code>.DS_Store</code> file in that folder,<br>
 which causes lots of <code>.DS_Store</code> files spreading all over the places in MacOS,<br>
 and it is pretty annoying to add <code>**/.DS_Store</code> into every <code>.gitignore</code> file every time we create a new Git repository,<br>
@@ -92,16 +43,7 @@ so I find a way to prevent the <code>.DS_Store</code> file from being tracked in
 <p>The <code>git config</code> command can be used to set a variety of settings for git.<br>
 The most famous ones are <code>git config --global user.name</code> and <code>git config --global user.email</code>,<br>
 which sets <code>user.name</code> and <code>user.email</code> globally,<br>
-so every git repositories can use these settings.</p>]]></description>
-</item><item>
-    <title>Difference between Concurrent Processing and Parallel Processing</title>
-    <link>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</link>
-    <pubDate>Wed, 25 Dec 2019 19:40:00 &#43;0000</pubDate>
-    <author>Author</author>
-    <guid>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</guid>
-    <description><![CDATA[<p>Both &lsquo;Concurrent Processing&rsquo; and &lsquo;Parallel Processing&rsquo; refer to <strong>multiple processes is executing by the CPU in a period</strong>,<br>
+so every git repositories can use these settings.</p>]]></description></item><item><title>Difference between Concurrent Processing and Parallel Processing</title><link>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</link><pubDate>Wed, 25 Dec 2019 19:40:00 +0800</pubDate><author>Author</author><guid>http://klee1611.github.io/en/posts/concurrent-process-parallel-process.html/</guid><description><![CDATA[<p>Both &lsquo;Concurrent Processing&rsquo; and &lsquo;Parallel Processing&rsquo; refer to <strong>multiple processes is executing by the CPU in a period</strong>,<br>
 but they are two different things.</p>
 <p>According to the <a href="http://shop.oreilly.com/product/9780596521547.do" target="_blank" rel="noopener noreffer">The Art of Concurrency</a> ，<br>
-Concurrent means:</p>]]></description>
-</item></channel>
-</rss>
+Concurrent means:</p>]]></description></item></channel></rss>

@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Stateless HTTP, Stateful Session and Cookies - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Stateless HTTP, Stateful Session and Cookies" />
-<meta property="og:description" content="Stateless HTTP HTTP 是一種 stateless 的 protocol，
+<!doctype html><html lang><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>Stateless HTTP, Stateful Session and Cookies - Kourtney's Blog</title><meta name=Description content><meta property="og:title" content="Stateless HTTP, Stateful Session and Cookies"><meta property="og:description" content="Stateless HTTP HTTP 是一種 stateless 的 protocol，
 也就是說每一次的 request / response 都是獨立的，
 和之前或之後的 request / response 無關。
 相同的 request 就會回應相同的 response，
@@ -18,15 +10,7 @@
 Session Session 是一段具有狀態 (stateful) 的時間。
 HTTP request / response 是 stateless 的，
 但如果透過 stateless 的 request / response 夾帶 state 資訊的話，
-client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-06-28T02:51:00+00:00" />
-<meta property="article:modified_time" content="2021-06-28T02:51:00+00:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Stateless HTTP, Stateful Session and Cookies"/>
-<meta name="twitter:description" content="Stateless HTTP HTTP 是一種 stateless 的 protocol，
+client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。"><meta property="og:type" content="article"><meta property="og:url" content="http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-06-28T02:51:00+00:00"><meta property="article:modified_time" content="2021-06-28T02:51:00+00:00"><meta property="og:site_name" content="Kourtney's Blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="Stateless HTTP, Stateful Session and Cookies"><meta name=twitter:description content="Stateless HTTP HTTP 是一種 stateless 的 protocol，
 也就是說每一次的 request / response 都是獨立的，
 和之前或之後的 request / response 無關。
 相同的 request 就會回應相同的 response，
@@ -38,196 +22,13 @@ client 和 server 就可以透過 request / response 夾帶的 state 資訊製�
 Session Session 是一段具有狀態 (stateful) 的時間。
 HTTP request / response 是 stateless 的，
 但如果透過 stateless 的 request / response 夾帶 state 資訊的話，
-client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。"/>
-<meta name="application-name" content="Kourtney&#39;s Blog">
-<meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/" /><link rel="prev" href="http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/" /><link rel="next" href="http://klee1611.github.io/posts/pipenv-notes.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0" /><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Stateless HTTP, Stateful Session and Cookies",
-        "inLanguage": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http:\/\/klee1611.github.io\/posts\/stateless-http-stateful-session-and-cookies.html\/"
-        },"genre": "posts","keywords": "Web, Session, Cookie","wordcount":  222 ,
-        "url": "http:\/\/klee1611.github.io\/posts\/stateless-http-stateful-session-and-cookies.html\/","datePublished": "2021-06-28T02:51:00+00:00","dateModified": "2021-06-28T02:51:00+00:00","publisher": {
-            "@type": "Organization",
-            "name": "Kourtney Lee"},"author": {
-                "@type": "Person",
-                "name": "Kourtney Lee"
-            },"description": ""
-    }
-    </script></head>
-    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
-
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 標簽 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/stateless-http-stateful-session-and-cookies.html/" selected>繁體中文</option></select>
-                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">標簽</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/posts/stateless-http-stateful-session-and-cookies.html/" selected>繁體中文</option></select>
-                </a></div>
-    </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">目錄</h2>
-            <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Stateless HTTP, Stateful Session and Cookies</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/web/"><i class="far fa-folder fa-fw"></i>Web</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-06-28">2021-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 222 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 2 分鐘&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>目錄</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#stateless-http">Stateless HTTP</a></li>
-        <li><a href="#session">Session</a></li>
-        <li><a href="#cookie">Cookie</a>
-          <ul>
-            <li><a href="#cookie-based-session">Cookie-based session</a></li>
-            <li><a href="#session-id">Session ID</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h2 id="stateless-http">Stateless HTTP</h2>
-<p>HTTP 是一種 <strong>stateless 的 protocol</strong>，<br>
-也就是說<strong>每一次的 request / response 都是獨立的</strong>，<br>
-和之前或之後的 request / response 無關。<br>
-相同的 request 就會回應相同的 response，<br>
-不會因為之前的 request / response 內容而有不同。</p>
-<p>這樣一來 server 因為不需要儲存使用者資訊可以省去大量的資料庫、伺服器儲存空間，<br>
-也因為不需要讓 client 每次都必須連線到相同的 socket 而能夠加快 response time 和省去不少 network bandwidth，</p>
-<!-- raw HTML omitted -->
-<p>但在網站需要做連續動作（例如需要確認使用者身份認證時）就會需要一些機制來協助，<br>
-這時候大部分的網站就會利用 session 或 cookie。</p>
-<h2 id="session">Session</h2>
-<p><strong>Session 是一段具有狀態 (stateful) 的時間</strong>。<br>
-HTTP request / response 是 stateless 的，<br>
-但如果透過 stateless 的 request / response 夾帶 state 資訊的話，<br>
-client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。</p>
-<p>例如說當某個動作必須要使用者登入並且選定了選項 A 後才能夠操作，<br>
-就希望能有一段<strong>具有狀態的時期 (session)</strong> 是“使用者已登入且選定了 A 選項”的狀態，<br>
-做出這個狀態的方式有許多種，<br>
-例如在這個期間的 request 透過攜帶加密過後的使用者 ID 和選項 A 來告訴 server 現在使用者已經登入、使用者的身份和選定的選項等。</p>
-<p>做出 session 的做法可以有很多種，<br>
-最常見的是 cookie，<br>
-但 cookie 只是方法之一，<br>
-並不是說 session 一定只能透過 cookie 來實作，<br>
-透過別的方式也能做出 session，<br>
-例如利用 query string 來記錄前幾次的互動等。</p>
-<h2 id="cookie">Cookie</h2>
-<p>Cookie 是實作出 session 的一種機制，<br>
-server 可以用 <strong><code>Set-Cookie</code> 這個 Header</strong> 請 browser 設定 cookie 並指定 cookie 的內容，<br>
-之後 browser 在發送 request 到相同的 domain 和 path 時會將 cookie 帶入一併發送，<br>
-這樣一來在需要記憶某些 state 時，<br>
-server 只要讓 browser 去設定需要的 cookie，<br>
-之後當發送 request 時 server 看到 cookie 的內容就能知道現在的 state 了。</p>
-<p>由於 <strong>cookie 的內容可以在使用者端被自行修改</strong>，<br>
-所以為了安全性考量，<br>
-在使用 cookie 的時候有比較常見的兩種做法(也能兩者一起使用)：</p>
-<h3 id="cookie-based-session">Cookie-based session</h3>
-<p><strong>將 cookie 內容加密</strong>，<br>
-傳到 server 後由 server 解密才知道 cookie 存的內容。</p>
-<p>接續上面的例子就是將使用者 ID 和選項 A 加密後放進 cookie。</p>
-<p>使用上要注意：</p>
-<ul>
-<li>因為 Cookie 的大小有限制，所以加密後 cookie 的大小要特別注意不能太大</li>
-<li>加密的 key 必須妥善保存</li>
-</ul>
-<h3 id="session-id">Session ID</h3>
-<p>使用一個 ID (Session Identifier, Session ID) 來記錄使用者身份，<br>
-其餘的資料 (Session Data) 都儲存在 server。</p>
-<p>接續上面的例子就是將使用者選定的選項 A 放在 server，<br>
-cookie 裡放置使用者的 ID。</p>
-<p>使用上要注意：</p>
-<ul>
-<li>Session ID 要設計的不好猜，一旦被猜中使用者的身份就會被偷走</li>
-<li>如果網站不夠安全，一旦 Session ID 在某個頁面被其他惡意網站或駭客盜走，使用者的身份就會被偷走</li>
-</ul>
-</div><div id="likecoin-wrap" align='center'>
-    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fposts%2fstateless-http-stateful-session-and-cookies.html%2f" frameborder="0"></iframe>
-</div>
-<div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>更新於 2021-06-28</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/" data-title="Stateless HTTP, Stateful Session and Cookies" data-hashtags="Web,Session,Cookie"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/" data-hashtag="Web"><i class="fab fa-facebook-square fa-fw"></i></a></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/web/">Web</a>,&nbsp;<a href="/tags/session/">Session</a>,&nbsp;<a href="/tags/cookie/">Cookie</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主頁</a></span>
-        </section>
-    </div>
-
-    <div class="post-nav"><a href="/posts/wsl-2-on-windows-part-2.html/" class="prev" rel="prev" title="WSL 2 on Windows Part 2 - Terminal 介面設定"><i class="fas fa-angle-left fa-fw"></i>WSL 2 on Windows Part 2 - Terminal 介面設定</a>
-            <a href="/posts/pipenv-notes.html/" class="next" rel="next" title="Pipenv Notes">Pipenv Notes<i class="fas fa-angle-right fa-fw"></i></a></div>
-</div>
-<div id="comments"><div id="gitalk" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
-            </noscript></div></article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Kourtney Lee</a></span></div>
-        </div>
-    </footer></div>
-
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂端">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
-                <i class="fas fa-comment fa-fw"></i>
-            </a>
-        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼簿","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2021-06-28T02:51:00Z","owner":"klee1611","repo":"klee1611.github.io","title":"Stateless HTTP, Stateful Session and Cookies"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
-            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-            gtag('config', 'UA-127207785-1');
-        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>
-</html>
+client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。"><meta name=application-name content="Kourtney's Blog"><meta name=apple-mobile-web-app-title content="Kourtney's Blog"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=canonical href=http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/><link rel=prev href=http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/><link rel=next href=http://klee1611.github.io/posts/pipenv-notes.html/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><meta name=google-site-verification content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Stateless HTTP, Stateful Session and Cookies","inLanguage":"","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/klee1611.github.io\/posts\/stateless-http-stateful-session-and-cookies.html\/"},"genre":"posts","keywords":"Web, Session, Cookie","wordcount":222,"url":"http:\/\/klee1611.github.io\/posts\/stateless-http-stateful-session-and-cookies.html\/","datePublished":"2021-06-28T02:51:00+00:00","dateModified":"2021-06-28T02:51:00+00:00","publisher":{"@type":"Organization","name":"Kourtney Lee"},"author":{"@type":"Person","name":"Kourtney Lee"},"description":""}</script></head><body header-desktop header-mobile><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"dark"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"dark"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kourtney's Blog">Kourtney's Blog</a></div><div class=menu><div class=menu-inner><a class=menu-item href=https://github.com/klee1611 rel="noopener noreffer" target=_blank><i class='fab fa-fw fa-github'></i> GitHub </a><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>標簽 </a><a class=menu-item href=/categories/>分類 </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item language" title=選擇語言>繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select id=language-select-desktop onchange="location=this.value"><option value=/posts/stateless-http-stateful-session-and-cookies.html/ selected>繁體中文</option></select>
+</a><a href=javascript:void(0); class="menu-item theme-switch" title=切換主題><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kourtney's Blog">Kourtney's Blog</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=https://github.com/klee1611 title rel="noopener noreffer" target=_blank><i class='fab fa-fw fa-github'></i>GitHub</a><a class=menu-item href=/posts/ title>文章</a><a class=menu-item href=/tags/ title>標簽</a><a class=menu-item href=/categories/ title>分類</a><a href=javascript:void(0); class="menu-item theme-switch" title=切換主題>
+<i class="fas fa-adjust fa-fw"></i>
+</a><a href=javascript:void(0); class=menu-item title=選擇語言>繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select onchange="location=this.value"><option value=/posts/stateless-http-stateful-session-and-cookies.html/ selected>繁體中文</option></select></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目錄</h2><div class="toc-content always-active" id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">Stateless HTTP, Stateful Session and Cookies</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class=post-category>收錄於 <a href=/categories/web/><i class="far fa-folder fa-fw"></i>Web</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2021-06-28>2021-06-28</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 222 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 2 分鐘&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目錄</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#stateless-http>Stateless HTTP</a></li><li><a href=#session>Session</a></li><li><a href=#cookie>Cookie</a><ul><li><a href=#cookie-based-session>Cookie-based session</a></li><li><a href=#session-id>Session ID</a></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><h2 id=stateless-http>Stateless HTTP</h2><p>HTTP 是一種 <strong>stateless 的 protocol</strong>，<br>也就是說<strong>每一次的 request / response 都是獨立的</strong>，<br>和之前或之後的 request / response 無關。<br>相同的 request 就會回應相同的 response，<br>不會因為之前的 request / response 內容而有不同。</p><p>這樣一來 server 因為不需要儲存使用者資訊可以省去大量的資料庫、伺服器儲存空間，<br>也因為不需要讓 client 每次都必須連線到相同的 socket 而能夠加快 response time 和省去不少 network bandwidth，</p><p>但在網站需要做連續動作（例如需要確認使用者身份認證時）就會需要一些機制來協助，<br>這時候大部分的網站就會利用 session 或 cookie。</p><h2 id=session>Session</h2><p><strong>Session 是一段具有狀態 (stateful) 的時間</strong>。<br>HTTP request / response 是 stateless 的，<br>但如果透過 stateless 的 request / response 夾帶 state 資訊的話，<br>client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。</p><p>例如說當某個動作必須要使用者登入並且選定了選項 A 後才能夠操作，<br>就希望能有一段<strong>具有狀態的時期 (session)</strong> 是“使用者已登入且選定了 A 選項”的狀態，<br>做出這個狀態的方式有許多種，<br>例如在這個期間的 request 透過攜帶加密過後的使用者 ID 和選項 A 來告訴 server 現在使用者已經登入、使用者的身份和選定的選項等。</p><p>做出 session 的做法可以有很多種，<br>最常見的是 cookie，<br>但 cookie 只是方法之一，<br>並不是說 session 一定只能透過 cookie 來實作，<br>透過別的方式也能做出 session，<br>例如利用 query string 來記錄前幾次的互動等。</p><h2 id=cookie>Cookie</h2><p>Cookie 是實作出 session 的一種機制，<br>server 可以用 <strong><code>Set-Cookie</code> 這個 Header</strong> 請 browser 設定 cookie 並指定 cookie 的內容，<br>之後 browser 在發送 request 到相同的 domain 和 path 時會將 cookie 帶入一併發送，<br>這樣一來在需要記憶某些 state 時，<br>server 只要讓 browser 去設定需要的 cookie，<br>之後當發送 request 時 server 看到 cookie 的內容就能知道現在的 state 了。</p><p>由於 <strong>cookie 的內容可以在使用者端被自行修改</strong>，<br>所以為了安全性考量，<br>在使用 cookie 的時候有比較常見的兩種做法(也能兩者一起使用)：</p><h3 id=cookie-based-session>Cookie-based session</h3><p><strong>將 cookie 內容加密</strong>，<br>傳到 server 後由 server 解密才知道 cookie 存的內容。</p><p>接續上面的例子就是將使用者 ID 和選項 A 加密後放進 cookie。</p><p>使用上要注意：</p><ul><li>因為 Cookie 的大小有限制，所以加密後 cookie 的大小要特別注意不能太大</li><li>加密的 key 必須妥善保存</li></ul><h3 id=session-id>Session ID</h3><p>使用一個 ID (Session Identifier, Session ID) 來記錄使用者身份，<br>其餘的資料 (Session Data) 都儲存在 server。</p><p>接續上面的例子就是將使用者選定的選項 A 放在 server，<br>cookie 裡放置使用者的 ID。</p><p>使用上要注意：</p><ul><li>Session ID 要設計的不好猜，一旦被猜中使用者的身份就會被偷走</li><li>如果網站不夠安全，一旦 Session ID 在某個頁面被其他惡意網站或駭客盜走，使用者的身份就會被偷走</li></ul></div><div id=buy-me-a-coffee align=center style=margin-top:5vh><script type=text/javascript src=https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js data-name=bmc-button data-slug=klee1611 data-color=#FFDD00 data-emoji data-font=Bree data-text="Buy me a coffee" data-outline-color=#000000 data-font-color=#000000 data-coffee-color=#ffffff></script></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新於 2021-06-28</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/ data-title="Stateless HTTP, Stateful Session and Cookies" data-hashtags=Web,Session,Cookie><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/ data-hashtag=Web><i class="fab fa-facebook-square fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/web/>Web</a>,&nbsp;<a href=/tags/session/>Session</a>,&nbsp;<a href=/tags/cookie/>Cookie</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主頁</a></span></section></div><div class=post-nav><a href=/posts/wsl-2-on-windows-part-2.html/ class=prev rel=prev title="WSL 2 on Windows Part 2 - Terminal 介面設定"><i class="fas fa-angle-left fa-fw"></i>WSL 2 on Windows Part 2 - Terminal 介面設定</a>
+<a href=/posts/pipenv-notes.html/ class=next rel=next title="Pipenv Notes">Pipenv Notes<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=gitalk class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> 強力驅動 | 主題 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2023</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kourtney Lee</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到頂端><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看評論><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=/lib/gitalk/gitalk.min.css><script type=text/javascript src=/lib/gitalk/gitalk.min.js></script><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.js></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/sharer/sharer.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"複製到剪貼簿",maxShownLines:10},comment:{gitalk:{admin:["klee1611"],clientID:"9039cf9e5ad3113a26a0",clientSecret:"f7944019c2817fafd830792a4b68d2c38ff69521",id:"2021-06-28T02:51:00Z",owner:"klee1611",repo:"klee1611.github.io",title:"Stateless HTTP, Stateful Session and Cookies"}}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-127207785-1")</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body></html>

@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Node.js - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/tags/node.js/</link>
-        <description>Node.js - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/node.js/" rel="self" type="application/rss+xml" /><item>
-    <title>Remove or Upgrade Global NPM Packages After Installing NVM</title>
-    <link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link>
-    <pubDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid>
-    <description><![CDATA[今天遇到一個問題，
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Node.js - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/node.js/</link><description>Node.js - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 06 Nov 2021 19:31:32 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/node.js/" rel="self" type="application/rss+xml"/><item><title>Remove or Upgrade Global NPM Packages After Installing NVM</title><link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid><description><![CDATA[今天遇到一個問題，
 安裝過 nvm 後安裝 global package 的路徑就被改變了，
 導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
 怎麼發現這件事的呢？
@@ -23,6 +11,4 @@
 很明顯是用 npm -g 安裝的，
 於是再仔細的看了一下 npm list -g 的結果，
 發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
-在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description>
-</item></channel>
-</rss>
+在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description></item></channel></rss>

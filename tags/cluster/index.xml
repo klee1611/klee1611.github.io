@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Cluster - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/tags/cluster/</link>
-        <description>Cluster - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 09 Jan 2020 19:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/cluster/" rel="self" type="application/rss+xml" /><item>
-    <title>HA cluster 筆記和 Application 設計</title>
-    <link>http://klee1611.github.io/posts/ha-cluster-app-architecture.html/</link>
-    <pubDate>Thu, 09 Jan 2020 19:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/ha-cluster-app-architecture.html/</guid>
-    <description><![CDATA[設計比較大流量的系統時早晚要遇上 cluster 的問題。
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Cluster - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/cluster/</link><description>Cluster - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 09 Jan 2020 19:40:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/cluster/" rel="self" type="application/rss+xml"/><item><title>HA cluster 筆記和 Application 設計</title><link>http://klee1611.github.io/posts/ha-cluster-app-architecture.html/</link><pubDate>Thu, 09 Jan 2020 19:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/ha-cluster-app-architecture.html/</guid><description>設計比較大流量的系統時早晚要遇上 cluster 的問題。
 Cluster 一台以上的機器(node)組成的集合，
 有三種不同的目的:
 Load Balancing 讓多台機器一起盡可能的平均分擔任務，
@@ -21,14 +9,13 @@ High Performance Computing 高效能/平行運算系統，
 簡稱 HPC cluster，
 結合多台機器的硬體來增加運算能力，
 用來解決單一一台機器不能解決的任務。
-HA 運作模式 有很多種例如 N+1, N+M, &hellip;
+HA 運作模式 有很多種例如 N+1, N+M, &amp;hellip;
 但最常見的是 two-node cluster，
 two-node cluster 有兩種運作方式:
- Active-Passive Active-Acitve  Active-Passive (AP) Master-slave 的設計，
+Active-Passive Active-Acitve Active-Passive (AP) Master-slave 的設計，
 正常狀況下只有 master (Active) 在做 service，
 當 master (Active) 出現問題時 slave (Passive) 才接手，
 等到 master (Active) 恢復正常狀態再換回來由 master (Active) 繼續處理 service
 優點:
- Fail-over 的速度快 設計跟設定都相對簡單  缺點:]]></description>
-</item></channel>
-</rss>
+Fail-over 的速度快 設計跟設定都相對簡單 缺點:
+沒辦法同時做 load balance 會浪費一些硬體 Active-Active (AA) 兩台機器都同時有自己獨立執行的 service (都同時是 Active)，</description></item></channel></rss>

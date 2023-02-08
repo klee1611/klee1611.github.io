@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Develop environment - 分類 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/categories/develop-environment/</link>
-        <description>Develop environment - 分類 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</lastBuildDate><atom:link href="http://klee1611.github.io/categories/develop-environment/" rel="self" type="application/rss+xml" /><item>
-    <title>Remove or Upgrade Global NPM Packages After Installing NVM</title>
-    <link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link>
-    <pubDate>Sat, 06 Nov 2021 19:31:32 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid>
-    <description><![CDATA[今天遇到一個問題，
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Develop environment - 分類 - Kourtney's Blog</title><link>http://klee1611.github.io/categories/develop-environment/</link><description>Develop environment - 分類 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 06 Nov 2021 19:31:32 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/categories/develop-environment/" rel="self" type="application/rss+xml"/><item><title>Remove or Upgrade Global NPM Packages After Installing NVM</title><link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid><description><![CDATA[今天遇到一個問題，
 安裝過 nvm 後安裝 global package 的路徑就被改變了，
 導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
 怎麼發現這件事的呢？
@@ -23,14 +11,7 @@
 很明顯是用 npm -g 安裝的，
 於是再仔細的看了一下 npm list -g 的結果，
 發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
-在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description>
-</item><item>
-    <title>Pyenv Notes</title>
-    <link>http://klee1611.github.io/posts/pyenv-notes.html/</link>
-    <pubDate>Mon, 01 Nov 2021 18:48:33 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/pyenv-notes.html/</guid>
-    <description><![CDATA[pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
+在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description></item><item><title>Pyenv Notes</title><link>http://klee1611.github.io/posts/pyenv-notes.html/</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/pyenv-notes.html/</guid><description>pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
 並能夠方便的切換 python 版本的工具。
 當同時有不同 python 版本的專案需要開發或維護時，
 就會需要使用 pyenv 來協助切換 python 的版本。
@@ -43,43 +24,22 @@ python 的新版本通常都會有一些語法上的更新或是新增一些功�
 諸如次類的情況就可以使用 pyenv 方便的切換 python 的版本。
 安裝和初始化 安裝
 brew install pyenv 安裝完畢後執行初始化
-pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/.]]></description>
-</item><item>
-    <title>Pipenv Notes</title>
-    <link>http://klee1611.github.io/posts/pipenv-notes.html/</link>
-    <pubDate>Sun, 26 Sep 2021 18:34:23 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/pipenv-notes.html/</guid>
-    <description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
+pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/.</description></item><item><title>Pipenv Notes</title><link>http://klee1611.github.io/posts/pipenv-notes.html/</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/pipenv-notes.html/</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
 <p>當有很多 Python project 要維護，<br>
 不同的 project 有可能使用相同的 python libraries 的不同版本，<br>
 不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。</p>
 <p>過去使用 <code>virtualenv</code> + <code>requirement.txt</code> 的機制可以在不同的 project 使用同一個套件的不同版本，<br>
-也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description>
-</item><item>
-    <title>WSL 2 on Windows Part 2 - Terminal 介面設定</title>
-    <link>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</link>
-    <pubDate>Sun, 11 Apr 2021 00:14:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</guid>
-    <description><![CDATA[把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，
+也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description></item><item><title>WSL 2 on Windows Part 2 - Terminal 介面設定</title><link>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</guid><description>把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，
 方便操作。
 Windows Terminal 功能 用 Windows terminal 可以
- 啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換) 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題  這些功能比原生 WSL 能支援的多的多，
+啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換) 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題 這些功能比原生 WSL 能支援的多的多，
 也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，
 於是就決定選用 windows terminal 了。
 Windows terminal 設定 到 Microsoft store 搜尋 Windows terminal 並安裝完成後，
 就可以開始設定 Windows terminal。
-將 WSL 設定為 Windows terminal 預設開啟環境  在 windows terminal 的 [V] 箭頭選單選擇&quot;設定(settings)&quot;，
+將 WSL 設定為 Windows terminal 預設開啟環境 在 windows terminal 的 [V] 箭頭選單選擇&amp;quot;設定(settings)&amp;quot;，
 會出現一個 JSON 檔可以修改，
-從 profiles 的 list 找到想要做為預設的 Linux distribution，]]></description>
-</item><item>
-    <title>WSL 2 on Windows Part 1 - 安裝啟用</title>
-    <link>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</link>
-    <pubDate>Sat, 10 Apr 2021 15:52:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</guid>
-    <description><![CDATA[工作的時候習慣用 Linux 或 mac 的 terminal，
+從 profiles 的 list 找到想要做為預設的 Linux distribution，</description></item><item><title>WSL 2 on Windows Part 1 - 安裝啟用</title><link>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</guid><description>工作的時候習慣用 Linux 或 mac 的 terminal，
 找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。 WSL 2 和 WSL 1 的差異 WSL 2 是基於 Hyper-V 在 virtual machine 中跑完整的 Linux kernal，
 WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，
 因此 WSL 2 比 WSL 1 支援更多 Linux 原生的功能和 system call。
@@ -87,6 +47,4 @@ WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，
 WSL 2 支援的能力比 WSL 1 更好。
 一般情況下 WSL 2 啟動 process 的效能也更好，
 但需要讀取 host 系統的檔案時除外。
-但因為 WSL 2 是在 VM 上跑 Linux kernal，]]></description>
-</item></channel>
-</rss>
+但因為 WSL 2 是在 VM 上跑 Linux kernal，</description></item></channel></rss>

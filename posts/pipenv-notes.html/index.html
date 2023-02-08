@@ -1,247 +1,35 @@
-<!DOCTYPE html>
-<html lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="robots" content="noodp" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Pipenv Notes - Kourtney&#39;s Blog</title><meta name="Description" content=""><meta property="og:title" content="Pipenv Notes" />
-<meta property="og:description" content="Why Pipenv
+<!doctype html><html lang><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=robots content="noodp"><meta http-equiv=x-ua-compatible content="IE=edge, chrome=1"><title>Pipenv Notes - Kourtney's Blog</title><meta name=Description content><meta property="og:title" content="Pipenv Notes"><meta property="og:description" content="Why Pipenv
 當有很多 Python project 要維護，
 不同的 project 有可能使用相同的 python libraries 的不同版本，
 不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。
-過去使用 virtualenv &#43; requirement.txt 的機制可以在不同的 project 使用同一個套件的不同版本，
-也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="http://klee1611.github.io/posts/pipenv-notes.html/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2021-09-26T18:34:23+08:00" />
-<meta property="article:modified_time" content="2021-09-26T18:34:23+08:00" /><meta property="og:site_name" content="Kourtney&#39;s Blog" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pipenv Notes"/>
-<meta name="twitter:description" content="Why Pipenv
+過去使用 virtualenv + requirement.txt 的機制可以在不同的 project 使用同一個套件的不同版本，
+也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，"><meta property="og:type" content="article"><meta property="og:url" content="http://klee1611.github.io/posts/pipenv-notes.html/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2021-09-26T18:34:23+08:00"><meta property="article:modified_time" content="2021-09-26T18:34:23+08:00"><meta property="og:site_name" content="Kourtney's Blog"><meta name=twitter:card content="summary"><meta name=twitter:title content="Pipenv Notes"><meta name=twitter:description content="Why Pipenv
 當有很多 Python project 要維護，
 不同的 project 有可能使用相同的 python libraries 的不同版本，
 不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。
-過去使用 virtualenv &#43; requirement.txt 的機制可以在不同的 project 使用同一個套件的不同版本，
-也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，"/>
-<meta name="application-name" content="Kourtney&#39;s Blog">
-<meta name="apple-mobile-web-app-title" content="Kourtney&#39;s Blog"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://klee1611.github.io/posts/pipenv-notes.html/" /><link rel="prev" href="http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/" /><link rel="next" href="http://klee1611.github.io/posts/python-coroutine-asyncio.html/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><meta name="google-site-verification" content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0" /><script type="application/ld+json">
-    {
-        "@context": "http://schema.org",
-        "@type": "BlogPosting",
-        "headline": "Pipenv Notes",
-        "inLanguage": "",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "http:\/\/klee1611.github.io\/posts\/pipenv-notes.html\/"
-        },"genre": "posts","keywords": "Programming, Python, Pipenv","wordcount":  186 ,
-        "url": "http:\/\/klee1611.github.io\/posts\/pipenv-notes.html\/","datePublished": "2021-09-26T18:34:23+08:00","dateModified": "2021-09-26T18:34:23+08:00","publisher": {
-            "@type": "Organization",
-            "name": "Kourtney Lee"},"author": {
-                "@type": "Person",
-                "name": "Kourtney Lee"
-            },"description": ""
-    }
-    </script></head>
-    <body header-desktop="" header-mobile=""><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('dark' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'dark' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
-
-        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
-    <div class="header-wrapper">
-        <div class="header-title">
-            <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
-        </div>
-        <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="https://github.com/klee1611" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i> GitHub </a><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 標簽 </a><a class="menu-item" href="/categories/"> 分類 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
-                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/posts/pipenv-notes.html/" selected>繁體中文</option></select>
-                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
-                    <i class="fas fa-adjust fa-fw"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</header><header class="mobile" id="header-mobile">
-    <div class="header-container">
-        <div class="header-wrapper">
-            <div class="header-title">
-                <a href="/" title="Kourtney&#39;s Blog">Kourtney&#39;s Blog</a>
-            </div>
-            <div class="menu-toggle" id="menu-toggle-mobile">
-                <span></span><span></span><span></span>
-            </div>
-        </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="https://github.com/klee1611" title="" rel="noopener noreffer" target="_blank"><i class='fab fa-fw fa-github'></i>GitHub</a><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">標簽</a><a class="menu-item" href="/categories/" title="">分類</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切換主題">
-                <i class="fas fa-adjust fa-fw"></i>
-            </a><a href="javascript:void(0);" class="menu-item" title="選擇語言">繁體中文<i class="fas fa-chevron-right fa-fw"></i>
-                    <select class="language-select" onchange="location = this.value;"><option value="/posts/pipenv-notes.html/" selected>繁體中文</option></select>
-                </a></div>
-    </div>
-</header>
-<div class="search-dropdown desktop">
-    <div id="search-dropdown-desktop"></div>
-</div>
-<div class="search-dropdown mobile">
-    <div id="search-dropdown-mobile"></div>
-</div>
-<main class="main">
-                <div class="container"><div class="toc" id="toc-auto">
-            <h2 class="toc-title">目錄</h2>
-            <div class="toc-content always-active" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animated flipInX">Pipenv Notes</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel=" author" class="author"><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class="post-category">收錄於 <a href="/categories/develop-environment/"><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime="2021-09-26">2021-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 186 字&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 1 分鐘&nbsp;</div>
-        </div><div class="details toc" id="toc-static"  kept="">
-                <div class="details-summary toc-title">
-                    <span>目錄</span>
-                    <span><i class="details-icon fas fa-angle-right"></i></span>
-                </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#why-pipenv">Why Pipenv</a></li>
-        <li><a href="#操作-pipenv">操作 Pipenv</a>
-          <ul>
-            <li><a href="#install-pipenv">Install Pipenv</a></li>
-            <li><a href="#pipenv-commands">Pipenv Commands</a></li>
-            <li><a href="#upgrade-pipenv">Upgrade Pipenv</a></li>
-          </ul>
-        </li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
-            </div><div class="content" id="content"><h2 id="why-pipenv">Why Pipenv</h2>
-<p>當有很多 Python project 要維護，<br>
-不同的 project 有可能使用相同的 python libraries 的不同版本，<br>
-不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。</p>
-<p>過去使用 <code>virtualenv</code> + <code>requirement.txt</code> 的機制可以在不同的 project 使用同一個套件的不同版本，<br>
-也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>
-<p>但當套件需要更新時相當麻煩，<br>
-需要手動再去倒出一份新的 <code>requirement.txt</code>，<br>
-而且當 project 有不同環境的需求的時候(例如 development 環境和 production 環境)還要維護<code>requirement-prod.txt</code> 和 <code>requirement-dev.txt</code> 兩份套件設定，<br>
-如果不搭配 <code>pyenv</code> 也無法切換不同的 python 版本。</p>
-<p>後來發現了 Python 官方推薦的 <code>pipenv</code> 解決了這些問題，<br>
-可以方便的只用 command 做到：</p>
-<ul>
-<li>建立獨立的 python 版本和套件虛擬環境</li>
-<li>安裝並記錄套件版本到自動生成的 <code>Pipfile</code> 和 <code>Pipfile.lock</code>，同時透過套件的 Hash 值檢查套件安全性</li>
-<li>紀錄套件使用環境 (分開 development 和 production 環境)</li>
-<li>讀取 <code>.env</code> 檔案設定虛擬環境的環境變數</li>
-<li>自動切換系統中的 python 版本（或 <code>pyenv</code> 有安裝的 python 版本）</li>
-</ul>
-<h2 id="操作-pipenv">操作 Pipenv</h2>
-<h3 id="install-pipenv">Install Pipenv</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pip3 install pipenv
-</code></pre></div><h3 id="pipenv-commands">Pipenv Commands</h3>
-<ul>
-<li>
-<p>建立特定 python 版本的獨立虛擬環境:</p>
-<p>到 project 所在的目錄下</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv --python 3.8
-</code></pre></div><ul>
-<li>注意該版本的 python 系統要有，不然就要用 <code>pyenv</code> 裝一下</li>
-</ul>
-</li>
-<li>
-<p>安裝套件</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv install flask
-</code></pre></div></li>
-<li>
-<p>安裝 development 套件</p>
-<p>加上 <code>--dev</code> 的套件在自動生成的 <code>Pipfile</code> 中會被放到 <code>[dev-packages]</code> 底下</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv install pytest --dev
-</code></pre></div></li>
-<li>
-<p>移除套件</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv uninstall flask
-</code></pre></div></li>
-<li>
-<p>在建立的虛擬環境中執行 script</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv run python server.py
-</code></pre></div><p>也可以執行其他指令如 <code>pytest</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv run pytest
-</code></pre></div></li>
-<li>
-<p>進入虛擬環境</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv shell
-</code></pre></div><p>要離開虛擬環境時在輸入 <code>exit</code> 即可</p>
-</li>
-<li>
-<p>用取得的 <code>Pipfile</code> 和 <code>Pipfile.lock</code> 建立虛擬環境</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv install
-</code></pre></div><p>如果要連 development 環境的套件一起安裝</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv install --dev
-</code></pre></div></li>
-<li>
-<p>從 <code>requirement.txt</code> 建立 <code>Pipfile</code> 和 <code>Pipfile.lock</code></p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv install
-</code></pre></div></li>
-<li>
-<p>輸出 <code>requirement.txt</code></p>
-<p>實際上不需要做這件事，<br>
-但在某些特殊情況下（例如特殊平台的需求）還是可以這樣做</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">pipenv lock --requirements &gt; requirements.txt
-</code></pre></div></li>
-<li>
-<p>升級虛擬環境中的套件</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv update
-</code></pre></div></li>
-<li>
-<p>刪除目前的虛擬環境</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pipenv --rm
-</code></pre></div></li>
-</ul>
-<h3 id="upgrade-pipenv">Upgrade Pipenv</h3>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">pip3 install --upgrade pipenv
-</code></pre></div></div><div id="likecoin-wrap" align='center'>
-    <iframe scrolling="no" style="width: 500px; height: 200px" src="https://button.like.co/in/embed/klee1611/button/?referrer=http%3a%2f%2fklee1611.github.io%2fposts%2fpipenv-notes.html%2f" frameborder="0"></iframe>
-</div>
-<div class="post-footer" id="post-footer">
-    <div class="post-info">
-        <div class="post-info-line">
-            <div class="post-info-mod">
-                <span>更新於 2021-09-26</span>
-            </div>
-            <div class="post-info-license"></div>
-        </div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 Twitter" data-sharer="twitter" data-url="http://klee1611.github.io/posts/pipenv-notes.html/" data-title="Pipenv Notes" data-hashtags="Programming,Python,Pipenv"><i class="fab fa-twitter fa-fw"></i></a><a href="javascript:void(0);" title="分享到 Facebook" data-sharer="facebook" data-url="http://klee1611.github.io/posts/pipenv-notes.html/" data-hashtag="Programming"><i class="fab fa-facebook-square fa-fw"></i></a></span>
-            </div>
-        </div>
-    </div>
-
-    <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/programming/">Programming</a>,&nbsp;<a href="/tags/python/">Python</a>,&nbsp;<a href="/tags/pipenv/">Pipenv</a></section>
-        <section>
-            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主頁</a></span>
-        </section>
-    </div>
-
-    <div class="post-nav"><a href="/posts/stateless-http-stateful-session-and-cookies.html/" class="prev" rel="prev" title="Stateless HTTP, Stateful Session and Cookies"><i class="fas fa-angle-left fa-fw"></i>Stateless HTTP, Stateful Session and Cookies</a>
-            <a href="/posts/python-coroutine-asyncio.html/" class="next" rel="next" title="Python Coroutine Asyncio">Python Coroutine Asyncio<i class="fas fa-angle-right fa-fw"></i></a></div>
-</div>
-<div id="comments"><div id="gitalk" class="comment"></div><noscript>
-                Please enable JavaScript to view the comments powered by <a href="https://github.com/gitalk/gitalk"></a>Gitalk</a>.
-            </noscript></div></article></div>
-            </main><footer class="footer">
-        <div class="footer-container"><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.87.0">Hugo</a> 強力驅動 | 主題 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a>
-                </div><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2022</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">Kourtney Lee</a></span></div>
-        </div>
-    </footer></div>
-
-        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到頂端">
-                <i class="fas fa-arrow-up fa-fw"></i>
-            </a><a href="#" id="view-comments" class="fixed-button" title="查看評論">
-                <i class="fas fa-comment fa-fw"></i>
-            </a>
-        </div><link rel="stylesheet" href="/lib/gitalk/gitalk.min.css"><script type="text/javascript" src="/lib/gitalk/gitalk.min.js"></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"複製到剪貼簿","maxShownLines":10},"comment":{"gitalk":{"admin":["klee1611"],"clientID":"9039cf9e5ad3113a26a0","clientSecret":"f7944019c2817fafd830792a4b68d2c38ff69521","id":"2021-09-26T18:34:23+08:00","owner":"klee1611","repo":"klee1611.github.io","title":"Pipenv Notes"}}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript">
-            window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());
-            gtag('config', 'UA-127207785-1');
-        </script><script type="text/javascript" src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body>
-</html>
+過去使用 virtualenv + requirement.txt 的機制可以在不同的 project 使用同一個套件的不同版本，
+也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，"><meta name=application-name content="Kourtney's Blog"><meta name=apple-mobile-web-app-title content="Kourtney's Blog"><link rel="shortcut icon" type=image/x-icon href=/favicon.ico><link rel=icon type=image/png sizes=32x32 href=/favicon-32x32.png><link rel=icon type=image/png sizes=16x16 href=/favicon-16x16.png><link rel=apple-touch-icon sizes=180x180 href=/apple-touch-icon.png><link rel=manifest href=/site.webmanifest><link rel=canonical href=http://klee1611.github.io/posts/pipenv-notes.html/><link rel=prev href=http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/><link rel=next href=http://klee1611.github.io/posts/python-coroutine-asyncio.html/><link rel=stylesheet href=/lib/normalize/normalize.min.css><link rel=stylesheet href=/css/style.min.css><link rel=stylesheet href=/lib/fontawesome-free/all.min.css><link rel=stylesheet href=/lib/animate/animate.min.css><meta name=google-site-verification content="WLcU5DjZJSqz0doT_JYXHt6H-4I0EE_iWnsqFqyO1E0"><script type=application/ld+json>{"@context":"http://schema.org","@type":"BlogPosting","headline":"Pipenv Notes","inLanguage":"","mainEntityOfPage":{"@type":"WebPage","@id":"http:\/\/klee1611.github.io\/posts\/pipenv-notes.html\/"},"genre":"posts","keywords":"Programming, Python, Pipenv","wordcount":186,"url":"http:\/\/klee1611.github.io\/posts\/pipenv-notes.html\/","datePublished":"2021-09-26T18:34:23+08:00","dateModified":"2021-09-26T18:34:23+08:00","publisher":{"@type":"Organization","name":"Kourtney Lee"},"author":{"@type":"Person","name":"Kourtney Lee"},"description":""}</script></head><body header-desktop header-mobile><script type=text/javascript>(window.localStorage&&localStorage.getItem("theme")?localStorage.getItem("theme")==="dark":"dark"==="auto"?window.matchMedia("(prefers-color-scheme: dark)").matches:"dark"==="dark")&&document.body.setAttribute("theme","dark")</script><div id=mask></div><div class=wrapper><header class=desktop id=header-desktop><div class=header-wrapper><div class=header-title><a href=/ title="Kourtney's Blog">Kourtney's Blog</a></div><div class=menu><div class=menu-inner><a class=menu-item href=https://github.com/klee1611 rel="noopener noreffer" target=_blank><i class='fab fa-fw fa-github'></i> GitHub </a><a class=menu-item href=/posts/>文章 </a><a class=menu-item href=/tags/>標簽 </a><a class=menu-item href=/categories/>分類 </a><span class="menu-item delimiter"></span><a href=javascript:void(0); class="menu-item language" title=選擇語言>繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select id=language-select-desktop onchange="location=this.value"><option value=/posts/pipenv-notes.html/ selected>繁體中文</option></select>
+</a><a href=javascript:void(0); class="menu-item theme-switch" title=切換主題><i class="fas fa-adjust fa-fw"></i></a></div></div></div></header><header class=mobile id=header-mobile><div class=header-container><div class=header-wrapper><div class=header-title><a href=/ title="Kourtney's Blog">Kourtney's Blog</a></div><div class=menu-toggle id=menu-toggle-mobile><span></span><span></span><span></span></div></div><div class=menu id=menu-mobile><a class=menu-item href=https://github.com/klee1611 title rel="noopener noreffer" target=_blank><i class='fab fa-fw fa-github'></i>GitHub</a><a class=menu-item href=/posts/ title>文章</a><a class=menu-item href=/tags/ title>標簽</a><a class=menu-item href=/categories/ title>分類</a><a href=javascript:void(0); class="menu-item theme-switch" title=切換主題>
+<i class="fas fa-adjust fa-fw"></i>
+</a><a href=javascript:void(0); class=menu-item title=選擇語言>繁體中文<i class="fas fa-chevron-right fa-fw"></i>
+<select class=language-select onchange="location=this.value"><option value=/posts/pipenv-notes.html/ selected>繁體中文</option></select></a></div></div></header><div class="search-dropdown desktop"><div id=search-dropdown-desktop></div></div><div class="search-dropdown mobile"><div id=search-dropdown-mobile></div></div><main class=main><div class=container><div class=toc id=toc-auto><h2 class=toc-title>目錄</h2><div class="toc-content always-active" id=toc-content-auto></div></div><article class="page single"><h1 class="single-title animated flipInX">Pipenv Notes</h1><div class=post-meta><div class=post-meta-line><span class=post-author><a href=/ title=Author rel=author class=author><i class="fas fa-user-circle fa-fw"></i>Kourtney Lee</a></span>&nbsp;<span class=post-category>收錄於 <a href=/categories/develop-environment/><i class="far fa-folder fa-fw"></i>Develop environment</a></span></div><div class=post-meta-line><i class="far fa-calendar-alt fa-fw"></i>&nbsp;<time datetime=2021-09-26>2021-09-26</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;約 186 字&nbsp;
+<i class="far fa-clock fa-fw"></i>&nbsp;預計閱讀 1 分鐘&nbsp;</div></div><div class="details toc" id=toc-static kept><div class="details-summary toc-title"><span>目錄</span>
+<span><i class="details-icon fas fa-angle-right"></i></span></div><div class="details-content toc-content" id=toc-content-static><nav id=TableOfContents><ul><li><ul><li><a href=#why-pipenv>Why Pipenv</a></li><li><a href=#操作-pipenv>操作 Pipenv</a><ul><li><a href=#install-pipenv>Install Pipenv</a></li><li><a href=#pipenv-commands>Pipenv Commands</a></li><li><a href=#upgrade-pipenv>Upgrade Pipenv</a></li></ul></li></ul></li></ul></nav></div></div><div class=content id=content><h2 id=why-pipenv>Why Pipenv</h2><p>當有很多 Python project 要維護，<br>不同的 project 有可能使用相同的 python libraries 的不同版本，<br>不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。</p><p>過去使用 <code>virtualenv</code> + <code>requirement.txt</code> 的機制可以在不同的 project 使用同一個套件的不同版本，<br>也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p><p>但當套件需要更新時相當麻煩，<br>需要手動再去倒出一份新的 <code>requirement.txt</code>，<br>而且當 project 有不同環境的需求的時候(例如 development 環境和 production 環境)還要維護<code>requirement-prod.txt</code> 和 <code>requirement-dev.txt</code> 兩份套件設定，<br>如果不搭配 <code>pyenv</code> 也無法切換不同的 python 版本。</p><p>後來發現了 Python 官方推薦的 <code>pipenv</code> 解決了這些問題，<br>可以方便的只用 command 做到：</p><ul><li>建立獨立的 python 版本和套件虛擬環境</li><li>安裝並記錄套件版本到自動生成的 <code>Pipfile</code> 和 <code>Pipfile.lock</code>，同時透過套件的 Hash 值檢查套件安全性</li><li>紀錄套件使用環境 (分開 development 和 production 環境)</li><li>讀取 <code>.env</code> 檔案設定虛擬環境的環境變數</li><li>自動切換系統中的 python 版本（或 <code>pyenv</code> 有安裝的 python 版本）</li></ul><h2 id=操作-pipenv>操作 Pipenv</h2><h3 id=install-pipenv>Install Pipenv</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pip3 install pipenv
+</span></span></code></pre></div><h3 id=pipenv-commands>Pipenv Commands</h3><ul><li><p>建立特定 python 版本的獨立虛擬環境:</p><p>到 project 所在的目錄下</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv --python 3.8
+</span></span></code></pre></div><ul><li>注意該版本的 python 系統要有，不然就要用 <code>pyenv</code> 裝一下</li></ul></li><li><p>安裝套件</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv install flask
+</span></span></code></pre></div></li><li><p>安裝 development 套件</p><p>加上 <code>--dev</code> 的套件在自動生成的 <code>Pipfile</code> 中會被放到 <code>[dev-packages]</code> 底下</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv install pytest --dev
+</span></span></code></pre></div></li><li><p>移除套件</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv uninstall flask
+</span></span></code></pre></div></li><li><p>在建立的虛擬環境中執行 script</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv run python server.py
+</span></span></code></pre></div><p>也可以執行其他指令如 <code>pytest</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv run pytest
+</span></span></code></pre></div></li><li><p>進入虛擬環境</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv shell
+</span></span></code></pre></div><p>要離開虛擬環境時在輸入 <code>exit</code> 即可</p></li><li><p>用取得的 <code>Pipfile</code> 和 <code>Pipfile.lock</code> 建立虛擬環境</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv install
+</span></span></code></pre></div><p>如果要連 development 環境的套件一起安裝</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv install --dev
+</span></span></code></pre></div></li><li><p>從 <code>requirement.txt</code> 建立 <code>Pipfile</code> 和 <code>Pipfile.lock</code></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv install
+</span></span></code></pre></div></li><li><p>輸出 <code>requirement.txt</code></p><p>實際上不需要做這件事，<br>但在某些特殊情況下（例如特殊平台的需求）還是可以這樣做</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-html data-lang=html><span class=line><span class=cl>pipenv lock --requirements &gt; requirements.txt
+</span></span></code></pre></div></li><li><p>升級虛擬環境中的套件</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv update
+</span></span></code></pre></div></li><li><p>刪除目前的虛擬環境</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pipenv --rm
+</span></span></code></pre></div></li></ul><h3 id=upgrade-pipenv>Upgrade Pipenv</h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-bash data-lang=bash><span class=line><span class=cl>pip3 install --upgrade pipenv
+</span></span></code></pre></div></div><div id=buy-me-a-coffee align=center style=margin-top:5vh><script type=text/javascript src=https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js data-name=bmc-button data-slug=klee1611 data-color=#FFDD00 data-emoji data-font=Bree data-text="Buy me a coffee" data-outline-color=#000000 data-font-color=#000000 data-coffee-color=#ffffff></script></div><div class=post-footer id=post-footer><div class=post-info><div class=post-info-line><div class=post-info-mod><span>更新於 2021-09-26</span></div><div class=post-info-license></div></div><div class=post-info-line><div class=post-info-md></div><div class=post-info-share><span><a href=javascript:void(0); title="分享到 Twitter" data-sharer=twitter data-url=http://klee1611.github.io/posts/pipenv-notes.html/ data-title="Pipenv Notes" data-hashtags=Programming,Python,Pipenv><i class="fab fa-twitter fa-fw"></i></a><a href=javascript:void(0); title="分享到 Facebook" data-sharer=facebook data-url=http://klee1611.github.io/posts/pipenv-notes.html/ data-hashtag=Programming><i class="fab fa-facebook-square fa-fw"></i></a></span></div></div></div><div class=post-info-more><section class=post-tags><i class="fas fa-tags fa-fw"></i>&nbsp;<a href=/tags/programming/>Programming</a>,&nbsp;<a href=/tags/python/>Python</a>,&nbsp;<a href=/tags/pipenv/>Pipenv</a></section><section><span><a href=javascript:void(0); onclick=window.history.back()>返回</a></span>&nbsp;|&nbsp;<span><a href=/>主頁</a></span></section></div><div class=post-nav><a href=/posts/stateless-http-stateful-session-and-cookies.html/ class=prev rel=prev title="Stateless HTTP, Stateful Session and Cookies"><i class="fas fa-angle-left fa-fw"></i>Stateless HTTP, Stateful Session and Cookies</a>
+<a href=/posts/python-coroutine-asyncio.html/ class=next rel=next title="Python Coroutine Asyncio">Python Coroutine Asyncio<i class="fas fa-angle-right fa-fw"></i></a></div></div><div id=comments><div id=gitalk class=comment></div><noscript>Please enable JavaScript to view the comments powered by <a href=https://github.com/gitalk/gitalk></a>Gitalk</a>.</noscript></div></article></div></main><footer class=footer><div class=footer-container><div class=footer-line>由 <a href=https://gohugo.io/ target=_blank rel="noopener noreffer" title="Hugo 0.110.0">Hugo</a> 強力驅動 | 主題 - <a href=https://github.com/dillonzq/LoveIt target=_blank rel="noopener noreffer" title="LoveIt 0.2.10"><i class="far fa-kiss-wink-heart fa-fw"></i> LoveIt</a></div><div class=footer-line><i class="far fa-copyright fa-fw"></i><span itemprop=copyrightYear>2023</span><span class=author itemprop=copyrightHolder>&nbsp;<a href=/ target=_blank>Kourtney Lee</a></span></div></div></footer></div><div id=fixed-buttons><a href=# id=back-to-top class=fixed-button title=回到頂端><i class="fas fa-arrow-up fa-fw"></i>
+</a><a href=# id=view-comments class=fixed-button title=查看評論><i class="fas fa-comment fa-fw"></i></a></div><link rel=stylesheet href=/lib/gitalk/gitalk.min.css><script type=text/javascript src=/lib/gitalk/gitalk.min.js></script><script type=text/javascript src=/lib/smooth-scroll/smooth-scroll.min.js></script><script type=text/javascript src=/lib/lazysizes/lazysizes.min.js></script><script type=text/javascript src=/lib/clipboard/clipboard.min.js></script><script type=text/javascript src=/lib/sharer/sharer.min.js></script><script type=text/javascript>window.config={code:{copyTitle:"複製到剪貼簿",maxShownLines:10},comment:{gitalk:{admin:["klee1611"],clientID:"9039cf9e5ad3113a26a0",clientSecret:"f7944019c2817fafd830792a4b68d2c38ff69521",id:"2021-09-26T18:34:23+08:00",owner:"klee1611",repo:"klee1611.github.io",title:"Pipenv Notes"}}}</script><script type=text/javascript src=/js/theme.min.js></script><script type=text/javascript>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","UA-127207785-1")</script><script type=text/javascript src="https://www.googletagmanager.com/gtag/js?id=UA-127207785-1" async></script></body></html>

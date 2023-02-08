@@ -1,16 +1,4 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>Frontend - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/tags/frontend/</link>
-        <description>Frontend - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/tags/frontend/" rel="self" type="application/rss+xml" /><item>
-    <title>Add LikeWidget to Jekyll theme</title>
-    <link>http://klee1611.github.io/posts/likecoin-button-jekyll.html/</link>
-    <pubDate>Fri, 27 Dec 2019 04:06:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/posts/likecoin-button-jekyll.html/</guid>
-    <description><![CDATA[<h2 id="更新">更新</h2>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Frontend - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/frontend/</link><description>Frontend - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 27 Dec 2019 04:06:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/frontend/" rel="self" type="application/rss+xml"/><item><title>Add LikeWidget to Jekyll theme</title><link>http://klee1611.github.io/posts/likecoin-button-jekyll.html/</link><pubDate>Fri, 27 Dec 2019 04:06:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/likecoin-button-jekyll.html/</guid><description><![CDATA[<h2 id="更新">更新</h2>
 <p>已從 Jekyll migrate 到 Hugo，<br>
 這篇方法原理不變但 code 放的位置和內容要修正。</p>
 <h2 id="likecoin">LikeCoin</h2>
@@ -25,6 +13,4 @@ LikeCoin 是一種虛擬貨幣，<br>
 那點下的讚就由 LikeCoin 的基金會按比例支付;<br>
 如果讀者註冊的是付費帳戶，<br>
 那就看該讀者當月按下多少讚按比例分配。<br>
-詳情可以參考 <a href="https://medium.com/likecoin/%E8%AE%9A%E8%B3%9E%E5%85%AC%E6%B0%91%E6%87%B6%E4%BA%BA%E5%8C%85-e7079686bf6e" target="_blank" rel="noopener noreffer">LikeCoin 的 Medium</a>。</p>]]></description>
-</item></channel>
-</rss>
+詳情可以參考 <a href="https://medium.com/likecoin/%E8%AE%9A%E8%B3%9E%E5%85%AC%E6%B0%91%E6%87%B6%E4%BA%BA%E5%8C%85-e7079686bf6e" target="_blank" rel="noopener noreffer">LikeCoin 的 Medium</a>。</p>]]></description></item></channel></rss>
