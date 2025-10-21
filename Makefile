@@ -1,6 +1,6 @@
-.PHONY: local deploy
+.PHONY: local deploy new clean
 local:
-	@hugo server --buildDrafts --buildFuture --disableFastRender --watch --verbose
+	@hugo server --buildDrafts --buildFuture --disableFastRender --watch
 
 deploy:
 	@hugo --minify --verbose
@@ -10,3 +10,6 @@ deploy:
 
 new:
 	@hugo new $(filter-out $@,$(MAKECMDGOALS))
+
+clean:
+	@hugo --cleanDestinationDir
