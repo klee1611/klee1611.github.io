@@ -1,6 +1,6 @@
 .PHONY: local deploy new clean
 local:
-	@hugo server --buildDrafts --buildFuture --disableFastRender --watch
+	@hugo server --baseURL "http://localhost:1313/" --buildDrafts --buildFuture --disableFastRender --watch
 
 deploy:
 	@hugo --minify --verbose
