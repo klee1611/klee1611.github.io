@@ -7,31 +7,27 @@ categories:
 tags: [Git, gitignore, Tool]
 slug: 'remove-ds_store-from-all-git-repo'
 ---
-Every time we create a new folder and add some files in MacOS,  
-it generates a ``.DS_Store`` file in that folder,  
-which causes lots of ``.DS_Store`` files spreading all over the places in MacOS,  
-and it is pretty annoying to add ``**/.DS_Store`` into every ``.gitignore`` file every time we create a new Git repository,  
-so I find a way to prevent the ``.DS_Store`` file from being tracked in every Git repository.  
+Every time a new folder is created and files are added in macOS, a ``.DS_Store`` file is generated within that folder. This results in numerous ``.DS_Store`` files scattered across macOS, and it's quite annoying to add ``**/.DS_Store`` to every ``.gitignore`` file each time a new Git repository is created. Therefore, I found a method to prevent ``.DS_Store`` files from being tracked in all Git repositories.  
 
 ## The ``git config`` command
-The ``git config`` command can be used to set a variety of settings for git.  
-The most famous ones are ``git config --global user.name`` and ``git config --global user.email``,  
-which sets ``user.name`` and ``user.email`` globally,  
-so every git repositories can use these settings.
+The ``git config`` command can be used to set a variety of Git settings.  
+The most common uses are ``git config --global user.name`` and ``git config --global user.email``,  
+which set ``user.name`` and ``user.email`` globally,  
+allowing all Git repositories to use these settings.
 <!--more-->
 
-This command can also be used to set local settings for a single git repository.  
-If we wish to use a different user name or email under a specific repository,  
-we can use ``git config --local user.name`` and ``git config --local user.email`` to achieve the goal.  
+This command can also be used to set local settings for a single Git repository.  
+If we wish to use a different username or email within a specific repository,  
+we can use ``git config --local user.name`` and ``git config --local user.email`` to achieve this.  
 
 There is a ``core.excludesfile`` setting for ``git config``,  
-which can be set to a ignore configuration file to specify files we want all git repositories to ignore.  
+which can be set to an ignore configuration file to specify files that all Git repositories should ignore.  
 
-So all we have to do is to write ``.DS_Store`` and ``**/.DS_Store`` into a file,  
-and set ``core.excludesfile`` to the file.  
-Then all the git repositories will ignore ``.DS_Store``.  
+Therefore, all we need to do is write ``.DS_Store`` and ``**/.DS_Store`` into a file,  
+and then set ``core.excludesfile`` to point to that file.  
+Then all Git repositories will ignore ``.DS_Store`` files.  
 
-We can do that by using these commands:  
+We can achieve this by using these commands:  
 
 ```bash
 echo ".DS_Store" >> ~/.gitignore_global

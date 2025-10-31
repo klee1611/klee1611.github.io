@@ -8,68 +8,62 @@ tags: [Docker, Virtual Environment]
 slug: docker-operating-1
 ---
 ## Basic Concept
-Docker can be seen as a simplified VM.  
-Since it will not install the whole operating system,  
-it comes with a smaller size and faster speed.  
+Docker can be seen as a simplified virtual machine (VM).  
+Since it doesn't install a full operating system, it offers a smaller footprint and faster speed.  
 
 ### Image
-**Image** contains a lightweight runtime environment,  
-including some libraries and executables within it.  
+**An Image** contains a lightweight runtime environment,  
+including its libraries and executables.  
 <!--more-->
 
-Images can be seen as the `.iso` file on VM for docker.  
-It can only be read but not to be executed.  
-If anyone ever wants to modify the image,  
-he or she can only create a new image based on the old one.  
+Images can be thought of as the `.iso` file for a Docker VM.  
+It can only be read, not executed directly.  
+If one wants to modify an image, they can only create a new image based on the existing one.  
 
 ### Container
-When the image is used and becomes a running environment,  
-it is the **container**.  
+When an image is used to create a running environment,  
+it becomes a **container**.  
 
-Like VM,  
-the docker container is also isolated from the host environment.  
-Whatever is done in the container has nothing to do with the host environment,  
-unless we have done some special settings.  
+Like a VM,  
+the Docker container is isolated from the host environment.  
+Whatever is done within the container does not affect the host environment,  
+unless specific settings are configured.  
 
 For example,  
-we can open a port of a docker container,  
-but the host port remains closed.  
-But if we can also expose the port of the host if we want.  
+We can expose a port of a Docker container,  
+while the host port remains closed.  
+However, we can also expose the host's port if desired.  
 
 ### Repository
-A **repository** is where we keep the images.  
+A **repository** is where images are stored.  
 
-It is like the repository of Git:  
-There can be lots of repositories,  
-and each of them is where to place the code of a project.  
-Likewise,  
-The repositories of docker are where to place images.  
-Every image in the same repository has the same name but different tags.  
-And also,  
-there are many different repositories for different images.  
+It is similar to a Git repository:  
+There can be many repositories,  
+and each serves as a place to store the code of a project.  
+Similarly, Docker repositories are where images are stored.  
+Every image within the same repository shares the same name but has different tags.  
+Additionally, there are many different repositories for various images.  
 
 ### Registry
-A **registry** is also somewhere to place images.  
+A **registry** is also a place to store images.  
 
-The difference between registry and repository is,  
-the registry is a service where people can push their images from or pull images back to their local machine;  
-like GitHub for Git.  
+The difference between a registry and a repository is that a registry is a service where users can push or pull images to and from their local machines, similar to GitHub for Git.  
 The most famous one is [Docker Hub](https://hub.docker.com/).  
-While the repository is somewhere to keep images with the same name and different tags.  
+Whereas a repository is a location to keep images with the same name but different tags.  
 
 ## Basic Usage of Docker
 ### Install
-It is really simple in Ubuntu,  
+It is very simple in Ubuntu:  
 
 ```bash
 sudo apt-get install docker.io
 ```
 
 ### Pull Image
-There are lots of images on [Docker Hub](https://hub.docker.com/) that can be used.  
+There are many images on [Docker Hub](https://hub.docker.com/) that can be used.  
 
 If I want a clean Ubuntu environment,  
-I can pull a Ubuntu image back to my local machine:  
+I can pull an Ubuntu image to my local machine:  
 
 ```bash
 docker pull ubuntu
@@ -82,16 +76,16 @@ docker pull ubuntu:14.04
 ```
 
 ### Run the Image
-We can echo a `Hello world` using the image we just get:  
+We can echo `Hello world` using the image we just obtained:  
 
 ```bash
 docker run ubuntu /bin/echo 'Hello world'
 ```
 
-Should print `Hello world` on the terminal.  
+This should print `Hello world` on the terminal.  
 
-What just happened is the `docker run` command creates a temporary container,  
-terminates itself after the `echo` command.  
+What just happened is that the `docker run` command creates a temporary container,  
+and terminates itself after the `echo` command completes.  
 
 ### List Images at Local
 
@@ -103,9 +97,9 @@ It should list the image we just pulled to our local machine.
 
 ### Create a Container
 Once we have a container,  
-we have a running environment that can be changed by what we do.  
+we have a running environment that can be modified by our actions.  
 
-Creating a container with an image is just like using `.iso` to create a virtual machine.  
+Creating a container from an image is just like using an `.iso` to create a virtual machine.  
 
 We can create a container running Ubuntu with the image we pulled:  
 
@@ -119,8 +113,8 @@ We can also create a container with a name:
 docker create -it --name CONTAINER_NAME ubuntu
 ```
 
-``i`` refers to 'input' (open `stdin` of the container).  
-``t`` refers to 'tty' (so we can access it with terminal).  
+``i`` refers to 'interactive' (opens `stdin` of the container).  
+``t`` refers to 'TTY' (allocates a pseudo-TTY so we can interact with it via a terminal).  
 
 Or if we want to create a container and run it:  
 
@@ -134,43 +128,43 @@ or
 docker run -itd --name CONTAINER_NAME ubuntu
 ```
 
-``d`` refers to 'detach' (let the container runs in the background).  
+``d`` refers to 'detach' (runs the container in the background).  
 
 ### List Containers
 ```bash
 docker ps -a
 ```
 
-Should be able to list all the containers in the host machine.  
+This should list all containers on the host machine.  
 
-And we can see there is a difference in `status` between container created with `docker create` and `docker run`:  
-Containers created with `docker create` is only created and have not been running,  
-so the status is `created`;  
-while containers created with `docker run` is not only created but also run,  
-so the status is `up`.  
+And we can observe a difference in `status` between containers created with `docker create` and `docker run`:  
+Containers created with `docker create` are only created and not yet running,  
+so their status is `created`;  
+whereas containers created with `docker run` are both created and run,  
+so their status is `up`.  
 
-There is a  **container id** that can be used at running the container or terminate it.  
+There is a **container ID** that can be used to run or terminate the container.  
 
 ### Run Containers
 So,  
-if the container is created with `docker create` then it has to be run before we can access it:  
+if a container is created with `docker create`, it must be run before we can access it:  
 
-We can use container ID to run the container:  
+We can use the container ID to run the container:  
 
 ```bash
 docker start "CONTAINER_ID"
 ```
 
 Or,  
-if the container creates with a name,  
-we can use the name to run it:  
+if the container was created with a name,  
+we can use that name to run it:  
 
 ```bash
 docker start "CONTAINER_NAME"
 ```
 
-If the status of the container is `exit`,  
-it also has to be `start`ed to run before we can access it.  
+If the container's status is `exited`,  
+it also needs to be `start`ed to run before we can access it.  
 Use  
 
 ```bash
@@ -179,27 +173,27 @@ docker ps -a
 
 to check the `status` first.  
 
-As for containers created with `docker run`,  
-or the containers have already started to run by `docker start`,  
+For containers created with `docker run`,  
+or those already started with `docker start`,  
 we can access them with `docker exec`:  
 
 ```bash
 docker exec -it "CONTAINER_ID" bash
 ```
 
-`bash` is the command we want it to run,  
-it can be replaced with other commands like `echo` or something else.  
+`bash` is the command we want to run;  
+it can be replaced with other commands like `echo` or anything else.  
 
-We can also use the container's name to access the container:  
+We can also use the container's name to access it:  
 
 ```bash
 docker exec -it "CONTAINER_NAME" bash
 ```
 
-If the command used is `bash`,  
-we should find ourselves in the container.  
-The user has become `root`,  
-and we can start to do some settings or install something on the container.  
+If `bash` is the command used,  
+we should find ourselves inside the container.  
+The user becomes `root`,  
+and we can start configuring settings or installing software within the container.  
 
 If we want to leave the container:  
 
@@ -207,12 +201,12 @@ If we want to leave the container:
 exit
 ```
 
-The container is left running in the background after we `exit` it.  
+The container remains running in the background after we `exit` it.  
 
 ### Stop Containers
-It is pretty similar to turning off the virtual machine.  
-Stops a container only changes the `status` of the container to be `exit`,  
-it will not remove the container entirely.  
+This is quite similar to turning off a virtual machine.  
+Stopping a container only changes its `status` to `exited`;  
+it does not remove the container entirely.  
 
 ```bash
 docker stop "CONTAINER_ID"
@@ -224,23 +218,23 @@ Or,
 docker stop "CONTAINER_NAME"
 ```
 
-If we inspect with,
+If we inspect it with,
 
 ```bash
 docker ps -a
 ```
 
-We will find that the container remains to exist,  
-only the `status` has changed to `exit`.  
+We will find that the container still exists,  
+but its `status` has changed to `exited`.  
 
 ### Export Container
 Once a container is exported,  
 it can be moved to another host machine.  
 
-We can export a container to be a `.tar` file.  
+We can export a container as a `.tar` file.  
 
 For example,  
-export a container to be `exported.tar`:  
+export a container as `exported.tar`:  
 
 ```bash
 docker export "CONTAINER_ID" > exported.tar

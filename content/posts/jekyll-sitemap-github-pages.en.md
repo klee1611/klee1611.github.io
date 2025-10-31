@@ -9,29 +9,29 @@ slug: jekyll-sitemap-github-pages
 ---
 ## Update
 I've moved from Jekyll to Hugo.  
-This method only fits Jekyll.  
+This method is only applicable to Jekyll.  
 
 ## Sitemap
-A sitemap is a `.xml` file that contains the links to all the pages inside a website.  
+A sitemap is an `.xml` file that contains links to all the pages within a website.  
 With a sitemap,  
-a search engine knows the pages and can therefore create indexes for them.  
-Then, people surfing the internet can find those pages with keywords after that.  
+a search engine can discover the pages and subsequently create indexes for them.  
+Then, people browsing the internet can find those pages using keywords.  
 
 ## Jekyll-sitemap
-There is a plugin called [jekyll-stiemap](https://github.com/jekyll/jekyll-sitemap) for Jekyll,  
-which generates a sitemap automatically whenever the website is re-building.  
+There is a plugin called [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) for Jekyll,  
+which automatically generates a sitemap whenever the website is rebuilt.  
 
 <!--more-->
-It is a good choice if you build your website on your machine,  
+It is a good choice if you build your website locally,  
 but with GitHub Pages,  
-it is broken.  
+it doesn't work as expected.  
 
-Not sure if that is because of the parameters or the way Github used to build a website;  
+It's unclear if this is due to the parameters or how GitHub builds websites;  
 The sitemap is generated,  
-but the address was not correct.  
+but the URLs are incorrect.  
 
 ## Generates sitemap without plugin
-So I find [this](https://poychang.github.io/generating-sitemap-in-jekyll-without-plugin/),  
-which seems to work so I decided to give it a try,  
-modify and put it to `sitemap.xml` inside the repository,  
+So I found [this](https://poychang.github.io/generating-sitemap-in-jekyll-without-plugin/),  
+which seemed to work, so I decided to give it a try,  
+modified it, and placed it in `sitemap.xml` inside the repository,  
 and it did work!  

@@ -7,78 +7,77 @@ categories:
 tags: [Linux, OS]
 slug: 'linux-process-group-sessions-daemon'
 ---
-Trying to figure out what **daemon** is,  
-so I found [The Linux Programming Interface](https://www.oreilly.com/library/view/the-linux-programming/9781593272203/) and took notes related to it.  
+To understand what a **daemon** is,  
+I consulted [The Linux Programming Interface](https://www.oreilly.com/library/view/the-linux-programming/9781593272203/) and took notes related to it.  
 <!--more-->
 
-* A **Process group** is a bunch of **related processes**
-* A **Session** is a bunch of **related process groups**
+* A **process group** is a collection of **related processes**.
+* A **session** is a collection of **related process groups**.
 
-Defining process group and session is for **job control**  
+Process groups and sessions are defined for **job control**  
 
 ## Process Group
-A **process group** is a bunch of related processes sharing the same **process group identifier (PGID)**.  
-There is a **process group leader** in a process group,  
-which is the process that builds this process group,  
-and the PGID of the process group is the process group leader's PID.  
+A **process group** is a collection of related processes that share the same **process group identifier (PGID)**.  
+Each process group has a **process group leader**,  
+which is the process that created the group.  
+The PGID of the process group is the PID of its leader.  
 
-The PGID of any newly created process is its parent's PGID.  
+The PGID of any newly created process is inherited from its parent.  
 
-The lifetime of a process group is calculated from the time when the process group leader creates the process group and is ended until all the processes leave the process group.  
-By 'leaves' a process group it might mean the process is terminated,  
-or the process is switched to another process group.  
+The lifetime of a process group begins when its leader creates it and ends when all processes have left the group.  
+A process 'leaves' a process group either by terminating or by being switched to another process group.  
 
 ## Session
-A **Session** is a bunch of related process groups sharing the same **session identifier (SID)**.  
-There is a **session leader** in these processes,  
-which is the process that created this session,  
-and the SID of this session is the PID of the session leader.  
+A **session** is a collection of related process groups that share the same **session identifier (SID)**.  
+Each session has a **session leader**,  
+which is the process that created the session.  
+The SID of the session is the PID of its leader.  
 
 Whenever a new process is created,  
-its SID is its parent's SID.  
+its SID is inherited from its parent.  
 
-All processes in the same session share a **controlling terminal**,  
-A controlling terminal is created the first time when session leader opens a terminal device,  
+All processes in the same session share a **controlling terminal**.  
+A controlling terminal is established the first time a session leader opens a terminal device,  
 and a terminal can only be the controlling terminal for one session.  
-Hence, a session and a controlling terminal are a one-to-one relationship.  
+Hence, there is a one-to-one relationship between a session and a controlling terminal.  
 
-At any time, there are:  
+At any given time, there are:  
 * **foreground process group**:  
-A process group in a session.  
-Only processes in this process group can get the input from the controlling terminal.
+A process group within a session.  
+Only processes in this process group can receive input from the controlling terminal.
 * **background process groups**:  
 All process groups that are not the foreground process group.  
 
 ## Terminal
-There will be a session leader when a terminal is opened,  
-and the same session leader is also the controlling process.  
-Meanwhile, the foreground process group are waiting for the input from the terminal,  
+When a terminal is opened, a session leader is established,  
+and this same session leader also acts as the controlling process.  
+Meanwhile, the foreground process group waits for input from the terminal,  
 which could be user input or signals from the user,  
-and the background process groups exist at the same time.  
+while background process groups exist concurrently.  
 
 When a terminal is terminated,  
-the kernel sends ``SIGHUP`` to the session leader to inform that the terminal is over.   
+the kernel sends a ``SIGHUP`` signal to the session leader to indicate that the terminal session has ended.   
 
 ## Shell Job Control
-Defining process groups and sessions are for an explanation for shell job control.  
-Here is a shell job control example:  
+Process groups and sessions are defined to explain shell job control.  
+Here is an example of shell job control:  
 
-The terminal user used to login is the controlling terminal,  
-and the login shell is both the session leader and the controlling process.  
-Commands from this shell will create a process or more,  
-these processes become new process groups,  
-and other processes created by these processes becomes part of the process groups.  
-All those processes are created from this shell and thus belong to this login session.  
+The terminal used by the user to log in is the controlling terminal,  
+and the login shell acts as both the session leader and the controlling process.  
+Commands executed from this shell will create one or more processes.  
+These processes form new process groups,  
+and any other processes created by them become part of these process groups.  
+All these processes are created from this shell and thus belong to this login session.  
 
 ## Daemon
-What daemons have:  
+Characteristics of daemons:  
 * **long-lived**:  
-Usually activated at the system started,  
-running till the time system turned off.  
-* **Running at the background and has no controlling terminal**:  
-To make sure there will be not job control or terminal-related signal generated by the kernel to affect the daemon.  
+Usually activated when the system starts,  
+running until the system is turned off.  
+Running in the background and having no controlling terminal: 
+To ensure that no job control or terminal-related signals generated by the kernel affect the daemon.  
 
-Daemons usually end with \'d\'.  
+Daemons usually end with 'd'. 
 
 Several common daemons:  
 * cron

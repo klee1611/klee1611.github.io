@@ -15,7 +15,7 @@ const TYPE NAME = VALUE; // more common
 TYPE const NAME = VAULE;
 ```
 
-Both means this variable cannot be assigned to another value.  
+Both mean this variable cannot be assigned to another value.  
 
 For example,  
 <!--more-->
@@ -38,7 +38,7 @@ int main(void)
 }
 ```
 
-The same error cames out for ``i`` and ``j``:
+The same error occurs for ``i`` and ``j``:
 
 ```
 const.cpp:9:4: error: cannot assign to variable 'i' with const-qualified type 'const int'
@@ -57,7 +57,7 @@ const.cpp:8:12: note: variable 'j' declared const here
 ```
 
 ## ``const`` and Reference
-Also two ways to add ``const`` to a reference:  
+There are also two ways to add ``const`` to a reference:  
 
 ```cpp
 const TYPE &NAME = VALUE; // more common
@@ -65,10 +65,10 @@ TYPE const &NAME = VAULE;
 ```
 
 Both have the same meaning.  
-There are two limits for them:  
-1. This reference cannot be assigned to another variable
-2. The variable being referenced **cannot change its value with this reference**,  
-but it **can change its value without using that reference**.  
+There are two restrictions for them:  
+1. This reference cannot be reassigned to another variable
+2. The variable being referenced **cannot have its value changed through this reference**,  
+but its value **can be changed without using this reference**.  
 
 For example,  
 
@@ -98,14 +98,14 @@ int main(void)
 }
 ```
 
-**constant reference can only be read**.  
-if the value of the variable it referenced to has be changed,  
-it **can only change the value without that reference**.  
+**A constant reference can only be read**.  
+If the value of the variable it references has been changed,  
+it **can only be changed without using that reference**.  
 
 ## ``const`` and Pointer
-This one is complicated.  
+This can be complicated.  
 
-But we can use the position of ``const`` to remember which one ``const`` is decorating:  
+However, we can use the position of ``const`` to determine what it is modifying:  
 
 ```cpp
 TYPE* const pNAME;  // 1
@@ -115,21 +115,20 @@ const TYPE* const pNAME;  // 4
 ```
 
 For 1,  
-``const`` decorates ``pNAME``,  
-that means ``pNAME`` cannot be changed (No ``pNAME = ...``).  
+``const`` modifies ``pNAME``,  
+meaning that ``pNAME`` cannot be changed (i.e., ``pNAME = ...`` is not allowed).  
 
 For 2,  
-``const`` decorates `*pNAME`,  
-so `*pNAME` cannot be changed (No `*pNAME = ...`).  
+``const`` modifies `*pNAME`,  
+so the value pointed to by `pNAME` cannot be changed (i.e., `*pNAME = ...` is not allowed).  
 
 For 3,  
-`const` decorates `TYPE *pNAME`.  
-it is the same as 2,  
-saying that `*pNAME` cannot be changed (No `*pNAME = ...`).
+`const` modifies `TYPE *pNAME`.  
+This is the same as case 2, meaning that the value pointed to by `pNAME` cannot be changed (i.e., `*pNAME = ...` is not allowed).
 
 For 4,  
-`const` decorates `pNAME` and `TYPE*`,  
-so both `pNAME` and `TYPE*` cannot be changed (No `pNAME = ...` or `*pNAME = ...`).  
+`const` modifies both `pNAME` and the `TYPE` it points to,  
+so neither `pNAME` nor the value it points to can be changed (i.e., `pNAME = ...` or `*pNAME = ...` are not allowed).  
 
 ```cpp
 #include <iostream>
@@ -144,7 +143,7 @@ int main(void)
 	const int *p3 = &i;
 	const int* const p4 = &i;
 
-	// change value with pointer
+	// Change value through pointer
 	*p1 = 2;
 	*p2 = 2;  // error
 	*p3 = 2;  // error
@@ -153,7 +152,7 @@ int main(void)
 	// change value
 	i = 3;
 
-	// change pointer position
+	// Change pointer's target
 	p1 = &j;  // error
 	p2 = &j;
 	p3 = &j;

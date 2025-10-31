@@ -8,10 +8,10 @@ tags: [Programming, Concurrent Processing, Parallel Processing]
 slug: 'concurrent-process-parallel-process'
 ---
 
-Both 'Concurrent Processing' and 'Parallel Processing' refer to **multiple processes is executing by the CPU in a period**,  
+Both 'Concurrent Processing' and 'Parallel Processing' refer to **multiple processes executing on the CPU within a period**,  
 but they are two different things.
 
-According to the [The Art of Concurrency](http://shop.oreilly.com/product/9780596521547.do) ，  
+According to [The Art of Concurrency](http://shop.oreilly.com/product/9780596521547.do),  
 Concurrent means:
 <!--more-->
 
@@ -20,7 +20,7 @@ Concurrent means:
 While Parallel means:
 > two or more processes executing simultaneously
 
-It does look pretty similar but they are actually different.  
+They look pretty similar but are actually different.  
 For example,  
 two processes are executing,  
 process A and process B.  
@@ -30,16 +30,16 @@ Parallel processing may look like this：
 
 ![parallel_processing](/images/concurrent_processing_and_parallel_processing/parallel_processing.jpeg)
 
-Both process A and Process B are being executed.   
+Both Process A and Process B are being executed.   
 
 ### Concurrent Processing
-But for concurrent processing,  
-the executing may look like the diagram above,  
-or it may look like this:  
+However, for concurrent processing,  
+the execution might look like the diagram above,  
+or it might look like this:  
 
 ![consurrent_processing](/images/concurrent_processing_and_parallel_processing/concurrent_processing.jpeg)
 
-Both process A and process B are in progress,  
+Both Process A and Process B are in progress,  
 but they are **not executing at the same time**.
 
 ### Notice
@@ -47,5 +47,5 @@ but they are **not executing at the same time**.
 As long as there are **multiple processes in progress**,  
 it is **concurrent processing**.  
 
-There are many kinds of ways to achieve concurrent processing,  
+There are many ways to achieve concurrent processing,  
 and parallel processing is only one of them.  
