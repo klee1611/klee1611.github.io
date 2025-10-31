@@ -1,11 +1,15 @@
 ---
-title: "Remove or Upgrade Global NPM Packages After Installing NVM"
+title: "Managing Pre-existing Global NPM Packages After Installing NVM"
 date: 2021-11-06T19:31:32+08:00
 draft: false
 categories:
 - Develop environment
-tags: [Programming, Node.js]
-slug: 'remove-upgrade-npm-global-packages-after-installing-nvm'
+tags: [NVM, NPM, Node.js, Global Packages, Troubleshooting]
+slug: 'managing-pre-exist-global-npm-packages-after-installing-nvm'
+aliases:
+- /zh-tw/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html
+toc: true
+find_last_modify_date: true
 ---
 
 今天遇到一個問題，
@@ -17,7 +21,7 @@ slug: 'remove-upgrade-npm-global-packages-after-installing-nvm'
 
 怎麼發現這件事的呢？
 
-很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，
+很久以前我在 global 裝過一個 package 可以直接在 terminal 呼叫 command 執行，
 
 但因為年代久遠，
 

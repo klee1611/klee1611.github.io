@@ -5,6 +5,8 @@ categories:
 - C++
 tags: [Programming, C++, STL, container]
 slug: c++-stl-container-compare-array-vector-dequeue-list-forward_list
+toc: true
+find_last_modify_date: true
 ---
 
 ## Array

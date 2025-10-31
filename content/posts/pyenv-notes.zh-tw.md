@@ -3,7 +3,7 @@ title: "Pyenv Notes"
 date: 2021-11-01T18:48:33+08:00
 categories:
 - Develop environment
-tags: [Programming, Python]
+tags: [Programming, Python, Pyenv]
 slug: 'pyenv-notes'
 ---
 ### `pyenv` 的功能和使用的原因

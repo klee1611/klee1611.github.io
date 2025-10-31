@@ -9,7 +9,7 @@ slug: deep-copy-shallow-copy
 ### Shallow Copy
 複製越少越好，  
 Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，  
-並一起**共享 elements**。  
+並一起**共享 elements 的記憶體位置**。  
   
 舉個 Java 的例子，
 <!-- more -->
@@ -24,7 +24,7 @@ int[] arr2 = arr1;
 ### Deep Copy
 全部複製，  
 Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，  
-還把**舊的 structure 的 elements 全部複製了一份給新的**。
+還把**舊的 structure 的 elements 全部複製了一份到新的記憶體空間**。
   
 ```java
 int[] arr1 = {1, 2, 3};

@@ -96,7 +96,7 @@ pip3 install pipenv
 
     實際上不需要做這件事，  
     但在某些特殊情況下（例如特殊平台的需求）還是可以這樣做
-    ```html
+    ```bash
     pipenv lock --requirements > requirements.txt
     ```
 
