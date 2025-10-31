@@ -1,7 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Docker - Category - Kourtney's Blog</title><link>http://klee1611.github.io/en/categories/docker/</link><description>Docker - Category - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 01 Jan 2020 17:06:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/en/categories/docker/" rel="self" type="application/rss+xml"/><item><title>Docker Notes 1 - Beginner</title><link>http://klee1611.github.io/en/posts/docker-operating-1.html/</link><pubDate>Wed, 01 Jan 2020 17:06:00 +0800</pubDate><author>Author</author><guid>http://klee1611.github.io/en/posts/docker-operating-1.html/</guid><description><![CDATA[<h2 id="basic-concept">Basic Concept</h2>
-<p>Docker can be seen as a simplified VM.<br>
-Since it will not install the whole operating system,<br>
-it comes with a smaller size and faster speed.</p>
-<h3 id="image">Image</h3>
-<p><strong>Image</strong> contains a lightweight runtime environment,<br>
-including some libraries and executables within it.</p>]]></description></item></channel></rss>

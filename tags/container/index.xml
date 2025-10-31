@@ -1,8 +1,51 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>container - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/container/</link><description>container - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 12 Jan 2020 20:40:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/container/" rel="self" type="application/rss+xml"/><item><title>C++ STL Containers 比較 - array, vector, deque, list, forward_list</title><link>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid><description>Array 固定大小的連續記憶體空間所構成
-優缺點 不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1)) Vector 可以動態改變儲存空間大小的 array
-底層實作方式 動態的 allocate array，
-當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去 實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大 優缺點 random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢 Deque Double-ended queue，
-一樣可以動態的改變 container 大小。
-不同的 library 實作 deque 的方式可能會不一樣。
-優缺點 可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，
-但不保證 elements 都被存在一塊連續記憶體空間 Reallocate 的時候比 vector 有效率 在不是頭或尾端的地方加入或刪除 element 比較慢 random access 很有效率 (O(1)) List 底層實作方式 Doubly-linked list</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Container on Kourtney's Blog</title><link>https://klee1611.github.io/tags/container/</link><description>Recent content in Container on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:17:18 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/tags/container/index.xml" rel="self" type="application/rss+xml"/><item><title>C++ Container Characteristics and Usage Scenarios - array, vector, deque, list, forward_list</title><link>https://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;C++ provides various containers to store and manage data,&lt;br&gt;
+each with its unique characteristics and applicable scenarios.&lt;br&gt;
+This article will delve into five common sequence containers: &lt;code&gt;array&lt;/code&gt;, &lt;code&gt;vector&lt;/code&gt;, &lt;code&gt;deque&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt;, and &lt;code&gt;forward_list&lt;/code&gt;,&lt;br&gt;
+comparing their features, performance, and offering selection advice.&lt;/p&gt;
+&lt;h2 id="array"&gt;Array&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;std::array&lt;/code&gt; is a fixed-size array introduced in C++11,&lt;br&gt;
+combining the performance of C-style arrays with the interface of STL containers.&lt;/p&gt;
+&lt;h3 id="characteristics"&gt;Characteristics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fixed Size&lt;/strong&gt;: Size is determined at compile time and cannot be changed dynamically.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stack Allocation&lt;/strong&gt;: Typically allocates memory on the stack, offering high performance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Random Access&lt;/strong&gt;: Supports &lt;code&gt;O(1)&lt;/code&gt; time complexity for random access.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Iterator Support&lt;/strong&gt;: Provides iterators, allowing use with STL algorithms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="when-to-use"&gt;When to Use&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When the data size is known and fixed.&lt;/li&gt;
+&lt;li&gt;When pursuing ultimate performance, avoiding heap allocation overhead.&lt;/li&gt;
+&lt;li&gt;When interoperability with C-style arrays is required.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="example"&gt;Example&lt;/h3&gt;
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0"&gt;
+ &lt;div class="code-header language-cpp"&gt;
+ &lt;span class="code-title"&gt;&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="ellipses"&gt;&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="copy" title="Copy to clipboard"&gt;&lt;i class="far fa-copy fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;array&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;numeric&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// For std::accumulate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;my_array&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// Access elements
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Element at index 2: &amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;my_array&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// Output: 3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// Iteration
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="nl"&gt;x&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;my_array&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// Sum
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;accumulate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;my_array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;begin&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;my_array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Sum of elements: &amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// Output: 30
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id="vector"&gt;Vector&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;std::vector&lt;/code&gt; is a dynamic array that can change its size dynamically at runtime.&lt;br&gt;
+It is the most commonly used and flexible sequence container in C++.&lt;/p&gt;</description></item></channel></rss>

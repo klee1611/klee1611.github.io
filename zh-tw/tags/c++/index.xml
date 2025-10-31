@@ -1,34 +1,38 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>C&#43;&#43; - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/zh-tw/tags/c&#43;&#43;/</link>
-        <description>C&#43;&#43; - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/zh-tw/tags/c&#43;&#43;/" rel="self" type="application/rss+xml" /><item>
-    <title>C&#43;&#43; STL Containers 比較 - array, vector, deque, list, forward_list</title>
-    <link>http://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link>
-    <pubDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid>
-    <description><![CDATA[Array 固定大小的連續記憶體空間所構成
-優缺點  不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1))  Vector 可以動態改變儲存空間大小的 array
-底層實作方式  動態的 allocate array，
-當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去   實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大  優缺點  random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢  Deque Double-ended queue，
-一樣可以動態的改變 container 大小。
-不同的 library 實作 deque 的方式可能會不一樣。
-優缺點  可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，]]></description>
-</item><item>
-    <title>C/C&#43;&#43; - const 加上 pointer 和 reference 的用法整理</title>
-    <link>http://klee1611.github.io/zh-tw/posts/const-pointer-reference.html/</link>
-    <pubDate>Mon, 30 Dec 2019 08:19:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/const-pointer-reference.html/</guid>
-    <description><![CDATA[<h2 id="const-和一般變數">const 和一般變數</h2>
-<p>有兩種寫法</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="k">const</span> <span class="n">TYPE</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
-</span><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
-</code></pre></div><p>意思都一樣，<br>
-就是這個變數不能再被指定別的值。</p>
-<p>舉個例：</p>]]></description>
-</item></channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C++ on Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/tags/c++/</link><description>Recent content in C++ on Kourtney's Blog</description><generator>Hugo</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:17:18 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>C++ STL Containers 比較 - array, vector, deque, list, forward_list</title><link>https://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid><description>&lt;h2 id="array"&gt;Array&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;固定大小&lt;/strong&gt;的&lt;strong&gt;連續記憶體空間&lt;/strong&gt;所構成&lt;/p&gt;
+&lt;h3 id="優缺點"&gt;優缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;不能像其他 C++ container 那樣動態改變儲存空間的大小&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;random access 很有效率&lt;/strong&gt; (O(1))&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="vector"&gt;Vector&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;可以動態改變儲存空間大小&lt;/strong&gt;的 array&lt;/p&gt;
+&lt;h3 id="底層實作方式"&gt;底層實作方式&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;動態的 allocate array，&lt;br&gt;
+當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+&lt;li&gt;實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="優缺點-1"&gt;優缺點&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;random access 很有效率&lt;/strong&gt; (O(1))&lt;/li&gt;
+&lt;li&gt;在&lt;strong&gt;尾端&lt;/strong&gt;加入或刪除 element 相對有效率&lt;/li&gt;
+&lt;li&gt;在不是尾端的地方加入或刪除 element 比較慢&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="deque"&gt;Deque&lt;/h2&gt;
+&lt;p&gt;Double-ended queue，&lt;br&gt;
+一樣可以動態的改變 container 大小。&lt;br&gt;
+不同的 library 實作 deque 的方式可能會不一樣。&lt;/p&gt;</description></item><item><title>C/C++ - const 加上 pointer 和 reference 的用法整理</title><link>https://klee1611.github.io/zh-tw/posts/const-pointer-reference.html/</link><pubDate>Mon, 30 Dec 2019 08:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/const-pointer-reference.html/</guid><description>&lt;h2 id="const-和一般變數"&gt;const 和一般變數&lt;/h2&gt;
+&lt;p&gt;有兩種寫法&lt;/p&gt;
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0"&gt;
+ &lt;div class="code-header language-cpp"&gt;
+ &lt;span class="code-title"&gt;&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="ellipses"&gt;&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="copy" title="複製到剪貼板"&gt;&lt;i class="far fa-copy fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;TYPE&lt;/span&gt; &lt;span class="n"&gt;NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// more common
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="n"&gt;TYPE&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;VAULE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;意思都一樣，&lt;br&gt;
+就是這個變數不能再被指定別的值。&lt;/p&gt;
+&lt;p&gt;舉個例：&lt;/p&gt;</description></item></channel></rss>

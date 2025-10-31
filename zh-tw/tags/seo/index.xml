@@ -1,23 +1,12 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>SEO - 標籤 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/zh-tw/tags/seo/</link>
-        <description>SEO - 標籤 - Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/zh-tw/tags/seo/" rel="self" type="application/rss+xml" /><item>
-    <title>Github Pages and Jekyll - sitemap</title>
-    <link>http://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html/</link>
-    <pubDate>Mon, 30 Dec 2019 22:19:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html/</guid>
-    <description><![CDATA[<h2 id="sitemap">Sitemap</h2>
-<p>sitemap 基本上就一個 <code>.xml</code> 檔案，<br>
-裡面包含了網站有哪些頁面連結，<br>
-讓搜尋引擎去爬，<br>
-搜尋引擎爬完以後就可以建立 index，<br>
-之後有人在搜尋引擎打關鍵字才搜尋的到。</p>
-<h2 id="jekyll-sitemap">Jekyll-sitemap</h2>
-<p>Jekyll 有一個 plugin 叫做 <a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer">jekyll-stiemap</a>，<br>
-可以在每次 build 網站之後自動產生 sitemap。</p>]]></description>
-</item></channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SEO on Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/tags/seo/</link><description>Recent content in SEO on Kourtney's Blog</description><generator>Hugo</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 15 Nov 2021 17:33:53 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/seo/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Pages and Jekyll - sitemap</title><link>https://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html/</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html/</guid><description>&lt;h2 id="更新"&gt;更新&lt;/h2&gt;
+&lt;p&gt;已從 Jekyll migrate 到 Hugo，&lt;br&gt;
+這篇方法僅適用 Jekyll。&lt;/p&gt;
+&lt;h2 id="sitemap"&gt;Sitemap&lt;/h2&gt;
+&lt;p&gt;sitemap 基本上就一個 &lt;code&gt;.xml&lt;/code&gt; 檔案，&lt;br&gt;
+裡面包含了網站有哪些頁面連結，&lt;br&gt;
+讓搜尋引擎去爬，&lt;br&gt;
+搜尋引擎爬完以後就可以建立 index，&lt;br&gt;
+之後有人在搜尋引擎打關鍵字才搜尋的到。&lt;/p&gt;
+&lt;h2 id="jekyll-sitemap"&gt;Jekyll-sitemap&lt;/h2&gt;
+&lt;p&gt;Jekyll 有一個 plugin 叫做 &lt;a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer "&gt;jekyll-stiemap&lt;/a&gt;，&lt;br&gt;
+可以在每次 build 網站之後自動產生 sitemap。&lt;/p&gt;</description></item></channel></rss>

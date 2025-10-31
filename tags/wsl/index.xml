@@ -1,19 +1,26 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>WSL - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/wsl/</link><description>WSL - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 11 Apr 2021 00:14:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/wsl/" rel="self" type="application/rss+xml"/><item><title>WSL 2 on Windows Part 2 - Terminal 介面設定</title><link>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</guid><description>把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，
-方便操作。
-Windows Terminal 功能 用 Windows terminal 可以
-啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換) 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題 這些功能比原生 WSL 能支援的多的多，
-也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，
-於是就決定選用 windows terminal 了。
-Windows terminal 設定 到 Microsoft store 搜尋 Windows terminal 並安裝完成後，
-就可以開始設定 Windows terminal。
-將 WSL 設定為 Windows terminal 預設開啟環境 在 windows terminal 的 [V] 箭頭選單選擇&amp;quot;設定(settings)&amp;quot;，
-會出現一個 JSON 檔可以修改，
-從 profiles 的 list 找到想要做為預設的 Linux distribution，</description></item><item><title>WSL 2 on Windows Part 1 - 安裝啟用</title><link>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</guid><description>工作的時候習慣用 Linux 或 mac 的 terminal，
-找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。 WSL 2 和 WSL 1 的差異 WSL 2 是基於 Hyper-V 在 virtual machine 中跑完整的 Linux kernal，
-WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，
-因此 WSL 2 比 WSL 1 支援更多 Linux 原生的功能和 system call。
-如果需要用到 Linux 底層的應用，
-WSL 2 支援的能力比 WSL 1 更好。
-一般情況下 WSL 2 啟動 process 的效能也更好，
-但需要讀取 host 系統的檔案時除外。
-但因為 WSL 2 是在 VM 上跑 Linux kernal，</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WSL on Kourtney's Blog</title><link>https://klee1611.github.io/tags/wsl/</link><description>Recent content in WSL on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:17:18 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/tags/wsl/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL 2 on Windows Part 2 - Terminal Interface Settings</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</guid><description>&lt;p&gt;&lt;img
+ class="lazyload"
+ src="https://klee1611.github.io/svg/loading.min.svg"
+ data-src="https://klee1611.github.io/images/wsl2_terminal_screenshot.png"
+ data-srcset="https://klee1611.github.io/images/wsl2_terminal_screenshot.png, https://klee1611.github.io/images/wsl2_terminal_screenshot.png 1.5x, https://klee1611.github.io/images/wsl2_terminal_screenshot.png 2x"
+ data-sizes="auto"
+ alt="/images/wsl2_terminal_screenshot.png"
+ title="wsl2_terminal_screenshot" /&gt;&lt;/p&gt;
+&lt;p&gt;Bringing the terminal settings from Linux and Mac to Windows
+for easier operation.&lt;/p&gt;
+&lt;h2 id="windows-terminal-features"&gt;Windows Terminal Features&lt;/h2&gt;
+&lt;p&gt;With Windows Terminal, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable multiple tabs (quickly switch between multiple Linux CLIs, Windows CLIs, PowerShell, etc.)&lt;/li&gt;
+&lt;li&gt;Customize key bindings (shortcuts for opening/closing tabs, copy/paste, etc.)&lt;/li&gt;
+&lt;li&gt;Use search functionality&lt;/li&gt;
+&lt;li&gt;Customize themes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These features offer much more than native WSL support,
+and allow for a setup similar to my Linux or Mac development environments,
+which is why I decided to use Windows Terminal.&lt;/p&gt;</description></item><item><title>WSL 2 on Windows Part 1 - Installation and Activation</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</guid><description>&lt;p&gt;I&amp;rsquo;m used to using Linux or Mac terminals for work.&lt;br&gt;
+I took some time to set up the WSL environment on my home PC to easily switch work environments.&lt;/p&gt;
+&lt;h2 id="differences-between-wsl-2-and-wsl-1"&gt;Differences between WSL 2 and WSL 1&lt;/h2&gt;
+&lt;p&gt;WSL 2 is based on Hyper-V and &lt;strong&gt;runs a full Linux kernel&lt;/strong&gt; in a virtual machine.&lt;br&gt;
+WSL 1 is a simulation of Linux functionalities on the Windows system.&lt;br&gt;
+Therefore, WSL 2 &lt;strong&gt;supports more native Linux features and system calls&lt;/strong&gt; than WSL 1.&lt;/p&gt;</description></item></channel></rss>

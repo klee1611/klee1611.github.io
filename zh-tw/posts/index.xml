@@ -1,185 +1,66 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
-    <channel>
-        <title>所有文章 - Kourtney&#39;s Blog</title>
-        <link>http://klee1611.github.io/zh-tw/posts/</link>
-        <description>所有文章 | Kourtney&#39;s Blog</description>
-        <generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor>
-            <webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</lastBuildDate><atom:link href="http://klee1611.github.io/zh-tw/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>Stateless HTTP, Stateful Session and Cookies</title>
-    <link>http://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</link>
-    <pubDate>Mon, 28 Jun 2021 02:51:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</guid>
-    <description><![CDATA[Stateless HTTP HTTP 是一種 stateless 的 protocol，
-也就是說每一次的 request / response 都是獨立的，
-和之前或之後的 request / response 無關。
-相同的 request 就會回應相同的 response，
-不會因為之前的 request / response 內容而有不同。
-這樣一來 server 因為不需要儲存使用者資訊可以省去大量的資料庫、伺服器儲存空間，
-也因為不需要讓 client 每次都必須連線到相同的 socket 而能夠加快 response time 和省去不少 network bandwidth，
-但在網站需要做連續動作（例如需要確認使用者身份認證時）就會需要一些機制來協助，
-這時候大部分的網站就會利用 session 或 cookie。
-Session Session 是一段具有狀態 (stateful) 的時間。
-HTTP request / response 是 stateless 的，
-但如果透過 stateless 的 request / response 夾帶 state 資訊的話，
-client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。]]></description>
-</item><item>
-    <title>WSL 2 on Windows Part 2 - Terminal 介面設定</title>
-    <link>http://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html/</link>
-    <pubDate>Sun, 11 Apr 2021 00:14:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html/</guid>
-    <description><![CDATA[把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，
-方便操作。
-Windows Terminal 功能 用 Windows terminal 可以
- 啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換) 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題  這些功能比原生 WSL 能支援的多的多，
-也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，
-於是就決定選用 windows terminal 了。
-Windows terminal 設定 到 Microsoft store 搜尋 Windows terminal 並安裝完成後，
-就可以開始設定 Windows terminal。
-將 WSL 設定為 Windows terminal 預設開啟環境  在 windows terminal 的 [V] 箭頭選單選擇&quot;設定(settings)&quot;，
-會出現一個 JSON 檔可以修改，
-從 profiles 的 list 找到想要做為預設的 Linux distribution，]]></description>
-</item><item>
-    <title>WSL 2 on Windows Part 1 - 安裝啟用</title>
-    <link>http://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html/</link>
-    <pubDate>Sat, 10 Apr 2021 15:52:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html/</guid>
-    <description><![CDATA[工作的時候習慣用 Linux 或 mac 的 terminal，
-找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。 WSL 2 和 WSL 1 的差異 WSL 2 是基於 Hyper-V 在 virtual machine 中跑完整的 Linux kernal，
-WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，
-因此 WSL 2 比 WSL 1 支援更多 Linux 原生的功能和 system call。
-如果需要用到 Linux 底層的應用，
-WSL 2 支援的能力比 WSL 1 更好。
-一般情況下 WSL 2 啟動 process 的效能也更好，
-但需要讀取 host 系統的檔案時除外。
-但因為 WSL 2 是在 VM 上跑 Linux kernal，]]></description>
-</item><item>
-    <title>Deep Copy and Shallow Copy</title>
-    <link>http://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html/</link>
-    <pubDate>Tue, 21 Jan 2020 01:19:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html/</guid>
-    <description><![CDATA[Shallow Copy 複製越少越好，
-Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，
-並一起共享 elements。
-舉個 Java 的例子，
-int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; arr2 就是一個 arr1 的 shallow copy。
- 一旦其中一個 structure 更動了 element 另外一個也會受到影響。  Deep Copy 全部複製，
-Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
-還把舊的 structure 的 elements 全部複製了一份給新的。
-int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &lt; arr1.]]></description>
-</item><item>
-    <title>C&#43;&#43; STL Containers 比較 - array, vector, deque, list, forward_list</title>
-    <link>http://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link>
-    <pubDate>Sun, 12 Jan 2020 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid>
-    <description><![CDATA[Array 固定大小的連續記憶體空間所構成
-優缺點  不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1))  Vector 可以動態改變儲存空間大小的 array
-底層實作方式  動態的 allocate array，
-當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去   實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大  優缺點  random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢  Deque Double-ended queue，
-一樣可以動態的改變 container 大小。
-不同的 library 實作 deque 的方式可能會不一樣。
-優缺點  可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，]]></description>
-</item><item>
-    <title>Docker 操作紀錄(二)</title>
-    <link>http://klee1611.github.io/zh-tw/posts/docker-operating-2.html/</link>
-    <pubDate>Thu, 09 Jan 2020 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/docker-operating-2.html/</guid>
-    <description><![CDATA[接上一篇 Docker 操作紀錄 (一)
-Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
-docker rm CONTAINER_NAME 或
-docker rm CONTAINER_ID 刪完之後可以用
-docker ps -a 確認一下是不是 container 就消失了。
-用之前 Export 過的 Container 建立 image 之前 export 過一個 container 出來叫 c_test.tar，
-可以用它來建立一個新的 image:
-cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_repo 是 repository 的名字，
-1.0 是 tag，
-可以用
-docker images 列出來看一下。
-有了 image 就可以建立新的 container 了。
-刪除 Image 如果我用
-docker images 列出的 image 有這些:]]></description>
-</item><item>
-    <title>HA cluster 筆記和 Application 設計</title>
-    <link>http://klee1611.github.io/zh-tw/posts/ha-cluster-app-architecture.html/</link>
-    <pubDate>Thu, 09 Jan 2020 19:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/ha-cluster-app-architecture.html/</guid>
-    <description><![CDATA[設計比較大流量的系統時早晚要遇上 cluster 的問題。
-Cluster 一台以上的機器(node)組成的集合，
-有三種不同的目的:
-Load Balancing 讓多台機器一起盡可能的平均分擔任務，
-加速應用程式執行。
-High Availability (HA) 為了高可用性和備援，
-如果其中一台機器突然掛了其他的機器可以接替。
-High Performance Computing 高效能/平行運算系統，
-簡稱 HPC cluster，
-結合多台機器的硬體來增加運算能力，
-用來解決單一一台機器不能解決的任務。
-HA 運作模式 有很多種例如 N+1, N+M, &hellip;
-但最常見的是 two-node cluster，
-two-node cluster 有兩種運作方式:
- Active-Passive Active-Acitve  Active-Passive (AP) Master-slave 的設計，
-正常狀況下只有 master (Active) 在做 service，
-當 master (Active) 出現問題時 slave (Passive) 才接手，
-等到 master (Active) 恢復正常狀態再換回來由 master (Active) 繼續處理 service
-優點:
- Fail-over 的速度快 設計跟設定都相對簡單  缺點:]]></description>
-</item><item>
-    <title>常用 DNS Resource Record 紀錄</title>
-    <link>http://klee1611.github.io/zh-tw/posts/common-dns-resource-record.html/</link>
-    <pubDate>Wed, 08 Jan 2020 20:40:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/common-dns-resource-record.html/</guid>
-    <description><![CDATA[<p>DNS server 中每個 DNS zone 都有一個 zone file，<br>
-DNS zone 通常會是一個 single domain (有時候不是)，<br>
-zone file 是由很多個 dns resource record (RR) 組成，<br>
-RR 有很多種不同的類型，<br>
-紀錄一下常用幾種。</p>
-<h2 id="a-record">A record</h2>
-<p>將 hostname 對應到 IPv4。 (32-bit)</p>
-<pre><code>hostname IN A xxx.xxx.xxx.xxx
-</code></pre>]]></description>
-</item><item>
-    <title>RDBMS 與 NoSQL 差異筆記</title>
-    <link>http://klee1611.github.io/zh-tw/posts/rdbms-acid-nosql-cap.html/</link>
-    <pubDate>Mon, 06 Jan 2020 04:06:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/rdbms-acid-nosql-cap.html/</guid>
-    <description><![CDATA[<h2 id="rdbms">RDBMS</h2>
-<p><strong>Relational Database Management System</strong></p>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/posts/</link><description>所有文章 | Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 25 Oct 2025 10:39:27 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/posts/" rel="self" type="application/rss+xml"/><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html/</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html/</guid><description><![CDATA[<p>在 Python 3.4 之後出現了 <code>Asyncio</code> 可以在特定情境下提升效能，<br>
+結合之前已經有的 Multiprocessing 和 Multithreading，<br>
+我整理了一下這三項技術適合的原理、差異和使用情境做了幾篇紀錄。<br>
+這一篇先簡單介紹三者的基本概念和適用情境。</p>]]></description></item><item><title>Sync Obsidian / Joplin Data Across Multiple Device with Synology WebDAV</title><link>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html/</link><pubDate>Wed, 25 Dec 2024 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html/</guid><description><![CDATA[<p>原先我使用的筆記軟體是 Notion，<br>
+功能豐富且介面美觀，<br>
+但幾年前 Notion 出現了隱私權爭議，<br>
+被指控偷看某公司放在 Notion 的內容，<br>
+甚至進一步提出合作；<br>
+就改用了一陣子 <a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer ">Joplin</a>，<br>
+但最後還是轉到了擁有大量外掛及社群支援，<br>
+而且可以高度客製化的 <a href="https://obsidian.md/" target="_blank" rel="noopener noreffer ">Obsidian</a>。</p>]]></description></item><item><title>Managing Pre-existing Global NPM Packages After Installing NVM</title><link>https://klee1611.github.io/zh-tw/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html/</guid><description><![CDATA[<p>今天遇到一個問題，</p>
+<p>安裝過 <code>nvm</code> 後安裝 global package 的路徑就被改變了，</p>
+<p>導致想要移除之前安裝過的 global package 時沒辦法直接用 <code>npm uninstall -g</code> 移除。</p>
+<p>怎麼發現這件事的呢？</p>
+<p>很久以前我在 global 裝過一個 package 可以直接在 terminal 呼叫 command 執行，</p>]]></description></item><item><title>Pyenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html/</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html/</guid><description><![CDATA[<h3 id="pyenv-的功能和使用的原因"><code>pyenv</code> 的功能和使用的原因</h3>
+<p><code>pyenv</code> 是用來在系統裡安裝各種不同版本的 python，</p>
+<p>並能夠方便的切換 python 版本的工具。</p>
+<p>當同時有不同 python 版本的專案需要開發或維護時，</p>
+<p>就會需要使用 <code>pyenv</code> 來協助切換 python 的版本。</p>]]></description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html/</guid><description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
+當一隻 Python 程式有很多需要並行執行的 task，<br>
+想要提升程式效能，<br>
+只能選用 multiprocessing 或 threading；<br>
+Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
+<code>asyncio</code> 可以用來撰寫 coroutines，<br>
+並使用 event loop 並行執行 coroutines，<br>
+減少程式不必要的等待時間以提升效能。</p>]]></description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html/</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html/</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
+<p>當有很多 Python project 要維護，<br>
+不同的 project 有可能使用相同的 python libraries 的不同版本，<br>
+不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。</p>
+<p>過去使用 <code>virtualenv</code> + <code>requirement.txt</code> 的機制可以在不同的 project 使用同一個套件的不同版本，<br>
+也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description></item><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>https://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</guid><description><![CDATA[<h2 id="stateless-http">Stateless HTTP</h2>
+<p>HTTP 是一種 <strong>stateless 的 protocol</strong>，<br>
+也就是說<strong>每一次的 request / response 都是獨立的</strong>，<br>
+和之前或之後的 request / response 無關。<br>
+相同的 request 就會回應相同的 response，<br>
+不會因為之前的 request / response 內容而有不同。</p>]]></description></item><item><title>WSL 2 on Windows Part 2 - Terminal 介面設定</title><link>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html/</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html/</guid><description><![CDATA[<p></p>
+<p>把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，<br>
+方便操作。</p>
+<h2 id="windows-terminal-功能">Windows Terminal 功能</h2>
+<p>用 Windows terminal 可以</p>
 <ul>
-<li>在資料之前有很強的 <strong>Relation (關聯性)</strong> 的時候使用:
-<ul>
-<li>設計不太會去變動的 schema 將 table 互相關聯，<br>
-就可以去透過 SQL 取得想要的資料</li>
+<li>啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換)</li>
+<li>自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵)</li>
+<li>使用搜尋功能</li>
+<li>自訂佈景主題</li>
 </ul>
-</li>
-<li><strong>資料的正確性</strong>很重要的時候使用
-<ul>
-<li>通常會提供<strong>ACID</strong></li>
-</ul>
-</li>
-<li>要變動 schema 是一件很浩大的工程:
-<ul>
-<li>要把的 table 的 schema 更新還要 migrate 資料</li>
-<li>所有用到要被更換 schema 的 table 的程式都要修改</li>
-</ul>
-</li>
-</ul>]]></description>
-</item><item>
-    <title>Process Groups, Sessions and Daemon Overview</title>
-    <link>http://klee1611.github.io/zh-tw/posts/linux-process-group-sessions-daemon.html/</link>
-    <pubDate>Thu, 02 Jan 2020 02:06:00 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://klee1611.github.io/zh-tw/posts/linux-process-group-sessions-daemon.html/</guid>
-    <description><![CDATA[<p>為了弄清楚某個 daemon 的東西，<br>
-決定把 daemon 是什麼弄清楚，<br>
-網路上找到的資料實在又多又不清楚，<br>
-乾脆直接從 <a href="https://www.oreilly.com/library/view/the-linux-programming/9781593272203/" target="_blank" rel="noopener noreffer">The Linux Programming Interface</a> 把相關資料找出來做筆記。</p>]]></description>
-</item></channel>
-</rss>
+<p>這些功能比原生 WSL 能支援的多的多，<br>
+也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，<br>
+於是就決定選用 windows terminal 了。</p>]]></description></item><item><title>WSL 2 on Windows Part 1 - 安裝啟用</title><link>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html/</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html/</guid><description><![CDATA[<p>工作的時候習慣用 Linux 或 mac 的 terminal，<br>
+找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。  </p>
+<h2 id="wsl-2-和-wsl-1-的差異">WSL 2 和 WSL 1 的差異</h2>
+<p>WSL 2 是基於 Hyper-V 在 virtual machine 中<strong>跑完整的 Linux kernal</strong>，<br>
+WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，<br>
+因此 WSL 2 比 WSL 1 <strong>支援更多 Linux 原生的功能和 system call</strong>。</p>]]></description></item><item><title>Deep Copy and Shallow Copy</title><link>https://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html/</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html/</guid><description><![CDATA[<h3 id="shallow-copy">Shallow Copy</h3>
+<p>複製越少越好，<br>
+Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，<br>
+並一起<strong>共享 elements 的記憶體位置</strong>。</p>
+<p>舉個 Java 的例子，</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="複製到剪貼板"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr1</span><span class="p">;</span></span></span></code></pre></div></div>
+<p><code>arr2</code> 就是一個 <code>arr1</code> 的 shallow copy。</p>]]></description></item></channel></rss>

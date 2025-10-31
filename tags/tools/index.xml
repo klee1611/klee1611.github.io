@@ -1,6 +1,0 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Tools - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/tools/</link><description>Tools - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 09 Jan 2022 19:27:21 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/tools/" rel="self" type="application/rss+xml"/><item><title>Joplin With Webdav on Synology 918plus</title><link>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</link><pubDate>Sun, 09 Jan 2022 19:27:21 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</guid><description><![CDATA[<p>原本使用的筆記軟體是 Notion，<br>
-功能相當強大；<br>
-但後來看到了一些隱私權爭議，<br>
-決定尋找有沒有替代的方案，<br>
-方便我儲存私人專案或清單之類的個人筆記；<br>
-然後就找到了<a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer">Joplin</a> 這套開源軟體。</p>]]></description></item></channel></rss>

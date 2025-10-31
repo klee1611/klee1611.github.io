@@ -1,8 +1,13 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Concurrency Programming - 分類 - Kourtney's Blog</title><link>http://klee1611.github.io/categories/concurrency-programming/</link><description>Concurrency Programming - 分類 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 27 Oct 2021 16:39:27 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/categories/concurrency-programming/" rel="self" type="application/rss+xml"/><item><title>Python Coroutine Asyncio</title><link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid><description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
-當一隻 Python 程式有很多需要並行執行的 task，<br>
-想要提升程式效能，<br>
-只能選用 multiprocessing 或 threading；<br>
-Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
-<code>asyncio</code> 可以用來撰寫 coroutines，<br>
-並使用 event loop 並行執行 coroutines，<br>
-減少程式不必要的等待時間以提升效能。</p>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Concurrency Programming on Kourtney's Blog</title><link>https://klee1611.github.io/categories/concurrency-programming/</link><description>Recent content in Concurrency Programming on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:17:18 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/categories/concurrency-programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html/</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html/</guid><description>&lt;p&gt;After Python 3.4,&lt;br&gt;
+&lt;code&gt;Asyncio&lt;/code&gt; emerged,&lt;br&gt;
+which can improve performance in specific scenarios.&lt;br&gt;
+Combined with the pre-existing Multiprocessing and Multithreading,&lt;br&gt;
+I have compiled a few records on the principles, differences, and use cases for these three technologies.&lt;br&gt;
+This first post will briefly introduce the basic concepts and suitable scenarios for each of the three.&lt;/p&gt;</description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid><description>&lt;p&gt;Before the advent of &lt;code&gt;asyncio&lt;/code&gt;,&lt;br&gt;
+when a Python program had many tasks that needed to be executed concurrently,&lt;br&gt;
+and wanted to improve program performance,&lt;br&gt;
+the only options were multiprocessing or threading.&lt;br&gt;
+After Python 3.4, &lt;code&gt;asyncio&lt;/code&gt; became another option.&lt;br&gt;
+&lt;code&gt;asyncio&lt;/code&gt; can be used to write coroutines,&lt;br&gt;
+and execute coroutines concurrently using an event loop,&lt;br&gt;
+reducing unnecessary waiting time in the program to improve performance.&lt;/p&gt;</description></item></channel></rss>

@@ -1,21 +1,21 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Database - 分類 - Kourtney's Blog</title><link>http://klee1611.github.io/categories/database/</link><description>Database - 分類 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 06 Jan 2020 04:06:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/categories/database/" rel="self" type="application/rss+xml"/><item><title>RDBMS 與 NoSQL 差異筆記</title><link>http://klee1611.github.io/posts/rdbms-acid-nosql-cap.html/</link><pubDate>Mon, 06 Jan 2020 04:06:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/rdbms-acid-nosql-cap.html/</guid><description><![CDATA[<h2 id="rdbms">RDBMS</h2>
-<p><strong>Relational Database Management System</strong></p>
-<ul>
-<li>在資料之前有很強的 <strong>Relation (關聯性)</strong> 的時候使用:
-<ul>
-<li>設計不太會去變動的 schema 將 table 互相關聯，<br>
-就可以去透過 SQL 取得想要的資料</li>
-</ul>
-</li>
-<li><strong>資料的正確性</strong>很重要的時候使用
-<ul>
-<li>通常會提供<strong>ACID</strong></li>
-</ul>
-</li>
-<li>要變動 schema 是一件很浩大的工程:
-<ul>
-<li>要把的 table 的 schema 更新還要 migrate 資料</li>
-<li>所有用到要被更換 schema 的 table 的程式都要修改</li>
-</ul>
-</li>
-</ul>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Database on Kourtney's Blog</title><link>https://klee1611.github.io/categories/database/</link><description>Recent content in Database on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:29:44 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/categories/database/index.xml" rel="self" type="application/rss+xml"/><item><title>RDBMS and NoSQL Differences Notes</title><link>https://klee1611.github.io/posts/rdbms-acid-nosql-cap.html/</link><pubDate>Mon, 06 Jan 2020 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/rdbms-acid-nosql-cap.html/</guid><description>&lt;h2 id="rdbms"&gt;RDBMS&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Relational Database Management System&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Used when there are strong &lt;strong&gt;Relations&lt;/strong&gt; between data:
+&lt;ul&gt;
+&lt;li&gt;Design a schema that is unlikely to change, relating tables to each other,
+then you can retrieve the desired data through SQL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Used when &lt;strong&gt;data correctness&lt;/strong&gt; is very important:
+&lt;ul&gt;
+&lt;li&gt;Usually provides &lt;strong&gt;ACID&lt;/strong&gt; properties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Changing the schema is a huge undertaking:
+&lt;ul&gt;
+&lt;li&gt;Requires updating the table schema and migrating data.&lt;/li&gt;
+&lt;li&gt;All programs that use the table with the changed schema need to be modified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

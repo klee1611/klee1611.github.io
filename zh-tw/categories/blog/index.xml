@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/categories/blog/</link><description>Recent content in Blog on Kourtney's Blog</description><generator>Hugo</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Wed, 17 Nov 2021 19:10:24 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/categories/blog/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Pages and Jekyll - sitemap</title><link>https://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html/</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html/</guid><description>&lt;h2 id="更新"&gt;更新&lt;/h2&gt;
+&lt;p&gt;已從 Jekyll migrate 到 Hugo，&lt;br&gt;
+這篇方法僅適用 Jekyll。&lt;/p&gt;
+&lt;h2 id="sitemap"&gt;Sitemap&lt;/h2&gt;
+&lt;p&gt;sitemap 基本上就一個 &lt;code&gt;.xml&lt;/code&gt; 檔案，&lt;br&gt;
+裡面包含了網站有哪些頁面連結，&lt;br&gt;
+讓搜尋引擎去爬，&lt;br&gt;
+搜尋引擎爬完以後就可以建立 index，&lt;br&gt;
+之後有人在搜尋引擎打關鍵字才搜尋的到。&lt;/p&gt;
+&lt;h2 id="jekyll-sitemap"&gt;Jekyll-sitemap&lt;/h2&gt;
+&lt;p&gt;Jekyll 有一個 plugin 叫做 &lt;a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer "&gt;jekyll-stiemap&lt;/a&gt;，&lt;br&gt;
+可以在每次 build 網站之後自動產生 sitemap。&lt;/p&gt;</description></item><item><title>Add LikeWidget to Jekyll theme</title><link>https://klee1611.github.io/zh-tw/posts/likecoin-button-jekyll.html/</link><pubDate>Fri, 27 Dec 2019 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/likecoin-button-jekyll.html/</guid><description>&lt;h2 id="更新"&gt;更新&lt;/h2&gt;
+&lt;p&gt;已從 Jekyll migrate 到 Hugo，&lt;br&gt;
+這篇方法原理不變但 code 放的位置和內容要修正。&lt;/p&gt;
+&lt;h2 id="likecoin"&gt;LikeCoin&lt;/h2&gt;
+&lt;p&gt;前陣子對 LikeCoin 發生了一點興趣，&lt;br&gt;
+LikeCoin 是一種虛擬貨幣，&lt;br&gt;
+創立的初衷是想做為一種獎勵創作者的機制，&lt;br&gt;
+創作者在文章裡放入 &lt;strong&gt;Like Button&lt;/strong&gt;，&lt;br&gt;
+讓大家對他的按鈕按讚鼓掌，&lt;br&gt;
+他就能收到相對的 LikeCoin。&lt;/p&gt;
+&lt;p&gt;至於作者能獲得多少 LikeCoin 就要看按讚讀者的帳戶種類，&lt;br&gt;
+如果讀者註冊的是免費帳戶，&lt;br&gt;
+那點下的讚就由 LikeCoin 的基金會按比例支付;&lt;br&gt;
+如果讀者註冊的是付費帳戶，&lt;br&gt;
+那就看該讀者當月按下多少讚按比例分配。&lt;br&gt;
+詳情可以參考 &lt;a href="https://medium.com/likecoin/%E8%AE%9A%E8%B3%9E%E5%85%AC%E6%B0%91%E6%87%B6%E4%BA%BA%E5%8C%85-e7079686bf6e" target="_blank" rel="noopener noreffer "&gt;LikeCoin 的 Medium&lt;/a&gt;。&lt;/p&gt;</description></item></channel></rss>

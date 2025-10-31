@@ -1,14 +1,7 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Node.js - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/node.js/</link><description>Node.js - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 06 Nov 2021 19:31:32 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/node.js/" rel="self" type="application/rss+xml"/><item><title>Remove or Upgrade Global NPM Packages After Installing NVM</title><link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid><description><![CDATA[今天遇到一個問題，
-安裝過 nvm 後安裝 global package 的路徑就被改變了，
-導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
-怎麼發現這件事的呢？
-很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，
-但因為年代久遠，
-要升級那個 package 的時候發現他不在 npm list -g 的範圍，
-只好先用 which 看一下他在的位置，
-接著發現是一個 link 然後就用 ls -al 看那個 link 連到哪裡，
-發現是在 /usr/lib/node_modules 底下，
-很明顯是用 npm -g 安裝的，
-於是再仔細的看了一下 npm list -g 的結果，
-發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
-在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Node.js on Kourtney's Blog</title><link>https://klee1611.github.io/tags/node.js/</link><description>Recent content in Node.js on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:17:18 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/tags/node.js/index.xml" rel="self" type="application/rss+xml"/><item><title>Managing Pre-existing Global NPM Packages After Installing NVM</title><link>https://klee1611.github.io/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html/</guid><description>&lt;p&gt;Today I encountered a problem:&lt;/p&gt;
+&lt;p&gt;After installing &lt;code&gt;nvm&lt;/code&gt;, the path for installing global packages changed,&lt;/p&gt;
+&lt;p&gt;making it impossible to directly remove previously installed global packages using &lt;code&gt;npm uninstall -g&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;How did I discover this?&lt;/p&gt;
+&lt;p&gt;A long time ago, I installed a global package that could be executed directly from the terminal using a command.&lt;/p&gt;
+&lt;p&gt;But because it was so long ago,&lt;/p&gt;
+&lt;p&gt;when I tried to upgrade that package, I found it wasn&amp;rsquo;t listed in &lt;code&gt;npm list -g&lt;/code&gt;.&lt;/p&gt;</description></item></channel></rss>

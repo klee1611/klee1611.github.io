@@ -1,89 +1,73 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Kourtney's Blog</title><link>http://klee1611.github.io/posts/</link><description>所有文章 | Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sun, 09 Jan 2022 19:27:21 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Joplin With Webdav on Synology 918plus</title><link>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</link><pubDate>Sun, 09 Jan 2022 19:27:21 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/joplin-with-webdav-on-synology-ds918plus.html/</guid><description><![CDATA[<p>原本使用的筆記軟體是 Notion，<br>
-功能相當強大；<br>
-但後來看到了一些隱私權爭議，<br>
-決定尋找有沒有替代的方案，<br>
-方便我儲存私人專案或清單之類的個人筆記；<br>
-然後就找到了<a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer">Joplin</a> 這套開源軟體。</p>]]></description></item><item><title>Remove or Upgrade Global NPM Packages After Installing NVM</title><link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid><description><![CDATA[今天遇到一個問題，
-安裝過 nvm 後安裝 global package 的路徑就被改變了，
-導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
-怎麼發現這件事的呢？
-很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，
-但因為年代久遠，
-要升級那個 package 的時候發現他不在 npm list -g 的範圍，
-只好先用 which 看一下他在的位置，
-接著發現是一個 link 然後就用 ls -al 看那個 link 連到哪裡，
-發現是在 /usr/lib/node_modules 底下，
-很明顯是用 npm -g 安裝的，
-於是再仔細的看了一下 npm list -g 的結果，
-發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
-在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description></item><item><title>Pyenv Notes</title><link>http://klee1611.github.io/posts/pyenv-notes.html/</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/pyenv-notes.html/</guid><description>pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
-並能夠方便的切換 python 版本的工具。
-當同時有不同 python 版本的專案需要開發或維護時，
-就會需要使用 pyenv 來協助切換 python 的版本。
-python 的新版本通常都會有一些語法上的更新或是新增一些功能，
-例如 python 的 async / await 就是 python 3.5 以上才出現的功能，
-用 python 3.5 以下的版本來開發的專案就無法使用；
-又或者例如同時有 python 2 和 python 3 的專案，
-而且因為 python 2 和 python 3 語法不相容，
-勢必要在系統裡安裝 python 2 和 python 3；
-諸如次類的情況就可以使用 pyenv 方便的切換 python 的版本。
-安裝和初始化 安裝
-brew install pyenv 安裝完畢後執行初始化
-pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/.</description></item><item><title>Python Coroutine Asyncio</title><link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid><description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
-當一隻 Python 程式有很多需要並行執行的 task，<br>
-想要提升程式效能，<br>
-只能選用 multiprocessing 或 threading；<br>
-Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
-<code>asyncio</code> 可以用來撰寫 coroutines，<br>
-並使用 event loop 並行執行 coroutines，<br>
-減少程式不必要的等待時間以提升效能。</p>]]></description></item><item><title>Pipenv Notes</title><link>http://klee1611.github.io/posts/pipenv-notes.html/</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/pipenv-notes.html/</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
-<p>當有很多 Python project 要維護，<br>
-不同的 project 有可能使用相同的 python libraries 的不同版本，<br>
-不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。</p>
-<p>過去使用 <code>virtualenv</code> + <code>requirement.txt</code> 的機制可以在不同的 project 使用同一個套件的不同版本，<br>
-也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description></item><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</guid><description>Stateless HTTP HTTP 是一種 stateless 的 protocol，
-也就是說每一次的 request / response 都是獨立的，
-和之前或之後的 request / response 無關。
-相同的 request 就會回應相同的 response，
-不會因為之前的 request / response 內容而有不同。
-這樣一來 server 因為不需要儲存使用者資訊可以省去大量的資料庫、伺服器儲存空間，
-也因為不需要讓 client 每次都必須連線到相同的 socket 而能夠加快 response time 和省去不少 network bandwidth，
-但在網站需要做連續動作（例如需要確認使用者身份認證時）就會需要一些機制來協助，
-這時候大部分的網站就會利用 session 或 cookie。
-Session Session 是一段具有狀態 (stateful) 的時間。
-HTTP request / response 是 stateless 的，
-但如果透過 stateless 的 request / response 夾帶 state 資訊的話，
-client 和 server 就可以透過 request / response 夾帶的 state 資訊製造出 stateful 的運作。</description></item><item><title>WSL 2 on Windows Part 2 - Terminal 介面設定</title><link>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</guid><description>把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，
-方便操作。
-Windows Terminal 功能 用 Windows terminal 可以
-啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換) 自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵) 使用搜尋功能 自訂佈景主題 這些功能比原生 WSL 能支援的多的多，
-也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，
-於是就決定選用 windows terminal 了。
-Windows terminal 設定 到 Microsoft store 搜尋 Windows terminal 並安裝完成後，
-就可以開始設定 Windows terminal。
-將 WSL 設定為 Windows terminal 預設開啟環境 在 windows terminal 的 [V] 箭頭選單選擇&amp;quot;設定(settings)&amp;quot;，
-會出現一個 JSON 檔可以修改，
-從 profiles 的 list 找到想要做為預設的 Linux distribution，</description></item><item><title>WSL 2 on Windows Part 1 - 安裝啟用</title><link>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</guid><description>工作的時候習慣用 Linux 或 mac 的 terminal，
-找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。 WSL 2 和 WSL 1 的差異 WSL 2 是基於 Hyper-V 在 virtual machine 中跑完整的 Linux kernal，
-WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，
-因此 WSL 2 比 WSL 1 支援更多 Linux 原生的功能和 system call。
-如果需要用到 Linux 底層的應用，
-WSL 2 支援的能力比 WSL 1 更好。
-一般情況下 WSL 2 啟動 process 的效能也更好，
-但需要讀取 host 系統的檔案時除外。
-但因為 WSL 2 是在 VM 上跑 Linux kernal，</description></item><item><title>Deep Copy and Shallow Copy</title><link>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</guid><description>Shallow Copy 複製越少越好，
-Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，
-並一起共享 elements。
-舉個 Java 的例子，
-int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; arr2 就是一個 arr1 的 shallow copy。
-一旦其中一個 structure 更動了 element 另外一個也會受到影響。 Deep Copy 全部複製，
-Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
-還把舊的 structure 的 elements 全部複製了一份給新的。
-int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &amp;lt; arr1.length; ++i) { arr2[i] = arr1[i]; } arr2 是 arr1 的 deep copy。</description></item><item><title>C++ STL Containers 比較 - array, vector, deque, list, forward_list</title><link>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid><description>Array 固定大小的連續記憶體空間所構成
-優缺點 不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1)) Vector 可以動態改變儲存空間大小的 array
-底層實作方式 動態的 allocate array，
-當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去 實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大 優缺點 random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢 Deque Double-ended queue，
-一樣可以動態的改變 container 大小。
-不同的 library 實作 deque 的方式可能會不一樣。
-優缺點 可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，
-但不保證 elements 都被存在一塊連續記憶體空間 Reallocate 的時候比 vector 有效率 在不是頭或尾端的地方加入或刪除 element 比較慢 random access 很有效率 (O(1)) List 底層實作方式 Doubly-linked list</description></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>All Posts - Kourtney's Blog</title><link>https://klee1611.github.io/posts/</link><description>All Posts | Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 25 Oct 2025 10:39:27 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/posts/" rel="self" type="application/rss+xml"/><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html/</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html/</guid><description><![CDATA[<p>After Python 3.4,<br>
+<code>Asyncio</code> emerged,<br>
+which can improve performance in specific scenarios.<br>
+Combined with the pre-existing Multiprocessing and Multithreading,<br>
+I have compiled a few records on the principles, differences, and use cases for these three technologies.<br>
+This first post will briefly introduce the basic concepts and suitable scenarios for each of the three.</p>]]></description></item><item><title>Sync Obsidian / Joplin Data Across Multiple Devices with Synology WebDAV</title><link>https://klee1611.github.io/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html/</link><pubDate>Wed, 25 Dec 2024 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html/</guid><description><![CDATA[<p>I originally used Notion as my note-taking software.<br>
+It&rsquo;s feature-rich and has a beautiful interface.<br>
+However, a few years ago, a privacy controversy arose around Notion,<br>
+accusing them of looking at a company&rsquo;s content stored in Notion,<br>
+and even proposing a partnership based on that information.<br>
+So, I switched to <a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer ">Joplin</a> for a while,<br>
+but eventually moved to <a href="https://obsidian.md/" target="_blank" rel="noopener noreffer ">Obsidian</a>, which has a large number of plugins, strong community support, and is highly customizable.</p>]]></description></item><item><title>Managing Pre-existing Global NPM Packages After Installing NVM</title><link>https://klee1611.github.io/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html/</guid><description><![CDATA[<p>Today I encountered a problem:</p>
+<p>After installing <code>nvm</code>, the path for installing global packages changed,</p>
+<p>making it impossible to directly remove previously installed global packages using <code>npm uninstall -g</code>.</p>
+<p>How did I discover this?</p>
+<p>A long time ago, I installed a global package that could be executed directly from the terminal using a command.</p>
+<p>But because it was so long ago,</p>
+<p>when I tried to upgrade that package, I found it wasn&rsquo;t listed in <code>npm list -g</code>.</p>]]></description></item><item><title>Pyenv Notes</title><link>https://klee1611.github.io/posts/pyenv-notes.html/</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/pyenv-notes.html/</guid><description><![CDATA[<h3 id="functions-and-reasons-for-using-pyenv">Functions and Reasons for Using <code>pyenv</code></h3>
+<p><code>pyenv</code> is a tool used to install various versions of Python on a system,</p>
+<p>and to conveniently switch between Python versions.</p>
+<p>When you need to develop or maintain projects that require different Python versions simultaneously,</p>
+<p>you will need to use <code>pyenv</code> to help switch Python versions.</p>
+<p>New Python versions usually include syntax updates or new features.</p>
+<p>For example, Python&rsquo;s <code>async / await</code> feature appeared only in Python 3.5 and later.</p>]]></description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid><description><![CDATA[<p>Before the advent of <code>asyncio</code>,<br>
+when a Python program had many tasks that needed to be executed concurrently,<br>
+and wanted to improve program performance,<br>
+the only options were multiprocessing or threading.<br>
+After Python 3.4, <code>asyncio</code> became another option.<br>
+<code>asyncio</code> can be used to write coroutines,<br>
+and execute coroutines concurrently using an event loop,<br>
+reducing unnecessary waiting time in the program to improve performance.</p>]]></description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/posts/pipenv-notes.html/</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/pipenv-notes.html/</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
+<p>When maintaining many Python projects,<br>
+different projects might use different versions of the same Python libraries.<br>
+Not using a virtual environment and installing all Python modules directly on your machine will lead to version conflicts.</p>
+<p>In the past, the mechanism of <code>virtualenv</code> + <code>requirements.txt</code> allowed different projects to use different versions of the same package,<br>
+and also enabled new developers or production environments to quickly install the packages required by the project.</p>]]></description></item><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>https://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html/</guid><description><![CDATA[<h2 id="stateless-http">Stateless HTTP</h2>
+<p>HTTP is a <strong>stateless protocol</strong>,<br>
+meaning that <strong>each request/response is independent</strong>,<br>
+and is unrelated to previous or subsequent requests/responses.<br>
+The same request will always receive the same response,<br>
+and will not differ based on the content of previous requests/responses.</p>
+<p>This allows the server to save a large amount of database and server storage space because it doesn&rsquo;t need to store user information.<br>
+It also speeds up response times and saves considerable network bandwidth because the client doesn&rsquo;t always have to connect to the same socket.</p>]]></description></item><item><title>WSL 2 on Windows Part 2 - Terminal Interface Settings</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html/</guid><description><![CDATA[<p></p>
+<p>Bringing the terminal settings from Linux and Mac to Windows
+for easier operation.</p>
+<h2 id="windows-terminal-features">Windows Terminal Features</h2>
+<p>With Windows Terminal, you can:</p>
+<ul>
+<li>Enable multiple tabs (quickly switch between multiple Linux CLIs, Windows CLIs, PowerShell, etc.)</li>
+<li>Customize key bindings (shortcuts for opening/closing tabs, copy/paste, etc.)</li>
+<li>Use search functionality</li>
+<li>Customize themes</li>
+</ul>
+<p>These features offer much more than native WSL support,
+and allow for a setup similar to my Linux or Mac development environments,
+which is why I decided to use Windows Terminal.</p>]]></description></item><item><title>WSL 2 on Windows Part 1 - Installation and Activation</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html/</guid><description><![CDATA[<p>I&rsquo;m used to using Linux or Mac terminals for work.<br>
+I took some time to set up the WSL environment on my home PC to easily switch work environments.</p>
+<h2 id="differences-between-wsl-2-and-wsl-1">Differences between WSL 2 and WSL 1</h2>
+<p>WSL 2 is based on Hyper-V and <strong>runs a full Linux kernel</strong> in a virtual machine.<br>
+WSL 1 is a simulation of Linux functionalities on the Windows system.<br>
+Therefore, WSL 2 <strong>supports more native Linux features and system calls</strong> than WSL 1.</p>]]></description></item><item><title>Deep Copy and Shallow Copy</title><link>https://klee1611.github.io/posts/deep-copy-shallow-copy.html/</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/deep-copy-shallow-copy.html/</guid><description><![CDATA[<h3 id="shallow-copy">Shallow Copy</h3>
+<p>Copies as little as possible.<br>
+A new structure created by a shallow copy has the same structure as the old one,<br>
+and they <strong>share the memory address of elements</strong>.</p>
+<p>For example, in Java:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-java">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="n">1</span><span class="p">,</span><span class="w"> </span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">3</span><span class="p">};</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arr1</span><span class="p">;</span></span></span></code></pre></div></div>
+<p><code>arr2</code> is a shallow copy of <code>arr1</code>.</p>]]></description></item></channel></rss>

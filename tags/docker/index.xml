@@ -1,22 +1,23 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Docker - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/docker/</link><description>Docker - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Thu, 09 Jan 2020 20:40:00 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/docker/" rel="self" type="application/rss+xml"/><item><title>Docker 操作紀錄(二)</title><link>http://klee1611.github.io/posts/docker-operating-2.html/</link><pubDate>Thu, 09 Jan 2020 20:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/docker-operating-2.html/</guid><description>接上一篇 Docker 操作紀錄 (一)
-Docker 基本使用 刪除 Container 記得先用 stop 停止 container 才能刪。
-docker rm CONTAINER_NAME 或
-docker rm CONTAINER_ID 刪完之後可以用
-docker ps -a 確認一下是不是 container 就消失了。
-用之前 Export 過的 Container 建立 image 之前 export 過一個 container 出來叫 c_test.tar，
-可以用它來建立一個新的 image:
-cat c_test.tar | docker import - ubuntu_test_repo:1.0 後面那個 ubuntu_test_repo 是 repository 的名字，
-1.0 是 tag，
-可以用
-docker images 列出來看一下。
-有了 image 就可以建立新的 container 了。
-刪除 Image 如果我用
-docker images 列出的 image 有這些:</description></item><item><title>Docker Notes 1 - Beginner</title><link>http://klee1611.github.io/posts/docker-operating-1.html/</link><pubDate>Wed, 01 Jan 2020 17:06:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/docker-operating-1.html/</guid><description><![CDATA[<h2 id="docker-基本概念">Docker 基本概念</h2>
-<p>一言以蔽之，<br>
-簡化版的 VM。<br>
-因為 docker 不會把整個 operating system 都裝起來，<br>
-所以大小比 VM 小很多速度也比 VM 快很多。</p>
-<h3 id="image">Image</h3>
-<p>跑在 container 上面的東西，<br>
-裡面包了一個輕量級的 runtime environment，<br>
-包含一些 library 跟 executable。</p>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Docker on Kourtney's Blog</title><link>https://klee1611.github.io/tags/docker/</link><description>Recent content in Docker on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:29:44 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>Docker Operations Log (Part 2)</title><link>https://klee1611.github.io/posts/docker-operating-2.html/</link><pubDate>Thu, 09 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/docker-operating-2.html/</guid><description>&lt;p&gt;Continuing from &lt;a href="https://klee1611.github.io/zh-tw/posts/docker-operating-1.html" rel=""&gt;Docker Operations Log (Part 1)&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="basic-docker-usage"&gt;Basic Docker Usage&lt;/h2&gt;
+&lt;h3 id="deleting-a-container"&gt;Deleting a Container&lt;/h3&gt;
+&lt;p&gt;Remember to stop the container using &lt;code&gt;stop&lt;/code&gt; before deleting it.&lt;/p&gt;
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0"&gt;
+ &lt;div class="code-header language-bash"&gt;
+ &lt;span class="code-title"&gt;&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="ellipses"&gt;&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="copy" title="Copy to clipboard"&gt;&lt;i class="far fa-copy fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker rm CONTAINER_NAME&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0"&gt;
+ &lt;div class="code-header language-bash"&gt;
+ &lt;span class="code-title"&gt;&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="ellipses"&gt;&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="copy" title="Copy to clipboard"&gt;&lt;i class="far fa-copy fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker rm CONTAINER_ID&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;After deletion, you can use&lt;/p&gt;</description></item><item><title>Docker Notes 1 - Beginner</title><link>https://klee1611.github.io/posts/docker-operating-1.html/</link><pubDate>Wed, 01 Jan 2020 17:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/docker-operating-1.html/</guid><description>&lt;h2 id="basic-concept"&gt;Basic Concept&lt;/h2&gt;
+&lt;p&gt;Docker can be seen as a simplified virtual machine (VM).&lt;br&gt;
+Since it doesn&amp;rsquo;t install a full operating system, it offers a smaller footprint and faster speed.&lt;/p&gt;
+&lt;h3 id="image"&gt;Image&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;An Image&lt;/strong&gt; contains a lightweight runtime environment,&lt;br&gt;
+including its libraries and executables.&lt;/p&gt;</description></item></channel></rss>

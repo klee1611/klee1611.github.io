@@ -1,74 +1,104 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Programming - 標籤 - Kourtney's Blog</title><link>http://klee1611.github.io/tags/programming/</link><description>Programming - 標籤 - Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 06 Nov 2021 19:31:32 +0800</lastBuildDate><atom:link href="http://klee1611.github.io/tags/programming/" rel="self" type="application/rss+xml"/><item><title>Remove or Upgrade Global NPM Packages After Installing NVM</title><link>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/remove-upgrade-npm-global-packages-after-installing-nvm.html/</guid><description><![CDATA[今天遇到一個問題，
-安裝過 nvm 後安裝 global package 的路徑就被改變了，
-導致想要移除之前安裝過的 global package 時沒辦法直接用 npm uninstall -g 移除。
-怎麼發現這件事的呢？
-很久以前我在 global 裝過一個 package 可以直接在 terminal 用 command 呼叫 command 執行，
-但因為年代久遠，
-要升級那個 package 的時候發現他不在 npm list -g 的範圍，
-只好先用 which 看一下他在的位置，
-接著發現是一個 link 然後就用 ls -al 看那個 link 連到哪裡，
-發現是在 /usr/lib/node_modules 底下，
-很明顯是用 npm -g 安裝的，
-於是再仔細的看了一下 npm list -g 的結果，
-發現其他的 global package 都列在 /Users/&lt;USER_NAME&gt;/.nvm/versions/node/v16.5.0/lib 底下，
-在一陣 google 之後找到了一個方式 nvm use system &amp;&amp; npm ls -g --depth=0 來列出原本安裝過的 global package 有哪些，]]></description></item><item><title>Pyenv Notes</title><link>http://klee1611.github.io/posts/pyenv-notes.html/</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/pyenv-notes.html/</guid><description>pyenv 的功能和使用的原因 pyenv 是用來在系統裡安裝各種不同版本的 python，
-並能夠方便的切換 python 版本的工具。
-當同時有不同 python 版本的專案需要開發或維護時，
-就會需要使用 pyenv 來協助切換 python 的版本。
-python 的新版本通常都會有一些語法上的更新或是新增一些功能，
-例如 python 的 async / await 就是 python 3.5 以上才出現的功能，
-用 python 3.5 以下的版本來開發的專案就無法使用；
-又或者例如同時有 python 2 和 python 3 的專案，
-而且因為 python 2 和 python 3 語法不相容，
-勢必要在系統裡安裝 python 2 和 python 3；
-諸如次類的情況就可以使用 pyenv 方便的切換 python 的版本。
-安裝和初始化 安裝
-brew install pyenv 安裝完畢後執行初始化
-pyenv init 之後按照指示將顯示的 code 貼到 ~/.zshrc 或 ~/.</description></item><item><title>Python Coroutine Asyncio</title><link>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid><description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
-當一隻 Python 程式有很多需要並行執行的 task，<br>
-想要提升程式效能，<br>
-只能選用 multiprocessing 或 threading；<br>
-Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
-<code>asyncio</code> 可以用來撰寫 coroutines，<br>
-並使用 event loop 並行執行 coroutines，<br>
-減少程式不必要的等待時間以提升效能。</p>]]></description></item><item><title>Pipenv Notes</title><link>http://klee1611.github.io/posts/pipenv-notes.html/</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/pipenv-notes.html/</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
-<p>當有很多 Python project 要維護，<br>
-不同的 project 有可能使用相同的 python libraries 的不同版本，<br>
-不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。</p>
-<p>過去使用 <code>virtualenv</code> + <code>requirement.txt</code> 的機制可以在不同的 project 使用同一個套件的不同版本，<br>
-也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description></item><item><title>Deep Copy and Shallow Copy</title><link>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/deep-copy-shallow-copy.html/</guid><description>Shallow Copy 複製越少越好，
-Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，
-並一起共享 elements。
-舉個 Java 的例子，
-int[] arr1 = {1, 2, 3}; int[] arr2 = arr1; arr2 就是一個 arr1 的 shallow copy。
-一旦其中一個 structure 更動了 element 另外一個也會受到影響。 Deep Copy 全部複製，
-Deep copy 出來的 structure 不但有跟舊的 structure 相同的結構，
-還把舊的 structure 的 elements 全部複製了一份給新的。
-int[] arr1 = {1, 2, 3}; int[] arr2 = new int[arr1.length]; for (int i = 0; i &amp;lt; arr1.length; ++i) { arr2[i] = arr1[i]; } arr2 是 arr1 的 deep copy。</description></item><item><title>C++ STL Containers 比較 - array, vector, deque, list, forward_list</title><link>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid><description>Array 固定大小的連續記憶體空間所構成
-優缺點 不能像其他 C++ container 那樣動態改變儲存空間的大小 random access 很有效率 (O(1)) Vector 可以動態改變儲存空間大小的 array
-底層實作方式 動態的 allocate array，
-當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去 實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大 優缺點 random access 很有效率 (O(1)) 在尾端加入或刪除 element 相對有效率 在不是尾端的地方加入或刪除 element 比較慢 Deque Double-ended queue，
-一樣可以動態的改變 container 大小。
-不同的 library 實作 deque 的方式可能會不一樣。
-優缺點 可以當作是在 container 的頭和尾做 insert 和 delete 都一樣很有效率的 vector，
-但不保證 elements 都被存在一塊連續記憶體空間 Reallocate 的時候比 vector 有效率 在不是頭或尾端的地方加入或刪除 element 比較慢 random access 很有效率 (O(1)) List 底層實作方式 Doubly-linked list</description></item><item><title>Github Pages and Jekyll - sitemap</title><link>http://klee1611.github.io/posts/jekyll-sitemap-github-pages.html/</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/jekyll-sitemap-github-pages.html/</guid><description><![CDATA[<h2 id="更新">更新</h2>
-<p>已從 Jekyll migrate 到 Hugo，<br>
-這篇方法僅適用 Jekyll。</p>
-<h2 id="sitemap">Sitemap</h2>
-<p>sitemap 基本上就一個 <code>.xml</code> 檔案，<br>
-裡面包含了網站有哪些頁面連結，<br>
-讓搜尋引擎去爬，<br>
-搜尋引擎爬完以後就可以建立 index，<br>
-之後有人在搜尋引擎打關鍵字才搜尋的到。</p>
-<h2 id="jekyll-sitemap">Jekyll-sitemap</h2>
-<p>Jekyll 有一個 plugin 叫做 <a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer">jekyll-stiemap</a>，<br>
-可以在每次 build 網站之後自動產生 sitemap。</p>]]></description></item><item><title>C/C++ - const 加上 pointer 和 reference 的用法整理</title><link>http://klee1611.github.io/posts/const-pointer-reference.html/</link><pubDate>Mon, 30 Dec 2019 08:19:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/const-pointer-reference.html/</guid><description><![CDATA[<h2 id="const-和一般變數">const 和一般變數</h2>
-<p>有兩種寫法</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">const</span> <span class="n">TYPE</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VALUE</span><span class="p">;</span> <span class="c1">// more common
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="n">TYPE</span> <span class="k">const</span> <span class="n">NAME</span> <span class="o">=</span> <span class="n">VAULE</span><span class="p">;</span>
-</span></span></code></pre></div><p>意思都一樣，<br>
-就是這個變數不能再被指定別的值。</p>
-<p>舉個例：</p>]]></description></item><item><title>Difference between Concurrent Processing and Parallel Processing</title><link>http://klee1611.github.io/posts/concurrent-process-parallel-process.html/</link><pubDate>Wed, 25 Dec 2019 19:40:00 +0800</pubDate><author>作者</author><guid>http://klee1611.github.io/posts/concurrent-process-parallel-process.html/</guid><description><![CDATA[<p>Concurrent Processing 和 Parallel Processing 指的都是 CPU <strong>在 一段時間內執行多個 process</strong>，<br>
-但兩者在概念上有些差異；</p>
-<p>根據 <a href="http://shop.oreilly.com/product/9780596521547.do" target="_blank" rel="noopener noreffer">The Art of Concurrency</a> ，<br>
-Concurrent 指的是</p>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Programming on Kourtney's Blog</title><link>https://klee1611.github.io/tags/programming/</link><description>Recent content in Programming on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:29:44 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/tags/programming/index.xml" rel="self" type="application/rss+xml"/><item><title>Pyenv Notes</title><link>https://klee1611.github.io/posts/pyenv-notes.html/</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/pyenv-notes.html/</guid><description>&lt;h3 id="functions-and-reasons-for-using-pyenv"&gt;Functions and Reasons for Using &lt;code&gt;pyenv&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;pyenv&lt;/code&gt; is a tool used to install various versions of Python on a system,&lt;/p&gt;
+&lt;p&gt;and to conveniently switch between Python versions.&lt;/p&gt;
+&lt;p&gt;When you need to develop or maintain projects that require different Python versions simultaneously,&lt;/p&gt;
+&lt;p&gt;you will need to use &lt;code&gt;pyenv&lt;/code&gt; to help switch Python versions.&lt;/p&gt;
+&lt;p&gt;New Python versions usually include syntax updates or new features.&lt;/p&gt;
+&lt;p&gt;For example, Python&amp;rsquo;s &lt;code&gt;async / await&lt;/code&gt; feature appeared only in Python 3.5 and later.&lt;/p&gt;</description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/python-coroutine-asyncio.html/</guid><description>&lt;p&gt;Before the advent of &lt;code&gt;asyncio&lt;/code&gt;,&lt;br&gt;
+when a Python program had many tasks that needed to be executed concurrently,&lt;br&gt;
+and wanted to improve program performance,&lt;br&gt;
+the only options were multiprocessing or threading.&lt;br&gt;
+After Python 3.4, &lt;code&gt;asyncio&lt;/code&gt; became another option.&lt;br&gt;
+&lt;code&gt;asyncio&lt;/code&gt; can be used to write coroutines,&lt;br&gt;
+and execute coroutines concurrently using an event loop,&lt;br&gt;
+reducing unnecessary waiting time in the program to improve performance.&lt;/p&gt;</description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/posts/pipenv-notes.html/</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/pipenv-notes.html/</guid><description>&lt;h2 id="why-pipenv"&gt;Why Pipenv&lt;/h2&gt;
+&lt;p&gt;When maintaining many Python projects,&lt;br&gt;
+different projects might use different versions of the same Python libraries.&lt;br&gt;
+Not using a virtual environment and installing all Python modules directly on your machine will lead to version conflicts.&lt;/p&gt;
+&lt;p&gt;In the past, the mechanism of &lt;code&gt;virtualenv&lt;/code&gt; + &lt;code&gt;requirements.txt&lt;/code&gt; allowed different projects to use different versions of the same package,&lt;br&gt;
+and also enabled new developers or production environments to quickly install the packages required by the project.&lt;/p&gt;</description></item><item><title>Deep Copy and Shallow Copy</title><link>https://klee1611.github.io/posts/deep-copy-shallow-copy.html/</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/deep-copy-shallow-copy.html/</guid><description>&lt;h3 id="shallow-copy"&gt;Shallow Copy&lt;/h3&gt;
+&lt;p&gt;Copies as little as possible.&lt;br&gt;
+A new structure created by a shallow copy has the same structure as the old one,&lt;br&gt;
+and they &lt;strong&gt;share the memory address of elements&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For example, in Java:&lt;/p&gt;
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0"&gt;
+ &lt;div class="code-header language-java"&gt;
+ &lt;span class="code-title"&gt;&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="ellipses"&gt;&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="copy" title="Copy to clipboard"&gt;&lt;i class="far fa-copy fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;arr1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="w"&gt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;arr2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;arr1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;arr2&lt;/code&gt; is a shallow copy of &lt;code&gt;arr1&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>C++ Container Characteristics and Usage Scenarios - array, vector, deque, list, forward_list</title><link>https://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;C++ provides various containers to store and manage data,&lt;br&gt;
+each with its unique characteristics and applicable scenarios.&lt;br&gt;
+This article will delve into five common sequence containers: &lt;code&gt;array&lt;/code&gt;, &lt;code&gt;vector&lt;/code&gt;, &lt;code&gt;deque&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt;, and &lt;code&gt;forward_list&lt;/code&gt;,&lt;br&gt;
+comparing their features, performance, and offering selection advice.&lt;/p&gt;
+&lt;h2 id="array"&gt;Array&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;std::array&lt;/code&gt; is a fixed-size array introduced in C++11,&lt;br&gt;
+combining the performance of C-style arrays with the interface of STL containers.&lt;/p&gt;
+&lt;h3 id="characteristics"&gt;Characteristics&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fixed Size&lt;/strong&gt;: Size is determined at compile time and cannot be changed dynamically.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Stack Allocation&lt;/strong&gt;: Typically allocates memory on the stack, offering high performance.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Random Access&lt;/strong&gt;: Supports &lt;code&gt;O(1)&lt;/code&gt; time complexity for random access.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Iterator Support&lt;/strong&gt;: Provides iterators, allowing use with STL algorithms.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="when-to-use"&gt;When to Use&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;When the data size is known and fixed.&lt;/li&gt;
+&lt;li&gt;When pursuing ultimate performance, avoiding heap allocation overhead.&lt;/li&gt;
+&lt;li&gt;When interoperability with C-style arrays is required.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="example"&gt;Example&lt;/h3&gt;
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0"&gt;
+ &lt;div class="code-header language-cpp"&gt;
+ &lt;span class="code-title"&gt;&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="ellipses"&gt;&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="copy" title="Copy to clipboard"&gt;&lt;i class="far fa-copy fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;array&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;iostream&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="cp"&gt;#include&lt;/span&gt; &lt;span class="cpf"&gt;&amp;lt;numeric&amp;gt;&lt;/span&gt;&lt;span class="cp"&gt; &lt;/span&gt;&lt;span class="c1"&gt;// For std::accumulate
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="nf"&gt;main&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;my_array&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// Access elements
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Element at index 2: &amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;my_array&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// Output: 3
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// Iteration
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;&amp;amp;&lt;/span&gt; &lt;span class="nl"&gt;x&lt;/span&gt; &lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;my_array&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;*=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="c1"&gt;// Sum
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt; &lt;span class="kt"&gt;int&lt;/span&gt; &lt;span class="n"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;accumulate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;my_array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;begin&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="n"&gt;my_array&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;end&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;cout&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="s"&gt;&amp;#34;Sum of elements: &amp;#34;&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;sum&lt;/span&gt; &lt;span class="o"&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class="n"&gt;std&lt;/span&gt;&lt;span class="o"&gt;::&lt;/span&gt;&lt;span class="n"&gt;endl&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// Output: 30
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h2 id="vector"&gt;Vector&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;std::vector&lt;/code&gt; is a dynamic array that can change its size dynamically at runtime.&lt;br&gt;
+It is the most commonly used and flexible sequence container in C++.&lt;/p&gt;</description></item><item><title>Github Pages and Jekyll - sitemap</title><link>https://klee1611.github.io/posts/jekyll-sitemap-github-pages.html/</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/jekyll-sitemap-github-pages.html/</guid><description>&lt;h2 id="update"&gt;Update&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve moved from Jekyll to Hugo.&lt;br&gt;
+This method is only applicable to Jekyll.&lt;/p&gt;
+&lt;h2 id="sitemap"&gt;Sitemap&lt;/h2&gt;
+&lt;p&gt;A sitemap is an &lt;code&gt;.xml&lt;/code&gt; file that contains links to all the pages within a website.&lt;br&gt;
+With a sitemap,&lt;br&gt;
+a search engine can discover the pages and subsequently create indexes for them.&lt;br&gt;
+Then, people browsing the internet can find those pages using keywords.&lt;/p&gt;
+&lt;h2 id="jekyll-sitemap"&gt;Jekyll-sitemap&lt;/h2&gt;
+&lt;p&gt;There is a plugin called &lt;a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer "&gt;jekyll-sitemap&lt;/a&gt; for Jekyll,&lt;br&gt;
+which automatically generates a sitemap whenever the website is rebuilt.&lt;/p&gt;</description></item><item><title>C/C++ - const with Pointer or Reference</title><link>https://klee1611.github.io/posts/const-pointer-reference.html/</link><pubDate>Mon, 30 Dec 2019 08:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/const-pointer-reference.html/</guid><description>&lt;h2 id="const-with-normal-variables"&gt;&lt;code&gt;const&lt;/code&gt; with Normal Variables&lt;/h2&gt;
+&lt;p&gt;Two ways to add &lt;code&gt;const&lt;/code&gt; for normal variables:&lt;/p&gt;
+&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0"&gt;
+ &lt;div class="code-header language-cpp"&gt;
+ &lt;span class="code-title"&gt;&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="ellipses"&gt;&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;span class="copy" title="Copy to clipboard"&gt;&lt;i class="far fa-copy fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
+ &lt;/div&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;TYPE&lt;/span&gt; &lt;span class="n"&gt;NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// more common
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="c1"&gt;&lt;/span&gt;&lt;span class="n"&gt;TYPE&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;VAULE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Both mean this variable cannot be assigned to another value.&lt;/p&gt;
+&lt;p&gt;For example,&lt;/p&gt;</description></item><item><title>Difference between Concurrent Processing and Parallel Processing</title><link>https://klee1611.github.io/posts/concurrent-process-parallel-process.html/</link><pubDate>Wed, 25 Dec 2019 19:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/concurrent-process-parallel-process.html/</guid><description>&lt;p&gt;Both &amp;lsquo;Concurrent Processing&amp;rsquo; and &amp;lsquo;Parallel Processing&amp;rsquo; refer to &lt;strong&gt;multiple processes executing on the CPU within a period&lt;/strong&gt;,&lt;br&gt;
+but they are two different things.&lt;/p&gt;
+&lt;p&gt;According to &lt;a href="http://shop.oreilly.com/product/9780596521547.do" target="_blank" rel="noopener noreffer "&gt;The Art of Concurrency&lt;/a&gt;,&lt;br&gt;
+Concurrent means:&lt;/p&gt;</description></item></channel></rss>
