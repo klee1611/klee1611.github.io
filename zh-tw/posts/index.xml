@@ -1,39 +1,39 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/posts/</link><description>所有文章 | Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 25 Oct 2025 10:39:27 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/posts/" rel="self" type="application/rss+xml"/><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html/</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html/</guid><description><![CDATA[<p>在 Python 3.4 之後出現了 <code>Asyncio</code> 可以在特定情境下提升效能，<br>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/posts/index.html</link><description>所有文章 | Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Sat, 25 Oct 2025 10:39:27 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/posts/index.html" rel="self" type="application/rss+xml"/><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description><![CDATA[<p>在 Python 3.4 之後出現了 <code>Asyncio</code> 可以在特定情境下提升效能，<br>
 結合之前已經有的 Multiprocessing 和 Multithreading，<br>
 我整理了一下這三項技術適合的原理、差異和使用情境做了幾篇紀錄。<br>
-這一篇先簡單介紹三者的基本概念和適用情境。</p>]]></description></item><item><title>Sync Obsidian / Joplin Data Across Multiple Device with Synology WebDAV</title><link>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html/</link><pubDate>Wed, 25 Dec 2024 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html/</guid><description><![CDATA[<p>原先我使用的筆記軟體是 Notion，<br>
+這一篇先簡單介紹三者的基本概念和適用情境。</p>]]></description></item><item><title>Sync Obsidian / Joplin Data Across Multiple Device with Synology WebDAV</title><link>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</link><pubDate>Wed, 25 Dec 2024 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</guid><description><![CDATA[<p>原先我使用的筆記軟體是 Notion，<br>
 功能豐富且介面美觀，<br>
 但幾年前 Notion 出現了隱私權爭議，<br>
 被指控偷看某公司放在 Notion 的內容，<br>
 甚至進一步提出合作；<br>
 就改用了一陣子 <a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer ">Joplin</a>，<br>
 但最後還是轉到了擁有大量外掛及社群支援，<br>
-而且可以高度客製化的 <a href="https://obsidian.md/" target="_blank" rel="noopener noreffer ">Obsidian</a>。</p>]]></description></item><item><title>Managing Pre-existing Global NPM Packages After Installing NVM</title><link>https://klee1611.github.io/zh-tw/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html/</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html/</guid><description><![CDATA[<p>今天遇到一個問題，</p>
+而且可以高度客製化的 <a href="https://obsidian.md/" target="_blank" rel="noopener noreffer ">Obsidian</a>。</p>]]></description></item><item><title>Managing Pre-existing Global NPM Packages After Installing NVM</title><link>https://klee1611.github.io/zh-tw/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html</guid><description><![CDATA[<p>今天遇到一個問題，</p>
 <p>安裝過 <code>nvm</code> 後安裝 global package 的路徑就被改變了，</p>
 <p>導致想要移除之前安裝過的 global package 時沒辦法直接用 <code>npm uninstall -g</code> 移除。</p>
 <p>怎麼發現這件事的呢？</p>
-<p>很久以前我在 global 裝過一個 package 可以直接在 terminal 呼叫 command 執行，</p>]]></description></item><item><title>Pyenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html/</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html/</guid><description><![CDATA[<h3 id="pyenv-的功能和使用的原因"><code>pyenv</code> 的功能和使用的原因</h3>
+<p>很久以前我在 global 裝過一個 package 可以直接在 terminal 呼叫 command 執行，</p>]]></description></item><item><title>Pyenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html</guid><description><![CDATA[<h3 id="pyenv-的功能和使用的原因"><code>pyenv</code> 的功能和使用的原因</h3>
 <p><code>pyenv</code> 是用來在系統裡安裝各種不同版本的 python，</p>
 <p>並能夠方便的切換 python 版本的工具。</p>
 <p>當同時有不同 python 版本的專案需要開發或維護時，</p>
-<p>就會需要使用 <code>pyenv</code> 來協助切換 python 的版本。</p>]]></description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html/</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html/</guid><description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
+<p>就會需要使用 <code>pyenv</code> 來協助切換 python 的版本。</p>]]></description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html</guid><description><![CDATA[<p>在出現 <code>asyncio</code> 前，<br>
 當一隻 Python 程式有很多需要並行執行的 task，<br>
 想要提升程式效能，<br>
 只能選用 multiprocessing 或 threading；<br>
 Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
 <code>asyncio</code> 可以用來撰寫 coroutines，<br>
 並使用 event loop 並行執行 coroutines，<br>
-減少程式不必要的等待時間以提升效能。</p>]]></description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html/</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html/</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
+減少程式不必要的等待時間以提升效能。</p>]]></description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
 <p>當有很多 Python project 要維護，<br>
 不同的 project 有可能使用相同的 python libraries 的不同版本，<br>
 不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。</p>
 <p>過去使用 <code>virtualenv</code> + <code>requirement.txt</code> 的機制可以在不同的 project 使用同一個套件的不同版本，<br>
-也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description></item><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>https://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html/</guid><description><![CDATA[<h2 id="stateless-http">Stateless HTTP</h2>
+也能夠讓新加入的開發者或 production 環境可以快速安裝 project 需要的套件，</p>]]></description></item><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>https://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/stateless-http-stateful-session-and-cookies.html</guid><description><![CDATA[<h2 id="stateless-http">Stateless HTTP</h2>
 <p>HTTP 是一種 <strong>stateless 的 protocol</strong>，<br>
 也就是說<strong>每一次的 request / response 都是獨立的</strong>，<br>
 和之前或之後的 request / response 無關。<br>
 相同的 request 就會回應相同的 response，<br>
-不會因為之前的 request / response 內容而有不同。</p>]]></description></item><item><title>WSL 2 on Windows Part 2 - Terminal 介面設定</title><link>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html/</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html/</guid><description><![CDATA[<p></p>
+不會因為之前的 request / response 內容而有不同。</p>]]></description></item><item><title>WSL 2 on Windows Part 2 - Terminal 介面設定</title><link>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html</guid><description><![CDATA[<p></p>
 <p>把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，<br>
 方便操作。</p>
 <h2 id="windows-terminal-功能">Windows Terminal 功能</h2>
@@ -46,12 +46,12 @@ Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
 </ul>
 <p>這些功能比原生 WSL 能支援的多的多，<br>
 也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，<br>
-於是就決定選用 windows terminal 了。</p>]]></description></item><item><title>WSL 2 on Windows Part 1 - 安裝啟用</title><link>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html/</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html/</guid><description><![CDATA[<p>工作的時候習慣用 Linux 或 mac 的 terminal，<br>
+於是就決定選用 windows terminal 了。</p>]]></description></item><item><title>WSL 2 on Windows Part 1 - 安裝啟用</title><link>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html</guid><description><![CDATA[<p>工作的時候習慣用 Linux 或 mac 的 terminal，<br>
 找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。  </p>
 <h2 id="wsl-2-和-wsl-1-的差異">WSL 2 和 WSL 1 的差異</h2>
 <p>WSL 2 是基於 Hyper-V 在 virtual machine 中<strong>跑完整的 Linux kernal</strong>，<br>
 WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，<br>
-因此 WSL 2 比 WSL 1 <strong>支援更多 Linux 原生的功能和 system call</strong>。</p>]]></description></item><item><title>Deep Copy and Shallow Copy</title><link>https://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html/</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html/</guid><description><![CDATA[<h3 id="shallow-copy">Shallow Copy</h3>
+因此 WSL 2 比 WSL 1 <strong>支援更多 Linux 原生的功能和 system call</strong>。</p>]]></description></item><item><title>Deep Copy and Shallow Copy</title><link>https://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/deep-copy-shallow-copy.html</guid><description><![CDATA[<h3 id="shallow-copy">Shallow Copy</h3>
 <p>複製越少越好，<br>
 Shallow copy 出來的新的 structure 擁有跟舊的 structure 相同的結構，<br>
 並一起<strong>共享 elements 的記憶體位置</strong>。</p>
