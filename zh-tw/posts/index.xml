@@ -1,9 +1,13 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/posts/index.html</link><description>所有文章 | Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 14 Nov 2025 23:45:19 -0500</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/posts/index.html" rel="self" type="application/rss+xml"/><item><title>使用 GitHub CLI 徹底移除 GitHub 上頑固的「幽靈通知」</title><link>https://klee1611.github.io/zh-tw/posts/remove-ghost-notification-github-gitcoin-spam.html</link><pubDate>Fri, 14 Nov 2025 23:45:19 -0500</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/remove-ghost-notification-github-gitcoin-spam.html</guid><description><![CDATA[<div class="featured-image">
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>所有文章 - Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/posts/index.html</link><description>所有文章 | Kourtney's Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 20 Mar 2026 23:21:21 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/posts/index.html" rel="self" type="application/rss+xml"/><item><title>絕境長城之外：以 Firestore vector search 打造低成本、高效的雲端 RAG 應用</title><link>https://klee1611.github.io/zh-tw/posts/build-rag-system-firestore-vector-search-iron-counsel.html</link><pubDate>Fri, 20 Mar 2026 23:21:21 -0400</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/build-rag-system-firestore-vector-search-iron-counsel.html</guid><description>&lt;p>RAG(Retrieval Augmented Generation) 是一套 AI framework，能夠在不需要重新訓練 LLM 的前提下，讓開發者得以新增其他的外部資訊，以這些新增的資訊來改善 LLM 回答的精準度。在 2026 的今天已經是一項廣為人知的技術了。&lt;/p></description></item><item><title>使用 GitHub CLI 徹底移除 GitHub 上頑固的「幽靈通知」</title><link>https://klee1611.github.io/zh-tw/posts/remove-ghost-notification-github-gitcoin-spam.html</link><pubDate>Fri, 14 Nov 2025 23:45:19 -0500</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/remove-ghost-notification-github-gitcoin-spam.html</guid><description><![CDATA[<div class="featured-image">
                 <img src="/images/remove_ghost_notification_github_gitcoin_spam/stuck-github-notification.png" referrerpolicy="no-referrer">
-            </div><p>GitHub notification 對開發者來說是一向很方便的工具，可以用來追蹤 issue、pull request 和提及 (mention)。但某天我的通知標記忽然就這麼卡住了，即使已讀了所有內容也他還是非常頑固的卡在那裡，在又拖了幾個月之後我才終於花了點時間研究發生了什麼事。</p>]]></description></item><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description><![CDATA[<p>在 Python 3.4 之後出現了 <code>Asyncio</code> 可以在特定情境下提升效能，<br>
-結合之前已經有的 Multiprocessing 和 Multithreading，<br>
+            </div><p>GitHub notification 對開發者來說是一向很方便的工具，可以用來追蹤 issue、pull request 和提及 (mention)。但某天我的通知標記忽然就這麼卡住了，即使已讀了所有內容也他還是非常頑固的卡在那裡，在又拖了幾個月之後我才終於花了點時間研究發生了什麼事。</p>]]></description></item><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description><![CDATA[<p>Python 的效能瓶頸在幾年前一直為人詬病，<br>
+但在開發者的努力之下，Python 3.4 開始出現了 <code>Asyncio</code> 可以在特定情境下提升效能，<br>
+到了 Python 3.13 更出現了可選擇性關閉 GIL 的 Free-threaded (PEP-703) 設計，<br>
+結合過去的 Multiprocessing 和 Multithreading，<br>
 我整理了一下這三項技術適合的原理、差異和使用情境做了幾篇紀錄。<br>
-這一篇先簡單介紹三者的基本概念和適用情境。</p>]]></description></item><item><title>Sync Obsidian / Joplin Data Across Multiple Device with Synology WebDAV</title><link>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</link><pubDate>Wed, 25 Dec 2024 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</guid><description><![CDATA[<p>原先我使用的筆記軟體是 Notion，<br>
+這一篇先簡單介紹三者的基本概念和適用情境。</p>]]></description></item><item><title>Macos Legacy Rsync Hangs</title><link>https://klee1611.github.io/zh-tw/posts/resolve-macos-rsync-hangs.html</link><pubDate>Sat, 04 Oct 2025 21:59:35 -0500</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/resolve-macos-rsync-hangs.html</guid><description><![CDATA[<p>幾個月前用 <code>rsync</code> 從 Macbook 備份資料到 NAS 上的時候出現了點問題，</p>
+<p><code>rsync</code> 會看似正常的在螢幕上跑一陣子然後卡死不動，</p>
+<p>從螢幕輸出會看到他原本一邊同步一邊在吐正在同步中的檔案，</p>]]></description></item><item><title>Sync Obsidian / Joplin Data Across Multiple Device with Synology WebDAV</title><link>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</link><pubDate>Wed, 25 Dec 2024 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</guid><description><![CDATA[<p>原先我使用的筆記軟體是 Notion，<br>
 功能豐富且介面美觀，<br>
 但幾年前 Notion 出現了隱私權爭議，<br>
 被指控偷看某公司放在 Notion 的內容，<br>
@@ -35,22 +39,4 @@ Python 3.4 之後又多出了 <code>asyncio</code> 的選擇。<br>
 也就是說<strong>每一次的 request / response 都是獨立的</strong>，<br>
 和之前或之後的 request / response 無關。<br>
 相同的 request 就會回應相同的 response，<br>
-不會因為之前的 request / response 內容而有不同。</p>]]></description></item><item><title>WSL 2 on Windows Part 2 - Terminal 介面設定</title><link>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-2.html</guid><description><![CDATA[<p></p>
-<p>把在 Linux 和 Mac 上 terminal 的設定也搬到 Windows 上，<br>
-方便操作。</p>
-<h2 id="windows-terminal-功能">Windows Terminal 功能</h2>
-<p>用 Windows terminal 可以</p>
-<ul>
-<li>啟用多個分頁 (在多個 Linux CLI、Windows CLI、PowerShell等之間快速切換)</li>
-<li>自訂按鍵 (開啟或關閉分頁、複製+貼上等快速鍵)</li>
-<li>使用搜尋功能</li>
-<li>自訂佈景主題</li>
-</ul>
-<p>這些功能比原生 WSL 能支援的多的多，<br>
-也可以設定的和我在 Linux 或 Mac 的開發環境比較相似，<br>
-於是就決定選用 windows terminal 了。</p>]]></description></item><item><title>WSL 2 on Windows Part 1 - 安裝啟用</title><link>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/wsl-2-on-windows-part-1.html</guid><description><![CDATA[<p>工作的時候習慣用 Linux 或 mac 的 terminal，<br>
-找了個時間在家裡的 PC 上把 WSL 的環境也設定一下方便切換工作環境。  </p>
-<h2 id="wsl-2-和-wsl-1-的差異">WSL 2 和 WSL 1 的差異</h2>
-<p>WSL 2 是基於 Hyper-V 在 virtual machine 中<strong>跑完整的 Linux kernal</strong>，<br>
-WSL 1 則是在 Windows 系統上對 Linux 功能的模擬，<br>
-因此 WSL 2 比 WSL 1 <strong>支援更多 Linux 原生的功能和 system call</strong>。</p>]]></description></item></channel></rss>
+不會因為之前的 request / response 內容而有不同。</p>]]></description></item></channel></rss>
