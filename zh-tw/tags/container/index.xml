@@ -1,27 +1,35 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Container on Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/tags/container.html</link><description>Recent content in Container on Kourtney's Blog</description><generator>Hugo</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 31 Oct 2025 16:17:18 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/container/index.xml" rel="self" type="application/rss+xml"/><item><title>C++ STL Containers 比較 - array, vector, deque, list, forward_list</title><link>https://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html</guid><description>&lt;h2 id="array"&gt;Array&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Container on Kourtney's Portfolio</title><link>https://klee1611.github.io/zh-tw/tags/container.html</link><description>Recent content in Container on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Tue, 09 Jun 2026 17:05:32 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/container/index.xml" rel="self" type="application/rss+xml"/><item><title>C++ STL Containers 比較 - array, vector, deque, list, forward_list</title><link>https://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html</guid><description>&lt;h2 class="relative group"&gt;Array
+ &lt;div id="array" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#array" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;固定大小&lt;/strong&gt;的&lt;strong&gt;連續記憶體空間&lt;/strong&gt;所構成&lt;/p&gt;
-&lt;h3 id="優缺點"&gt;優缺點&lt;/h3&gt;
+
+&lt;h3 class="relative group"&gt;優缺點
+ &lt;div id="優缺點" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e5%84%aa%e7%bc%ba%e9%bb%9e" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;不能像其他 C++ container 那樣動態改變儲存空間的大小&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;random access 很有效率&lt;/strong&gt; (O(1))&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id="vector"&gt;Vector&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;可以動態改變儲存空間大小&lt;/strong&gt;的 array&lt;/p&gt;
-&lt;h3 id="底層實作方式"&gt;底層實作方式&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;動態的 allocate array，&lt;br&gt;
-當目前的 capacity 不夠大的時候就重新 reallocate 一個新的 array 然後把舊的 element 搬過去&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ul&gt;
-&lt;li&gt;實際上的 capacity 會比目前塞進 vector 裡面的 element 數量大&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id="優缺點-1"&gt;優缺點&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;random access 很有效率&lt;/strong&gt; (O(1))&lt;/li&gt;
-&lt;li&gt;在&lt;strong&gt;尾端&lt;/strong&gt;加入或刪除 element 相對有效率&lt;/li&gt;
-&lt;li&gt;在不是尾端的地方加入或刪除 element 比較慢&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id="deque"&gt;Deque&lt;/h2&gt;
-&lt;p&gt;Double-ended queue，&lt;br&gt;
-一樣可以動態的改變 container 大小。&lt;br&gt;
-不同的 library 實作 deque 的方式可能會不一樣。&lt;/p&gt;</description></item></channel></rss>
+
+&lt;h2 class="relative group"&gt;Vector
+ &lt;div id="vector" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#vector" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;可以動態改變儲存空間大小&lt;/strong&gt;的 array&lt;/p&gt;</description></item></channel></rss>

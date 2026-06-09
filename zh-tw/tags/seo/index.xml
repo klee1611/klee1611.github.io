@@ -1,12 +1,38 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SEO on Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/tags/seo.html</link><description>Recent content in SEO on Kourtney's Blog</description><generator>Hugo</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Mon, 15 Nov 2021 17:33:53 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/seo/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Pages and Jekyll - sitemap</title><link>https://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html</guid><description>&lt;h2 id="更新"&gt;更新&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>SEO on Kourtney's Portfolio</title><link>https://klee1611.github.io/zh-tw/tags/seo.html</link><description>Recent content in SEO on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Mon, 15 Nov 2021 17:33:53 +0800</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/seo/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Pages and Jekyll - sitemap</title><link>https://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/jekyll-sitemap-github-pages.html</guid><description>&lt;h2 class="relative group"&gt;更新
+ &lt;div id="更新" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#%e6%9b%b4%e6%96%b0" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;已從 Jekyll migrate 到 Hugo，&lt;br&gt;
 這篇方法僅適用 Jekyll。&lt;/p&gt;
-&lt;h2 id="sitemap"&gt;Sitemap&lt;/h2&gt;
+
+&lt;h2 class="relative group"&gt;Sitemap
+ &lt;div id="sitemap" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sitemap" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;sitemap 基本上就一個 &lt;code&gt;.xml&lt;/code&gt; 檔案，&lt;br&gt;
 裡面包含了網站有哪些頁面連結，&lt;br&gt;
 讓搜尋引擎去爬，&lt;br&gt;
 搜尋引擎爬完以後就可以建立 index，&lt;br&gt;
 之後有人在搜尋引擎打關鍵字才搜尋的到。&lt;/p&gt;
-&lt;h2 id="jekyll-sitemap"&gt;Jekyll-sitemap&lt;/h2&gt;
-&lt;p&gt;Jekyll 有一個 plugin 叫做 &lt;a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer "&gt;jekyll-stiemap&lt;/a&gt;，&lt;br&gt;
+
+&lt;h2 class="relative group"&gt;Jekyll-sitemap
+ &lt;div id="jekyll-sitemap" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#jekyll-sitemap" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Jekyll 有一個 plugin 叫做 &lt;a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noreferrer"&gt;jekyll-stiemap&lt;/a&gt;，&lt;br&gt;
 可以在每次 build 網站之後自動產生 sitemap。&lt;/p&gt;</description></item></channel></rss>

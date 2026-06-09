@@ -1,14 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WSL on Kourtney's Blog</title><link>https://klee1611.github.io/tags/wsl.html</link><description>Recent content in WSL on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Tue, 24 Mar 2026 17:57:55 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/wsl/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL 2 on Windows Part 2 - Terminal Interface Settings</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html</guid><description>&lt;p&gt;&lt;img
- class="lazyload"
- src="https://klee1611.github.io/svg/loading.min.svg"
- data-src="https://klee1611.github.io/images/wsl2_terminal_screenshot.png"
- data-srcset="https://klee1611.github.io/images/wsl2_terminal_screenshot.png, https://klee1611.github.io/images/wsl2_terminal_screenshot.png 1.5x, https://klee1611.github.io/images/wsl2_terminal_screenshot.png 2x"
- data-sizes="auto"
- alt="/images/wsl2_terminal_screenshot.png"
- title="wsl2_terminal_screenshot" /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>WSL on Kourtney's Portfolio</title><link>https://klee1611.github.io/tags/wsl.html</link><description>Recent content in WSL on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Tue, 24 Mar 2026 17:57:55 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/wsl/index.xml" rel="self" type="application/rss+xml"/><item><title>WSL 2 on Windows Part 2 - Terminal Interface Settings</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html</guid><description>&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="wsl2_terminal_screenshot"
+ src="https://klee1611.github.io/images/wsl2_terminal_screenshot.png"
+ &gt;&lt;/figure&gt;
+&lt;/p&gt;
 &lt;p&gt;Bringing the terminal settings from Linux and Mac to Windows
 for easier operation.&lt;/p&gt;
-&lt;h2 id="windows-terminal-features"&gt;Windows Terminal Features&lt;/h2&gt;
+
+&lt;h2 class="relative group"&gt;Windows Terminal Features
+ &lt;div id="windows-terminal-features" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows-terminal-features" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;With Windows Terminal, you can:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Enable multiple tabs (quickly switch between multiple Linux CLIs, Windows CLIs, PowerShell, etc.)&lt;/li&gt;
@@ -18,9 +28,18 @@ for easier operation.&lt;/p&gt;
 &lt;/ul&gt;
 &lt;p&gt;These features offer much more than native WSL support,
 and allow for a setup similar to my Linux or Mac development environments,
-which is why I decided to use Windows Terminal.&lt;/p&gt;</description></item><item><title>WSL 2 on Windows Part 1 - Installation and Activation</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html</guid><description>&lt;p&gt;I&amp;rsquo;m used to using Linux or Mac terminals for work.&lt;br&gt;
+which is why I decided to use Windows Terminal.&lt;/p&gt;</description></item><item><title>WSL 2 on Windows Part 1 - Installation and Activation</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html</guid><description>&lt;p&gt;I&amp;rsquo;m used to using Linux or Mac terminals for work.&lt;br&gt;
 I took some time to set up the WSL environment on my home PC to easily switch work environments.&lt;/p&gt;
-&lt;h2 id="differences-between-wsl-2-and-wsl-1"&gt;Differences between WSL 2 and WSL 1&lt;/h2&gt;
+
+&lt;h2 class="relative group"&gt;Differences between WSL 2 and WSL 1
+ &lt;div id="differences-between-wsl-2-and-wsl-1" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#differences-between-wsl-2-and-wsl-1" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;WSL 2 is based on Hyper-V and &lt;strong&gt;runs a full Linux kernel&lt;/strong&gt; in a virtual machine.&lt;br&gt;
 WSL 1 is a simulation of Linux functionalities on the Windows system.&lt;br&gt;
 Therefore, WSL 2 &lt;strong&gt;supports more native Linux features and system calls&lt;/strong&gt; than WSL 1.&lt;/p&gt;</description></item></channel></rss>

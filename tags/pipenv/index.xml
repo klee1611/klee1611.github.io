@@ -1,4 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pipenv on Kourtney's Blog</title><link>https://klee1611.github.io/tags/pipenv.html</link><description>Recent content in Pipenv on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Tue, 24 Mar 2026 17:57:55 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/pipenv/index.xml" rel="self" type="application/rss+xml"/><item><title>Pipenv Notes</title><link>https://klee1611.github.io/posts/pipenv-notes.html</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/pipenv-notes.html</guid><description>&lt;h2 id="why-pipenv"&gt;Why Pipenv&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pipenv on Kourtney's Portfolio</title><link>https://klee1611.github.io/tags/pipenv.html</link><description>Recent content in Pipenv on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Tue, 24 Mar 2026 17:57:55 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/pipenv/index.xml" rel="self" type="application/rss+xml"/><item><title>Pipenv Notes</title><link>https://klee1611.github.io/posts/pipenv-notes.html</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/pipenv-notes.html</guid><description>&lt;h2 class="relative group"&gt;Why Pipenv
+ &lt;div id="why-pipenv" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-pipenv" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;When maintaining many Python projects,&lt;br&gt;
 different projects might use different versions of the same Python libraries.&lt;br&gt;
 Not using a virtual environment and installing all Python modules directly on your machine will lead to version conflicts.&lt;/p&gt;

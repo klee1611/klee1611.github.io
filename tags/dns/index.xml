@@ -1,13 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on Kourtney's Blog</title><link>https://klee1611.github.io/tags/dns.html</link><description>Recent content in DNS on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Tue, 24 Mar 2026 17:57:55 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>Common DNS Resource Records</title><link>https://klee1611.github.io/posts/common-dns-resource-record.html</link><pubDate>Wed, 08 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/common-dns-resource-record.html</guid><description>&lt;p&gt;Each DNS zone in a DNS server has a zone file.&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>DNS on Kourtney's Portfolio</title><link>https://klee1611.github.io/tags/dns.html</link><description>Recent content in DNS on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Tue, 24 Mar 2026 17:57:55 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/dns/index.xml" rel="self" type="application/rss+xml"/><item><title>Common DNS Resource Records</title><link>https://klee1611.github.io/posts/common-dns-resource-record.html</link><pubDate>Wed, 08 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/common-dns-resource-record.html</guid><description>&lt;p&gt;Each DNS zone in a DNS server has a zone file.&lt;br&gt;
 A DNS zone is usually a single domain (though not always).&lt;br&gt;
 A zone file is composed of many DNS resource records (RRs).&lt;br&gt;
 There are many different types of RRs.&lt;br&gt;
 Let&amp;rsquo;s record some common ones.&lt;/p&gt;
-&lt;h2 id="a-record"&gt;A record&lt;/h2&gt;
+
+&lt;h2 class="relative group"&gt;A record
+ &lt;div id="a-record" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-record" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;Maps a hostname to an IPv4 address. (32-bit)&lt;/p&gt;
-&lt;div class="code-block code-line-numbers open" style="counter-reset: code-block 0"&gt;
- &lt;div class="code-header language-"&gt;
- &lt;span class="code-title"&gt;&lt;i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
- &lt;span class="ellipses"&gt;&lt;i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
- &lt;span class="copy" title="Copy to clipboard"&gt;&lt;i class="far fa-copy fa-fw" aria-hidden="true"&gt;&lt;/i&gt;&lt;/span&gt;
- &lt;/div&gt;&lt;pre tabindex="0"&gt;&lt;code&gt;hostname IN A xxx.xxx.xxx.xxx&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hostname IN A xxx.xxx.xxx.xxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item></channel></rss>

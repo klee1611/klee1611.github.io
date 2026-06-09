@@ -1,20 +1,34 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Kourtney's Blog</title><link>https://klee1611.github.io/zh-tw/tags/python.html</link><description>Recent content in Python on Kourtney's Blog</description><generator>Hugo</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Tue, 24 Mar 2026 17:18:00 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description>&lt;p&gt;Python 的效能瓶頸在幾年前一直為人詬病，&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Kourtney's Portfolio</title><link>https://klee1611.github.io/zh-tw/tags/python.html</link><description>Recent content in Python on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Tue, 09 Jun 2026 17:05:32 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description>&lt;p&gt;Python 的效能瓶頸在幾年前一直為人詬病，&lt;br&gt;
 但在開發者的努力之下，Python 3.4 開始出現了 &lt;code&gt;Asyncio&lt;/code&gt; 可以在特定情境下提升效能，&lt;br&gt;
 到了 Python 3.13 更出現了可選擇性關閉 GIL 的 Free-threaded (PEP-703) 設計，&lt;br&gt;
 結合過去的 Multiprocessing 和 Multithreading，&lt;br&gt;
 我整理了一下這三項技術適合的原理、差異和使用情境做了幾篇紀錄。&lt;br&gt;
-這一篇先簡單介紹三者的基本概念和適用情境。&lt;/p&gt;</description></item><item><title>Pyenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html</guid><description>&lt;h3 id="pyenv-的功能和使用的原因"&gt;&lt;code&gt;pyenv&lt;/code&gt; 的功能和使用的原因&lt;/h3&gt;
+這一篇先簡單介紹三者的基本概念和適用情境。&lt;/p&gt;</description></item><item><title>Iron Counsel：企業級 RAG 架構與對話式 AI</title><link>https://klee1611.github.io/zh-tw/projects/iron-counsel.html</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/projects/iron-counsel.html</guid><description>&lt;p&gt;以 RAG 技術為核心的對話式 AI 應用，在複雜資料集上實現精準的 LLM 推論。技術架構：基於 GCP 的無伺服器 FastAPI 後端（透過 Terraform 建置）、本地 ONNX 嵌入模型、Firestore 向量搜尋，以及 LangChain 編排框架。&lt;/p&gt;</description></item><item><title>企業標準：非同步 FastAPI 架構</title><link>https://klee1611.github.io/zh-tw/projects/cookiecutter-fastapi-mongo.html</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/projects/cookiecutter-fastapi-mongo.html</guid><description>&lt;p&gt;生產就緒的非同步 Python 微服務樣板，專為標準化企業後端開發、消除傳統 I/O 瓶頸而設計。透過整合 Docker 並強制要求 95% 測試覆蓋率基準，在組織內建立嚴格的工程文化。&lt;/p&gt;</description></item><item><title>Pyenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pyenv-notes.html</guid><description>&lt;h3 class="relative group"&gt;&lt;code&gt;pyenv&lt;/code&gt; 的功能和使用的原因
+ &lt;div id="pyenv-的功能和使用的原因" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#pyenv-%e7%9a%84%e5%8a%9f%e8%83%bd%e5%92%8c%e4%bd%bf%e7%94%a8%e7%9a%84%e5%8e%9f%e5%9b%a0" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
 &lt;p&gt;&lt;code&gt;pyenv&lt;/code&gt; 是用來在系統裡安裝各種不同版本的 python，&lt;/p&gt;
-&lt;p&gt;並能夠方便的切換 python 版本的工具。&lt;/p&gt;
-&lt;p&gt;當同時有不同 python 版本的專案需要開發或維護時，&lt;/p&gt;
-&lt;p&gt;就會需要使用 &lt;code&gt;pyenv&lt;/code&gt; 來協助切換 python 的版本。&lt;/p&gt;</description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html</guid><description>&lt;p&gt;在出現 &lt;code&gt;asyncio&lt;/code&gt; 前，&lt;br&gt;
+&lt;p&gt;並能夠方便的切換 python 版本的工具。&lt;/p&gt;</description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-coroutine-asyncio.html</guid><description>&lt;p&gt;在出現 &lt;code&gt;asyncio&lt;/code&gt; 前，&lt;br&gt;
 當一隻 Python 程式有很多需要並行執行的 task，&lt;br&gt;
 想要提升程式效能，&lt;br&gt;
 只能選用 multiprocessing 或 threading；&lt;br&gt;
 Python 3.4 之後又多出了 &lt;code&gt;asyncio&lt;/code&gt; 的選擇。&lt;br&gt;
 &lt;code&gt;asyncio&lt;/code&gt; 可以用來撰寫 coroutines，&lt;br&gt;
 並使用 event loop 並行執行 coroutines，&lt;br&gt;
-減少程式不必要的等待時間以提升效能。&lt;/p&gt;</description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html</guid><description>&lt;h2 id="why-pipenv"&gt;Why Pipenv&lt;/h2&gt;
+減少程式不必要的等待時間以提升效能。&lt;/p&gt;</description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/pipenv-notes.html</guid><description>&lt;h2 class="relative group"&gt;Why Pipenv
+ &lt;div id="why-pipenv" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-pipenv" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;當有很多 Python project 要維護，&lt;br&gt;
 不同的 project 有可能使用相同的 python libraries 的不同版本，&lt;br&gt;
 不使用 virtual environment 而將所有的 python modules 都裝在自己的機器上就會造成版本衝突。&lt;/p&gt;

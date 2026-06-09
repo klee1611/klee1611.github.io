@@ -1,54 +1,417 @@
-<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kourtney's Blog</title><link>https://klee1611.github.io/index.html</link><description>A blog about programming, technology, and life.</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Fri, 20 Mar 2026 23:21:21 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Beyond the Wall: Building a Low-Cost, High-Efficiency Cloud RAG Application with Firestore Vector Search</title><link>https://klee1611.github.io/posts/build-rag-system-firestore-vector-search-iron-counsel.html</link><pubDate>Fri, 20 Mar 2026 23:21:21 -0400</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/build-rag-system-firestore-vector-search-iron-counsel.html</guid><description>&lt;p>RAG (Retrieval Augmented Generation) is an AI framework that allows developers to add external information without retraining the LLM, improving the accuracy of its answers. As of 2026, it is a widely known technology.&lt;/p>
-&lt;p>The concept is roughly as follows: First, vectorize external information (the data you want the LLM to know) using an embedding model and store it. After a user enters a prompt, the prompt is also vectorized using the same embedding model. It is then compared against the previously stored vectors to retrieve the most similar pieces of data. These are then integrated by the LLM to generate a response for the user. This approach allows the LLM to answer using specific knowledge integrated by developers without the need for retraining.&lt;/p></description></item><item><title>How I Finally Removed GitHub’s Persistent “Ghost Notification” — The Real Fix With GitHub CLI</title><link>https://klee1611.github.io/posts/remove-ghost-notification-github-gitcoin-spam.html</link><pubDate>Fri, 14 Nov 2025 23:45:19 -0500</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/remove-ghost-notification-github-gitcoin-spam.html</guid><description><![CDATA[<div class="featured-image">
-                <img src="/images/remove_ghost_notification_github_gitcoin_spam/stuck-github-notification.png" referrerpolicy="no-referrer">
-            </div><p>If you’re a developer who uses GitHub daily, you probably rely on notification badges to track issues, pull requests, and mentions. But what happens when the notification badge gets stuck — even after clearing everything?</p>
-<p>For months, I saw a 1 notification badge that refused to disappear, even though there aren&rsquo;t any unread messages in any inbox folder. No archived items, no subscriptions, nothing hidden. Still, the badge remained.</p>
-<p>Many developers started reporting the same issue as early as September 2025. This wasn’t just a UI bug — it was caused by a spam attack impersonating Gitcoin, leaving backend notification records that GitHub never automatically cleaned up.</p>]]></description></item><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description><![CDATA[<p>Python&rsquo;s performance bottlenecks were criticized for years,<br>
-but thanks to the hard work of developers,<br>
-<code>Asyncio</code> was introduced in Python 3.4 to improve performance in specific scenarios.<br>
-By Python 3.13, the Free-threaded design (PEP-703) emerged,<br>
-allowing the optional disabling of the GIL.<br>
-Combined with the pre-existing Multiprocessing and Multithreading,<br>
-I have compiled a few records on the principles, differences, and use cases for these three technologies.<br>
-This first post will briefly introduce the basic concepts and suitable scenarios for each.</p>]]></description></item><item><title>MacOS Legacy Rsync Hangs</title><link>https://klee1611.github.io/posts/resolve-macos-rsync-hangs.html</link><pubDate>Sat, 04 Oct 2025 21:59:35 -0500</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/resolve-macos-rsync-hangs.html</guid><description><![CDATA[<p>A few months ago, I encountered an issue while using <code>rsync</code> to back up data from my MacBook to a NAS.</p>
-<p><code>rsync</code> would appear to be running normally for a while and then suddenly hang indefinitely.</p>
-<p>The terminal output showed it syncing files as usual, and then it just&hellip; stopped.</p>
-<p>There were no error messages, and <code>rsync</code> didn&rsquo;t exit.</p>
-<p>Initially, I thought it might be a large file transfer or an unstable network connection. However, I discovered that if I killed the process and ran the <code>rsync</code> command again, it would resume smoothly from the file where it had previously stuck. This happened several times in a row!</p>]]></description></item><item><title>Sync Obsidian / Joplin Data Across Multiple Devices with Synology WebDAV</title><link>https://klee1611.github.io/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</link><pubDate>Wed, 25 Dec 2024 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</guid><description><![CDATA[<p>I originally used Notion as my note-taking software.<br>
-It&rsquo;s feature-rich and has a beautiful interface.<br>
-However, a few years ago, a privacy controversy arose around Notion,<br>
-accusing them of looking at a company&rsquo;s content stored in Notion,<br>
-and even proposing a partnership based on that information.<br>
-So, I switched to <a href="https://joplinapp.org/" target="_blank" rel="noopener noreffer ">Joplin</a> for a while,<br>
-but eventually moved to <a href="https://obsidian.md/" target="_blank" rel="noopener noreffer ">Obsidian</a>, which has a large number of plugins, strong community support, and is highly customizable.</p>]]></description></item><item><title>Managing Pre-existing Global NPM Packages After Installing NVM</title><link>https://klee1611.github.io/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html</guid><description><![CDATA[<p>Today I encountered a problem:</p>
-<p>After installing <code>nvm</code>, the path for installing global packages changed,</p>
-<p>making it impossible to directly remove previously installed global packages using <code>npm uninstall -g</code>.</p>
-<p>How did I discover this?</p>
-<p>A long time ago, I installed a global package that could be executed directly from the terminal using a command.</p>
-<p>But because it was so long ago,</p>
-<p>when I tried to upgrade that package, I found it wasn&rsquo;t listed in <code>npm list -g</code>.</p>]]></description></item><item><title>Pyenv Notes</title><link>https://klee1611.github.io/posts/pyenv-notes.html</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/pyenv-notes.html</guid><description><![CDATA[<h3 id="functions-and-reasons-for-using-pyenv">Functions and Reasons for Using <code>pyenv</code></h3>
-<p><code>pyenv</code> is a tool used to install various versions of Python on a system,</p>
-<p>and to conveniently switch between Python versions.</p>
-<p>When you need to develop or maintain projects that require different Python versions simultaneously,</p>
-<p>you will need to use <code>pyenv</code> to help switch Python versions.</p>
-<p>New Python versions usually include syntax updates or new features.</p>
-<p>For example, Python&rsquo;s <code>async / await</code> feature appeared only in Python 3.5 and later.</p>]]></description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/posts/python-coroutine-asyncio.html</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/python-coroutine-asyncio.html</guid><description><![CDATA[<p>Before the advent of <code>asyncio</code>,<br>
-when a Python program had many tasks that needed to be executed concurrently,<br>
-and wanted to improve program performance,<br>
-the only options were multiprocessing or threading.<br>
-After Python 3.4, <code>asyncio</code> became another option.<br>
-<code>asyncio</code> can be used to write coroutines,<br>
-and execute coroutines concurrently using an event loop,<br>
-reducing unnecessary waiting time in the program to improve performance.</p>]]></description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/posts/pipenv-notes.html</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/pipenv-notes.html</guid><description><![CDATA[<h2 id="why-pipenv">Why Pipenv</h2>
-<p>When maintaining many Python projects,<br>
-different projects might use different versions of the same Python libraries.<br>
-Not using a virtual environment and installing all Python modules directly on your machine will lead to version conflicts.</p>
-<p>In the past, the mechanism of <code>virtualenv</code> + <code>requirements.txt</code> allowed different projects to use different versions of the same package,<br>
-and also enabled new developers or production environments to quickly install the packages required by the project.</p>]]></description></item><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>https://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html</guid><description><![CDATA[<h2 id="stateless-http">Stateless HTTP</h2>
-<p>HTTP is a <strong>stateless protocol</strong>,<br>
-meaning that <strong>each request/response is independent</strong>,<br>
-and is unrelated to previous or subsequent requests/responses.<br>
-The same request will always receive the same response,<br>
-and will not differ based on the content of previous requests/responses.</p>
-<p>This allows the server to save a large amount of database and server storage space because it doesn&rsquo;t need to store user information.<br>
-It also speeds up response times and saves considerable network bandwidth because the client doesn&rsquo;t always have to connect to the same socket.</p>]]></description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Kourtney's Space on Kourtney's Portfolio</title><link>https://klee1611.github.io/index.html</link><description>Recent content in Kourtney's Space on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><atom:link href="https://klee1611.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>PantryLens | Edge-Routed AI Vision PWA</title><link>https://klee1611.github.io/projects/pantry-lens.html</link><pubDate>Fri, 01 May 2026 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/projects/pantry-lens.html</guid><description>&lt;p&gt;An AI-driven Progressive Web App (PWA) designed to process unstructured visual data and generate real-time recipes. Built to demonstrate secure, low-latency edge computing, the application autonomously parses pantry inventories via image recognition to structure outputs for highly specialized dietary profiles. Dispatched vision tasks to the Gemma 4 model, engineered a real-time Server-Sent Events (SSE) pipeline, and utilized Redis for sliding-window IP rate limiting.&lt;/p&gt;</description></item><item><title>AuroraPath | Secure AI Routing Web Application</title><link>https://klee1611.github.io/projects/aurora-path.html</link><pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/projects/aurora-path.html</guid><description>&lt;p&gt;A modern, full-stack app connecting real-time NOAA space weather data with Google Gemini to generate travel routes for aurora sightings deployed to the global edge via Vercel. Demonstrate secure AI integration with a dual-layer identity ecosystem (Auth0 M2M) to securely isolate end-user authentication from the Gemini AI inference agent, enforcing strict API quotas and telemetry ingestion via Upstash Redis. Provides scalable edge-routing within a consumer-facing product.&lt;/p&gt;</description></item><item><title>Hackathon Sniper | Autonomous Discovery AI Agent</title><link>https://klee1611.github.io/projects/hackathon-sniper.html</link><pubDate>Wed, 01 Apr 2026 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/projects/hackathon-sniper.html</guid><description>&lt;p&gt;An autonomous AI agent engineered to dynamically discover, evaluate, and structure technology event data. Built for the Notion MCP Hackathon, this project demonstrates the transition from traditional, linear API and multiple odel Context Protocol (MCP) integrations to autonomous AI agent building.&lt;/p&gt;</description></item><item><title>Beyond the Wall: Building a Low-Cost, High-Efficiency Cloud RAG Application with Firestore Vector Search</title><link>https://klee1611.github.io/posts/build-rag-system-firestore-vector-search-iron-counsel.html</link><pubDate>Fri, 20 Mar 2026 23:21:21 -0400</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/build-rag-system-firestore-vector-search-iron-counsel.html</guid><description>&lt;p&gt;RAG (Retrieval Augmented Generation) is an AI framework that allows developers to add external information without retraining the LLM, improving the accuracy of its answers. As of 2026, it is a widely known technology.&lt;/p&gt;
+&lt;p&gt;The concept is roughly as follows: First, vectorize external information (the data you want the LLM to know) using an embedding model and store it. After a user enters a prompt, the prompt is also vectorized using the same embedding model. It is then compared against the previously stored vectors to retrieve the most similar pieces of data. These are then integrated by the LLM to generate a response for the user. This approach allows the LLM to answer using specific knowledge integrated by developers without the need for retraining.&lt;/p&gt;</description></item><item><title>How I Finally Removed GitHub’s Persistent “Ghost Notification” — The Real Fix With GitHub CLI</title><link>https://klee1611.github.io/posts/remove-ghost-notification-github-gitcoin-spam.html</link><pubDate>Fri, 14 Nov 2025 23:45:19 -0500</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/remove-ghost-notification-github-gitcoin-spam.html</guid><description>&lt;p&gt;If you’re a developer who uses GitHub daily, you probably rely on notification badges to track issues, pull requests, and mentions. But what happens when the notification badge gets stuck — even after clearing everything?&lt;/p&gt;
+&lt;p&gt;For months, I saw a 1 notification badge that refused to disappear, even though there aren&amp;rsquo;t any unread messages in any inbox folder. No archived items, no subscriptions, nothing hidden. Still, the badge remained.&lt;/p&gt;
+&lt;p&gt;Many developers started reporting the same issue as early as September 2025. This wasn’t just a UI bug — it was caused by a spam attack impersonating Gitcoin, leaving backend notification records that GitHub never automatically cleaned up.&lt;/p&gt;</description></item><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description>&lt;p&gt;Python&amp;rsquo;s performance bottlenecks were criticized for years,&lt;br&gt;
+but thanks to the hard work of developers,&lt;br&gt;
+&lt;code&gt;Asyncio&lt;/code&gt; was introduced in Python 3.4 to improve performance in specific scenarios.&lt;br&gt;
+By Python 3.13, the Free-threaded design (PEP-703) emerged,&lt;br&gt;
+allowing the optional disabling of the GIL.&lt;br&gt;
+Combined with the pre-existing Multiprocessing and Multithreading,&lt;br&gt;
+I have compiled a few records on the principles, differences, and use cases for these three technologies.&lt;br&gt;
+This first post will briefly introduce the basic concepts and suitable scenarios for each.&lt;/p&gt;</description></item><item><title>MacOS Legacy Rsync Hangs</title><link>https://klee1611.github.io/posts/resolve-macos-rsync-hangs.html</link><pubDate>Sat, 04 Oct 2025 21:59:35 -0500</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/resolve-macos-rsync-hangs.html</guid><description>&lt;p&gt;A few months ago, I encountered an issue while using &lt;code&gt;rsync&lt;/code&gt; to back up data from my MacBook to a NAS.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;rsync&lt;/code&gt; would appear to be running normally for a while and then suddenly hang indefinitely.&lt;/p&gt;
+&lt;p&gt;The terminal output showed it syncing files as usual, and then it just&amp;hellip; stopped.&lt;/p&gt;
+&lt;p&gt;There were no error messages, and &lt;code&gt;rsync&lt;/code&gt; didn&amp;rsquo;t exit.&lt;/p&gt;
+&lt;p&gt;Initially, I thought it might be a large file transfer or an unstable network connection. However, I discovered that if I killed the process and ran the &lt;code&gt;rsync&lt;/code&gt; command again, it would resume smoothly from the file where it had previously stuck. This happened several times in a row!&lt;/p&gt;</description></item><item><title>Iron Counsel: Enterprise RAG Architecture &amp; Conversational AI</title><link>https://klee1611.github.io/projects/iron-counsel.html</link><pubDate>Wed, 01 Jan 2025 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/projects/iron-counsel.html</guid><description>&lt;p&gt;Conversational AI app demonstrating accurate LLM inference with RAG over complex datasets. Tech stack: Serverless FastAPI backend on GCP (provisioned via Terraform), local ONNX embeddings, Firestore vector search, and LangChain orchestration.&lt;/p&gt;</description></item><item><title>Sync Obsidian / Joplin Data Across Multiple Devices with Synology WebDAV</title><link>https://klee1611.github.io/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</link><pubDate>Wed, 25 Dec 2024 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/sync-obsidian-joplin-data-across-multiple-device-synology-webdav.html</guid><description>&lt;p&gt;I originally used Notion as my note-taking software.&lt;br&gt;
+It&amp;rsquo;s feature-rich and has a beautiful interface.&lt;br&gt;
+However, a few years ago, a privacy controversy arose around Notion,&lt;br&gt;
+accusing them of looking at a company&amp;rsquo;s content stored in Notion,&lt;br&gt;
+and even proposing a partnership based on that information.&lt;br&gt;
+So, I switched to &lt;a href="https://joplinapp.org/" target="_blank" rel="noreferrer"&gt;Joplin&lt;/a&gt; for a while,&lt;br&gt;
+but eventually moved to &lt;a href="https://obsidian.md/" target="_blank" rel="noreferrer"&gt;Obsidian&lt;/a&gt;, which has a large number of plugins, strong community support, and is highly customizable.&lt;/p&gt;</description></item><item><title>Enterprise Standard: Asynchronous FastAPI Architecture</title><link>https://klee1611.github.io/projects/cookiecutter-fastapi-mongo.html</link><pubDate>Tue, 01 Mar 2022 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/projects/cookiecutter-fastapi-mongo.html</guid><description>&lt;p&gt;A production-grade, asynchronous Python microservice boilerplate engineered to standardize enterprise backend development and eradicate legacy I/O bottlenecks. Enforced strict organizational engineering culture by integrating Docker and mandating a baseline of 95% test coverage.&lt;/p&gt;</description></item><item><title>Managing Pre-existing Global NPM Packages After Installing NVM</title><link>https://klee1611.github.io/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html</link><pubDate>Sat, 06 Nov 2021 19:31:32 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/managing-pre-exist-global-npm-packages-after-installing-nvm.html</guid><description>&lt;p&gt;Today I encountered a problem:&lt;/p&gt;
+&lt;p&gt;After installing &lt;code&gt;nvm&lt;/code&gt;, the path for installing global packages changed,&lt;/p&gt;
+&lt;p&gt;making it impossible to directly remove previously installed global packages using &lt;code&gt;npm uninstall -g&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;How did I discover this?&lt;/p&gt;
+&lt;p&gt;A long time ago, I installed a global package that could be executed directly from the terminal using a command.&lt;/p&gt;
+&lt;p&gt;But because it was so long ago,&lt;/p&gt;
+&lt;p&gt;when I tried to upgrade that package, I found it wasn&amp;rsquo;t listed in &lt;code&gt;npm list -g&lt;/code&gt;.&lt;/p&gt;</description></item><item><title>Pyenv Notes</title><link>https://klee1611.github.io/posts/pyenv-notes.html</link><pubDate>Mon, 01 Nov 2021 18:48:33 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/pyenv-notes.html</guid><description>&lt;h3 class="relative group"&gt;Functions and Reasons for Using &lt;code&gt;pyenv&lt;/code&gt;
+ &lt;div id="functions-and-reasons-for-using-pyenv" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#functions-and-reasons-for-using-pyenv" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;pyenv&lt;/code&gt; is a tool used to install various versions of Python on a system,&lt;/p&gt;
+&lt;p&gt;and to conveniently switch between Python versions.&lt;/p&gt;
+&lt;p&gt;When you need to develop or maintain projects that require different Python versions simultaneously,&lt;/p&gt;
+&lt;p&gt;you will need to use &lt;code&gt;pyenv&lt;/code&gt; to help switch Python versions.&lt;/p&gt;
+&lt;p&gt;New Python versions usually include syntax updates or new features.&lt;/p&gt;</description></item><item><title>Python Coroutine Asyncio</title><link>https://klee1611.github.io/posts/python-coroutine-asyncio.html</link><pubDate>Wed, 27 Oct 2021 16:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/python-coroutine-asyncio.html</guid><description>&lt;p&gt;Before the advent of &lt;code&gt;asyncio&lt;/code&gt;,&lt;br&gt;
+when a Python program had many tasks that needed to be executed concurrently,&lt;br&gt;
+and wanted to improve program performance,&lt;br&gt;
+the only options were multiprocessing or threading.&lt;br&gt;
+After Python 3.4, &lt;code&gt;asyncio&lt;/code&gt; became another option.&lt;br&gt;
+&lt;code&gt;asyncio&lt;/code&gt; can be used to write coroutines,&lt;br&gt;
+and execute coroutines concurrently using an event loop,&lt;br&gt;
+reducing unnecessary waiting time in the program to improve performance.&lt;/p&gt;</description></item><item><title>Pipenv Notes</title><link>https://klee1611.github.io/posts/pipenv-notes.html</link><pubDate>Sun, 26 Sep 2021 18:34:23 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/pipenv-notes.html</guid><description>&lt;h2 class="relative group"&gt;Why Pipenv
+ &lt;div id="why-pipenv" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#why-pipenv" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;When maintaining many Python projects,&lt;br&gt;
+different projects might use different versions of the same Python libraries.&lt;br&gt;
+Not using a virtual environment and installing all Python modules directly on your machine will lead to version conflicts.&lt;/p&gt;
+&lt;p&gt;In the past, the mechanism of &lt;code&gt;virtualenv&lt;/code&gt; + &lt;code&gt;requirements.txt&lt;/code&gt; allowed different projects to use different versions of the same package,&lt;br&gt;
+and also enabled new developers or production environments to quickly install the packages required by the project.&lt;/p&gt;</description></item><item><title>Stateless HTTP, Stateful Session and Cookies</title><link>https://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html</link><pubDate>Mon, 28 Jun 2021 02:51:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/stateless-http-stateful-session-and-cookies.html</guid><description>&lt;h2 class="relative group"&gt;Stateless HTTP
+ &lt;div id="stateless-http" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#stateless-http" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;HTTP is a &lt;strong&gt;stateless protocol&lt;/strong&gt;,&lt;br&gt;
+meaning that &lt;strong&gt;each request/response is independent&lt;/strong&gt;,&lt;br&gt;
+and is unrelated to previous or subsequent requests/responses.&lt;br&gt;
+The same request will always receive the same response,&lt;br&gt;
+and will not differ based on the content of previous requests/responses.&lt;/p&gt;
+&lt;p&gt;This allows the server to save a large amount of database and server storage space because it doesn&amp;rsquo;t need to store user information.&lt;br&gt;
+It also speeds up response times and saves considerable network bandwidth because the client doesn&amp;rsquo;t always have to connect to the same socket.&lt;/p&gt;</description></item><item><title>WSL 2 on Windows Part 2 - Terminal Interface Settings</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html</link><pubDate>Sun, 11 Apr 2021 00:14:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-2.html</guid><description>&lt;p&gt;&lt;figure&gt;&lt;img
+ class="my-0 rounded-md"
+ loading="lazy"
+ decoding="async"
+ fetchpriority="low"
+ alt="wsl2_terminal_screenshot"
+ src="https://klee1611.github.io/images/wsl2_terminal_screenshot.png"
+ &gt;&lt;/figure&gt;
+&lt;/p&gt;
+&lt;p&gt;Bringing the terminal settings from Linux and Mac to Windows
+for easier operation.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Windows Terminal Features
+ &lt;div id="windows-terminal-features" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#windows-terminal-features" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;With Windows Terminal, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Enable multiple tabs (quickly switch between multiple Linux CLIs, Windows CLIs, PowerShell, etc.)&lt;/li&gt;
+&lt;li&gt;Customize key bindings (shortcuts for opening/closing tabs, copy/paste, etc.)&lt;/li&gt;
+&lt;li&gt;Use search functionality&lt;/li&gt;
+&lt;li&gt;Customize themes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These features offer much more than native WSL support,
+and allow for a setup similar to my Linux or Mac development environments,
+which is why I decided to use Windows Terminal.&lt;/p&gt;</description></item><item><title>WSL 2 on Windows Part 1 - Installation and Activation</title><link>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html</link><pubDate>Sat, 10 Apr 2021 15:52:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/wsl-2-on-windows-part-1.html</guid><description>&lt;p&gt;I&amp;rsquo;m used to using Linux or Mac terminals for work.&lt;br&gt;
+I took some time to set up the WSL environment on my home PC to easily switch work environments.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Differences between WSL 2 and WSL 1
+ &lt;div id="differences-between-wsl-2-and-wsl-1" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#differences-between-wsl-2-and-wsl-1" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;WSL 2 is based on Hyper-V and &lt;strong&gt;runs a full Linux kernel&lt;/strong&gt; in a virtual machine.&lt;br&gt;
+WSL 1 is a simulation of Linux functionalities on the Windows system.&lt;br&gt;
+Therefore, WSL 2 &lt;strong&gt;supports more native Linux features and system calls&lt;/strong&gt; than WSL 1.&lt;/p&gt;</description></item><item><title>Deep Copy and Shallow Copy</title><link>https://klee1611.github.io/posts/deep-copy-shallow-copy.html</link><pubDate>Tue, 21 Jan 2020 01:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/deep-copy-shallow-copy.html</guid><description>&lt;h3 class="relative group"&gt;Shallow Copy
+ &lt;div id="shallow-copy" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#shallow-copy" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;Copies as little as possible.&lt;br&gt;
+A new structure created by a shallow copy has the same structure as the old one,&lt;br&gt;
+and they &lt;strong&gt;share the memory address of elements&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;For example, in Java:&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-java" data-lang="java"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;arr1&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt;&lt;span class="n"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;3&lt;/span&gt;&lt;span class="p"&gt;};&lt;/span&gt;&lt;span class="w"&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="kt"&gt;int&lt;/span&gt;&lt;span class="o"&gt;[]&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;arr2&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="w"&gt; &lt;/span&gt;&lt;span class="n"&gt;arr1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;code&gt;arr2&lt;/code&gt; is a shallow copy of &lt;code&gt;arr1&lt;/code&gt;.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If one of the structures modifies an element, the other will also be affected.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 class="relative group"&gt;Deep Copy
+ &lt;div id="deep-copy" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deep-copy" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;Copies everything.&lt;br&gt;
+A new structure created by a deep copy not only has the same structure as the old one,&lt;br&gt;
+but also &lt;strong&gt;copies all elements of the old structure to the new memory address&lt;/strong&gt;.&lt;/p&gt;</description></item><item><title>C++ Container Characteristics and Usage Scenarios - array, vector, deque, list, forward_list</title><link>https://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html</link><pubDate>Sun, 12 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/c-stl-container-compare-array-vector-dequeue-list-forward_list.html</guid><description>&lt;h2 class="relative group"&gt;Introduction
+ &lt;div id="introduction" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#introduction" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;C++ provides various containers to store and manage data,&lt;br&gt;
+each with its unique characteristics and applicable scenarios.&lt;br&gt;
+This article will delve into five common sequence containers: &lt;code&gt;array&lt;/code&gt;, &lt;code&gt;vector&lt;/code&gt;, &lt;code&gt;deque&lt;/code&gt;, &lt;code&gt;list&lt;/code&gt;, and &lt;code&gt;forward_list&lt;/code&gt;,&lt;br&gt;
+comparing their features, performance, and offering selection advice.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Array
+ &lt;div id="array" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#array" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;std::array&lt;/code&gt; is a fixed-size array introduced in C++11,&lt;br&gt;
+combining the performance of C-style arrays with the interface of STL containers.&lt;/p&gt;</description></item><item><title>Docker Operations Log (Part 2)</title><link>https://klee1611.github.io/posts/docker-operating-2.html</link><pubDate>Thu, 09 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/docker-operating-2.html</guid><description>&lt;p&gt;Continuing from &lt;a href="https://klee1611.github.io/zh-tw/posts/docker-operating-1.html" &gt;Docker Operations Log (Part 1)&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Basic Docker Usage
+ &lt;div id="basic-docker-usage" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#basic-docker-usage" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+
+&lt;h3 class="relative group"&gt;Deleting a Container
+ &lt;div id="deleting-a-container" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#deleting-a-container" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;Remember to stop the container using &lt;code&gt;stop&lt;/code&gt; before deleting it.&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker rm CONTAINER_NAME&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Or&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker rm CONTAINER_ID&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;After deletion, you can use&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-bash" data-lang="bash"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;docker ps -a&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;to confirm if the container has disappeared.&lt;/p&gt;</description></item><item><title>HA Cluster Notes and Application Design</title><link>https://klee1611.github.io/posts/ha-cluster-app-architecture.html</link><pubDate>Thu, 09 Jan 2020 19:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/ha-cluster-app-architecture.html</guid><description>&lt;p&gt;When designing systems with higher traffic, you will eventually encounter cluster-related issues.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Cluster
+ &lt;div id="cluster" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#cluster" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;A collection of one or more machines (nodes) with three different purposes:&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;Load Balancing
+ &lt;div id="load-balancing" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#load-balancing" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;Allows multiple machines to share tasks as evenly as possible,
+accelerating application execution.&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;High Availability (HA)
+ &lt;div id="high-availability-ha" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#high-availability-ha" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;For high availability and redundancy,
+if one machine suddenly fails, others can take over.&lt;/p&gt;</description></item><item><title>Common DNS Resource Records</title><link>https://klee1611.github.io/posts/common-dns-resource-record.html</link><pubDate>Wed, 08 Jan 2020 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/common-dns-resource-record.html</guid><description>&lt;p&gt;Each DNS zone in a DNS server has a zone file.&lt;br&gt;
+A DNS zone is usually a single domain (though not always).&lt;br&gt;
+A zone file is composed of many DNS resource records (RRs).&lt;br&gt;
+There are many different types of RRs.&lt;br&gt;
+Let&amp;rsquo;s record some common ones.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;A record
+ &lt;div id="a-record" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#a-record" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Maps a hostname to an IPv4 address. (32-bit)&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hostname IN A xxx.xxx.xxx.xxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>RDBMS and NoSQL Differences Notes</title><link>https://klee1611.github.io/posts/rdbms-acid-nosql-cap.html</link><pubDate>Mon, 06 Jan 2020 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/rdbms-acid-nosql-cap.html</guid><description>&lt;h2 class="relative group"&gt;RDBMS
+ &lt;div id="rdbms" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rdbms" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Relational Database Management System&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Used when there are strong &lt;strong&gt;Relations&lt;/strong&gt; between data:
+&lt;ul&gt;
+&lt;li&gt;Design a schema that is unlikely to change, relating tables to each other,
+then you can retrieve the desired data through SQL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Used when &lt;strong&gt;data correctness&lt;/strong&gt; is very important:
+&lt;ul&gt;
+&lt;li&gt;Usually provides &lt;strong&gt;ACID&lt;/strong&gt; properties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Changing the schema is a huge undertaking:
+&lt;ul&gt;
+&lt;li&gt;Requires updating the table schema and migrating data.&lt;/li&gt;
+&lt;li&gt;All programs that use the table with the changed schema need to be modified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Process Groups, Sessions and Daemon Overview</title><link>https://klee1611.github.io/posts/linux-process-group-sessions-daemon.html</link><pubDate>Thu, 02 Jan 2020 02:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/linux-process-group-sessions-daemon.html</guid><description>&lt;p&gt;To understand what a &lt;strong&gt;daemon&lt;/strong&gt; is,&lt;br&gt;
+I consulted &lt;a href="https://www.oreilly.com/library/view/the-linux-programming/9781593272203/" target="_blank" rel="noreferrer"&gt;The Linux Programming Interface&lt;/a&gt; and took notes related to it.&lt;/p&gt;</description></item><item><title>Docker Notes 1 - Beginner</title><link>https://klee1611.github.io/posts/docker-operating-1.html</link><pubDate>Wed, 01 Jan 2020 17:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/docker-operating-1.html</guid><description>&lt;h2 class="relative group"&gt;Basic Concept
+ &lt;div id="basic-concept" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#basic-concept" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Docker can be seen as a simplified virtual machine (VM).&lt;br&gt;
+Since it doesn&amp;rsquo;t install a full operating system, it offers a smaller footprint and faster speed.&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;Image
+ &lt;div id="image" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#image" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;An Image&lt;/strong&gt; contains a lightweight runtime environment,&lt;br&gt;
+including its libraries and executables.&lt;/p&gt;</description></item><item><title>Github Pages and Jekyll - sitemap</title><link>https://klee1611.github.io/posts/jekyll-sitemap-github-pages.html</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/jekyll-sitemap-github-pages.html</guid><description>&lt;h2 class="relative group"&gt;Update
+ &lt;div id="update" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#update" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve moved from Jekyll to Hugo.&lt;br&gt;
+This method is only applicable to Jekyll.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Sitemap
+ &lt;div id="sitemap" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sitemap" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;A sitemap is an &lt;code&gt;.xml&lt;/code&gt; file that contains links to all the pages within a website.&lt;br&gt;
+With a sitemap,&lt;br&gt;
+a search engine can discover the pages and subsequently create indexes for them.&lt;br&gt;
+Then, people browsing the internet can find those pages using keywords.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;Jekyll-sitemap
+ &lt;div id="jekyll-sitemap" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#jekyll-sitemap" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;There is a plugin called &lt;a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noreferrer"&gt;jekyll-sitemap&lt;/a&gt; for Jekyll,&lt;br&gt;
+which automatically generates a sitemap whenever the website is rebuilt.&lt;/p&gt;</description></item><item><title>C/C++ - const with Pointer or Reference</title><link>https://klee1611.github.io/posts/const-pointer-reference.html</link><pubDate>Mon, 30 Dec 2019 08:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/const-pointer-reference.html</guid><description>&lt;h2 class="relative group"&gt;&lt;code&gt;const&lt;/code&gt; with Normal Variables
+ &lt;div id="const-with-normal-variables" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#const-with-normal-variables" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Two ways to add &lt;code&gt;const&lt;/code&gt; for normal variables:&lt;/p&gt;
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-cpp" data-lang="cpp"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;TYPE&lt;/span&gt; &lt;span class="n"&gt;NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;VALUE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt; &lt;span class="c1"&gt;// more common
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;&lt;span class="n"&gt;TYPE&lt;/span&gt; &lt;span class="k"&gt;const&lt;/span&gt; &lt;span class="n"&gt;NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;VAULE&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Both mean this variable cannot be assigned to another value.&lt;/p&gt;
+&lt;p&gt;For example,&lt;/p&gt;</description></item><item><title>Add LikeWidget to Jekyll theme</title><link>https://klee1611.github.io/posts/likecoin-button-jekyll.html</link><pubDate>Fri, 27 Dec 2019 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/likecoin-button-jekyll.html</guid><description>&lt;h2 class="relative group"&gt;Update
+ &lt;div id="update" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#update" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ve moved my blog from Jekyll to Hugo.&lt;br&gt;
+The method for adding a like button remains similar,&lt;br&gt;
+but the code and its placement need to be adjusted.&lt;/p&gt;
+
+&lt;h2 class="relative group"&gt;LikeCoin
+ &lt;div id="likecoin" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#likecoin" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;I came across LikeCoin and it piqued my interest.&lt;br&gt;
+LikeCoin is a cryptocurrency,&lt;br&gt;
+which was created to encourage content creators.&lt;/p&gt;
+&lt;p&gt;Content creators can embed a &lt;strong&gt;Like Button&lt;/strong&gt; within their content or web pages.&lt;br&gt;
+Anyone with a LikeCoin account who appreciates the content can click the button,&lt;br&gt;
+and the content creator will receive the corresponding LikeCoin.&lt;/p&gt;
+&lt;p&gt;The amount of LikeCoin a content creator receives depends on the account type of the likers.&lt;br&gt;
+The LikeCoin Foundation proportionally rewards free account likers,&lt;br&gt;
+while payment accounts are proportionally charged based on the number of likes they click each month.&lt;br&gt;
+More details can be found on &lt;a href="https://medium.com/likecoin" target="_blank" rel="noreferrer"&gt;LikeCoin&amp;rsquo;s Medium&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Remove .DS_Store tracking in all Git repositories</title><link>https://klee1611.github.io/posts/remove-ds_store-from-all-git-repo.html</link><pubDate>Wed, 25 Dec 2019 20:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/remove-ds_store-from-all-git-repo.html</guid><description>&lt;p&gt;Every time a new folder is created and files are added in macOS, a &lt;code&gt;.DS_Store&lt;/code&gt; file is generated within that folder. This results in numerous &lt;code&gt;.DS_Store&lt;/code&gt; files scattered across macOS, and it&amp;rsquo;s quite annoying to add &lt;code&gt;**/.DS_Store&lt;/code&gt; to every &lt;code&gt;.gitignore&lt;/code&gt; file each time a new Git repository is created. Therefore, I found a method to prevent &lt;code&gt;.DS_Store&lt;/code&gt; files from being tracked in all Git repositories.&lt;/p&gt;</description></item><item><title>Difference between Concurrent Processing and Parallel Processing</title><link>https://klee1611.github.io/posts/concurrent-process-parallel-process.html</link><pubDate>Wed, 25 Dec 2019 19:40:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/concurrent-process-parallel-process.html</guid><description>&lt;p&gt;Both &amp;lsquo;Concurrent Processing&amp;rsquo; and &amp;lsquo;Parallel Processing&amp;rsquo; refer to &lt;strong&gt;multiple processes executing on the CPU within a period&lt;/strong&gt;,&lt;br&gt;
+but they are two different things.&lt;/p&gt;
+&lt;p&gt;According to &lt;a href="http://shop.oreilly.com/product/9780596521547.do" target="_blank" rel="noreferrer"&gt;The Art of Concurrency&lt;/a&gt;,&lt;br&gt;
+Concurrent means:&lt;/p&gt;</description></item><item><title>About</title><link>https://klee1611.github.io/about.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/about.html</guid><description>&lt;h2 class="relative group"&gt;Summary
+ &lt;div id="summary" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#summary" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;I am a Senior Software Developer and Backend Expert with over seven years of experience engineering the high-performance distributed systems required to scale compute-intensive services and modern AI applications. While my core expertise is rooted in robust backend architecture and applied AI development, I maintain strong cross-stack frontend capabilities, enabling me to seamlessly bridge complex intelligent logic layers with polished, user-facing interfaces.&lt;/p&gt;</description></item><item><title>Work With Me</title><link>https://klee1611.github.io/work-with-me.html</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/work-with-me.html</guid><description>&lt;h2 class="relative group"&gt;Software &amp;amp; Systems Development
+ &lt;div id="software--systems-development" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#software--systems-development" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Available for consulting and contract work on website development, full-stack systems, workflow automation, backend systems, and AI applications.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Typical engagements:&lt;/strong&gt; Technical consulting, contract development, code reviews, architecture design.&lt;/p&gt;
+&lt;hr&gt;
+
+&lt;h2 class="relative group"&gt;Research Collaboration
+ &lt;div id="research-collaboration" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#research-collaboration" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;Open to academic or industry research collaboration in areas such as distributed systems, applied AI, and cloud computing, including co-authoring papers.&lt;/p&gt;</description></item></channel></rss>

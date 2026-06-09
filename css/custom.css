@@ -1,0 +1,53 @@
+/* Force proper tag alignment for all post summaries */
+article.single.summary .post-footer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    flex-wrap: nowrap !important;
+    gap: 1rem !important;
+}
+
+/* Read More link stays on the left */
+article.single.summary .post-footer > a {
+    flex: 0 0 auto !important;
+    order: 1 !important;
+}
+
+/* Tags go to the right */
+article.single.summary .post-footer .post-tags {
+    flex: 1 1 auto !important;
+    text-align: right !important;
+    order: 2 !important;
+    margin: 0 !important;
+}
+
+/* Override any theme-specific margins/padding */
+.home .single.summary .post-footer {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+}
+
+.home .single.summary .post-footer .post-tags {
+    margin-left: auto !important;
+    text-align: right !important;
+}
+
+/* Mobile responsive - stack vertically */
+@media (max-width: 768px) {
+    article.single.summary .post-footer {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.5rem !important;
+    }
+
+    article.single.summary .post-footer > a {
+        order: 1 !important;
+    }
+
+    article.single.summary .post-footer .post-tags {
+        order: 2 !important;
+        text-align: left !important;
+        width: 100% !important;
+    }
+}

@@ -1,18 +1,61 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github Pages on Kourtney's Blog</title><link>https://klee1611.github.io/tags/github-pages.html</link><description>Recent content in Github Pages on Kourtney's Blog</description><generator>Hugo</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kourtney Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kourtney Lee)</webMaster><lastBuildDate>Tue, 24 Mar 2026 17:57:55 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Pages and Jekyll - sitemap</title><link>https://klee1611.github.io/posts/jekyll-sitemap-github-pages.html</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/jekyll-sitemap-github-pages.html</guid><description>&lt;h2 id="update"&gt;Update&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Github Pages on Kourtney's Portfolio</title><link>https://klee1611.github.io/tags/github-pages.html</link><description>Recent content in Github Pages on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Tue, 24 Mar 2026 17:57:55 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/github-pages/index.xml" rel="self" type="application/rss+xml"/><item><title>Github Pages and Jekyll - sitemap</title><link>https://klee1611.github.io/posts/jekyll-sitemap-github-pages.html</link><pubDate>Mon, 30 Dec 2019 22:19:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/jekyll-sitemap-github-pages.html</guid><description>&lt;h2 class="relative group"&gt;Update
+ &lt;div id="update" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#update" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;ve moved from Jekyll to Hugo.&lt;br&gt;
 This method is only applicable to Jekyll.&lt;/p&gt;
-&lt;h2 id="sitemap"&gt;Sitemap&lt;/h2&gt;
+
+&lt;h2 class="relative group"&gt;Sitemap
+ &lt;div id="sitemap" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#sitemap" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;A sitemap is an &lt;code&gt;.xml&lt;/code&gt; file that contains links to all the pages within a website.&lt;br&gt;
 With a sitemap,&lt;br&gt;
 a search engine can discover the pages and subsequently create indexes for them.&lt;br&gt;
 Then, people browsing the internet can find those pages using keywords.&lt;/p&gt;
-&lt;h2 id="jekyll-sitemap"&gt;Jekyll-sitemap&lt;/h2&gt;
-&lt;p&gt;There is a plugin called &lt;a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noopener noreffer "&gt;jekyll-sitemap&lt;/a&gt; for Jekyll,&lt;br&gt;
-which automatically generates a sitemap whenever the website is rebuilt.&lt;/p&gt;</description></item><item><title>Add LikeWidget to Jekyll theme</title><link>https://klee1611.github.io/posts/likecoin-button-jekyll.html</link><pubDate>Fri, 27 Dec 2019 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kourtney Lee)</author><guid>https://klee1611.github.io/posts/likecoin-button-jekyll.html</guid><description>&lt;h2 id="update"&gt;Update&lt;/h2&gt;
+
+&lt;h2 class="relative group"&gt;Jekyll-sitemap
+ &lt;div id="jekyll-sitemap" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#jekyll-sitemap" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;There is a plugin called &lt;a href="https://github.com/jekyll/jekyll-sitemap" target="_blank" rel="noreferrer"&gt;jekyll-sitemap&lt;/a&gt; for Jekyll,&lt;br&gt;
+which automatically generates a sitemap whenever the website is rebuilt.&lt;/p&gt;</description></item><item><title>Add LikeWidget to Jekyll theme</title><link>https://klee1611.github.io/posts/likecoin-button-jekyll.html</link><pubDate>Fri, 27 Dec 2019 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/likecoin-button-jekyll.html</guid><description>&lt;h2 class="relative group"&gt;Update
+ &lt;div id="update" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#update" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;I&amp;rsquo;ve moved my blog from Jekyll to Hugo.&lt;br&gt;
 The method for adding a like button remains similar,&lt;br&gt;
 but the code and its placement need to be adjusted.&lt;/p&gt;
-&lt;h2 id="likecoin"&gt;LikeCoin&lt;/h2&gt;
+
+&lt;h2 class="relative group"&gt;LikeCoin
+ &lt;div id="likecoin" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#likecoin" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
 &lt;p&gt;I came across LikeCoin and it piqued my interest.&lt;br&gt;
 LikeCoin is a cryptocurrency,&lt;br&gt;
 which was created to encourage content creators.&lt;/p&gt;
@@ -22,4 +65,4 @@ and the content creator will receive the corresponding LikeCoin.&lt;/p&gt;
 &lt;p&gt;The amount of LikeCoin a content creator receives depends on the account type of the likers.&lt;br&gt;
 The LikeCoin Foundation proportionally rewards free account likers,&lt;br&gt;
 while payment accounts are proportionally charged based on the number of likes they click each month.&lt;br&gt;
-More details can be found on &lt;a href="https://medium.com/likecoin" target="_blank" rel="noopener noreffer "&gt;LikeCoin&amp;rsquo;s Medium&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+More details can be found on &lt;a href="https://medium.com/likecoin" target="_blank" rel="noreferrer"&gt;LikeCoin&amp;rsquo;s Medium&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
