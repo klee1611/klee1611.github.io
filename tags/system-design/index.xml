@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System Design on Kourtney's Portfolio</title><link>https://klee1611.github.io/tags/system-design.html</link><description>Recent content in System Design on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Sat, 13 Jun 2026 03:45:00 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/tags/system-design/index.xml" rel="self" type="application/rss+xml"/><item><title>RDBMS, NoSQL, ACID, CAP theorem, and Scaling</title><link>https://klee1611.github.io/posts/rdbms-acid-nosql-cap.html</link><pubDate>Mon, 06 Jan 2020 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/rdbms-acid-nosql-cap.html</guid><description>&lt;h2 class="relative group"&gt;RDBMS
+ &lt;div id="rdbms" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rdbms" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Relational Database Management System&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Used when there are strong &lt;strong&gt;Relations&lt;/strong&gt; between data:
+&lt;ul&gt;
+&lt;li&gt;Design a schema that is unlikely to change, relating tables to each other,
+then you can retrieve the desired data through SQL.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Used when &lt;strong&gt;data correctness&lt;/strong&gt; is very important:
+&lt;ul&gt;
+&lt;li&gt;Usually provides &lt;strong&gt;ACID&lt;/strong&gt; properties.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Changing the schema is a huge undertaking:
+&lt;ul&gt;
+&lt;li&gt;Requires updating the table schema and migrating data.&lt;/li&gt;
+&lt;li&gt;All programs that use the table with the changed schema need to be modified.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;join&lt;/code&gt; operations can be performed across different tables.&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>

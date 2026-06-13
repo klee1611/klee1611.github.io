@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>文章 on Kourtney's Portfolio</title><link>https://klee1611.github.io/zh-tw/posts/index.html</link><description>Recent content in 文章 on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><atom:link href="https://klee1611.github.io/zh-tw/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>絕境長城之外：以 Firestore vector search 打造低成本、高效的雲端 RAG 應用</title><link>https://klee1611.github.io/zh-tw/posts/build-rag-system-firestore-vector-search-iron-counsel.html</link><pubDate>Fri, 20 Mar 2026 23:21:21 -0400</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/build-rag-system-firestore-vector-search-iron-counsel.html</guid><description>&lt;p&gt;RAG(Retrieval Augmented Generation) 是一套 AI framework，能夠在不需要重新訓練 LLM 的前提下，讓開發者得以新增其他的外部資訊，以這些新增的資訊來改善 LLM 回答的精準度。在 2026 的今天已經是一項廣為人知的技術了。&lt;/p&gt;</description></item><item><title>使用 GitHub CLI 徹底移除 GitHub 上頑固的「幽靈通知」</title><link>https://klee1611.github.io/zh-tw/posts/remove-ghost-notification-github-gitcoin-spam.html</link><pubDate>Fri, 14 Nov 2025 23:45:19 -0500</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/remove-ghost-notification-github-gitcoin-spam.html</guid><description>&lt;p&gt;GitHub notification 對開發者來說是一向很方便的工具，可以用來追蹤 issue、pull request 和提及 (mention)。但某天我的通知標記忽然就這麼卡住了，即使已讀了所有內容也他還是非常頑固的卡在那裡，在又拖了幾個月之後我才終於花了點時間研究發生了什麼事。&lt;/p&gt;</description></item><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description>&lt;p&gt;Python 的效能瓶頸在幾年前一直為人詬病，&lt;br&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>文章 on Kourtney's Portfolio</title><link>https://klee1611.github.io/zh-tw/posts/index.html</link><description>Recent content in 文章 on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Sat, 13 Jun 2026 03:45:00 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>絕境長城之外：以 Firestore vector search 打造低成本、高效的雲端 RAG 應用</title><link>https://klee1611.github.io/zh-tw/posts/build-rag-system-firestore-vector-search-iron-counsel.html</link><pubDate>Fri, 20 Mar 2026 23:21:21 -0400</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/build-rag-system-firestore-vector-search-iron-counsel.html</guid><description>&lt;p&gt;RAG(Retrieval Augmented Generation) 是一套 AI framework，能夠在不需要重新訓練 LLM 的前提下，讓開發者得以新增其他的外部資訊，以這些新增的資訊來改善 LLM 回答的精準度。在 2026 的今天已經是一項廣為人知的技術了。&lt;/p&gt;</description></item><item><title>使用 GitHub CLI 徹底移除 GitHub 上頑固的「幽靈通知」</title><link>https://klee1611.github.io/zh-tw/posts/remove-ghost-notification-github-gitcoin-spam.html</link><pubDate>Fri, 14 Nov 2025 23:45:19 -0500</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/remove-ghost-notification-github-gitcoin-spam.html</guid><description>&lt;p&gt;GitHub notification 對開發者來說是一向很方便的工具，可以用來追蹤 issue、pull request 和提及 (mention)。但某天我的通知標記忽然就這麼卡住了，即使已讀了所有內容也他還是非常頑固的卡在那裡，在又拖了幾個月之後我才終於花了點時間研究發生了什麼事。&lt;/p&gt;</description></item><item><title>Multiprocessing, Multithreading and Asyncio in Python Part 1 - Basic Concept</title><link>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</link><pubDate>Sat, 25 Oct 2025 10:39:27 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/python-concurrency-parallelism-multiprocessing-multithreading-asyncio.html</guid><description>&lt;p&gt;Python 的效能瓶頸在幾年前一直為人詬病，&lt;br&gt;
 但在開發者的努力之下，Python 3.4 開始出現了 &lt;code&gt;Asyncio&lt;/code&gt; 可以在特定情境下提升效能，&lt;br&gt;
 到了 Python 3.13 更出現了可選擇性關閉 GIL 的 Free-threaded (PEP-703) 設計，&lt;br&gt;
 結合過去的 Multiprocessing 和 Multithreading，&lt;br&gt;
@@ -197,7 +197,7 @@ RR 有很多種不同的類型，&lt;br&gt;
  
 &lt;/h2&gt;
 &lt;p&gt;將 hostname 對應到 IPv4。 (32-bit)&lt;/p&gt;
-&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hostname IN A xxx.xxx.xxx.xxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>RDBMS 與 NoSQL 差異筆記</title><link>https://klee1611.github.io/zh-tw/posts/rdbms-acid-nosql-cap.html</link><pubDate>Mon, 06 Jan 2020 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/rdbms-acid-nosql-cap.html</guid><description>&lt;h2 class="relative group"&gt;RDBMS
+&lt;div class="highlight-wrapper"&gt;&lt;div class="highlight"&gt;&lt;pre tabindex="0" class="chroma"&gt;&lt;code class="language-text" data-lang="text"&gt;&lt;span class="line"&gt;&lt;span class="cl"&gt;hostname IN A xxx.xxx.xxx.xxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</description></item><item><title>RDBMS, NoSQL, ACID, CAP theorem, and Scaling</title><link>https://klee1611.github.io/zh-tw/posts/rdbms-acid-nosql-cap.html</link><pubDate>Mon, 06 Jan 2020 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/rdbms-acid-nosql-cap.html</guid><description>&lt;h2 class="relative group"&gt;RDBMS
  &lt;div id="rdbms" class="anchor"&gt;&lt;/div&gt;
  
  &lt;span
@@ -208,23 +208,24 @@ RR 有很多種不同的類型，&lt;br&gt;
 &lt;/h2&gt;
 &lt;p&gt;&lt;strong&gt;Relational Database Management System&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;在資料之前有很強的 &lt;strong&gt;Relation (關聯性)&lt;/strong&gt; 的時候使用:
+&lt;li&gt;在資料之間有很強的 &lt;strong&gt;Relation（關聯性）&lt;/strong&gt; 的時候使用:
 &lt;ul&gt;
-&lt;li&gt;設計不太會去變動的 schema 將 table 互相關聯，&lt;br&gt;
-就可以去透過 SQL 取得想要的資料&lt;/li&gt;
+&lt;li&gt;設計不太會去變動的 schema 將 table 互相關聯，
+就可以透過 SQL 取得想要的資料。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;資料的正確性&lt;/strong&gt;很重要的時候使用
+&lt;li&gt;&lt;strong&gt;資料的正確性&lt;/strong&gt;很重要的時候使用:
 &lt;ul&gt;
-&lt;li&gt;通常會提供&lt;strong&gt;ACID&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;通常會提供&lt;strong&gt;ACID&lt;/strong&gt;。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
 &lt;li&gt;要變動 schema 是一件很浩大的工程:
 &lt;ul&gt;
-&lt;li&gt;要把的 table 的 schema 更新還要 migrate 資料&lt;/li&gt;
-&lt;li&gt;所有用到要被更換 schema 的 table 的程式都要修改&lt;/li&gt;
+&lt;li&gt;要把 table 的 schema 更新還要 migrate 資料。&lt;/li&gt;
+&lt;li&gt;所有用到要被更換 schema 的 table 的程式都要修改。&lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
+&lt;li&gt;可以對不同的 table 執行 &lt;code&gt;join&lt;/code&gt; 操作。&lt;/li&gt;
 &lt;/ul&gt;</description></item><item><title>Process Groups, Sessions and Daemon Overview</title><link>https://klee1611.github.io/zh-tw/posts/linux-process-group-sessions-daemon.html</link><pubDate>Thu, 02 Jan 2020 02:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/linux-process-group-sessions-daemon.html</guid><description>&lt;p&gt;為了弄清楚某個 daemon 的東西，&lt;br&gt;
 決定把 daemon 是什麼弄清楚，&lt;br&gt;
 網路上找到的資料實在又多又不清楚，&lt;br&gt;

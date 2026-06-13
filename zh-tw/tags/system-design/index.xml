@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System Design on Kourtney's Portfolio</title><link>https://klee1611.github.io/zh-tw/tags/system-design.html</link><description>Recent content in System Design on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>zh-TW</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Sat, 13 Jun 2026 03:45:00 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/zh-tw/tags/system-design/index.xml" rel="self" type="application/rss+xml"/><item><title>RDBMS, NoSQL, ACID, CAP theorem, and Scaling</title><link>https://klee1611.github.io/zh-tw/posts/rdbms-acid-nosql-cap.html</link><pubDate>Mon, 06 Jan 2020 04:06:00 +0800</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/zh-tw/posts/rdbms-acid-nosql-cap.html</guid><description>&lt;h2 class="relative group"&gt;RDBMS
+ &lt;div id="rdbms" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#rdbms" aria-label="定位點"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;Relational Database Management System&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在資料之間有很強的 &lt;strong&gt;Relation（關聯性）&lt;/strong&gt; 的時候使用:
+&lt;ul&gt;
+&lt;li&gt;設計不太會去變動的 schema 將 table 互相關聯，
+就可以透過 SQL 取得想要的資料。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;資料的正確性&lt;/strong&gt;很重要的時候使用:
+&lt;ul&gt;
+&lt;li&gt;通常會提供&lt;strong&gt;ACID&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;要變動 schema 是一件很浩大的工程:
+&lt;ul&gt;
+&lt;li&gt;要把 table 的 schema 更新還要 migrate 資料。&lt;/li&gt;
+&lt;li&gt;所有用到要被更換 schema 的 table 的程式都要修改。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;可以對不同的 table 執行 &lt;code&gt;join&lt;/code&gt; 操作。&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
