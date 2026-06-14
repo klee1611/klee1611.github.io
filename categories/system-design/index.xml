@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>System Design on Kourtney's Portfolio</title><link>https://klee1611.github.io/categories/system-design.html</link><description>Recent content in System Design on Kourtney's Portfolio</description><generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</managingEditor><webMaster>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</webMaster><copyright>© 2026 Kuo-Hsiu (Kourtney) Lee</copyright><lastBuildDate>Sat, 13 Jun 2026 14:05:33 -0400</lastBuildDate><atom:link href="https://klee1611.github.io/categories/system-design/index.xml" rel="self" type="application/rss+xml"/><item><title>Common Components in System Design</title><link>https://klee1611.github.io/posts/common-components-system-design.html</link><pubDate>Sat, 13 Jun 2026 14:05:33 -0400</pubDate><author>kourtneylee1611@gmail.com (Kuo-Hsiu (Kourtney) Lee)</author><guid>https://klee1611.github.io/posts/common-components-system-design.html</guid><description>&lt;p&gt;Designing scalable and reliable systems requires understanding a core set of reusable building blocks. This article covers the most common components — from load balancers and databases to caches and CDNs — and the key trade-offs to consider when using them.&lt;/p&gt;
+
+&lt;h3 class="relative group"&gt;Load Balancer with Multiple Web Servers and Auto Scaling
+ &lt;div id="load-balancer-with-multiple-web-servers-and-auto-scaling" class="anchor"&gt;&lt;/div&gt;
+ 
+ &lt;span
+ class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none"&gt;
+ &lt;a class="text-primary-300 dark:text-neutral-700 !no-underline" href="#load-balancer-with-multiple-web-servers-and-auto-scaling" aria-label="Anchor"&gt;#&lt;/a&gt;
+ &lt;/span&gt;
+ 
+&lt;/h3&gt;
+&lt;p&gt;A load balancer distributes incoming traffic across multiple web servers, providing a single public entry point to the system.&lt;/p&gt;</description></item></channel></rss>
